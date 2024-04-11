@@ -35,6 +35,14 @@ private:
 
 	void parseTexture(std::string name);
 
+	void parseCoords();
+
+	void parseTexCoords();
+
+	void parseCoordIndex();
+
+	void parseTexCoordIndex();
+
 public:
 	void parseFile(const char* vrlmFileName);
 

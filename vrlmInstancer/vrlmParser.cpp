@@ -225,7 +225,132 @@ void VrmlParser::parseTexture(std::string name) {
 }
 
 void VrmlParser::parseGeometry(std::string name) {
+    readSymbol();
+    if (str != "DEF") std::cout << "error: expected DEF at the start of Geometry node named " << name << std::endl;
+    readSymbol();
+    std::string geometryName = str;
+    readSymbol();
+    if (str != "IndexedFaceSet") 
+        std::cout << "I currently handle only IndexedFaceSet construction in geometry node " << geometryName << std::endl;
+    readSymbol();
+    if (str[0] != '{')
+        std::cout << "error: expected { at the start of IndexedFaceSet node named " << geometryName << std::endl;
 
+    do {
+        readSymbol();
+        if (str == "ccw") {
+            //save ccw after I create the Node structure
+            readSymbol();
+        }
+        else if (str == "solid") {
+            //save solid after I create the Node structure
+            readSymbol();
+        }
+        else if (str == "coord") {
+            parseCoords();
+        }
+        else if (str == "texCoord") {
+            parseTexCoords();
+        }
+        else if (str == "coordIndex") {
+            parseCoordIndex();
+        }
+        else if (str == "texCoordIndex") {
+            parseTexCoordIndex();
+        }
+        else if (str[0] != '}')
+            std::cout << "error of Geometry node " << geometryName << " error symbol " << str << std::endl;
+        else
+            break;
+    } while (true);
+}
+
+void VrmlParser::parseCoords() {
+    readSymbol();
+    if (str != "DEF") std::cout << "error: expected DEF at the start of Coord node " << std::endl;
+    readSymbol();
+    std::string coordName = str;
+    readSymbol();
+    if(str != "Coordinate") std::cout << "error: expected Coordinate at the start of Coord node " << std::endl;
+    readSymbol();
+    if (str[0] != '{') std::cout << "error: expected { at the start of Coord node " << std::endl;
+    readSymbol();
+    if(str != "point") std::cout << "error: expected point at the start of Coord node " << std::endl;
+    readSymbol();
+    if (str[0] != '[') std::cout << "error: expected [ at the start of Coord node " << std::endl;
+    do {
+        float vals[] = { 0,0,0 };
+        for (int i = 0; i < 3; i++)
+        {
+            readSymbol();
+            if (str[0] == ']') break;
+            vals[i] = n;
+        }
+        readSymbol();
+    } while (str[0] == ',' || str[0] == '[');
+    readSymbol();
+    if (str[0] != '}') std::cout << "error: expected } at the end of Coord node " << std::endl;
+}
+
+void VrmlParser::parseTexCoords() {
+    readSymbol();
+    if (str != "DEF") std::cout << "error: expected DEF at the start of TexCoord node " << std::endl;
+    readSymbol();
+    std::string coordName = str;
+    readSymbol();
+    if (str != "TextureCoordinate") std::cout << "error: expected Coordinate at the start of TexCoord node " << std::endl;
+    readSymbol();
+    if (str[0] != '{') std::cout << "error: expected { at the start of TexCoord node " << std::endl;
+    readSymbol();
+    if (str != "point") std::cout << "error: expected point at the start of TexCoord node " << std::endl;
+    readSymbol();
+    if (str[0] != '[') std::cout << "error: expected [ at the start of TexCoord node " << std::endl;
+    do {
+        float vals[] = { 0,0,0 };
+        for (int i = 0; i < 2; i++)
+        {
+            readSymbol();
+            if (str[0] == ']') break;
+            vals[i] = n;
+        }
+        readSymbol();
+    } while (str[0] == ',' || str[0] == '[');
+    readSymbol();
+    if (str[0] != '}') std::cout << "error: expected } at the end of TexCoord node " << std::endl;
+}
+
+void VrmlParser::parseCoordIndex() {
+    readSymbol();
+    if(str[0] != '[') std::cout << "error: expected [ at the start of CoordIndex node " << std::endl;
+    do {
+        float vals[] = { 0,0,0 };
+        for (int i = 0; i < 3; i++)
+        {
+            readSymbol();
+            if (str[0] == ']') break;
+            vals[i] = n;
+            readSymbol(); // read comma
+        }
+        readSymbol(); // read -1
+        readSymbol(); // read comma
+    } while (str[0] == ',' || str[0] == '[');
+}
+
+void VrmlParser::parseTexCoordIndex() {
+    readSymbol();
+    if (str[0] != '[') std::cout << "error: expected [ at the start of TexCoordIndex node " << std::endl;
+    do {
+        float vals[] = { 0,0,0 };
+        for (int i = 0; i < 3; i++)
+        {
+            readSymbol();
+            if (str[0] == ']') break;
+            vals[i] = n;
+            readSymbol(); // read comma
+        }
+        readSymbol(); // read -1
+        readSymbol(); // read comma
+    } while (str[0] == ',' || str[0] == '[');
 }
 
 void VrmlParser::parseShape(std::string name) {
