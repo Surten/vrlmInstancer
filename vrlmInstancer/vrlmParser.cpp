@@ -1,11 +1,9 @@
 #include <iostream>
 #include "vrlmParser.h"
 
-std::ifstream vrlmFile;
-std::string str;
-float n;
 
-void loadFile(const char* vrlmFileName) {
+
+void VrmlParser::loadFile(const char* vrlmFileName) {
     vrlmFile.open(vrlmFileName);
     if (!vrlmFile.is_open()) {
         std::cout << "Input file wasn't open!";
@@ -13,39 +11,54 @@ void loadFile(const char* vrlmFileName) {
 
 }
 
-void skipComments() {
+void VrmlParser::skipComments() {
     char next;
     do { vrlmFile.get(next); } while (next != '\n');
 }
 
-void readSymbol(/*bool & wasNumber*/) {
-    vrlmFile >> std::ws; // eat leading spaces
-    int c = vrlmFile.peek();
-    if (c == EOF) { std::cout << "End Of File" << std::endl; exit(2); }
+void VrmlParser::readSymbol() {
+    int c;
+    do {
+        vrlmFile >> std::ws; // eat leading spaces
+        c = vrlmFile.peek();
+        if (c == EOF)
+        {
+            std::cout << "End Of File" << std::endl;
+            exit(2);
+        }
+        if (c == '#') skipComments();
+    } while (static_cast<char>(c) == '#');
+
     if (std::isdigit(c) || c == '-')
     {
         vrlmFile >> n;
-        //wasNumber = true;
+        lastWasNumber = true;
     }
     else
     {
         vrlmFile >> str;
-        //wasNumber = false;
+        lastWasNumber = false;
     }
 
 }
 
-void parseFile() {
+void VrmlParser::parseFile(const char* vrlmFileName) {
+    loadFile(vrlmFileName);
+    parseNextNode();
+}
+
+void VrmlParser::parseNextNode() {
     while (vrlmFile.is_open()) {
         readSymbol();
-        if (str[0] == '#') { skipComments(); continue; };
         if (str == "DEF") {
             parseDEF();
         }
     }
 }
 
-void parseDEF() {
+
+
+void VrmlParser::parseDEF() {
     std::string name;
     readSymbol();
 
@@ -64,7 +77,7 @@ void parseDEF() {
 
 }
 
-void parseTransformNode(std::string name) {
+void VrmlParser::parseTransformNode(std::string name) {
 
     readSymbol();
     if (str[0] != '{') std::cout << "error: expected { at the start of Transform node named " << name << std::endl;
@@ -111,12 +124,131 @@ void parseTransformNode(std::string name) {
         else if (str == "children") {
             parseChildren(name);
         }
-        else if (str[0] != '}') std::cout << "error reading properties of Transform named " << name << std::endl;
+        else if (str[0] != '}')
+            std::cout << "error reading properties of Transform named " << name << std::endl;
+        else
+            break;
 
-    } while (str[0] != '}');
+    } while (true);
 }
 
-void parseChildren(std::string name) {
+void VrmlParser::parseApperance(std::string name) {
+    readSymbol();
+    std::string apperanceName;
+    apperanceName = str;
+    readSymbol();
+    if (str[0] != '{') std::cout << "error: expected { at the start of Apperance node named " << name << std::endl;
+    do {
+        readSymbol();
+        if (str == "material") {
+            parseMaterial(name);
+        }
+        else if (str == "texture") {
+            parseTexture(name);
+        }
+        else if (str[0] != '}')
+            std::cout << "error reading properties of Shape of node named " << name << std::endl;
+        else
+            break;
+
+    } while (true);
+}
+
+void VrmlParser::parseMaterial(std::string name) {
+    readSymbol();
+    std::string materialName;
+    materialName = str;
+    readSymbol();
+    if (str[0] != '{') std::cout << "error: expected { at the start of Material node named " << name << std::endl;
+
+    float diffuseColor[] = { 0,0,0 };
+    float ambientIntensity = 0;
+    float specularColor[] = { 0,0,0 };
+    float shininess = 0;
+    float transparency = 0;
+
+    do {
+        readSymbol();
+        if (str == "diffuseColor") {
+            for (int i = 0; i < 3; i++)
+            {
+                readSymbol();
+                diffuseColor[i] = n;
+            }
+        }
+        else if (str == "ambientIntensity") {
+            readSymbol();
+            ambientIntensity = n;
+        }
+        else if (str == "specularColor") {
+            for (int i = 0; i < 3; i++)
+            {
+                readSymbol();
+                specularColor[i] = n;
+            }
+        }
+        else if (str == "shininess") {
+            readSymbol();
+            shininess = n;
+        }
+        else if (str == "transparency") {
+            readSymbol();
+            transparency = n;
+        }
+        else if (str[0] != '}')
+            std::cout << "error reading properties of Material of node named " << name << std::endl;
+        else
+            break;
+
+    } while (true);
+}
+
+void VrmlParser::parseTexture(std::string name) {
+    readSymbol();
+    std::string textureName;
+    textureName = str;
+    readSymbol();
+    if (str[0] != '{') std::cout << "error: expected { at the start of Texture node named " << name << std::endl;
+    std::string textureFilePath;
+    do {
+        readSymbol();
+        if (str == "url") {
+            readSymbol();
+            textureFilePath = str;
+        }
+        else if (str[0] != '}')
+            std::cout << "error reading properties of Texture of node named " << name << std::endl;
+        else
+            break;
+
+    } while (true);
+}
+
+void VrmlParser::parseGeometry(std::string name) {
+
+}
+
+void VrmlParser::parseShape(std::string name) {
+    readSymbol();
+    if (str[0] != '{') std::cout << "error: expected { at the start of Shape node named " << name << std::endl;
+
+    do {
+        readSymbol();
+        if (str == "appearance") {
+            parseApperance(name);
+        }
+        else if (str == "geometry") {
+            parseGeometry(name);
+        }
+        else if (str[0] != '}')
+            std::cout << "error reading properties of Shape of node named " << name << std::endl;
+        else
+            break;
+
+    } while (true);
+}
+
+void VrmlParser::parseChildren(std::string name) {
     readSymbol();
     if (str[0] != '[') std::cout << "error: expected [ at the start of children of Transform node named " << name << std::endl;
 
@@ -126,11 +258,19 @@ void parseChildren(std::string name) {
             parseDEF();
             continue;
         }
-        if (str[0] == ',') {
+        else if (str[0] == ',') {
             continue;
         }
-        //shape
-        //timeSensor
-
-    } while (str[0] != ']');
+        else if (str == "Shape") {
+            parseShape(name);
+            continue;
+        }
+        else if (str == "timeSensor") {
+            //timeSensor
+        }
+        else if (str[0] != ']')
+            std::cout << "error reading properties of children of Transform node named " << name << std::endl;
+        else
+            break;
+    } while (true);
 }

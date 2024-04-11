@@ -10,7 +10,7 @@
 
 int main()
 {
-    loadFile("skrinTextured.wrl");
-    parseFile();
+    VrmlParser vrmlParser;
+    vrmlParser.parseFile("skrinTextured.wrl");
 }
 

@@ -3,18 +3,44 @@
 #include <fstream>
 #include <string>
 
-void loadFile(const char* vrlmFileName);
+class VrmlParser {
 
-void skipComments();
+private:
+	std::ifstream vrlmFile;
+	std::string str;
+	float n;
 
-void readSymbol(/*bool & wasNumber*/);
+private:
+	void loadFile(const char* vrlmFileName);
 
-void parseFile();
+	void skipComments();
 
-void parseDEF();
+	void readSymbol();
 
-void parseTransformNode(std::string name);
+	void parseDEF();
 
-void parseChildren(std::string name);
+	void parseTransformNode(std::string name);
+
+	void parseChildren(std::string name);
+
+	void parseNextNode();
+
+	void parseShape(std::string name);
+
+	void parseApperance(std::string name);
+
+	void parseGeometry(std::string name);
+
+	void parseMaterial(std::string name);
+
+	void parseTexture(std::string name);
+
+public:
+	void parseFile(const char* vrlmFileName);
+
+public:
+	bool lastWasNumber;
+};
+
 
 
