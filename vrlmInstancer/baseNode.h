@@ -4,13 +4,27 @@
 
 class BaseNode {
 public:
-
+	enum NodeTypes {Transform, Shape};
 public:
 
-private:
-	//properties of all nodes: name, enum Type
+protected:
 	std::string name;
+
+
 	std::vector<BaseNode*> children;
+	BaseNode* parent;
+
 private:
-	BaseNode();
+};
+
+class TransformNode : BaseNode {
+public:
+	TransformNode(std::string name, float* translation, float* rotation, float* scale, float* scaleOrientation);
+	
+public:
+	float translation[3];
+	float rotation[4];
+	float scale[3];
+	float scaleOrientation[4];
+
 };
