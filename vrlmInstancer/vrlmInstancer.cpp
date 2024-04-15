@@ -11,7 +11,8 @@
 int main()
 {
     Scene scene;
-    scene.loadSceneFromVrmlFile("0_fl_furniture.wrl");
+    scene.loadSceneFromVrmlFile("skrinTextured.wrl");
+    scene.saveSceneToVrmlFile("out.wrl");
     std::cout << "done" << std::endl;
 }
 

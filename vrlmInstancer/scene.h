@@ -2,16 +2,17 @@
 #include <vector>
 
 #include "vrlmParser.h"
+#include "vrmlSaver.h"
 
 class Scene {
 
 public:
 	Scene() {}
 	
-	void loadSceneFromVrmlFile(std::string filePath) {
-		vrmlParser.parseFile(filePath.c_str());
-	}
+	void loadSceneFromVrmlFile(std::string filePath);
+	void saveSceneToVrmlFile(std::string outFilePath);
 
 private:
 	VrmlParser vrmlParser;
+	VrmlSaver vrmlSaver;
 };

@@ -79,10 +79,14 @@ void VrmlParser::parseDEF(TransformNode* parent) {
         #endif
         TransformNode* transformNode = new TransformNode(name);
         AllNodes.push_back(transformNode);
-        if (parent == nullptr) RootNodes.push_back(transformNode);
+        if (parent == nullptr) {
+            RootNodes.push_back(transformNode);
+            transformNode->nodeDepth = 0;
+        }
         else {
             parent->children.push_back(transformNode); 
             transformNode->parent = parent;
+            transformNode->nodeDepth = parent->nodeDepth + 1;
         }
         parseTransformNode(transformNode);
     }
@@ -380,6 +384,7 @@ void VrmlParser::parseShape(TransformNode* parent) {
 
     ShapeNode* shapeNode = new ShapeNode();
     parent->children.push_back(shapeNode);
+    shapeNode->nodeDepth = parent->nodeDepth + 1;
     shapeNode->parent = parent;
     do {
         readSymbol();

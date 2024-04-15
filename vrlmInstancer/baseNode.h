@@ -3,13 +3,16 @@
 #include <vector>
 #include "dataStructs.h"
 
+enum NodeTypes { Transform, Shape };
+
 class BaseNode {
 public:
-	enum NodeTypes {Transform, Shape};
+
 
 	NodeTypes type;
 	std::string name;
 	BaseNode* parent;
+	int nodeDepth;
 
 public:
 	BaseNode(std::string name, NodeTypes type) {
@@ -52,6 +55,31 @@ public:
 	}
 	void setScaleOrientation(float* scaleOrientation) {
 		std::memcpy(this->scaleOrientation, scaleOrientation, sizeof(float) * 4);
+	}
+
+	bool hasTranslation() {
+		float eps = 0.0001;
+		if (std::abs(translation[0]) < eps && std::abs(translation[1]) < eps && std::abs(translation[2]) < eps)
+			return false;
+		return true;
+	}
+	bool hasRotation() {
+		float eps = 0.0001;
+		if (std::abs(rotation[0]) < eps && std::abs(rotation[1]) < eps && std::abs(rotation[2]) < eps && std::abs(rotation[3]) < eps)
+			return false;
+		return true;
+	}
+	bool hasScale() {
+		float eps = 0.0001;
+		if (std::abs(scale[0] - 1.0f) < eps && std::abs(scale[1] - 1.0f) < eps && std::abs(scale[2] - 1.0f) < eps)
+			return false;
+		return true;
+	}
+	bool hasScaleOrientation() {
+		float eps = 0.0001;
+		if (std::abs(scaleOrientation[0]) < eps && std::abs(scaleOrientation[1]) < eps && std::abs(scaleOrientation[2]) < eps && std::abs(scaleOrientation[3]) < eps)
+			return false;
+		return true;
 	}
 	
 public:

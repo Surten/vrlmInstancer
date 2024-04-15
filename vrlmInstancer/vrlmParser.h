@@ -11,8 +11,6 @@ private:
 	std::string str;
 	float n;
 
-	std::vector<BaseNode*> AllNodes;
-	std::vector<BaseNode*> RootNodes;
 
 private:
 	void loadFile(const char* vrlmFileName);
@@ -48,10 +46,13 @@ private:
 	void parseTexCoordIndex(ShapeNode* shapeNode);
 
 public:
-	void parseFile(const char* vrlmFileName);
+	bool lastWasNumber;
+
+	std::vector<BaseNode*> AllNodes;
+	std::vector<BaseNode*> RootNodes;
 
 public:
-	bool lastWasNumber;
+	void parseFile(const char* vrlmFileName);
 };
 
 
