@@ -29,6 +29,12 @@
     <ClInclude Include="baseNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dataStructs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="skrinTextured.wrl" />

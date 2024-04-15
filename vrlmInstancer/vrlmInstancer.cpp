@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-#include "vrlmParser.h"
+#include "scene.h"
 
 
 
@@ -10,7 +10,8 @@
 
 int main()
 {
-    VrmlParser vrmlParser;
-    vrmlParser.parseFile("skrinTextured.wrl");
+    Scene scene;
+    scene.loadSceneFromVrmlFile("0_fl_furniture.wrl");
+    std::cout << "done" << std::endl;
 }
 

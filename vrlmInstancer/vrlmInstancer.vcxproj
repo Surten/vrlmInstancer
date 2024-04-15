@@ -132,6 +132,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="baseNode.h" />
+    <ClInclude Include="dataStructs.h" />
+    <ClInclude Include="scene.h" />
     <ClInclude Include="vrlmParser.h" />
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,7 @@
 
 #include <fstream>
 #include <string>
+#include "baseNode.h"
 
 class VrmlParser {
 
@@ -10,6 +11,9 @@ private:
 	std::string str;
 	float n;
 
+	std::vector<BaseNode*> AllNodes;
+	std::vector<BaseNode*> RootNodes;
+
 private:
 	void loadFile(const char* vrlmFileName);
 
@@ -17,31 +21,31 @@ private:
 
 	void readSymbol();
 
-	void parseDEF();
+	void parseDEF(TransformNode* parent);
 
-	void parseTransformNode(std::string name);
+	void parseTransformNode(TransformNode* transformNode);
 
-	void parseChildren(std::string name);
+	void parseChildren(TransformNode* parent);
 
 	void parseNextNode();
 
-	void parseShape(std::string name);
+	void parseShape(TransformNode* parent);
 
-	void parseApperance(std::string name);
+	void parseApperance(ShapeNode* shapeNode);
 
-	void parseGeometry(std::string name);
+	void parseGeometry(ShapeNode* shapeNode);
 
-	void parseMaterial(std::string name);
+	void parseMaterial(ShapeNode* shapeNode);
 
-	void parseTexture(std::string name);
+	void parseTexture(ShapeNode* shapeNode);
 
-	void parseCoords();
+	void parseCoords(ShapeNode* shapeNode);
 
-	void parseTexCoords();
+	void parseTexCoords(ShapeNode* shapeNode);
 
-	void parseCoordIndex();
+	void parseCoordIndex(ShapeNode* shapeNode);
 
-	void parseTexCoordIndex();
+	void parseTexCoordIndex(ShapeNode* shapeNode);
 
 public:
 	void parseFile(const char* vrlmFileName);
