@@ -310,7 +310,7 @@ void VrmlParser::parseCoords(ShapeNode* shapeNode) {
         shapeNode->geometry.coords.push_back(vec3(vals[0], vals[1], vals[2]));
         readSymbol();
     } while (str[0] == ',' || str[0] == '[');
-    readSymbol();
+     readSymbol();
     if (str[0] != '}') std::cout << "error: expected } at the end of Coord node " << std::endl;
 }
 

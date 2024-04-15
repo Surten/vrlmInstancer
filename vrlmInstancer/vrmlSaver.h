@@ -22,6 +22,7 @@ private:
 
 private:
 	void writeHeader();
+	std::string getLeadingSpaces(int numberOfSpaces);
 	void writeNodesfromRoot();
 	void writeTransformNode(TransformNode* node);
 	void writeShapeNode(ShapeNode* node);
@@ -30,4 +31,8 @@ private:
 	void writeMaterial(ShapeNode* node);
 	void writeTexture(ShapeNode* node);
 	void writeGeometryDEF(ShapeNode* node);
+	void writeGeometryCoords(ShapeNode* node);
+	void writeGeometryTexCoords(ShapeNode* node);
+	void writeGeometryIndices(ShapeNode* node);
+	void writeGeometryTextureIndices(ShapeNode* node);
 };
