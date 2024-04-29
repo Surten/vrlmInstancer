@@ -94,15 +94,17 @@ public:
 class ShapeNode : public BaseNode {
 public:
 	ShapeNode() : BaseNode("", Shape) {
-
+		geometry = nullptr;
 	}
 
 public:
 
-	Geometry geometry;
+
+	Geometry *geometry;
 	Material material;
 	std::string textureFilePath;
 	std::string textureType;
+	bool usesOtherGeometry = false;
 private:
 
 };

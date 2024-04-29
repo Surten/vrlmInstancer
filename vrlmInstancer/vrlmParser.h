@@ -48,10 +48,13 @@ private:
 public:
 	bool lastWasNumber;
 
-	std::vector<BaseNode*> AllNodes;
-	std::vector<BaseNode*> RootNodes;
+	std::vector<BaseNode*> * AllNodes;
+	std::vector<BaseNode*> * RootNodes;
+	std::vector<ShapeNode*> * ShapeNodes;
+	std::vector<Geometry*> * geometries;
 
 public:
+	VrmlParser(std::vector<BaseNode*> *AllNodes, std::vector<BaseNode*> *RootNodes, std::vector<ShapeNode*> *ShapeNodes, std::vector<Geometry*>* geometries);
 	void parseFile(const char* vrlmFileName);
 };
 

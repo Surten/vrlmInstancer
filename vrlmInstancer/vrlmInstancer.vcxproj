@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dataStructs.cpp" />
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="vrlmInstancer.cpp" />
     <ClCompile Include="vrlmParser.cpp" />

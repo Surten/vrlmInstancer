@@ -1,8 +1,19 @@
 #include <iostream>
+
 #include "vrlmParser.h"
 
 #define LOGS
 
+
+VrmlParser::VrmlParser(std::vector<BaseNode*> *AllNodes, std::vector<BaseNode*> *RootNodes, std::vector<ShapeNode*> *ShapeNodes, std::vector<Geometry*>* geometries) {
+    this->AllNodes = AllNodes;
+    this->RootNodes = RootNodes;
+    this->ShapeNodes = ShapeNodes;
+    this->geometries = geometries;
+
+    lastWasNumber = false;
+    n = 0;
+}
 
 
 void VrmlParser::loadFile(const char* vrlmFileName) {
@@ -78,9 +89,9 @@ void VrmlParser::parseDEF(TransformNode* parent) {
         std::cout << "Reading Transform node " << name << std::endl;
         #endif
         TransformNode* transformNode = new TransformNode(name);
-        AllNodes.push_back(transformNode);
+        AllNodes->push_back(transformNode);
         if (parent == nullptr) {
-            RootNodes.push_back(transformNode);
+            RootNodes->push_back(transformNode);
             transformNode->nodeDepth = 0;
         }
         else {
@@ -240,32 +251,54 @@ void VrmlParser::parseTexture(ShapeNode* shapeNode) {
 
 void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
     readSymbol();
+    if (str == "USE") {
+        readSymbol();
+        for (size_t i = 0; i < geometries->size(); i++)
+        {
+            if (geometries->at(i)->name == str) {
+                shapeNode->geometry = geometries->at(i);
+                #ifdef LOGS
+                std::cout << "using geometry of " << str << std::endl;
+                #endif
+                break;
+            }
+        }
+        if (shapeNode->geometry == nullptr) {
+            std::cout << "tried to use geometry " << str << " but could not find it" << std::endl;;
+        }
+        shapeNode->usesOtherGeometry = true;
+        return;                             
+    }
     if (str != "DEF") std::cout << "error: expected DEF at the start of Geometry node named " << shapeNode->parent->name << std::endl;
+    Geometry *geometry = new Geometry();
+    shapeNode->geometry = geometry;
+    shapeNode->usesOtherGeometry = true;
+    geometries->push_back(geometry);
     readSymbol();
-    shapeNode->geometry.name = str;
+    geometry->name = str;
     readSymbol();
     if (str != "IndexedFaceSet") 
-        std::cout << "I currently handle only IndexedFaceSet construction in geometry node " << shapeNode->geometry.name << std::endl;
+        std::cout << "I currently handle only IndexedFaceSet construction in geometry->node " << geometry->name << std::endl;
     readSymbol();
     if (str[0] != '{')
-        std::cout << "error: expected { at the start of IndexedFaceSet node named " << shapeNode->geometry.name << std::endl;
+        std::cout << "error: expected { at the start of IndexedFaceSet node named " << geometry->name << std::endl;
     do {
         readSymbol();
         if (str == "ccw") {
             readSymbol();
-            shapeNode->geometry.ccw = (str == "TRUE") ? true : false;
+            geometry->ccw = (str == "TRUE") ? true : false;
         }
         else if (str == "solid") {
             readSymbol();
-            shapeNode->geometry.solid = (str == "TRUE") ? true : false;
+            geometry->solid = (str == "TRUE") ? true : false;
         }
         else if (str == "normalPerVertex") {
             readSymbol();
-            shapeNode->geometry.normalPerVertex = (str == "TRUE") ? true : false;
+            geometry->normalPerVertex = (str == "TRUE") ? true : false;
         }
         else if (str == "creaseAngle") {
             readSymbol();
-            shapeNode->geometry.creaseAngle = n;
+            geometry->creaseAngle = n;
         }
         else if (str == "coord") {
             parseCoords(shapeNode);
@@ -280,7 +313,7 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
             parseTexCoordIndex(shapeNode);
         }
         else if (str[0] != '}')
-            std::cout << "error of Geometry node " << shapeNode->geometry.name << " error symbol " << str << std::endl;
+            std::cout << "error of Geometry node " << geometry->name << " error symbol " << str << std::endl;
         else
             break;
     } while (true);
@@ -307,7 +340,7 @@ void VrmlParser::parseCoords(ShapeNode* shapeNode) {
             if (str[0] == ']') break;
             vals[i] = n;
         }
-        shapeNode->geometry.coords.push_back(vec3(vals[0], vals[1], vals[2]));
+        shapeNode->geometry->coords.push_back(vec3(vals[0], vals[1], vals[2]));
         readSymbol();
     } while (str[0] == ',' || str[0] == '[');
      readSymbol();
@@ -335,7 +368,7 @@ void VrmlParser::parseTexCoords(ShapeNode* shapeNode) {
             if (str[0] == ']') break;
             vals[i] = n;
         }
-        shapeNode->geometry.textureCoords.push_back(vec2(vals[0], vals[1]));
+        shapeNode->geometry->textureCoords.push_back(vec2(vals[0], vals[1]));
         readSymbol();
     } while (str[0] == ',' || str[0] == '[');
     readSymbol();
@@ -354,7 +387,7 @@ void VrmlParser::parseCoordIndex(ShapeNode* shapeNode) {
             vals[i] = n;
             readSymbol(); // read comma
         }
-        shapeNode->geometry.facesPointsIndex.push_back(vec3i(vals[0], vals[1], vals[2]));
+        shapeNode->geometry->facesPointsIndex.push_back(vec3i(vals[0], vals[1], vals[2]));
         readSymbol(); // read -1
         readSymbol(); // read comma
     } while (str[0] == ',' || str[0] == '[');
@@ -372,7 +405,7 @@ void VrmlParser::parseTexCoordIndex(ShapeNode* shapeNode) {
             vals[i] = n;
             readSymbol(); // read comma
         }
-        shapeNode->geometry.facesTextureIndex.push_back(vec3i(vals[0], vals[1], vals[2]));
+        shapeNode->geometry->facesTextureIndex.push_back(vec3i(vals[0], vals[1], vals[2]));
         readSymbol(); // read -1
         readSymbol(); // read comma
     } while (str[0] == ',' || str[0] == '[');
@@ -386,6 +419,8 @@ void VrmlParser::parseShape(TransformNode* parent) {
     parent->children.push_back(shapeNode);
     shapeNode->nodeDepth = parent->nodeDepth + 1;
     shapeNode->parent = parent;
+    AllNodes->push_back(shapeNode);
+    ShapeNodes->push_back(shapeNode);
     do {
         readSymbol();
         if (str == "appearance") {

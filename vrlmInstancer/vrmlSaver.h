@@ -19,6 +19,8 @@ public:
 
 private:
 	std::ofstream out;
+	int numOfPointsPerLine = 10;
+	int numOfIndicesPerLine = 8;
 
 private:
 	void writeHeader();
@@ -35,4 +37,5 @@ private:
 	void writeGeometryTexCoords(ShapeNode* node);
 	void writeGeometryIndices(ShapeNode* node);
 	void writeGeometryTextureIndices(ShapeNode* node);
+	void writeGeometryUSE(ShapeNode* node);
 };

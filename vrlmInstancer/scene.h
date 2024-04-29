@@ -7,12 +7,19 @@
 class Scene {
 
 public:
-	Scene() {}
+	Scene() : vrmlParser(&AllNodes, &RootNodes, &ShapeNodes, &geometries){}
 	
 	void loadSceneFromVrmlFile(std::string filePath);
 	void saveSceneToVrmlFile(std::string outFilePath);
+	void geometryFun();
+
 
 private:
 	VrmlParser vrmlParser;
 	VrmlSaver vrmlSaver;
+
+	std::vector<BaseNode*> AllNodes;
+	std::vector<BaseNode*> RootNodes;
+	std::vector<ShapeNode*> ShapeNodes;
+	std::vector<Geometry*> geometries;
 };
