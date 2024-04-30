@@ -2,7 +2,11 @@
 
 #include "vrlmParser.h"
 
+//#define LOGSTRANSFORM
+//#define LOGSSHAPE
+#define LOGSGEOMETRY
 #define LOGS
+
 
 
 VrmlParser::VrmlParser(std::vector<BaseNode*> *AllNodes, std::vector<BaseNode*> *RootNodes, std::vector<ShapeNode*> *ShapeNodes, std::vector<Geometry*>* geometries) {
@@ -85,7 +89,7 @@ void VrmlParser::parseDEF(TransformNode* parent) {
     }
 
     if (str == "Transform") {
-        #ifdef LOGS
+        #ifdef LOGSTRANSFORM
         std::cout << "Reading Transform node " << name << std::endl;
         #endif
         TransformNode* transformNode = new TransformNode(name);
@@ -257,8 +261,9 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
         {
             if (geometries->at(i)->name == str) {
                 shapeNode->geometry = geometries->at(i);
-                #ifdef LOGS
-                std::cout << "using geometry of " << str << std::endl;
+                shapeNode->usesOtherGeometry = true;
+                #ifdef LOGSGEOMETRY
+                std::cout << "Using geometry of " << str << std::endl;
                 #endif
                 break;
             }
@@ -266,13 +271,11 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
         if (shapeNode->geometry == nullptr) {
             std::cout << "tried to use geometry " << str << " but could not find it" << std::endl;;
         }
-        shapeNode->usesOtherGeometry = true;
         return;                             
     }
     if (str != "DEF") std::cout << "error: expected DEF at the start of Geometry node named " << shapeNode->parent->name << std::endl;
     Geometry *geometry = new Geometry();
     shapeNode->geometry = geometry;
-    shapeNode->usesOtherGeometry = true;
     geometries->push_back(geometry);
     readSymbol();
     geometry->name = str;
@@ -451,7 +454,7 @@ void VrmlParser::parseChildren(TransformNode* parent) {
             continue;
         }
         else if (str == "Shape") {
-            #ifdef LOGS
+            #ifdef LOGSSHAPE
             std::cout << "Reading Shape node of parent " << parent->name << std::endl;
             #endif
             parseShape(parent);

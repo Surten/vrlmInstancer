@@ -13,7 +13,7 @@ void VrmlSaver::saveLoadedToVrml(const char* outputFileName) {
 }
 
 void VrmlSaver::writeHeader() {
-	out << "# VRML V2.0 utf8" << std::endl;
+	out << "#VRML V2.0 utf8" << std::endl;
 	out << std::endl;
 	out << "# Produced by VrmlInstancer program written by Josef Bacík as a part of his master thesis" << std::endl;
 	out << "# Time and date are not important yet, still TODO" << std::endl;
@@ -70,7 +70,7 @@ void VrmlSaver::writeTransformNode(TransformNode* node) {
 void VrmlSaver::writeApperance(ShapeNode* node) {
 	std::string leadingSpaces = getLeadingSpaces((4 * node->nodeDepth) + 2);
 
-	out << leadingSpaces << "apperance Apperance {" << std::endl;
+	out << leadingSpaces << "appearance Appearance {" << std::endl;
 	writeMaterial(node);
 	writeTexture(node);
 	out << leadingSpaces << "}" << std::endl;
@@ -123,8 +123,13 @@ void VrmlSaver::writeGeometryCoords(ShapeNode* node)
 		for (j = 0; j < numOfPointsPerLine; j++)
 		{
 			int a = (i * numOfPointsPerLine) + j;
-			out << node->geometry->coords[a].x << " " << node->geometry->coords[a].y << " " << node->geometry->coords[a].z << ", ";
-
+			out << node->geometry->coords[a].x << " " << node->geometry->coords[a].y << " " << node->geometry->coords[a].z;
+			if (a + 1 == node->geometry->coords.size()) {
+				out << "] ";
+			}
+			else {
+				out << ", ";
+			}
 		}
 		out << std::endl;
 	}
@@ -132,13 +137,19 @@ void VrmlSaver::writeGeometryCoords(ShapeNode* node)
 	for (j = 0; j < numOfPointsPerLine; j++)
 	{
 		int a = (i * numOfPointsPerLine) + j;
-		if(a < node->geometry->coords.size())
-			out << node->geometry->coords[a].x << " " << node->geometry->coords[a].y << " " << node->geometry->coords[a].z << ", ";
+		if (a < node->geometry->coords.size()) {
+			out << node->geometry->coords[a].x << " " << node->geometry->coords[a].y << " " << node->geometry->coords[a].z;
+			if (a + 1 == node->geometry->coords.size()) {
+				out << "] ";
+			}
+			else {
+				out << ", ";
+			}
+		}
 
 	}
 	out << std::endl;
 
-	out << leadingSpaces << "]" << std::endl;
 	out << leadingSpaces << "}" << std::endl;
 }
 
@@ -253,10 +264,12 @@ void VrmlSaver::writeShapeNode(ShapeNode* node) {
 	out << leadingSpaces << "Shape {" << std::endl;
 	writeApperance(node);
 	if (node->geometry != nullptr) {
-		writeGeometryDEF(node);
-	}
-	else if (node->usesOtherGeometry) {
-		writeGeometryUSE(node);
+		if (!node->usesOtherGeometry) {
+			writeGeometryDEF(node);
+		}
+		else {
+			writeGeometryUSE(node);
+		}
 	}
 	out << leadingSpaces << "}" << std::endl;
 }

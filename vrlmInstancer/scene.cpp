@@ -15,9 +15,9 @@ void Scene::geometryFun() {
 	for (int i = 0; i < ShapeNodes.size(); i++)
 	{
 		if (ShapeNodes[i]->geometry == nullptr) continue;
-		vec3 a = ShapeNodes[i]->geometry->getCenterOfGravity();
-		AABB b = ShapeNodes[i]->geometry->getAABB();
-		std::cout << ShapeNodes[i]->geometry->name << std::endl;
-		std::cout << a << std::endl << b.min << std::endl << b.max << std::endl << std::endl;
+		//vec3 a = ShapeNodes[i]->geometry->getCenterOfGravity();
+		//AABB b = ShapeNodes[i]->geometry->getAABB();
+		//std::cout << ShapeNodes[i]->geometry->name << std::endl;
+		//std::cout << a << std::endl << b.min << std::endl << b.max << std::endl << std::endl;
 	}
 }
