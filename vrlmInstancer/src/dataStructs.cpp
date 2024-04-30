@@ -1,10 +1,13 @@
 #include "dataStructs.h"
 #include <iostream> 
+#include <iomanip>
 
 
 std::ostream& operator<<(std::ostream& os, const vec3& obj)
 {
-    os << obj.x << " " << obj.y << " " << obj.z << " ";
+    os << std::setw(9) << std::fixed << std::setprecision(3) << obj.x <<
+          std::setw(9) << std::fixed << std::setprecision(3) << obj.y <<
+          std::setw(9) << std::fixed << std::setprecision(3) << obj.z << " ";
     return os;
 }
 
@@ -45,6 +48,14 @@ void AABB::uniteWithAABB(AABB other) {
     max.y = std::max(max.y, other.max.y);
     max.z = std::max(max.z, other.max.z);
 }
+
+vec3 AABB::getDiagonal() {
+    return max - min;
+}
+vec3 AABB::getArithmeticCenter() {
+    return ((max - min) / 2.0f) + min;
+}
+
 
 AABB Geometry::getAABB() {
     AABB ret(coords[0], coords[1]);

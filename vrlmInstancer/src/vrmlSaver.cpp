@@ -1,8 +1,10 @@
 #include "vrmlSaver.h"
 
-VrmlSaver::VrmlSaver() {
-	AllNodes = nullptr;
-	RootNodes = nullptr;
+VrmlSaver::VrmlSaver(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>* RootNodes, std::vector<ShapeNode*>* ShapeNodes, std::vector<Geometry*>* geometries) {
+	this->AllNodes = AllNodes;
+	this->RootNodes = RootNodes;
+	this->ShapeNodes = ShapeNodes;
+	this->geometries = geometries;
 }
 
 

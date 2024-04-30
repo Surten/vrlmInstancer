@@ -15,40 +15,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vrlmInstancer.cpp">
+    <ClCompile Include="src\vrlmInstancer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vrlmParser.cpp">
+    <ClCompile Include="src\vrlmParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vrmlSaver.cpp">
+    <ClCompile Include="src\vrmlSaver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="scene.cpp">
+    <ClCompile Include="src\scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dataStructs.cpp">
+    <ClCompile Include="src\dataStructs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vrlmParser.h">
+    <ClInclude Include="src\vrlmParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="baseNode.h">
+    <ClInclude Include="src\baseNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dataStructs.h">
+    <ClInclude Include="src\dataStructs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="scene.h">
+    <ClInclude Include="src\scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vrmlSaver.h">
+    <ClInclude Include="src\vrmlSaver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="skrinTextured.wrl" />
   </ItemGroup>
 </Project>

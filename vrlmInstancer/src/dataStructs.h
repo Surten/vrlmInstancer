@@ -30,6 +30,9 @@ public:
     float len() {
         return std::sqrt(x * x + y * y + z * z);
     }
+    float len2() {
+        return (x * x + y * y + z * z);
+    }
 
 };
 std::ostream& operator<<(std::ostream& os, const vec3& obj);
@@ -62,7 +65,10 @@ public:
 
     void uniteWithPoint(vec3 point);
     void uniteWithAABB(AABB other);
+    vec3 getDiagonal();
+    vec3 getArithmeticCenter();
 };
+
 
 class Geometry {
 public:

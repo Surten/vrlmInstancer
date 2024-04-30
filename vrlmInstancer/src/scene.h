@@ -7,11 +7,14 @@
 class Scene {
 
 public:
-	Scene() : vrmlParser(&AllNodes, &RootNodes, &ShapeNodes, &geometries){}
+	Scene() : vrmlParser(&AllNodes, &RootNodes, &ShapeNodes, &geometries), vrmlSaver(&AllNodes, &RootNodes, &ShapeNodes, &geometries){}
 	
 	void loadSceneFromVrmlFile(std::string filePath);
 	void saveSceneToVrmlFile(std::string outFilePath);
 	void geometryFun();
+	void writeOutGeometries();
+	void findDuplicateGeometry();
+	void findSimilarObjects(Scene* otherScene);
 
 
 private:

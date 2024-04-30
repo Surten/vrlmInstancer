@@ -10,10 +10,12 @@ class VrmlSaver {
 public:
 	std::vector<BaseNode*> * AllNodes;
 	std::vector<BaseNode*> * RootNodes;
+	std::vector<ShapeNode*> * ShapeNodes;
+	std::vector<Geometry*> * geometries;
 
 public:
 
-	VrmlSaver();
+	VrmlSaver(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>* RootNodes, std::vector<ShapeNode*>* ShapeNodes, std::vector<Geometry*>* geometries);
 
 	void saveLoadedToVrml(const char* outputFileName);
 

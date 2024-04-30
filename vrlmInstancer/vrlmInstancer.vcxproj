@@ -127,21 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="dataStructs.cpp" />
-    <ClCompile Include="scene.cpp" />
-    <ClCompile Include="vrlmInstancer.cpp" />
-    <ClCompile Include="vrlmParser.cpp" />
-    <ClCompile Include="vrmlSaver.cpp" />
+    <ClCompile Include="src\dataStructs.cpp" />
+    <ClCompile Include="src\scene.cpp" />
+    <ClCompile Include="src\vrlmInstancer.cpp" />
+    <ClCompile Include="src\vrlmParser.cpp" />
+    <ClCompile Include="src\vrmlSaver.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="baseNode.h" />
-    <ClInclude Include="dataStructs.h" />
-    <ClInclude Include="scene.h" />
-    <ClInclude Include="vrlmParser.h" />
-    <ClInclude Include="vrmlSaver.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="skrinTextured.wrl" />
+    <ClInclude Include="src\baseNode.h" />
+    <ClInclude Include="src\dataStructs.h" />
+    <ClInclude Include="src\scene.h" />
+    <ClInclude Include="src\vrlmParser.h" />
+    <ClInclude Include="src\vrmlSaver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
