@@ -81,7 +81,7 @@ int main()
         case '5':
             std::cout << "The index of the scene: ";
             std::cin >> numOfScene;
-            scenes.at(numOfScene)->findDuplicateGeometry();
+            scenes.at(numOfScene)->findAndUseDuplicateGeometry();
             break;
         case '6':
 

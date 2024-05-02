@@ -54,11 +54,11 @@ void VrmlSaver::writeTransformNode(TransformNode* node) {
 	std::string leadingSpaces = getLeadingSpaces(4 * node->nodeDepth);
 	out << leadingSpaces << "DEF " << node->name << " Transform {" << std::endl;
 	if (node->hasTranslation())
-		out << leadingSpaces << "  translation " << node->translation[0] << " " << node->translation[1] << " " << node->translation[2] << std::endl;
+		out << leadingSpaces << "  translation " << node->translation.x << " " << node->translation.y << " " << node->translation.z << std::endl;
 	if (node->hasRotation())
 		out << leadingSpaces << "  rotation " << node->rotation[0] << " " << node->rotation[1] << " " << node->rotation[2] << " " << node->rotation[3] << std::endl;
 	if (node->hasScale())
-		out << leadingSpaces << "  scale " << node->scale[0] << " " << node->scale[1] << " " << node->scale[2] << std::endl;
+		out << leadingSpaces << "  scale " << node->scale.x << " " << node->scale.y << " " << node->scale.z << std::endl;
 	if (node->hasScaleOrientation())
 		out << leadingSpaces << "  scaleOrientation " << node->scaleOrientation[0] << " " << node->scaleOrientation[1] << " " << node->scaleOrientation[2] << " " << node->scaleOrientation[2] << std::endl;
 	if (node->children.size() > 0) {
@@ -84,7 +84,7 @@ void VrmlSaver::writeMaterial(ShapeNode* node) {
 	out << leadingSpaces << "material Material {" << std::endl;
 	out << leadingSpaces << "  diffuseColor " << node->material.diffuseColor[0] << " " << node->material.diffuseColor[1] << " " << node->material.diffuseColor[2] << std::endl;
 	out << leadingSpaces << "  ambientIntensity " << node->material.ambientIntensity << std::endl;
-	out << leadingSpaces << "  diffuseColor " << node->material.specularColor[0] << " " << node->material.specularColor[1] << " " << node->material.specularColor[2] << std::endl;
+	out << leadingSpaces << "  specularColor " << node->material.specularColor[0] << " " << node->material.specularColor[1] << " " << node->material.specularColor[2] << std::endl;
 	out << leadingSpaces << "  shininess " << node->material.shininess << std::endl;
 	out << leadingSpaces << "  transparency " << node->material.transparency << std::endl;
 	out << leadingSpaces << "}" << std::endl;

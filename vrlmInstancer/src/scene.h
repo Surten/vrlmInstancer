@@ -13,7 +13,7 @@ public:
 	void saveSceneToVrmlFile(std::string outFilePath);
 	void geometryFun();
 	void writeOutGeometries();
-	void findDuplicateGeometry();
+	void findAndUseDuplicateGeometry();
 	void findSimilarObjects(Scene* otherScene);
 
 
@@ -25,4 +25,7 @@ private:
 	std::vector<BaseNode*> RootNodes;
 	std::vector<ShapeNode*> ShapeNodes;
 	std::vector<Geometry*> geometries;
+
+private:
+	void findDuplicateGeometry(std::vector<std::pair<int, int>>& geoPairs);
 };

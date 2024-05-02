@@ -27,13 +27,18 @@ public:
     vec3 operator*(float other) {
         return vec3(x * other, y * other, z * other);
     }
+    void setVector(float a, float b, float c) {
+        x = a; y = b; z = c;
+    }
     float len() {
         return std::sqrt(x * x + y * y + z * z);
     }
     float len2() {
         return (x * x + y * y + z * z);
     }
-
+    bool areEqual(vec3 other) {
+        return (other - *this).len2() < 0.0001f ;
+    }
 };
 std::ostream& operator<<(std::ostream& os, const vec3& obj);
 
@@ -68,7 +73,7 @@ public:
     vec3 getDiagonal();
     vec3 getArithmeticCenter();
 };
-
+class ShapeNode;
 
 class Geometry {
 public:
@@ -84,8 +89,11 @@ public:
     bool solid;
     bool normalPerVertex;
     float creaseAngle;
-    Geometry() : ccw(true), solid(true), normalPerVertex(true), creaseAngle(0.0f){}
+    ShapeNode* parent;
+    AABB aabb;
+    Geometry() : ccw(true), solid(true), normalPerVertex(true), creaseAngle(0.0f), aabb(){}
 
+    void calculateAABB();
     AABB getAABB();
 
     vec3 getCenterOfGravity();

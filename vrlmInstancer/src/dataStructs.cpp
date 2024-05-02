@@ -12,7 +12,7 @@ std::ostream& operator<<(std::ostream& os, const vec3& obj)
 }
 
 
-AABB::AABB() {}
+AABB::AABB(): min(), max() {}
 
 AABB::AABB(vec3 a, vec3 b) {
     min.x = std::min(a.x, b.x);
@@ -57,13 +57,19 @@ vec3 AABB::getArithmeticCenter() {
 }
 
 
-AABB Geometry::getAABB() {
-    AABB ret(coords[0], coords[1]);
+void Geometry::calculateAABB() {
+    aabb.min = coords[0];
+    aabb.max = coords[1];
     for (int i = 2; i < coords.size(); i++)
     {
-        ret.uniteWithPoint(coords[i]);
+        aabb.uniteWithPoint(coords[i]);
     }
-    return ret;
+}
+
+AABB Geometry::getAABB() {
+    if (aabb.min.areEqual(vec3()) && aabb.max.areEqual(vec3()))
+        calculateAABB();
+    return aabb;
 }
 
 

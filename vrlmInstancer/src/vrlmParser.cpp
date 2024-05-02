@@ -127,11 +127,12 @@ void VrmlParser::parseTransformNode(TransformNode* transformNode) {
         readSymbol();
         // translation
         if (str == "translation") {
-            for (int i = 0; i < 3; i++)
-            {
-                readSymbol();
-                transformNode->translation[i] = n;
-            }
+            readSymbol();
+            transformNode->translation.x = n;
+            readSymbol();
+            transformNode->translation.y = n;
+            readSymbol();
+            transformNode->translation.z = n;
         }
         // rotation
         else if (str == "rotation") {
@@ -143,11 +144,12 @@ void VrmlParser::parseTransformNode(TransformNode* transformNode) {
         }
         // scale
         else if (str == "scale") {
-            for (int i = 0; i < 3; i++)
-            {
-                readSymbol();
-                transformNode->scale[i] = n;
-            }
+            readSymbol();
+            transformNode->scale.x = n;
+            readSymbol();
+            transformNode->scale.y = n;
+            readSymbol();
+            transformNode->scale.z = n;
         }
         // scaleOrientation
         else if (str == "scaleOrientation") {
@@ -276,6 +278,7 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
     if (str != "DEF") std::cout << "error: expected DEF at the start of Geometry node named " << shapeNode->parent->name << std::endl;
     Geometry *geometry = new Geometry();
     shapeNode->geometry = geometry;
+    geometry->parent = shapeNode;
     geometries->push_back(geometry);
     readSymbol();
     geometry->name = str;

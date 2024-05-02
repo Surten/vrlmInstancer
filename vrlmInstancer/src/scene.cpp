@@ -1,5 +1,6 @@
 #include "scene.h"
 #include <iomanip>
+#include <algorithm>
 
 void Scene::loadSceneFromVrmlFile(std::string filePath) {
 	vrmlParser.parseFile(filePath.c_str());
@@ -27,63 +28,83 @@ void Scene::writeOutGeometries() {
 		AABB b = geometries[i]->getAABB();
 
 		std::cout << std::left << std::setw(30) << geometries[i]->name;
-		std::cout << "center: " << a;
-		std::cout << "aabb: "   << b.min;
-		std::cout << b.max << std::endl;
+		std::cout << "diagAABB: " << b.getDiagonal();
+		std::cout << "arit to grav: " << geometries[i]->getCenterOfGravity() - b.getArithmeticCenter();
+		std::cout << "aabb: min: " << b.min << "  max: " << b.max;
 		std::cout << "coords Size: " << geometries[i]->coords.size() << " Indices size: " << geometries[i]->facesPointsIndex.size() << std::endl;
 	}
 }
 
-void Scene::findDuplicateGeometry() {
+void Scene::findDuplicateGeometry(std::vector<std::pair<int, int>> & geoPairs) {
 
-	float epsilon = 0.001;
 	for (size_t i = 0; i < geometries.size(); i++)
 	{
-		int nPoints = (int)geometries.at(i)->coords.size();
+		int nPoints = static_cast<int>(geometries.at(i)->coords.size());
 		AABB aabb = geometries[i]->getAABB();
 		vec3 diagonal = aabb.getDiagonal();
-		vec3 gravCenter = geometries[i]->getCenterOfGravity();
-		vec3 aritCenter = aabb.getArithmeticCenter();
-		vec3 vectorToGravCenter = (gravCenter - aritCenter);
+		vec3 vectorToGravCenter = geometries[i]->getCenterOfGravity() - aabb.getArithmeticCenter();
 		for (size_t j = 0; j < geometries.size(); j++)
 		{
 			if (i == j) continue;
-			int otherNpoints = geometries.at(j)->coords.size();
+			int otherNpoints = static_cast<int>(geometries.at(j)->coords.size());
 			AABB otherAabb = geometries[j]->getAABB();
-			vec3 differenceOfDiagonals = diagonal - otherAabb.getDiagonal();
-			vec3 otherGravCenter = geometries[i]->getCenterOfGravity();
-			vec3 otherAritCenter = otherAabb.getArithmeticCenter();
-			vec3 differenceOfGravCenters = vectorToGravCenter - (otherGravCenter - otherAritCenter);
-			if (nPoints == otherNpoints && differenceOfDiagonals.len2() < epsilon && differenceOfGravCenters.len2() < epsilon) {
-				std::cout << i << " " << j << std::endl;
+			//if (i == 13) {
+			//	std::cout << "breakPoint" << std::endl;
+			//}
+			if (nPoints == otherNpoints && diagonal.areEqual(otherAabb.getDiagonal()) && vectorToGravCenter.areEqual(geometries[j]->getCenterOfGravity() - otherAabb.getArithmeticCenter())) {
+				bool addAsNewConnection = true;
+				for (size_t k = 0; k < geoPairs.size(); k++)
+				{
+					if (geoPairs[k].second == i) {
+						addAsNewConnection = false;
+					}
+				}
+				if(addAsNewConnection)
+					geoPairs.push_back(std::pair<int,int>(i,j));
 			}
 		}
+	}
+}
+
+void Scene::findAndUseDuplicateGeometry() {
+	std::vector<std::pair<int, int>> geoPairs;
+	findDuplicateGeometry(geoPairs);
+	for (size_t i = 0; i < geoPairs.size(); i++)
+	{
+		std::cout << geoPairs[i].first << " " << geoPairs[i].second << std::endl;
+		static_cast<TransformNode*>(geometries[geoPairs[i].second]->parent->parent)->translation += (geometries[geoPairs[i].second]->getAABB().min - geometries[geoPairs[i].first]->getAABB().min);
+		geometries[geoPairs[i].second]->parent->usesOtherGeometry = true;
+		geometries[geoPairs[i].second]->parent->geometry = geometries[geoPairs[i].first];
 	}
 
 }
 
+
 void Scene::findSimilarObjects(Scene * otherScene) {
 	std::vector<std::pair<Geometry*, Geometry*>> geoPairs;
-	float epsilon = 0.001;
+	float epsilon = 0.001f;
 	for (size_t i = 0; i < geometries.size(); i++)
 	{
-		int nPoints = (int)geometries.at(i)->coords.size();
+		int nPoints = static_cast<int>(geometries.at(i)->coords.size());
 		AABB aabb = geometries[i]->getAABB();
 		vec3 diagonal = aabb.getDiagonal();
-		vec3 gravCenter = geometries[i]->getCenterOfGravity();
-		vec3 aritCenter = aabb.getArithmeticCenter();
-		vec3 vectorToGravCenter = (gravCenter - aritCenter);
+		vec3 vectorToGravCenter = (geometries[i]->getCenterOfGravity() - aabb.getArithmeticCenter());
 		for (size_t j = 0; j < otherScene->geometries.size(); j++)
 		{
-			int otherNpoints = otherScene->geometries.at(j)->coords.size();
+			int otherNpoints = static_cast<int>(otherScene->geometries.at(j)->coords.size());
 			AABB otherAabb = otherScene->geometries[j]->getAABB();
-			vec3 differenceOfDiagonals = diagonal - otherAabb.getDiagonal();
-			vec3 otherGravCenter = otherScene->geometries[i]->getCenterOfGravity();
-			vec3 otherAritCenter = otherAabb.getArithmeticCenter();
-			vec3 differenceOfGravCenters = vectorToGravCenter - (otherGravCenter - otherAritCenter);
-			if (nPoints == otherNpoints && differenceOfDiagonals.len2() < epsilon && differenceOfGravCenters.len2() < epsilon) {
-				std::cout << i << " " << j << std::endl;
-				geoPairs.push_back(std::pair<Geometry*, Geometry*>(geometries.at(i), otherScene->geometries.at(j)));
+			if (nPoints == otherNpoints && diagonal.areEqual(otherAabb.getDiagonal()) && vectorToGravCenter.areEqual(otherScene->geometries[j]->getCenterOfGravity() - otherAabb.getArithmeticCenter())) {
+				//bool addAsNewConnection = true;
+				//for (size_t k = 0; k < geoPairs.size(); k++)
+				//{
+				//	if (geoPairs[k].second == otherScene->geometries[i]) {
+				//		addAsNewConnection = false;
+				//	}
+				//}
+				//if (addAsNewConnection) {
+					geoPairs.push_back(std::pair<Geometry*, Geometry*>(geometries.at(i), otherScene->geometries.at(j)));
+					std::cout << i << " " << j << std::endl;
+				//}
 			}
 		}
 	}
