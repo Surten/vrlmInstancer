@@ -45,6 +45,8 @@ private:
 
 	void parseTexCoordIndex(ShapeNode* shapeNode);
 
+	void parseSpotLight(LightNode* light);
+
 public:
 	bool lastWasNumber;
 
@@ -52,9 +54,11 @@ public:
 	std::vector<BaseNode*> * RootNodes;
 	std::vector<ShapeNode*> * ShapeNodes;
 	std::vector<Geometry*> * geometries;
+	std::vector<LightNode*> * lights;
 
 public:
-	VrmlParser(std::vector<BaseNode*> *AllNodes, std::vector<BaseNode*> *RootNodes, std::vector<ShapeNode*> *ShapeNodes, std::vector<Geometry*>* geometries);
+	VrmlParser(std::vector<BaseNode*> *AllNodes, std::vector<BaseNode*> *RootNodes,
+		std::vector<ShapeNode*> *ShapeNodes, std::vector<Geometry*>* geometries, std::vector<LightNode*>* lights);
 	void parseFile(const char* vrlmFileName);
 };
 

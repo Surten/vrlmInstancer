@@ -76,6 +76,17 @@ void Scene::findAndUseDuplicateGeometry() {
 		geometries[geoPairs[i].second]->parent->usesOtherGeometry = true;
 		geometries[geoPairs[i].second]->parent->geometry = geometries[geoPairs[i].first];
 	}
+	int lastUsedIndex = 0;
+	for (size_t i = 0; i < geometries.size(); i++)
+	{
+		if (geometries[i]->parent->usesOtherGeometry) {
+			delete(geometries[i]);
+		}
+		else {
+			geometries[lastUsedIndex++] = geometries[i];
+		}
+	}
+	geometries.resize(lastUsedIndex);
 
 }
 
@@ -94,20 +105,17 @@ void Scene::findSimilarObjects(Scene * otherScene) {
 			int otherNpoints = static_cast<int>(otherScene->geometries.at(j)->coords.size());
 			AABB otherAabb = otherScene->geometries[j]->getAABB();
 			if (nPoints == otherNpoints && diagonal.areEqual(otherAabb.getDiagonal()) && vectorToGravCenter.areEqual(otherScene->geometries[j]->getCenterOfGravity() - otherAabb.getArithmeticCenter())) {
-				//bool addAsNewConnection = true;
-				//for (size_t k = 0; k < geoPairs.size(); k++)
-				//{
-				//	if (geoPairs[k].second == otherScene->geometries[i]) {
-				//		addAsNewConnection = false;
-				//	}
-				//}
-				//if (addAsNewConnection) {
-					geoPairs.push_back(std::pair<Geometry*, Geometry*>(geometries.at(i), otherScene->geometries.at(j)));
-					std::cout << i << " " << j << std::endl;
-				//}
+				geoPairs.push_back(std::pair<Geometry*, Geometry*>(geometries.at(i), otherScene->geometries.at(j)));
 			}
 		}
 	}
+	for (size_t i = 0; i < geoPairs.size(); i++)
+	{
+		std::cout << geoPairs[i].first->name << " " << geoPairs[i].second->name << std::endl;
+		geoPairs[i].second->textureCoords = geoPairs[i].first->textureCoords;
+		geoPairs[i].second->facesTextureIndex = geoPairs[i].first->facesTextureIndex;
+	}
+
 
 }
 

@@ -3,7 +3,7 @@
 #include <vector>
 #include "dataStructs.h"
 
-enum NodeTypes { Transform, Shape };
+enum NodeTypes { Transform, Shape, Light };
 
 class BaseNode {
 public:
@@ -101,4 +101,21 @@ public:
 	bool usesOtherGeometry = false;
 private:
 
+};
+
+class LightNode : public BaseNode {
+public:
+	float intensity;
+	vec3 color;
+	vec3 location;
+	vec3 direction;
+	float cutOffAngle;
+	float beamWidth;
+	bool on;
+	float radius;
+
+	LightNode() : BaseNode("", Light), intensity(0), color(), location(), direction(),
+		cutOffAngle(0), beamWidth(0), on(false), radius(0) {}
+
+private:
 };

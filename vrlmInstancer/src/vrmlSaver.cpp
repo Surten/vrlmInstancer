@@ -1,10 +1,12 @@
 #include "vrmlSaver.h"
 
-VrmlSaver::VrmlSaver(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>* RootNodes, std::vector<ShapeNode*>* ShapeNodes, std::vector<Geometry*>* geometries) {
+VrmlSaver::VrmlSaver(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>* RootNodes, 
+	std::vector<ShapeNode*>* ShapeNodes, std::vector<Geometry*>* geometries, std::vector<LightNode*>* lights) {
 	this->AllNodes = AllNodes;
 	this->RootNodes = RootNodes;
 	this->ShapeNodes = ShapeNodes;
 	this->geometries = geometries;
+	this->lights = lights;
 }
 
 
@@ -12,6 +14,7 @@ void VrmlSaver::saveLoadedToVrml(const char* outputFileName) {
 	out.open(outputFileName);
 	writeHeader();
 	writeNodesfromRoot();
+	out.close();
 }
 
 void VrmlSaver::writeHeader() {
@@ -35,6 +38,8 @@ void VrmlSaver::writeNodesfromRoot() {
 			writeTransformNode(static_cast<TransformNode*>(RootNodes->at(i)));
 		else if (RootNodes->at(i)->type == Shape)
 			writeShapeNode(static_cast<ShapeNode*>(RootNodes->at(i)));
+		else if (RootNodes->at(i)->type == Light)
+			writeLightNode(static_cast<LightNode*>(RootNodes->at(i)));
 	}
 }
 
@@ -74,7 +79,8 @@ void VrmlSaver::writeApperance(ShapeNode* node) {
 
 	out << leadingSpaces << "appearance Appearance {" << std::endl;
 	writeMaterial(node);
-	writeTexture(node);
+	if(node->textureFilePath != "")
+		writeTexture(node);
 	out << leadingSpaces << "}" << std::endl;
 }
 
@@ -106,9 +112,11 @@ void VrmlSaver::writeGeometryDEF(ShapeNode* node) {
 	//out << leadingSpaces << "  normalPerVertex " << ((node->geometry.normalPerVertex == true) ? "TRUE" : "FALSE") << std::endl;
 	//out << leadingSpaces << "  creaseAngle " << node->geometry.creaseAngle << std::endl;
 	writeGeometryCoords(node);
-	writeGeometryTexCoords(node);
+	if(node->geometry->textureCoords.size() > 0)
+		writeGeometryTexCoords(node);
 	writeGeometryIndices(node);
-	writeGeometryTextureIndices(node);
+	if(node->geometry->facesTextureIndex.size() > 0)
+		writeGeometryTextureIndices(node);
 	out << leadingSpaces << "}" << std::endl;
 
 }
@@ -276,3 +284,17 @@ void VrmlSaver::writeShapeNode(ShapeNode* node) {
 	out << leadingSpaces << "}" << std::endl;
 }
 
+void VrmlSaver::writeLightNode(LightNode* node) {
+	std::string leadingSpaces = getLeadingSpaces((4 * (node->nodeDepth)));
+	out << "DEF " << node->name << " SpotLight {" << std::endl;
+	out << "  intensity " << node->intensity << std::endl;
+	out << "  color " << node->color.x << " " << node->color.y << " " << node->color.z << std::endl;
+	out << "  location " << node->location.x << " " << node->location.y << " " << node->location.z << std::endl;
+	out << "  direction " << node->direction.x << " " << node->direction.y << " " << node->direction.z << std::endl;
+	out << "  cutOffAngle " << node->cutOffAngle << std::endl;
+	out << "  beamWidth " << node->beamWidth << std::endl;
+	out << "  on " << (node->on ? "TRUE" : "FALSE") << std::endl;
+	out << "  radius " << node->radius << std::endl;
+	out << "}" << std::endl;
+
+}

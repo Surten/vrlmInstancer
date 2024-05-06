@@ -46,6 +46,12 @@ int main()
                 inputFile = "files/skrinTextured.wrl";
             if (inputFile == "b")
                 inputFile = "files/0_fl_furniture.wrl";
+            if (inputFile == "c")
+                inputFile = "files/big/0-6_heating.WRL";
+            if (inputFile == "d")
+                inputFile = "files/big/0-6_lamps.WRL";
+            if (inputFile == "e")
+                inputFile = "files/big/0-6_Lights.WRL";
 
             scene->loadSceneFromVrmlFile(inputFile);
             std::cout << "Loaded into a scene with index " << scenes.size() << std::endl;

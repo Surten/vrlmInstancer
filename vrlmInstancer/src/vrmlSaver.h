@@ -12,10 +12,12 @@ public:
 	std::vector<BaseNode*> * RootNodes;
 	std::vector<ShapeNode*> * ShapeNodes;
 	std::vector<Geometry*> * geometries;
+	std::vector<LightNode*> * lights;
 
 public:
 
-	VrmlSaver(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>* RootNodes, std::vector<ShapeNode*>* ShapeNodes, std::vector<Geometry*>* geometries);
+	VrmlSaver(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>* RootNodes,
+		std::vector<ShapeNode*>* ShapeNodes, std::vector<Geometry*>* geometries, std::vector<LightNode*>* lights);
 
 	void saveLoadedToVrml(const char* outputFileName);
 
@@ -40,4 +42,5 @@ private:
 	void writeGeometryIndices(ShapeNode* node);
 	void writeGeometryTextureIndices(ShapeNode* node);
 	void writeGeometryUSE(ShapeNode* node);
+	void writeLightNode(LightNode* lightNode);
 };

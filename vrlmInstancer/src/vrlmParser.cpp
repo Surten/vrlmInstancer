@@ -2,18 +2,21 @@
 
 #include "vrlmParser.h"
 
+
 //#define LOGSTRANSFORM
 //#define LOGSSHAPE
-#define LOGSGEOMETRY
+//#define LOGSGEOMETRY
 #define LOGS
 
 
 
-VrmlParser::VrmlParser(std::vector<BaseNode*> *AllNodes, std::vector<BaseNode*> *RootNodes, std::vector<ShapeNode*> *ShapeNodes, std::vector<Geometry*>* geometries) {
+VrmlParser::VrmlParser(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>* RootNodes, 
+    std::vector<ShapeNode*>* ShapeNodes, std::vector<Geometry*>* geometries, std::vector <LightNode*>* lights) {
     this->AllNodes = AllNodes;
     this->RootNodes = RootNodes;
     this->ShapeNodes = ShapeNodes;
     this->geometries = geometries;
+    this->lights = lights;
 
     lastWasNumber = false;
     n = 0;
@@ -71,6 +74,8 @@ void VrmlParser::parseNextNode() {
             parseDEF(nullptr);
         }
     }
+    std::cout << "done Parsing file" << std::endl;
+    vrlmFile.close();
 }
 
 
@@ -80,7 +85,7 @@ void VrmlParser::parseDEF(TransformNode* parent) {
     readSymbol();
 
     if (str != "Transform" && str != "," && str != "TimeSensor"
-        && str != "kwSpotLight" && str != "PointLight" && str != "Viewpoint"
+        && str != "SpotLight" && str != "PointLight" && str != "Viewpoint"
         && str != "NavigationInfo")
         //to determine if there is a name filter out all the possible node keywords, because I cannot think of better solution
     {
@@ -112,6 +117,27 @@ void VrmlParser::parseDEF(TransformNode* parent) {
         readSymbol();
         readSymbol();
         readSymbol();
+
+    }
+    else if (str == "SpotLight") {
+        LightNode* lightNode = new LightNode();
+        lightNode->name = name;
+        AllNodes->push_back(lightNode);
+        lights->push_back(lightNode);
+        if (parent == nullptr) {
+            RootNodes->push_back(lightNode);
+            lightNode->nodeDepth = 0;
+        }
+        else {
+            parent->children.push_back(lightNode);
+            lightNode->parent = parent;
+            lightNode->nodeDepth = parent->nodeDepth + 1;
+        }
+        parseSpotLight(lightNode);
+
+    }
+    else if (str == "PointLight") {
+
 
     }
 
@@ -471,4 +497,70 @@ void VrmlParser::parseChildren(TransformNode* parent) {
         else
             break;
     } while (true);
+}
+
+void VrmlParser::parseSpotLight(LightNode* light) {
+    readSymbol();
+    if (str[0] != '{') std::cout << "error: expected { at the start of light named " << light->name << std::endl;
+    
+    do {
+        readSymbol();
+        if (str == "intensity") {
+            readSymbol();
+            light->intensity = n;
+            continue;
+        }
+        else if (str == "color") {
+            readSymbol();
+            light->color.x = n;
+            readSymbol();
+            light->color.y = n;
+            readSymbol();
+            light->color.z = n;
+            continue;
+        }
+        else if (str == "location") {
+            readSymbol();
+            light->location.x = n;
+            readSymbol();
+            light->location.y = n;
+            readSymbol();
+            light->location.z = n;
+            continue;
+        }
+        else if (str == "direction") {
+            readSymbol();
+            light->direction.x = n;
+            readSymbol();
+            light->direction.y = n;
+            readSymbol();
+            light->direction.z = n;
+            continue;
+        }
+        if (str == "cutOffAngle") {
+            readSymbol();
+            light->cutOffAngle = n;
+            continue;
+        }
+        if (str == "beamWidth") {
+            readSymbol();
+            light->beamWidth = n;
+            continue;
+        }
+        if (str == "on") {
+            readSymbol();
+            str == "FALSE" ? light->on = false : light->on = true;
+            continue;
+        }
+        if (str == "radius") {
+            readSymbol();
+            light->radius = n;
+            continue;
+        }
+        else if (str[0] != '}')
+            std::cout << "error reading properties of light named " << light->name << std::endl;
+        else
+            break;
+    } while (true);
+
 }
