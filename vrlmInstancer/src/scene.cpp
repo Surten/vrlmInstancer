@@ -43,9 +43,8 @@ void Scene::findDuplicateGeometry(std::vector<std::pair<int, int>> & geoPairs) {
 		AABB aabb = geometries[i]->getAABB();
 		vec3 diagonal = aabb.getDiagonal();
 		vec3 vectorToGravCenter = geometries[i]->getCenterOfGravity() - aabb.getArithmeticCenter();
-		for (size_t j = 0; j < geometries.size(); j++)
+		for (size_t j = i+1; j < geometries.size(); j++)
 		{
-			if (i == j) continue;
 			int otherNpoints = static_cast<int>(geometries.at(j)->coords.size());
 			AABB otherAabb = geometries[j]->getAABB();
 			//if (i == 13) {
@@ -75,6 +74,12 @@ void Scene::findAndUseDuplicateGeometry() {
 		static_cast<TransformNode*>(geometries[geoPairs[i].second]->parent->parent)->translation += (geometries[geoPairs[i].second]->getAABB().min - geometries[geoPairs[i].first]->getAABB().min);
 		geometries[geoPairs[i].second]->parent->usesOtherGeometry = true;
 		geometries[geoPairs[i].second]->parent->geometry = geometries[geoPairs[i].first];
+		geometries[geoPairs[i].first]->otherShapeNodesUsingMe.push_back(geometries[geoPairs[i].second]->parent);
+		for (size_t j = 0; j < geometries[geoPairs[i].second]->otherShapeNodesUsingMe.size(); j++)
+		{
+			geometries[geoPairs[i].second]->otherShapeNodesUsingMe[j]->geometry = geometries[geoPairs[i].first];
+			geometries[geoPairs[i].first]->otherShapeNodesUsingMe.push_back(geometries[geoPairs[i].second]->otherShapeNodesUsingMe[j]);
+		}
 	}
 	int lastUsedIndex = 0;
 	for (size_t i = 0; i < geometries.size(); i++)

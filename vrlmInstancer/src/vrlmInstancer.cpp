@@ -45,11 +45,13 @@ int main()
             if (inputFile == "a")
                 inputFile = "files/skrinTextured.wrl";
             if (inputFile == "b")
-                inputFile = "files/0_fl_furniture.wrl";
+                inputFile = "files/big/0_fl_furniture.WRL";
+            if (inputFile == "f")
+                inputFile = "files/tableTextured.wrl";
             if (inputFile == "c")
                 inputFile = "files/big/0-6_heating.WRL";
             if (inputFile == "d")
-                inputFile = "files/big/0-6_lamps.WRL";
+                inputFile = "files/0-7_geometry.WRL";
             if (inputFile == "e")
                 inputFile = "files/big/0-6_Lights.WRL";
 

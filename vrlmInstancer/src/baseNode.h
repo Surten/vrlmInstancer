@@ -3,7 +3,7 @@
 #include <vector>
 #include "dataStructs.h"
 
-enum NodeTypes { Transform, Shape, Light };
+enum NodeTypes { Transform, Shape, Light, ViewPoint };
 
 class BaseNode {
 public:
@@ -116,6 +116,19 @@ public:
 
 	LightNode() : BaseNode("", Light), intensity(0), color(), location(), direction(),
 		cutOffAngle(0), beamWidth(0), on(false), radius(0) {}
+
+private:
+};
+
+class ViewPointNode : public BaseNode {
+public:
+	
+	vec3 position;
+	float orientation[4];
+	float fieldOfView;
+	std::string description;
+
+	ViewPointNode() : BaseNode("", ViewPoint), position(), fieldOfView(0), description("") {}
 
 private:
 };

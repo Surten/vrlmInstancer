@@ -136,8 +136,20 @@ void VrmlParser::parseDEF(TransformNode* parent) {
         parseSpotLight(lightNode);
 
     }
-    else if (str == "PointLight") {
-
+    else if (str == "Viewpoint") {
+        ViewPointNode* viewPointNode = new ViewPointNode();
+        viewPointNode->name = name;
+        AllNodes->push_back(viewPointNode);
+        if (parent == nullptr) {
+            RootNodes->push_back(viewPointNode);
+            viewPointNode->nodeDepth = 0;
+        }
+        else {
+            parent->children.push_back(viewPointNode);
+            viewPointNode->parent = parent;
+            viewPointNode->nodeDepth = parent->nodeDepth + 1;
+        }
+        parseViewPoint(viewPointNode);
 
     }
 
@@ -290,6 +302,7 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
             if (geometries->at(i)->name == str) {
                 shapeNode->geometry = geometries->at(i);
                 shapeNode->usesOtherGeometry = true;
+                shapeNode->geometry->otherShapeNodesUsingMe.push_back(shapeNode);
                 #ifdef LOGSGEOMETRY
                 std::cout << "Using geometry of " << str << std::endl;
                 #endif
@@ -328,15 +341,25 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
             readSymbol();
             geometry->normalPerVertex = (str == "TRUE") ? true : false;
         }
+        else if (str == "colorPerVertex") {
+            readSymbol();
+            geometry->colorPerVertex = (str == "TRUE") ? true : false;
+        }
         else if (str == "creaseAngle") {
             readSymbol();
             geometry->creaseAngle = n;
+        }
+        else if (str == "color") {
+            parseColor(shapeNode);
         }
         else if (str == "coord") {
             parseCoords(shapeNode);
         }
         else if (str == "texCoord") {
             parseTexCoords(shapeNode);
+        }
+        else if (str == "colorIndex") {
+            parseColorIndex(shapeNode);
         }
         else if (str == "coordIndex") {
             parseCoordIndex(shapeNode);
@@ -349,6 +372,30 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
         else
             break;
     } while (true);
+}
+
+void VrmlParser::parseColor(ShapeNode* shapeNode) {
+    //readSymbol();
+    //if (str != "Color") std::cout << "error: expected Color at the start of Color node " << std::endl;
+    //readSymbol();
+    //if (str[0] != '{') std::cout << "error: expected { at the start of Color node " << std::endl;
+    //readSymbol();
+    //if (str != "color") std::cout << "error: expected color at the start of Color node " << std::endl;
+    //readSymbol();
+    //if (str[0] != '[') std::cout << "error: expected [ at the start of Color node " << std::endl;
+    //do {
+    //    float vals[3];
+    //    for (int i = 0; i < 3; i++)
+    //    {
+    //        readSymbol();
+    //        if (str[0] == ']') break;
+    //        vals[i] = n;
+    //    }
+    //    shapeNode->geometry->coords.push_back(vec3(vals[0], vals[1], vals[2]));
+    //    readSymbol();
+    //} while (str[0] == ',' || str[0] == '[');
+    //readSymbol();
+    //if (str[0] != '}') std::cout << "error: expected } at the end of Coord node " << std::endl;
 }
 
 void VrmlParser::parseCoords(ShapeNode* shapeNode) {
@@ -405,6 +452,10 @@ void VrmlParser::parseTexCoords(ShapeNode* shapeNode) {
     } while (str[0] == ',' || str[0] == '[');
     readSymbol();
     if (str[0] != '}') std::cout << "error: expected } at the end of TexCoord node " << std::endl;
+}
+
+void VrmlParser::parseColorIndex(ShapeNode* shapeNode) {
+
 }
 
 void VrmlParser::parseCoordIndex(ShapeNode* shapeNode) {
@@ -563,4 +614,47 @@ void VrmlParser::parseSpotLight(LightNode* light) {
             break;
     } while (true);
 
+}
+
+void VrmlParser::parseViewPoint(ViewPointNode* viewPointNode) {
+    readSymbol();
+    if (str[0] != '{') std::cout << "error: expected { at the start of light named " << viewPointNode->name << std::endl;
+
+    do {
+        readSymbol();
+        if (str == "position") {
+            readSymbol();
+            viewPointNode->position.x = n;
+            readSymbol();
+            viewPointNode->position.y = n;
+            readSymbol();
+            viewPointNode->position.z = n;
+            continue;
+        }
+        else if (str == "orientation") {
+            readSymbol();
+            viewPointNode->orientation[0] = n;
+            readSymbol();
+            viewPointNode->orientation[1] = n;
+            readSymbol();
+            viewPointNode->orientation[2] = n;
+            readSymbol();
+            viewPointNode->orientation[3] = n;
+            continue;
+        }
+        if (str == "fieldOfView") {
+            readSymbol();
+            viewPointNode->fieldOfView = n;
+            continue;
+        }
+        if (str == "description") {
+            readSymbol();
+            viewPointNode->description = str;
+            continue;
+        }
+        else if (str[0] != '}')
+            std::cout << "error reading properties of viewPointNode named " << viewPointNode->name << std::endl;
+        else
+            break;
+    } while (true);
 }

@@ -37,15 +37,21 @@ private:
 
 	void parseTexture(ShapeNode* shapeNode);
 
+	void parseColor(ShapeNode* shapeNode);
+
 	void parseCoords(ShapeNode* shapeNode);
 
 	void parseTexCoords(ShapeNode* shapeNode);
 
+	void parseColorIndex(ShapeNode* shapeNode);
+	
 	void parseCoordIndex(ShapeNode* shapeNode);
 
 	void parseTexCoordIndex(ShapeNode* shapeNode);
 
 	void parseSpotLight(LightNode* light);
+
+	void parseViewPoint(ViewPointNode* viewPointNode);
 
 public:
 	bool lastWasNumber;

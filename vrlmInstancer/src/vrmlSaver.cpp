@@ -40,6 +40,9 @@ void VrmlSaver::writeNodesfromRoot() {
 			writeShapeNode(static_cast<ShapeNode*>(RootNodes->at(i)));
 		else if (RootNodes->at(i)->type == Light)
 			writeLightNode(static_cast<LightNode*>(RootNodes->at(i)));
+		else if (RootNodes->at(i)->type == ViewPoint)
+			writeViewPointNode(static_cast<ViewPointNode*>(RootNodes->at(i)));
+
 	}
 }
 
@@ -295,6 +298,17 @@ void VrmlSaver::writeLightNode(LightNode* node) {
 	out << "  beamWidth " << node->beamWidth << std::endl;
 	out << "  on " << (node->on ? "TRUE" : "FALSE") << std::endl;
 	out << "  radius " << node->radius << std::endl;
+	out << "}" << std::endl;
+
+}
+
+void VrmlSaver::writeViewPointNode(ViewPointNode* viewPointNode) {
+	std::string leadingSpaces = getLeadingSpaces((4 * (viewPointNode->nodeDepth)));
+	out << "DEF " << viewPointNode->name << " Viewpoint {" << std::endl;
+	out << "  position " << viewPointNode->position.x << " " << viewPointNode->position.y << " " << viewPointNode->position.z << std::endl;
+	out << "  orientation " << viewPointNode->orientation[0] << " " << viewPointNode->orientation[1] << " " << viewPointNode->orientation[2] << " " << viewPointNode->orientation[3] << std::endl;
+	out << "  fieldOfView " << viewPointNode->fieldOfView << std::endl;
+	out << "  description " << viewPointNode->description << std::endl;
 	out << "}" << std::endl;
 
 }

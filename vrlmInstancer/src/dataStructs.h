@@ -88,10 +88,12 @@ public:
     bool ccw;
     bool solid;
     bool normalPerVertex;
+    bool colorPerVertex;
     float creaseAngle;
     ShapeNode* parent;
+    std::vector<ShapeNode*> otherShapeNodesUsingMe;
     AABB aabb;
-    Geometry() : ccw(true), solid(true), normalPerVertex(true), creaseAngle(0.0f), aabb(){}
+    Geometry() : ccw(true), solid(true), normalPerVertex(true), creaseAngle(0.0f), aabb(), parent(nullptr){}
 
     void calculateAABB();
     AABB getAABB();

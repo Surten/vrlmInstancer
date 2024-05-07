@@ -43,4 +43,6 @@ private:
 	void writeGeometryTextureIndices(ShapeNode* node);
 	void writeGeometryUSE(ShapeNode* node);
 	void writeLightNode(LightNode* lightNode);
+	void writeViewPointNode(ViewPointNode* lightNode);
+
 };
