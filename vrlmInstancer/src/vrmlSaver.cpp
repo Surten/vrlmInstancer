@@ -1,4 +1,6 @@
 #include "vrmlSaver.h"
+#include <iomanip>
+#include <ctime> 
 
 VrmlSaver::VrmlSaver(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>* RootNodes, 
 	std::vector<ShapeNode*>* ShapeNodes, std::vector<Geometry*>* geometries, std::vector<LightNode*>* lights) {
@@ -21,7 +23,8 @@ void VrmlSaver::writeHeader() {
 	out << "#VRML V2.0 utf8" << std::endl;
 	out << std::endl;
 	out << "# Produced by VrmlInstancer program written by Josef Bacík as a part of his master thesis" << std::endl;
-	out << "# Time and date are not important yet, still TODO" << std::endl;
+
+	out << "# Time and date " << "TODO " << std::endl;
 	out << std::endl;
 }
 

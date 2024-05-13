@@ -14,7 +14,8 @@ public:
 	void geometryFun();
 	void writeOutGeometries();
 	void findAndUseDuplicateGeometry();
-	void findSimilarObjects(Scene* otherScene);
+	void findAndUseSameObjects(Scene* otherScene);
+	void findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*> scenes);
 
 
 private:

@@ -23,9 +23,12 @@ int main()
         std::cout << "1 - Load a VRML file (.wrl)" << std::endl;
         std::cout << "2 - Save a scene to a VRML file" << std::endl;
         std::cout << "3 - Write out all geometries of a scene" << std::endl;
-        std::cout << "4 - Try to find the same geometries in two different scenes" << std::endl;
-        std::cout << "5 - Find Geometry duplicates" << std::endl;
-        std::cout << "6 - Exit" << std::endl;
+        std::cout << "4 - Find Geometry duplicates" << std::endl;
+        std::cout << "5 - Find and use geometries from the second scene in the first scene" << std::endl;
+        std::cout << "6 - Find and use geometries from all the scenes in the given scene" << std::endl;
+        std::cout << "7 - Not implemented yet" << std::endl;
+        std::cout << "8 - Not implemented yet" << std::endl;
+        std::cout << "9 - Exit" << std::endl;
 
         char inputNumber = 0;
         std::cin >> inputNumber;
@@ -82,16 +85,27 @@ int main()
         case '4':
             std::cout << "The index of the scene: ";
             std::cin >> numOfScene;
-            std::cout << "The index of the other scene : ";
-            std::cin >> numOfOtherScene;
-            scenes.at(numOfScene)->findSimilarObjects(scenes.at(numOfOtherScene));
+            scenes.at(numOfScene)->findAndUseDuplicateGeometry();
             break;
         case '5':
             std::cout << "The index of the scene: ";
             std::cin >> numOfScene;
-            scenes.at(numOfScene)->findAndUseDuplicateGeometry();
+            std::cout << "The index of the other scene : ";
+            std::cin >> numOfOtherScene;
+            scenes.at(numOfScene)->findAndUseSameObjects(scenes.at(numOfOtherScene));
             break;
         case '6':
+            std::cout << "The index of the scene: ";
+            std::cin >> numOfScene;
+            scenes.at(numOfScene)->findAndUseSameObjectsFromOtherScenesInThisScene(scenes);
+            break;
+        case '7':
+
+            break;
+        case '8':
+
+            break;
+        case '9':
 
             return 0;
         }

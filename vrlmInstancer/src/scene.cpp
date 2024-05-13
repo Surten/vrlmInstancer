@@ -47,9 +47,6 @@ void Scene::findDuplicateGeometry(std::vector<std::pair<int, int>> & geoPairs) {
 		{
 			int otherNpoints = static_cast<int>(geometries.at(j)->coords.size());
 			AABB otherAabb = geometries[j]->getAABB();
-			//if (i == 13) {
-			//	std::cout << "breakPoint" << std::endl;
-			//}
 			if (nPoints == otherNpoints && diagonal.areEqual(otherAabb.getDiagonal()) && vectorToGravCenter.areEqual(geometries[j]->getCenterOfGravity() - otherAabb.getArithmeticCenter())) {
 				bool addAsNewConnection = true;
 				for (size_t k = 0; k < geoPairs.size(); k++)
@@ -96,7 +93,8 @@ void Scene::findAndUseDuplicateGeometry() {
 }
 
 
-void Scene::findSimilarObjects(Scene * otherScene) {
+void Scene::findAndUseSameObjects(Scene * otherScene) {
+	if (this == otherScene) return;
 	std::vector<std::pair<Geometry*, Geometry*>> geoPairs;
 	float epsilon = 0.001f;
 	for (size_t i = 0; i < geometries.size(); i++)
@@ -122,5 +120,11 @@ void Scene::findSimilarObjects(Scene * otherScene) {
 	}
 
 
+}
+
+void Scene::findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*> scenes) {
+	for (auto scene : scenes) {
+		findAndUseSameObjects(scene);
+	}
 }
 
