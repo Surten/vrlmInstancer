@@ -13,7 +13,6 @@ private:
 
 
 private:
-	void loadFile(const char* vrlmFileName);
 
 	void skipComments();
 
@@ -65,7 +64,7 @@ public:
 public:
 	VrmlParser(std::vector<BaseNode*> *AllNodes, std::vector<BaseNode*> *RootNodes,
 		std::vector<ShapeNode*> *ShapeNodes, std::vector<Geometry*>* geometries, std::vector<LightNode*>* lights);
-	void parseFile(const char* vrlmFileName);
+	bool parseFile(const char* vrlmFileName);
 };
 
 

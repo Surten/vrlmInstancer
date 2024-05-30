@@ -7,9 +7,10 @@
 class Scene {
 
 public:
-	Scene() : vrmlParser(&AllNodes, &RootNodes, &ShapeNodes, &geometries, &lights), vrmlSaver(&AllNodes, &RootNodes, &ShapeNodes, &geometries, &lights){}
-	
-	void loadSceneFromVrmlFile(std::string filePath);
+	Scene(std::string name) : name(name), vrmlParser(&AllNodes, &RootNodes, &ShapeNodes, &geometries, &lights), vrmlSaver(&AllNodes, &RootNodes, &ShapeNodes, &geometries, &lights){}
+	~Scene();
+
+	bool loadSceneFromVrmlFile(std::string filePath);
 	void saveSceneToVrmlFile(std::string outFilePath);
 	void geometryFun();
 	void writeOutGeometries();
@@ -17,6 +18,7 @@ public:
 	void findAndUseSameObjects(Scene* otherScene);
 	void findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*> scenes);
 
+	std::string name;
 
 private:
 	VrmlParser vrmlParser;

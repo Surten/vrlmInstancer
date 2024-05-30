@@ -222,7 +222,13 @@ void VrmlSaver::writeGeometryIndices(ShapeNode* node)
 		for (j = 0; j < numOfIndicesPerLine; j++)
 		{
 			int a = (i * numOfIndicesPerLine) + j;
-			out << node->geometry->facesPointsIndex[a].x << ", " << node->geometry->facesPointsIndex[a].y << ", " << node->geometry->facesPointsIndex[a].z << ", -1, ";
+			out << node->geometry->facesPointsIndex[a].x << ", " << node->geometry->facesPointsIndex[a].y << ", " << node->geometry->facesPointsIndex[a].z << ", -1";
+			if (a + 1 == node->geometry->facesPointsIndex.size()) {
+				out << "] ";
+			}
+			else {
+				out << ", ";
+			}
 
 		}
 		out << std::endl;
@@ -231,13 +237,17 @@ void VrmlSaver::writeGeometryIndices(ShapeNode* node)
 	for (j = 0; j < numOfIndicesPerLine; j++)
 	{
 		int a = (i * numOfIndicesPerLine) + j;
-		if (a < node->geometry->facesPointsIndex.size())
-			out << node->geometry->facesPointsIndex[a].x << ", " << node->geometry->facesPointsIndex[a].y << ", " << node->geometry->facesPointsIndex[a].z << ", -1, ";
-
+		if (a < node->geometry->facesPointsIndex.size()) {
+			out << node->geometry->facesPointsIndex[a].x << ", " << node->geometry->facesPointsIndex[a].y << ", " << node->geometry->facesPointsIndex[a].z << ", -1";
+			if (a + 1 == node->geometry->facesPointsIndex.size()) {
+				out << "] ";
+			}
+			else {
+				out << ", ";
+			}
+		}
 	}
 	out << std::endl;
-
-	out << leadingSpaces << "]" << std::endl;
 }
 
 void VrmlSaver::writeGeometryTextureIndices(ShapeNode* node)
@@ -252,8 +262,13 @@ void VrmlSaver::writeGeometryTextureIndices(ShapeNode* node)
 		for (j = 0; j < numOfIndicesPerLine; j++)
 		{
 			int a = (i * numOfIndicesPerLine) + j;
-			out << node->geometry->facesTextureIndex[a].x << ", " << node->geometry->facesTextureIndex[a].y << ", " << node->geometry->facesTextureIndex[a].z << ", -1, ";
-
+			out << node->geometry->facesTextureIndex[a].x << ", " << node->geometry->facesTextureIndex[a].y << ", " << node->geometry->facesTextureIndex[a].z << ", -1";
+			if (a + 1 == node->geometry->facesTextureIndex.size()) {
+				out << "] ";
+			}
+			else {
+				out << ", ";
+			}
 		}
 		out << std::endl;
 	}
@@ -261,13 +276,17 @@ void VrmlSaver::writeGeometryTextureIndices(ShapeNode* node)
 	for (j = 0; j < numOfIndicesPerLine; j++)
 	{
 		int a = (i * numOfIndicesPerLine) + j;
-		if (a < node->geometry->facesTextureIndex.size())
-			out << node->geometry->facesTextureIndex[a].x << ", " << node->geometry->facesTextureIndex[a].y << ", " << node->geometry->facesTextureIndex[a].z << ", -1, ";
-
+		if (a < node->geometry->facesTextureIndex.size()) {
+			out << node->geometry->facesTextureIndex[a].x << ", " << node->geometry->facesTextureIndex[a].y << ", " << node->geometry->facesTextureIndex[a].z << ", -1";
+			if (a + 1 == node->geometry->facesTextureIndex.size()) {
+				out << "] ";
+			}
+			else {
+				out << ", ";
+			}
+		}
 	}
 	out << std::endl;
-
-	out << leadingSpaces << "]" << std::endl;
 }
 
 void VrmlSaver::writeGeometryUSE(ShapeNode* node) {

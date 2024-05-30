@@ -23,14 +23,6 @@ VrmlParser::VrmlParser(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>*
 }
 
 
-void VrmlParser::loadFile(const char* vrlmFileName) {
-    vrlmFile.open(vrlmFileName);
-    if (!vrlmFile.is_open()) {
-        std::cout << "Input file wasn't open!";
-    }
-
-}
-
 void VrmlParser::skipComments() {
     char next;
     do { vrlmFile.get(next); } while (next != '\n');
@@ -43,7 +35,7 @@ void VrmlParser::readSymbol() {
         c = vrlmFile.peek();
         if (c == EOF)
         {
-            std::cout << "End Of File" << std::endl;
+            //std::cout << "End Of File" << std::endl;
             return;
         }
         if (c == '#') skipComments();
@@ -62,9 +54,14 @@ void VrmlParser::readSymbol() {
 
 }
 
-void VrmlParser::parseFile(const char* vrlmFileName) {
-    loadFile(vrlmFileName);
+bool VrmlParser::parseFile(const char* vrlmFileName) {
+    vrlmFile.open(vrlmFileName);
+    if (!vrlmFile.is_open()) {
+        std::cout << "Input file wasn't open!";
+        return false;
+    }
     parseNextNode();
+    return true;
 }
 
 void VrmlParser::parseNextNode() {
@@ -74,7 +71,7 @@ void VrmlParser::parseNextNode() {
             parseDEF(nullptr);
         }
     }
-    std::cout << "done Parsing file" << std::endl;
+    //std::cout << "done Parsing file" << std::endl;
     vrlmFile.close();
 }
 
@@ -412,14 +409,15 @@ void VrmlParser::parseCoords(ShapeNode* shapeNode) {
     readSymbol();
     if (str[0] != '[') std::cout << "error: expected [ at the start of Coord node " << std::endl;
     do {
-        float vals[3];
-        for (int i = 0; i < 3; i++)
-        {
-            readSymbol();
-            if (str[0] == ']') break;
-            vals[i] = n;
-        }
-        shapeNode->geometry->coords.push_back(vec3(vals[0], vals[1], vals[2]));
+        readSymbol();
+        if (str[0] == ']') break;
+        float x = n;
+        readSymbol();
+        float y = n;
+        readSymbol();
+        float z = n;
+        
+        shapeNode->geometry->coords.push_back(vec3(x, y, z));
         readSymbol();
     } while (str[0] == ',' || str[0] == '[');
      readSymbol();
@@ -440,14 +438,13 @@ void VrmlParser::parseTexCoords(ShapeNode* shapeNode) {
     readSymbol();
     if (str[0] != '[') std::cout << "error: expected [ at the start of TexCoord node " << std::endl;
     do {
-        float vals[] = { 0,0};
-        for (int i = 0; i < 2; i++)
-        {
-            readSymbol();
-            if (str[0] == ']') break;
-            vals[i] = n;
-        }
-        shapeNode->geometry->textureCoords.push_back(vec2(vals[0], vals[1]));
+        readSymbol();
+        if (str[0] == ']') return;
+        float u = n;
+        readSymbol();
+        if (str[0] == ']') return;
+        float v = n;
+        shapeNode->geometry->textureCoords.push_back(vec2(u, v));
         readSymbol();
     } while (str[0] == ',' || str[0] == '[');
     readSymbol();
@@ -466,13 +463,14 @@ void VrmlParser::parseCoordIndex(ShapeNode* shapeNode) {
         for (int i = 0; i < 3; i++)
         {
             readSymbol();
-            if (str[0] == ']') break;
+            if (str[0] == ']') return;
             vals[i] = n;
             readSymbol(); // read comma
         }
         shapeNode->geometry->facesPointsIndex.push_back(vec3i(vals[0], vals[1], vals[2]));
         readSymbol(); // read -1
         readSymbol(); // read comma
+        if (str[0] == ']') break;
     } while (str[0] == ',' || str[0] == '[');
 }
 
@@ -484,13 +482,14 @@ void VrmlParser::parseTexCoordIndex(ShapeNode* shapeNode) {
         for (int i = 0; i < 3; i++)
         {
             readSymbol();
-            if (str[0] == ']') break;
+            if (str[0] == ']') return;
             vals[i] = n;
             readSymbol(); // read comma
         }
         shapeNode->geometry->facesTextureIndex.push_back(vec3i(vals[0], vals[1], vals[2]));
         readSymbol(); // read -1
         readSymbol(); // read comma
+        if (str[0] == ']') break;
     } while (str[0] == ',' || str[0] == '[');
 }
 

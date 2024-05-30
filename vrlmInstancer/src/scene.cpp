@@ -2,8 +2,18 @@
 #include <iomanip>
 #include <algorithm>
 
-void Scene::loadSceneFromVrmlFile(std::string filePath) {
-	vrmlParser.parseFile(filePath.c_str());
+
+Scene::~Scene() {
+	for (auto node : AllNodes) {
+		delete node;
+	}
+	for (auto geometry : geometries) {
+		delete geometry;
+	}
+}
+
+bool Scene::loadSceneFromVrmlFile(std::string filePath) {
+	return vrmlParser.parseFile(filePath.c_str());
 }
 
 void Scene::saveSceneToVrmlFile(std::string outFilePath) {
@@ -65,9 +75,9 @@ void Scene::findDuplicateGeometry(std::vector<std::pair<int, int>> & geoPairs) {
 void Scene::findAndUseDuplicateGeometry() {
 	std::vector<std::pair<int, int>> geoPairs;
 	findDuplicateGeometry(geoPairs);
+	
 	for (size_t i = 0; i < geoPairs.size(); i++)
 	{
-		std::cout << geoPairs[i].first << " " << geoPairs[i].second << std::endl;
 		static_cast<TransformNode*>(geometries[geoPairs[i].second]->parent->parent)->translation += (geometries[geoPairs[i].second]->getAABB().min - geometries[geoPairs[i].first]->getAABB().min);
 		geometries[geoPairs[i].second]->parent->usesOtherGeometry = true;
 		geometries[geoPairs[i].second]->parent->geometry = geometries[geoPairs[i].first];
@@ -79,6 +89,7 @@ void Scene::findAndUseDuplicateGeometry() {
 		}
 	}
 	int lastUsedIndex = 0;
+	std::cout << "Reduced the number of geometries from " << geometries.size();
 	for (size_t i = 0; i < geometries.size(); i++)
 	{
 		if (geometries[i]->parent->usesOtherGeometry) {
@@ -89,6 +100,7 @@ void Scene::findAndUseDuplicateGeometry() {
 		}
 	}
 	geometries.resize(lastUsedIndex);
+	std::cout << " to " << geometries.size() << std::endl;
 
 }
 
@@ -114,9 +126,15 @@ void Scene::findAndUseSameObjects(Scene * otherScene) {
 	}
 	for (size_t i = 0; i < geoPairs.size(); i++)
 	{
-		std::cout << geoPairs[i].first->name << " " << geoPairs[i].second->name << std::endl;
-		geoPairs[i].second->textureCoords = geoPairs[i].first->textureCoords;
-		geoPairs[i].second->facesTextureIndex = geoPairs[i].first->facesTextureIndex;
+		//std::cout << geoPairs[i].second->name << " " << geoPairs[i].first->name << std::endl;
+		geoPairs[i].first->textureCoords = geoPairs[i].second->textureCoords;
+		geoPairs[i].first->facesTextureIndex = geoPairs[i].second->facesTextureIndex;
+		geoPairs[i].first->parent->textureFilePath = geoPairs[i].second->parent->textureFilePath;
+		geoPairs[i].first->parent->textureType = geoPairs[i].second->parent->textureType;
+		for (size_t j = 0; j < geoPairs[i].first->otherShapeNodesUsingMe.size(); j++) {
+			geoPairs[i].first->otherShapeNodesUsingMe[j]->textureFilePath = geoPairs[i].second->parent->textureFilePath;
+			geoPairs[i].first->otherShapeNodesUsingMe[j]->textureType = geoPairs[i].second->parent->textureType;
+		}
 	}
 
 
