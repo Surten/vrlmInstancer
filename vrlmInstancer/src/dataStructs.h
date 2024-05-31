@@ -4,7 +4,9 @@
 #include <cmath>
 
 
-
+/// <summary>
+/// Ordinary vec3 class with overloaded operators and some common methods
+/// </summary>
 class vec3 {
 public:
     float x, y, z;
@@ -42,7 +44,9 @@ public:
 };
 std::ostream& operator<<(std::ostream& os, const vec3& obj);
 
-
+/// <summary>
+/// Ordinary vec2 class with overloaded operators and some common methods
+/// </summary>
 class vec2 {
 public:
     float x, y;
@@ -50,6 +54,9 @@ public:
     vec2() { x = y = 0; }
     vec2(float x, float y) : x(x), y(y) {}
 };
+/// <summary>
+/// Ordinary vec3 for integers class with overloaded operators and some common methods
+/// </summary>
 class vec3i {
 public:
     int x, y, z;
@@ -58,7 +65,13 @@ public:
     vec3i(int x, int y, int z) : x(x), y(y), z(z) {}
 };
 
-
+/// <summary>
+/// AABB class for Axis-aligned bounding box
+/// We have an implementation ensuring that we always have minimal 
+/// coordinates in min variable and vice versa
+/// Methods are for building up AABB by unifying it with a point or AABB
+/// Other methods return basic informations about the AABB
+/// </summary>
 class AABB {
 public:
     vec3 min, max;
@@ -73,8 +86,18 @@ public:
     vec3 getDiagonal();
     vec3 getArithmeticCenter();
 };
+
+//we need this to remember the parent Shape node in the geometry
 class ShapeNode;
 
+
+/// <summary>
+/// Contains a single mesh, with optional normals and texture coordinates
+/// Has some bool variables similar to what can be set inside VRML files
+/// Name serves as Identifier for instancing
+/// otherShapeNodesUsingMe is an array of all Shape nodes that have reference to this geometry except for the direct parent
+/// aabb stores the AABB of the entire mesh so that we will not need to calculate it again if we ask for it
+/// </summary>
 class Geometry {
 public:
     std::vector<vec3> coords;
@@ -92,19 +115,27 @@ public:
     float creaseAngle;
     ShapeNode* parent;
     std::vector<ShapeNode*> otherShapeNodesUsingMe;
-    AABB aabb;
     Geometry() : ccw(true), solid(true), normalPerVertex(true), creaseAngle(0.0f), aabb(), parent(nullptr){}
 
-    void calculateAABB();
+public:
+    // calculate AABB if needed and return it
     AABB getAABB();
 
+    // get center of gravity of the mesh, calculated with area of triangles as mass
     vec3 getCenterOfGravity();
+
 private:
+    void calculateAABB();
+    AABB aabb;
     float triangleArea(vec3 A, vec3 B, vec3 C);
     vec3 getMidPoint(vec3 a, vec3 b);
     vec3 getWeightedMidPoint(vec3 a, float massA, vec3 b, float massB);
 };
 
+
+/// <summary>
+/// Simple class holding the information about Material
+/// </summary>
 class Material {
 public:
     Material();

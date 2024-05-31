@@ -45,7 +45,7 @@ void Scene::writeOutGeometries() {
 	}
 }
 
-void Scene::findDuplicateGeometry(std::vector<std::pair<int, int>> & geoPairs) {
+void Scene::findIdenticalGeometry(std::vector<std::pair<int, int>> & geoPairs) {
 
 	for (size_t i = 0; i < geometries.size(); i++)
 	{
@@ -72,9 +72,9 @@ void Scene::findDuplicateGeometry(std::vector<std::pair<int, int>> & geoPairs) {
 	}
 }
 
-void Scene::findAndUseDuplicateGeometry() {
+void Scene::findAndUseIdenticalGeometry() {
 	std::vector<std::pair<int, int>> geoPairs;
-	findDuplicateGeometry(geoPairs);
+	findIdenticalGeometry(geoPairs);
 	
 	for (size_t i = 0; i < geoPairs.size(); i++)
 	{

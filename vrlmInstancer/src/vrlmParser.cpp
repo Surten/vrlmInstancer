@@ -31,17 +31,17 @@ void VrmlParser::skipComments() {
 void VrmlParser::readSymbol() {
     int c;
     do {
-        vrlmFile >> std::ws; // eat leading spaces
-        c = vrlmFile.peek();
+        vrlmFile >> std::ws;        // eat leading spaces
+        c = vrlmFile.peek();        // see the next symbol to know what to do with it
         if (c == EOF)
         {
             //std::cout << "End Of File" << std::endl;
             return;
         }
-        if (c == '#') skipComments();
-    } while (static_cast<char>(c) == '#');
+        if (c == '#') skipComments();   // if there are comments, skip them
+    } while (static_cast<char>(c) == '#'); // there can be more consecutive lines of comments
 
-    if (std::isdigit(c) || c == '-')
+    if (std::isdigit(c) || c == '-')    // determine if the next symbol is a number or a string
     {
         vrlmFile >> n;
         lastWasNumber = true;
@@ -65,14 +65,14 @@ bool VrmlParser::parseFile(const char* vrlmFileName) {
 }
 
 void VrmlParser::parseNextNode() {
-    while (!vrlmFile.eof()) {
+    while (!vrlmFile.eof()) {   // read all root nodes
         readSymbol();
-        if (str == "DEF") {
-            parseDEF(nullptr);
+        if (str == "DEF") {     // we always expect the root nodes to start with a DEF keyword
+            parseDEF(nullptr);  // there is no parent node, so we pass nullptr
         }
     }
     //std::cout << "done Parsing file" << std::endl;
-    vrlmFile.close();
+    vrlmFile.close();           // finish
 }
 
 
@@ -84,18 +84,21 @@ void VrmlParser::parseDEF(TransformNode* parent) {
     if (str != "Transform" && str != "," && str != "TimeSensor"
         && str != "SpotLight" && str != "PointLight" && str != "Viewpoint"
         && str != "NavigationInfo")
-        //to determine if there is a name filter out all the possible node keywords, because I cannot think of better solution
+        //to determine if there is a name filter out all the possible node keywords, because I cannot think of a better solution
     {
         name = str;
         readSymbol();
     }
 
     if (str == "Transform") {
+        // create a new TransformNode to store the data that will be read
         #ifdef LOGSTRANSFORM
         std::cout << "Reading Transform node " << name << std::endl;
         #endif
         TransformNode* transformNode = new TransformNode(name);
         AllNodes->push_back(transformNode);
+
+        // fill it up with info, different if it is a Root node
         if (parent == nullptr) {
             RootNodes->push_back(transformNode);
             transformNode->nodeDepth = 0;
@@ -105,9 +108,11 @@ void VrmlParser::parseDEF(TransformNode* parent) {
             transformNode->parent = parent;
             transformNode->nodeDepth = parent->nodeDepth + 1;
         }
+        // continue reading the file to fill up the Transform node
         parseTransformNode(transformNode);
     }
     else if (str == "TimeSensor") {
+        //we skip the TimeSensor for now, we will implemet it when the time comes
         readSymbol();
         readSymbol();
         readSymbol();
@@ -159,7 +164,7 @@ void VrmlParser::parseTransformNode(TransformNode* transformNode) {
     if (str[0] != '{') std::cout << "error: expected { at the start of Transform node named " << transformNode->name << std::endl;
 
     do {
-        readSymbol();
+        readSymbol();   //we expect a property or '}'
         // translation
         if (str == "translation") {
             readSymbol();
@@ -197,10 +202,10 @@ void VrmlParser::parseTransformNode(TransformNode* transformNode) {
         else if (str == "children") {
             parseChildren(transformNode);
         }
-        else if (str[0] != '}')
+        else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong
             std::cout << "error reading properties of Transform named " << transformNode->name << std::endl;
         else
-            break;
+            break;       // if we successfully found the '}' ending symbol, we end the loop
 
     } while (true);
 }
@@ -219,7 +224,7 @@ void VrmlParser::parseApperance(ShapeNode* shapeNode) {
         else if (str == "texture") {
             parseTexture(shapeNode);
         }
-        else if (str[0] != '}')
+        else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong
             std::cout << "error reading properties of Shape of node" << std::endl;
         else
             break;
@@ -262,10 +267,10 @@ void VrmlParser::parseMaterial(ShapeNode* shapeNode) {
             readSymbol();
             shapeNode->material.transparency = n;
         }
-        else if (str[0] != '}')
+        else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong
             std::cout << "error reading properties of Material of node" << std::endl;
         else
-            break;
+            break;      // if we successfully found the '}' ending symbol, we end the loop
 
     } while (true);
 }
@@ -282,10 +287,10 @@ void VrmlParser::parseTexture(ShapeNode* shapeNode) {
 
             shapeNode->textureFilePath = str.substr(1, str.size()-2);
         }
-        else if (str[0] != '}')
+        else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong
             std::cout << "error reading properties of Texture of node" << std::endl;
         else
-            break;
+            break;      // if we successfully found the '}' ending symbol, we end the loop
 
     } while (true);
 }
@@ -364,10 +369,10 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
         else if (str == "texCoordIndex") {
             parseTexCoordIndex(shapeNode);
         }
-        else if (str[0] != '}')
+        else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong
             std::cout << "error of Geometry node " << geometry->name << " error symbol " << str << std::endl;
         else
-            break;
+            break;      // if we successfully found the '}' ending symbol, we end the loop
     } while (true);
 }
 
@@ -511,10 +516,10 @@ void VrmlParser::parseShape(TransformNode* parent) {
         else if (str == "geometry") {
             parseGeometry(shapeNode);
         }
-        else if (str[0] != '}')
+        else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong
             std::cout << "error reading properties of Shape of node named " << parent->name << std::endl;
         else
-            break;
+            break;      // if we successfully found the '}' ending symbol, we end the loop
 
     } while (true);
 }
@@ -525,27 +530,27 @@ void VrmlParser::parseChildren(TransformNode* parent) {
 
     do {
         readSymbol();
-        if (str == "DEF") {
+        if (str == "DEF") {         // we foud a DEF keyword and need to determine what to parse, effectively doing recursion
             parseDEF(parent);
             continue;
         }
-        else if (str[0] == ',') {
+        else if (str[0] == ',') {   // comma is somehow valid
             continue;
         }
-        else if (str == "Shape") {
+        else if (str == "Shape") {  // we foud a Shape node to parse
             #ifdef LOGSSHAPE
             std::cout << "Reading Shape node of parent " << parent->name << std::endl;
             #endif
             parseShape(parent);
             continue;
         }
-        else if (str == "timeSensor") {
+        else if (str == "timeSensor") { //We never found one on depth greater than 0
             //timeSensor
         }
-        else if (str[0] != ']')
+        else if (str[0] != ']')     // if it does not contain a ']' any of the strings above, we assume there was someting wrong
             std::cout << "error reading properties of children of Transform node named " << parent->name << std::endl;
         else
-            break;
+            break;      // if we successfully found the ']' ending symbol, we end the loop
     } while (true);
 }
 
@@ -607,10 +612,10 @@ void VrmlParser::parseSpotLight(LightNode* light) {
             light->radius = n;
             continue;
         }
-        else if (str[0] != '}')
+        else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong
             std::cout << "error reading properties of light named " << light->name << std::endl;
         else
-            break;
+            break;      // if we successfully found the '}' ending symbol, we end the loop
     } while (true);
 
 }
@@ -651,9 +656,9 @@ void VrmlParser::parseViewPoint(ViewPointNode* viewPointNode) {
             viewPointNode->description = str;
             continue;
         }
-        else if (str[0] != '}')
+        else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong
             std::cout << "error reading properties of viewPointNode named " << viewPointNode->name << std::endl;
         else
-            break;
+            break;      // if we successfully found the '}' ending symbol, we end the loop
     } while (true);
 }

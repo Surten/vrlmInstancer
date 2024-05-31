@@ -15,8 +15,8 @@ void instanceFiles(std::vector<std::string> & fileNames) {
         std::cout << "Parsing file: " << namaeva << std::endl;
         Scene* scene = new Scene(namaeva.substr(5));
         if (!scene->loadSceneFromVrmlFile(namaeva)) std::cout << "error loading " << namaeva << std::endl;
-        std::cout << "Finding duplicate geometry of file: " << scene->name << std::endl;
-        scene->findAndUseDuplicateGeometry();
+        std::cout << "Finding identical geometry of file: " << scene->name << std::endl;
+        scene->findAndUseIdenticalGeometry();
         std::cout << "Saving file: " << scene->name << std::endl;
         scene->saveSceneToVrmlFile("VRMLUntex/" + scene->name);
         delete scene;
@@ -32,7 +32,7 @@ void applyTexturesFromFilesToOtherFiles(std::vector<std::string>& fileNames, std
             std::cout << "Error loading, could not find  " << fileName << std::endl;
         }
         std::cout << "Loaded  " << fileName << std::endl;
-        scene->findAndUseDuplicateGeometry();
+        scene->findAndUseIdenticalGeometry();
         scenes.push_back(scene);
     }
 
@@ -40,8 +40,8 @@ void applyTexturesFromFilesToOtherFiles(std::vector<std::string>& fileNames, std
         std::cout << "Automatic mode: Parsing file: " << fileName << std::endl;
         Scene* scene = new Scene(fileName.substr(5));
         if (!scene->loadSceneFromVrmlFile(fileName)) std::cout << "error loading " << fileName << std::endl;
-        std::cout << "Finding duplicate geometry of file: " << scene->name << std::endl;
-        scene->findAndUseDuplicateGeometry();
+        std::cout << "Finding identical geometry of file: " << scene->name << std::endl;
+        scene->findAndUseIdenticalGeometry();
         std::cout << "Finding same geometry in other files: " << scene->name << std::endl;
         scene->findAndUseSameObjectsFromOtherScenesInThisScene(scenes);
         std::cout << "Saving file: " << scene->name << std::endl;
@@ -213,7 +213,7 @@ int main()
         case '4':
             std::cout << "The index of the scene: ";
             std::cin >> numOfScene;
-            scenes.at(numOfScene)->findAndUseDuplicateGeometry();
+            scenes.at(numOfScene)->findAndUseIdenticalGeometry();
             break;
         case '5':
             std::cout << "The index of the scene: ";
@@ -229,7 +229,7 @@ int main()
             break;
         case '7':
             for (auto scene : scenes) {
-                scene->findAndUseDuplicateGeometry();
+                scene->findAndUseIdenticalGeometry();
             }
             break;
         case '8':
