@@ -7,7 +7,7 @@
 /// <summary>
 /// Class responsible for importing a VRML file
 /// Takes references for arrays of different nodes and geometries 
-///		from scene class and fills them up with data inside the loaded file
+///	from scene class and fills them up with data inside the loaded file
 /// </summary>
 class VrmlParser {
 

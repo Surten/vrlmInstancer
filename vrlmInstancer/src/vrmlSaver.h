@@ -6,6 +6,11 @@
 
 #include "baseNode.h"
 
+
+/// <summary>
+/// Responsible for exporting the data into a VRML 2.0 file
+/// Is created by and gets references to the data from Scene class
+/// </summary>
 class VrmlSaver {
 public:
 	std::vector<BaseNode*> * AllNodes;
@@ -19,6 +24,9 @@ public:
 	VrmlSaver(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>* RootNodes,
 		std::vector<ShapeNode*>* ShapeNodes, std::vector<Geometry*>* geometries, std::vector<LightNode*>* lights);
 
+	/// <summary>
+	/// Exports the scene data to a file  on a given path
+	/// </summary>
 	void saveLoadedToVrml(const char* outputFileName);
 
 private:

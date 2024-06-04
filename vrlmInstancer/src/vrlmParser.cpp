@@ -402,7 +402,8 @@ void VrmlParser::parseColor(ShapeNode* shapeNode) {
 
 void VrmlParser::parseCoords(ShapeNode* shapeNode) {
     readSymbol();
-    if (str != "DEF") std::cout << "error: expected DEF at the start of Coord node " << std::endl;
+    if (str != "DEF") 
+        std::cout << "error: expected DEF at the start of Coord node " << std::endl;
     readSymbol();
     std::string coordName = str;
     readSymbol();

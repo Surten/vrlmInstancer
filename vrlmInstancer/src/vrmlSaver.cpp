@@ -35,6 +35,9 @@ std::string VrmlSaver::getLeadingSpaces(int numberOfSpaces) {
 }
 
 void VrmlSaver::writeNodesfromRoot() {
+	
+	// we cycle through root nodes, expecting only Transform nodes to have children
+
 	for (size_t i = 0; i < RootNodes->size(); i++)
 	{
 		if (RootNodes->at(i)->type == Transform)
@@ -50,6 +53,7 @@ void VrmlSaver::writeNodesfromRoot() {
 }
 
 void VrmlSaver::writeChildren(TransformNode* node) {
+	// we write children of the given node, expecting only Transform nodes to have children
 	for (size_t i = 0; i < node->children.size(); i++)
 	{
 		if (node->children[i]->type == Transform)
@@ -140,6 +144,8 @@ void VrmlSaver::writeGeometryCoords(ShapeNode* node)
 		{
 			int a = (i * numOfPointsPerLine) + j;
 			out << node->geometry->coords[a].x << " " << node->geometry->coords[a].y << " " << node->geometry->coords[a].z;
+
+			// very dumb solve to how to write ']' instead of ',' after the last element
 			if (a + 1 == node->geometry->coords.size()) {
 				out << "] ";
 			}
@@ -155,6 +161,8 @@ void VrmlSaver::writeGeometryCoords(ShapeNode* node)
 		int a = (i * numOfPointsPerLine) + j;
 		if (a < node->geometry->coords.size()) {
 			out << node->geometry->coords[a].x << " " << node->geometry->coords[a].y << " " << node->geometry->coords[a].z;
+
+			// very dumb solve to how to write ']' instead of ',' after the last element
 			if (a + 1 == node->geometry->coords.size()) {
 				out << "] ";
 			}
@@ -182,6 +190,8 @@ void VrmlSaver::writeGeometryTexCoords(ShapeNode* node)
 		{
 			int a = (i * numOfPointsPerLine) + j;
 			out << node->geometry->textureCoords[a].x << " " << node->geometry->textureCoords[a].y;
+
+			// very dumb solve to how to write ']' instead of ',' after the last element
 			if (a + 1 == node->geometry->textureCoords.size()) {
 				out << "] ";
 			}
@@ -197,6 +207,8 @@ void VrmlSaver::writeGeometryTexCoords(ShapeNode* node)
 		int a = (i * numOfPointsPerLine) + j;
 		if (a < node->geometry->textureCoords.size()) {
 			out << node->geometry->textureCoords[a].x << " " << node->geometry->textureCoords[a].y;
+
+			// very dumb solve to how to write ']' instead of ',' after the last element
 			if (a + 1 == node->geometry->textureCoords.size()) {
 				out << "] ";
 			}
@@ -223,6 +235,8 @@ void VrmlSaver::writeGeometryIndices(ShapeNode* node)
 		{
 			int a = (i * numOfIndicesPerLine) + j;
 			out << node->geometry->facesPointsIndex[a].x << ", " << node->geometry->facesPointsIndex[a].y << ", " << node->geometry->facesPointsIndex[a].z << ", -1";
+			
+			// very dumb solve to how to write ']' instead of ',' after the last element
 			if (a + 1 == node->geometry->facesPointsIndex.size()) {
 				out << "] ";
 			}
@@ -239,6 +253,8 @@ void VrmlSaver::writeGeometryIndices(ShapeNode* node)
 		int a = (i * numOfIndicesPerLine) + j;
 		if (a < node->geometry->facesPointsIndex.size()) {
 			out << node->geometry->facesPointsIndex[a].x << ", " << node->geometry->facesPointsIndex[a].y << ", " << node->geometry->facesPointsIndex[a].z << ", -1";
+			
+			// very dumb solve to how to write ']' instead of ',' after the last element
 			if (a + 1 == node->geometry->facesPointsIndex.size()) {
 				out << "] ";
 			}
@@ -263,6 +279,8 @@ void VrmlSaver::writeGeometryTextureIndices(ShapeNode* node)
 		{
 			int a = (i * numOfIndicesPerLine) + j;
 			out << node->geometry->facesTextureIndex[a].x << ", " << node->geometry->facesTextureIndex[a].y << ", " << node->geometry->facesTextureIndex[a].z << ", -1";
+			
+			// very dumb solve to how to write ']' instead of ',' after the last element
 			if (a + 1 == node->geometry->facesTextureIndex.size()) {
 				out << "] ";
 			}
@@ -278,6 +296,8 @@ void VrmlSaver::writeGeometryTextureIndices(ShapeNode* node)
 		int a = (i * numOfIndicesPerLine) + j;
 		if (a < node->geometry->facesTextureIndex.size()) {
 			out << node->geometry->facesTextureIndex[a].x << ", " << node->geometry->facesTextureIndex[a].y << ", " << node->geometry->facesTextureIndex[a].z << ", -1";
+			
+			// very dumb solve to how to write ']' instead of ',' after the last element
 			if (a + 1 == node->geometry->facesTextureIndex.size()) {
 				out << "] ";
 			}
