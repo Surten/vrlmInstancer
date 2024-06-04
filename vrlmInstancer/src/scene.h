@@ -1,8 +1,7 @@
 #pragma once
 #include <vector>
+#include "baseNode.h"
 
-#include "vrlmParser.h"
-#include "vrmlSaver.h"
 
 /// <summary>
 /// Class containing the entirety of one loaded file
@@ -10,16 +9,20 @@
 /// We use name usually to remember the file name of the file loaded
 /// </summary>
 class Scene {
+public:
+
+	std::string name;
+	std::vector<BaseNode*> RootNodes;
+	std::vector<Geometry*> geometries;
+	std::vector<BaseNode*> AllNodes;
+	std::vector<ShapeNode*> ShapeNodes;
+	std::vector<LightNode*> lights;
+
 
 public:
-	Scene(std::string name) : name(name), vrmlParser(&AllNodes, &RootNodes, &ShapeNodes, &geometries, &lights), vrmlSaver(&AllNodes, &RootNodes, &ShapeNodes, &geometries, &lights){}
+	Scene(std::string name);
 	~Scene();
 
-	// loads a VRML file on the file path into the scene
-	bool loadSceneFromVrmlFile(std::string filePath);
-
-	// saves the VRML file into the outFilePath location
-	void saveSceneToVrmlFile(std::string outFilePath);
 
 	// just a helper method for testing different functionalities, we use it during debugging
 	void geometryFun();
@@ -47,17 +50,8 @@ public:
 	/// </summary>
 	void findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*> scenes);
 
-	std::string name;
-
 private:
-	VrmlParser vrmlParser;
-	VrmlSaver vrmlSaver;
 
-	std::vector<BaseNode*> AllNodes;
-	std::vector<BaseNode*> RootNodes;
-	std::vector<ShapeNode*> ShapeNodes;
-	std::vector<Geometry*> geometries;
-	std::vector<LightNode*> lights;
 
 private:
 	void findIdenticalGeometry(std::vector<std::pair<int, int>>& geoPairs);

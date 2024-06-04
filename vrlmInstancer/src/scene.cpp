@@ -1,7 +1,13 @@
 #include "scene.h"
+
+#include <iostream>
 #include <iomanip>
 #include <algorithm>
 
+
+Scene::Scene(std::string name) : name(name) {
+	
+}
 
 Scene::~Scene() {
 	for (auto node : AllNodes) {
@@ -12,13 +18,6 @@ Scene::~Scene() {
 	}
 }
 
-bool Scene::loadSceneFromVrmlFile(std::string filePath) {
-	return vrmlParser.parseFile(filePath.c_str());
-}
-
-void Scene::saveSceneToVrmlFile(std::string outFilePath) {
-	vrmlSaver.saveLoadedToVrml(outFilePath.c_str());
-}
 
 void Scene::geometryFun() {
 	for (int i = 0; i < ShapeNodes.size(); i++)

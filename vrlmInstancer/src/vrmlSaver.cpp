@@ -2,17 +2,13 @@
 #include <iomanip>
 #include <ctime> 
 
-VrmlSaver::VrmlSaver(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>* RootNodes, 
-	std::vector<ShapeNode*>* ShapeNodes, std::vector<Geometry*>* geometries, std::vector<LightNode*>* lights) {
-	this->AllNodes = AllNodes;
-	this->RootNodes = RootNodes;
-	this->ShapeNodes = ShapeNodes;
-	this->geometries = geometries;
-	this->lights = lights;
+VrmlSaver::VrmlSaver() {
+
 }
 
 
-void VrmlSaver::saveLoadedToVrml(const char* outputFileName) {
+void VrmlSaver::saveSceneToVrml(const char* outputFileName, Scene* scene) {
+	this->scene = scene;
 	out.open(outputFileName);
 	writeHeader();
 	writeNodesfromRoot();
@@ -38,16 +34,16 @@ void VrmlSaver::writeNodesfromRoot() {
 	
 	// we cycle through root nodes, expecting only Transform nodes to have children
 
-	for (size_t i = 0; i < RootNodes->size(); i++)
+	for (size_t i = 0; i < scene->RootNodes.size(); i++)
 	{
-		if (RootNodes->at(i)->type == Transform)
-			writeTransformNode(static_cast<TransformNode*>(RootNodes->at(i)));
-		else if (RootNodes->at(i)->type == Shape)
-			writeShapeNode(static_cast<ShapeNode*>(RootNodes->at(i)));
-		else if (RootNodes->at(i)->type == Light)
-			writeLightNode(static_cast<LightNode*>(RootNodes->at(i)));
-		else if (RootNodes->at(i)->type == ViewPoint)
-			writeViewPointNode(static_cast<ViewPointNode*>(RootNodes->at(i)));
+		if (scene->RootNodes.at(i)->type == Transform)
+			writeTransformNode(static_cast<TransformNode*>(scene->RootNodes.at(i)));
+		else if (scene->RootNodes.at(i)->type == Shape)
+			writeShapeNode(static_cast<ShapeNode*>(scene->RootNodes.at(i)));
+		else if (scene->RootNodes.at(i)->type == Light)
+			writeLightNode(static_cast<LightNode*>(scene->RootNodes.at(i)));
+		else if (scene->RootNodes.at(i)->type == ViewPoint)
+			writeViewPointNode(static_cast<ViewPointNode*>(scene->RootNodes.at(i)));
 
 	}
 }

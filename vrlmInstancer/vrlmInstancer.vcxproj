@@ -127,17 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\sceneManager.cpp" />
+    <ClCompile Include="src\pbrtExporter.cpp" />
     <ClCompile Include="src\dataStructs.cpp" />
     <ClCompile Include="src\scene.cpp" />
     <ClCompile Include="src\vrlmInstancer.cpp" />
-    <ClCompile Include="src\vrlmParser.cpp" />
+    <ClCompile Include="src\vrmlParser.cpp" />
     <ClCompile Include="src\vrmlSaver.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\sceneManager.h" />
+    <ClInclude Include="src\pbrtExporter.h" />
     <ClInclude Include="src\baseNode.h" />
     <ClInclude Include="src\dataStructs.h" />
     <ClInclude Include="src\scene.h" />
-    <ClInclude Include="src\vrlmParser.h" />
+    <ClInclude Include="src\vrmlParser.h" />
     <ClInclude Include="src\vrmlSaver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

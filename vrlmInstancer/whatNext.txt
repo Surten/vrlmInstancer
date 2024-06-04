@@ -1,0 +1,45 @@
+Tasks:
+	1. Finish unwrapping the models - solve the problematic fences and the geometry.wrl file somehow, 
+	   plus doors should be easy
+		a. Double check everything, I may have missed something, cause I am picking up data from three
+		different people over a few years, and there is a lot of rendomness in what is where. :(
+	2. Give a file structure to the vrml files, keep it tidy so that I don't get lost in it.
+		a. Also tidy up the software. Make it easy to use for my tasks, that will save a lot of time at the end
+		   of the thesis writing.
+	3. Write software to find and export non-unwrapped geometries.
+		a. Finish the unwrapping and record it for the Thesis results
+		b. Pretty straightforward implementation.
+	4. Get and use the appropriate textures instead of the checker board texture
+		a. This will require some smart implementation to assing the texture automatically based on
+		   names of the geometry. We will see how well it can be done.
+	5. Write a PBRT exporter
+		a. Since PBRT is not a realtime renderer, all of the geometry can be in one geometry.pbrt file
+			a1. due to the instancing we implemented, the resulting file can be really small.
+		b. Generate second file as main pbrt file, that just includes the entire geometry.pbrt file and defines
+		   the application wide things.
+		c. By doing this solution, we omit the dynamic objects somewhat, lets solve that in the next point
+	6. Solve the integration of dynamic objects from Linda
+	   We would require to omit the animated geometry from the general scene description and generate another
+	   file with the geometry moved due to animation. Also generating the animated files is not easy now, since
+	   I am implementing my own software and not using the one by Linda
+		a. First option is to use the software from Linda, but I would rather not to, cause it's old an not very
+		   well written. And connecting the two softwares could result in more work than writing my own solution.
+		   However, for doing the animation, there seems to be no other option than generate like 250 files
+		   and just running pbrt for each one.
+		b. Second option is to implement the dynamic objects in my software. But that seems a bit overkill,
+		   especially the workload will be too much. But it's doable, just not in the time frame I have,
+		   I need to live a life, not do thesis for like 600 hours. I really don't want to do this.
+		c. Third option is to say it was never a good idea to add this much complexity to a public
+		   dataset for research purposes and just not do it.
+			c1. But that is risky, since I will omit a part of the assignment.
+			c2. However, the software from Drahokoupil and Linda is too complex in my opinion,
+				and it should be easy to use the dataset for other researchers. Doing the animations
+				requires heavy use of said software. I can reason that the purpose of my work was 
+				to add the texturing coordinates and polish the dataset for future use and the given
+				solution for making dynamic objects breaks that purpose.
+		d. Fourth option would be to just half-ass it somehow, I have no idea how thou.
+	7. Something about modifying pbrt to render the texture properly, I still have to ask the consultant about that.
+		a. After reading a bit through PBRT book, I feel like if I have everything tidy and well prepared, this part
+		   will be super easy
+	8. Write a Mitsuba exporter
+		a. Haven't looked at that yet, I think that solving the pbrt problems will also solve the Mitsuba problems.

@@ -75,8 +75,9 @@ AABB Geometry::getAABB() {
 
 float Geometry::triangleArea(vec3 A, vec3 B, vec3 C) {
     float a = (A - B).len(), b = (B - C).len(), c = (C - A).len();
-    float s = (a + b + c) / 2;
-    return std::sqrt(s * (s - a) * (s - b) * (s - c));
+    float s = (a + b + c) * 0.5;
+    float temp = std::abs(s * (s - a) * (s - b) * (s - c));
+    return std::sqrtf(temp);;
 }
 
 vec3 Geometry::getMidPoint(vec3 a, vec3 b) {
@@ -89,7 +90,7 @@ vec3 Geometry::getMidPoint(vec3 a, vec3 b) {
 vec3 Geometry::getWeightedMidPoint(vec3 a, float massA, vec3 b, float massB) {
     vec3 ret = b - a;
     float x = massA + massB;
-
+    if (massB <= 0.000001) return ret;
     ret = ret * (massB / x);
     ret += a;
     return ret;
@@ -106,6 +107,9 @@ vec3 Geometry::getCenterOfGravity() {
         float mass = triangleArea(a, b, c);
         centerOfGrav = getWeightedMidPoint(centerOfGrav, massOfTheCenter, COTriangle, mass);
         massOfTheCenter += mass;
+        if (i == 546) {
+            int k = 0;
+        }
     }
     return centerOfGrav;
 }

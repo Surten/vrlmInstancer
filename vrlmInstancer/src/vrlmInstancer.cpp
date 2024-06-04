@@ -3,30 +3,31 @@
 #include <string>
 
 #include "scene.h"
+#include "sceneManager.h"
 
 
 
-#define MANUAL
+//#define MANUAL
 #define AUTOMATIC
 
 #ifdef AUTOMATIC
 /// <summary>
 /// loads all files in the given array and instances geometry for each of them, saving them to a given folder
 /// </summary>
-void instanceFiles(std::vector<std::string> & fileNames, std::string folderToSaveIn) {
-
-    for (auto namaeva : fileNames) {
-        std::cout << "Parsing file: " << namaeva << std::endl;
-        Scene* scene = new Scene(namaeva.substr(5));
-        if (!scene->loadSceneFromVrmlFile(namaeva)) std::cout << "error loading " << namaeva << std::endl;
-        std::cout << "Finding identical geometry of file: " << scene->name << std::endl;
-        scene->findAndUseIdenticalGeometry();
-        std::cout << "Saving file: " << scene->name << std::endl;
-        scene->saveSceneToVrmlFile(folderToSaveIn + "/" + scene->name);
-        delete scene;
-
-    }
-}
+//void instanceFiles(std::vector<std::string> & fileNames, std::string folderToSaveIn) {
+//    
+//    for (auto namaeva : fileNames) {
+//        std::cout << "Parsing file: " << namaeva << std::endl;
+//        Scene* scene = new Scene(namaeva.substr(5));
+//        if (!scene->loadSceneFromVrmlFile(namaeva)) std::cout << "error loading " << namaeva << std::endl;
+//        std::cout << "Finding identical geometry of file: " << scene->name << std::endl;
+//        scene->findAndUseIdenticalGeometry();
+//        std::cout << "Saving file: " << scene->name << std::endl;
+//        scene->saveSceneToVrmlFile(folderToSaveIn + "/" + scene->name);
+//        delete scene;
+//
+//    }
+//}
 
 /// <summary>
 /// loads all files in the second array, expecting texture coordinates in them,
@@ -34,47 +35,59 @@ void instanceFiles(std::vector<std::string> & fileNames, std::string folderToSav
 /// copies the texture coordinates from geometries in the second array to the appropriate
 /// geometries in the loaded file
 /// </summary>
-void applyTexturesFromFilesToOtherFiles(std::vector<std::string>& fileNames, std::vector<std::string>& otherFileNames) {
-    std::vector<Scene* > scenes;
-    for (auto fileName : otherFileNames) {
-        Scene* scene = new Scene(fileName);
-        if (!scene->loadSceneFromVrmlFile(fileName)) {
-            std::cout << "Error loading, could not find  " << fileName << std::endl;
-        }
-        std::cout << "Loaded  " << fileName << std::endl;
-        scene->findAndUseIdenticalGeometry();
-        scenes.push_back(scene);
-    }
-
-    for (auto fileName : fileNames) {
-        std::cout << "Automatic mode: Parsing file: " << fileName << std::endl;
-        Scene* scene = new Scene(fileName.substr(10));
-        if (!scene->loadSceneFromVrmlFile(fileName)) std::cout << "error loading " << fileName << std::endl;
-        std::cout << "Finding identical geometry of file: " << scene->name << std::endl;
-        scene->findAndUseIdenticalGeometry();
-        std::cout << "Finding same geometry in other files: " << scene->name << std::endl;
-        scene->findAndUseSameObjectsFromOtherScenesInThisScene(scenes);
-        std::cout << "Saving file: " << scene->name << std::endl;
-        scene->saveSceneToVrmlFile("VRML2/" + scene->name);
-        delete scene;
-    }
-}
+//void applyTexturesFromFilesToOtherFiles(std::vector<std::string>& fileNames, std::vector<std::string>& otherFileNames) {
+//    std::vector<Scene* > scenes;
+//    for (auto fileName : otherFileNames) {
+//        Scene* scene = new Scene(fileName);
+//        if (!scene->loadSceneFromVrmlFile(fileName)) {
+//            std::cout << "Error loading, could not find  " << fileName << std::endl;
+//        }
+//        std::cout << "Loaded  " << fileName << std::endl;
+//        scene->findAndUseIdenticalGeometry();
+//        scenes.push_back(scene);
+//    }
+//
+//    for (auto fileName : fileNames) {
+//        std::cout << "Automatic mode: Parsing file: " << fileName << std::endl;
+//        Scene* scene = new Scene(fileName.substr(10));
+//        if (!scene->loadSceneFromVrmlFile(fileName)) std::cout << "error loading " << fileName << std::endl;
+//        std::cout << "Finding identical geometry of file: " << scene->name << std::endl;
+//        scene->findAndUseIdenticalGeometry();
+//        std::cout << "Finding same geometry in other files: " << scene->name << std::endl;
+//        scene->findAndUseSameObjectsFromOtherScenesInThisScene(scenes);
+//        std::cout << "Saving file: " << scene->name << std::endl;
+//        scene->saveSceneToVrmlFile("VRML2/" + scene->name);
+//        delete scene;
+//    }
+//}
 
 /// <summary>
 /// just loads and saves the files, for testing of the parser and exporter
 /// </summary>
-void loadAndSave(std::vector<std::string>& fileNames) {
-    std::vector<Scene* > scenes;
-    for (auto fileName : fileNames) {
-        std::cout << "Automatic mode: Parsing file: " << fileName << std::endl;
-        Scene* scene = new Scene(fileName);
-        if (!scene->loadSceneFromVrmlFile(fileName)) std::cout << "error loading " << fileName << std::endl;
-        scenes.push_back(scene);
-        //std::cout << "Saving file: " << scene->name << std::endl;
-        //scene->saveSceneToVrmlFile(scene->name);
-        //delete scene;
-    }
-}
+//void loadAndSave(std::vector<std::string>& fileNames) {
+//    std::vector<Scene* > scenes;
+//    for (auto fileName : fileNames) {
+//        std::cout << "Automatic mode: Parsing file: " << fileName << std::endl;
+//        Scene* scene = new Scene(fileName);
+//        if (!scene->loadSceneFromVrmlFile(fileName)) std::cout << "error loading " << fileName << std::endl;
+//        scenes.push_back(scene);
+//        //std::cout << "Saving file: " << scene->name << std::endl;
+//        //scene->saveSceneToVrmlFile(scene->name);
+//        //delete scene;
+//    }
+//}
+
+//void combineScenes(std::vector<std::string>& fileNames) {
+//    SceneManager sm;
+//    for (auto s : fileNames) {
+//        if(sm.loadScene(s))
+//            std::cout << "Loaded " << s << std::endl;
+//    }
+//    sm.combineAllScenesIntoOne();
+//    sm.combinedScene->findAndUseIdenticalGeometry();
+//    sm.combinedScene->writeOutGeometries();
+//    sm.combinedScene->saveSceneToVrmlFile("out.wrl");
+//}
 
 
 #endif
@@ -85,38 +98,38 @@ int main()
 #ifdef AUTOMATIC
     std::vector<std::string> fileNames;
     {
-        fileNames.push_back("VRML2/0_fl_furniture.WRL");
-        fileNames.push_back("VRML2/1_fl_furniture.WRL");
-        fileNames.push_back("VRML2/2_fl_furniture_E.WRL");
-        fileNames.push_back("VRML2/2_fl_furniture_N.WRL");
-        fileNames.push_back("VRML2/2_fl_furniture_S.WRL");
-        fileNames.push_back("VRML2/2_fl_furniture_W.WRL");
-        fileNames.push_back("VRML2/3_fl_furniture_E.WRL");
-        fileNames.push_back("VRML2/3_fl_furniture_N.WRL");
-        fileNames.push_back("VRML2/3_fl_furniture_S.WRL");
-        fileNames.push_back("VRML2/3_fl_furniture_W.WRL");
-        fileNames.push_back("VRML2/4_fl_furniture_E.WRL");
-        fileNames.push_back("VRML2/4_fl_furniture_N.WRL");
-        fileNames.push_back("VRML2/4_fl_furniture_S.WRL");
-        fileNames.push_back("VRML2/4_fl_furniture_W.WRL");
-        fileNames.push_back("VRML2/5_fl_furniture_E.WRL");
-        fileNames.push_back("VRML2/5_fl_furniture_N.WRL");
-        fileNames.push_back("VRML2/5_fl_furniture_S.WRL");
-        fileNames.push_back("VRML2/5_fl_furniture_W.WRL");
-        fileNames.push_back("VRML2/6_fl_furniture_E.WRL");
-        fileNames.push_back("VRML2/6_fl_furniture_N.WRL");
-        fileNames.push_back("VRML2/6_fl_furniture_S.WRL");
-        fileNames.push_back("VRML2/6_fl_furniture_W.WRL");
-        fileNames.push_back("VRML2/0-6_equipment.WRL");
-        fileNames.push_back("VRML2/0-6_furniture_halls.WRL");
-        fileNames.push_back("VRML2/0-6_heating.WRL");
-        fileNames.push_back("VRML2/0-6_lamps.WRL");
-        fileNames.push_back("VRML2/0-6_Lights.WRL");
-        fileNames.push_back("VRML2/0-6_stairs_fences.WRL");
-        fileNames.push_back("VRML2/0-7_construction.WRL");
+        fileNames.push_back("VRMLUntex/0_fl_furniture.WRL");
+        fileNames.push_back("VRMLUntex/1_fl_furniture.WRL");
+        fileNames.push_back("VRMLUntex/2_fl_furniture_E.WRL");
+        fileNames.push_back("VRMLUntex/2_fl_furniture_N.WRL");
+        //fileNames.push_back("VRML2/2_fl_furniture_S.WRL");
+        //fileNames.push_back("VRML2/2_fl_furniture_W.WRL");
+        //fileNames.push_back("VRML2/3_fl_furniture_E.WRL");
+        //fileNames.push_back("VRML2/3_fl_furniture_N.WRL");
+        //fileNames.push_back("VRML2/3_fl_furniture_S.WRL");
+        //fileNames.push_back("VRML2/3_fl_furniture_W.WRL");
+        //fileNames.push_back("VRML2/4_fl_furniture_E.WRL");
+        //fileNames.push_back("VRML2/4_fl_furniture_N.WRL");
+        //fileNames.push_back("VRML2/4_fl_furniture_S.WRL");
+        //fileNames.push_back("VRML2/4_fl_furniture_W.WRL");
+        //fileNames.push_back("VRML2/5_fl_furniture_E.WRL");
+        //fileNames.push_back("VRML2/5_fl_furniture_N.WRL");
+        //fileNames.push_back("VRML2/5_fl_furniture_S.WRL");
+        //fileNames.push_back("VRML2/5_fl_furniture_W.WRL");
+        //fileNames.push_back("VRML2/6_fl_furniture_E.WRL");
+        //fileNames.push_back("VRML2/6_fl_furniture_N.WRL");
+        //fileNames.push_back("VRML2/6_fl_furniture_S.WRL");
+        //fileNames.push_back("VRML2/6_fl_furniture_W.WRL");
+        //fileNames.push_back("VRML2/0-6_equipment.WRL");
+        //fileNames.push_back("VRML2/0-6_furniture_halls.WRL");
+        //fileNames.push_back("VRML2/0-6_heating.WRL");
+        //fileNames.push_back("VRML2/0-6_lamps.WRL");
+        //fileNames.push_back("VRML2/0-6_Lights.WRL");
+        //fileNames.push_back("VRML2/0-6_stairs_fences.WRL");
+        //fileNames.push_back("VRML2/0-7_construction.WRL");
         //fileNames.push_back("VRML2/0-7_geometry.WRL");
-        fileNames.push_back("VRML2/0-7_tin_plates.WRL");
-        fileNames.push_back("VRML2/0-7_ventilation.WRL");
+        //fileNames.push_back("VRML2/0-7_tin_plates.WRL");
+        //fileNames.push_back("VRML2/0-7_ventilation.WRL");
         //fileNames.push_back("Door/U-6_doors_F0_new.WRL");
         //fileNames.push_back("Door/U-6_doors_F1_new.WRL");
         //fileNames.push_back("Door/U-6_doors_F2_new.WRL");
@@ -197,9 +210,14 @@ int main()
         fileNamesTwo.push_back("textured/TreeBigGroundFloor.wrl");
         fileNamesTwo.push_back("textured/typ40a.wrl");
     }
+
+
+
     //instanceFiles(fileNames, "VRMLUntex");
     //applyTexturesFromFilesToOtherFiles(fileNames, fileNamesTwo);
-    loadAndSave(fileNames);
+    //loadAndSave(fileNames);
+    //combineScenes(fileNames);
+
 #endif
 
 
@@ -295,9 +313,20 @@ int main()
             }
             break;
         case '9':
+            SceneManager sm;
+            sm.combineAllScenesIntoOne();
+
+            break;
+        case '10':
+            for (auto scene : scenes) {
+                scene->saveSceneToVrmlFile("savedFiles/" + scene->name);
+            }
+            break;
+        case '11':
 
             return 0;
         }
+
     }
 #endif
 }

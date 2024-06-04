@@ -18,7 +18,7 @@
     <ClCompile Include="src\vrlmInstancer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\vrlmParser.cpp">
+    <ClCompile Include="src\vrmlParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\vrmlSaver.cpp">
@@ -30,9 +30,15 @@
     <ClCompile Include="src\dataStructs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\pbrtExporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sceneManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\vrlmParser.h">
+    <ClInclude Include="src\vrmlParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\baseNode.h">
@@ -45,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\vrmlSaver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pbrtExporter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sceneManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

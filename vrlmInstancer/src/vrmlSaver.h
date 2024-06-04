@@ -5,7 +5,7 @@
 #include <vector>
 
 #include "baseNode.h"
-
+#include "scene.h"
 
 /// <summary>
 /// Responsible for exporting the data into a VRML 2.0 file
@@ -13,26 +13,22 @@
 /// </summary>
 class VrmlSaver {
 public:
-	std::vector<BaseNode*> * AllNodes;
-	std::vector<BaseNode*> * RootNodes;
-	std::vector<ShapeNode*> * ShapeNodes;
-	std::vector<Geometry*> * geometries;
-	std::vector<LightNode*> * lights;
+
 
 public:
 
-	VrmlSaver(std::vector<BaseNode*>* AllNodes, std::vector<BaseNode*>* RootNodes,
-		std::vector<ShapeNode*>* ShapeNodes, std::vector<Geometry*>* geometries, std::vector<LightNode*>* lights);
+	VrmlSaver();
 
 	/// <summary>
 	/// Exports the scene data to a file  on a given path
 	/// </summary>
-	void saveLoadedToVrml(const char* outputFileName);
+	void saveSceneToVrml(const char* outputFileName, Scene* scene);
 
 private:
 	std::ofstream out;
 	int numOfPointsPerLine = 10;
 	int numOfIndicesPerLine = 8;
+	Scene* scene;
 
 private:
 	void writeHeader();
