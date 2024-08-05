@@ -19,10 +19,19 @@ public:
 	void exportScene(Scene* scene);
 
 private:
-	std::ofstream outGeometry;
-	std::ofstream outMain;
+	std::ofstream out;
 
 private:
+
+	void writeSceneWideOptions();
+	void writeCamera(const ViewPointNode& camera);
+	void writeSampler();
+	void writeIntegrator();
+	void writeFilm();
+	void writeLightSource(const LightNode& camera);
+	void writeAtribute();
+
+	void computeLookAt(vec3& loc, vec3& dir, vec3& up);
 
 
 

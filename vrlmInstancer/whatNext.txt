@@ -2,7 +2,7 @@ Tasks:
 	1. Finish unwrapping the models - solve the problematic fences and the geometry.wrl file somehow, 
 	   plus doors should be easy
 		a. Double check everything, I may have missed something, cause I am picking up data from three
-		different people over a few years, and there is a lot of rendomness in what is where. :(
+		different people over a few years, and there is a lot of randomness in what is where. :(
 	2. Give a file structure to the vrml files, keep it tidy so that I don't get lost in it.
 		a. Also tidy up the software. Make it easy to use for my tasks, that will save a lot of time at the end
 		   of the thesis writing.
@@ -13,10 +13,11 @@ Tasks:
 		a. This will require some smart implementation to assing the texture automatically based on
 		   names of the geometry. We will see how well it can be done.
 	5. Write a PBRT exporter
-		a. Since PBRT is not a realtime renderer, all of the geometry can be in one geometry.pbrt file
+		a. Since PBRT is not a realtime renderer, all of the geometry can be in one geometry.pbrt file, 
+		   but why would i do that, it is better to preserve the folder hierarhy and import different files.
 			a1. due to the instancing we implemented, the resulting file can be really small.
 		b. Generate second file as main pbrt file, that just includes the entire geometry.pbrt file and defines
-		   the application wide things.
+		   the scene wide settings.
 		c. By doing this solution, we omit the dynamic objects somewhat, lets solve that in the next point
 	6. Solve the integration of dynamic objects from Linda
 	   We would require to omit the animated geometry from the general scene description and generate another
@@ -40,6 +41,6 @@ Tasks:
 		d. Fourth option would be to just half-ass it somehow, I have no idea how thou.
 	7. Something about modifying pbrt to render the texture properly, I still have to ask the consultant about that.
 		a. After reading a bit through PBRT book, I feel like if I have everything tidy and well prepared, this part
-		   will be super easy
+		   will be kind of easy hopefully
 	8. Write a Mitsuba exporter
 		a. Haven't looked at that yet, I think that solving the pbrt problems will also solve the Mitsuba problems.
