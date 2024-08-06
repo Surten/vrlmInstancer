@@ -372,30 +372,30 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
 }
 
 void VrmlParser::parseColor(ShapeNode* shapeNode) {
-    //readSymbol();
-    //if (str != "Color") std::cout << "error: expected Color at the start of Color node " << std::endl;
-    //readSymbol();
-    //if (str[0] != '{') std::cout << "error: expected { at the start of Color node " << std::endl;
-    //readSymbol();
-    //if (str != "color") std::cout << "error: expected color at the start of Color node " << std::endl;
-    //readSymbol();
-    //if (str[0] != '[') std::cout << "error: expected [ at the start of Color node " << std::endl;
-    //do {
-    //    float vals[3];
-    //    for (int i = 0; i < 3; i++)
-    //    {
-    //        readSymbol();
-    //        if (str[0] == ']') break;
-    //        vals[i] = n;
-    //    }
-    //    shapeNode->geometry->coords.push_back(vec3(vals[0], vals[1], vals[2]));
-    //    readSymbol();
-    //} while (str[0] == ',' || str[0] == '[');
-    //readSymbol();
-    //if (str[0] != '}') std::cout << "error: expected } at the end of Coord node " << std::endl;
+    readSymbol();
+    if (str != "Color") std::cout << "error: expected Color at the start of Color node " << std::endl;
+    readSymbol();
+    if (str[0] != '{') std::cout << "error: expected { at the start of Color node " << std::endl;
+    readSymbol();
+    if (str != "color") std::cout << "error: expected color at the start of Color node " << std::endl;
+    readSymbol();
+    if (str[0] != '[') std::cout << "error: expected [ at the start of Color node " << std::endl;
+    do {
+        float vals[3];
+        for (int i = 0; i < 3; i++)
+        {
+            readSymbol();
+            if (str[0] == ']') break;
+            vals[i] = n;
+        }
+        readSymbol();
+    } while (str[0] == ',' || str[0] == '[');
+    readSymbol();
+    if (str[0] != '}') std::cout << "error: expected } at the end of Coord node " << std::endl;
 }
 
 void VrmlParser::parseCoords(ShapeNode* shapeNode) {
+    std::string aaa = str;
     readSymbol();
     if (str != "DEF")
         std::cout << "error: expected DEF at the start of Coord node " << std::endl;
@@ -453,7 +453,14 @@ void VrmlParser::parseTexCoords(ShapeNode* shapeNode) {
 }
 
 void VrmlParser::parseColorIndex(ShapeNode* shapeNode) {
-
+    readSymbol();
+    if (str[0] != '[') std::cout << "error: expected [ at the start of CoordIndex node " << std::endl;
+    do {
+        readSymbol();
+        if (str[0] == ']') return;
+        readSymbol(); // read comma
+        if (str[0] == ']') break;
+    } while (str[0] == ',' || str[0] == '[');
 }
 
 void VrmlParser::parseCoordIndex(ShapeNode* shapeNode) {

@@ -7,8 +7,8 @@
 
 
 
-//#define MANUAL
-#define AUTOMATIC
+#define MANUAL
+//#define AUTOMATIC
 
 #ifdef AUTOMATIC
 /// <summary>
@@ -98,10 +98,10 @@ int main()
 #ifdef AUTOMATIC
     std::vector<std::string> fileNames;
     {
-        fileNames.push_back("VRMLUntex/0_fl_furniture.WRL");
-        fileNames.push_back("VRMLUntex/1_fl_furniture.WRL");
-        fileNames.push_back("VRMLUntex/2_fl_furniture_E.WRL");
-        fileNames.push_back("VRMLUntex/2_fl_furniture_N.WRL");
+        //fileNames.push_back("VRMLUntex/0_fl_furniture.WRL");
+        //fileNames.push_back("VRMLUntex/1_fl_furniture.WRL");
+        //fileNames.push_back("VRMLUntex/2_fl_furniture_E.WRL");
+        //fileNames.push_back("VRMLUntex/2_fl_furniture_N.WRL");
         //fileNames.push_back("VRML2/2_fl_furniture_S.WRL");
         //fileNames.push_back("VRML2/2_fl_furniture_W.WRL");
         //fileNames.push_back("VRML2/3_fl_furniture_E.WRL");
@@ -224,6 +224,7 @@ int main()
 #ifdef MANUAL
     int numOfScene;
     int numOfOtherScene;
+    SceneManager sm;
     while (true) {
         std::cout << std::endl << std::endl;
         std::cout << "Welcome, you have the following options: " << std::endl;
@@ -234,12 +235,12 @@ int main()
         std::cout << "5 - Find and use geometries from the second scene in the first scene" << std::endl;
         std::cout << "6 - Find and use geometries from all the scenes in the given scene" << std::endl;
         std::cout << "7 - Find Geometry duplicates for all scenes" << std::endl;
-        std::cout << "8 - Save all scenes to savedFiles folder" << std::endl;
-        std::cout << "9 - Exit" << std::endl;
+        std::cout << "9 - Not Exit" << std::endl;
+
 
         char inputNumber = 0;
         std::cin >> inputNumber;
-        if (inputNumber > '9' && inputNumber < '1')
+        if (inputNumber > '9' || inputNumber < '1')
         {
             std::cout << "Not a Number" << std::endl;
             continue;
@@ -251,18 +252,15 @@ int main()
             std::string inputFile;
             std::cout << "Input file name and location: ";
             std::cin >> inputFile;
-            if (inputFile == "b")
-                inputFile = "files/skrinTextured.wrl";
-            if (inputFile == "a")
-                inputFile = "VRML/0_fl_furniture.WRL";
+            //if (inputFile == "a") {
+            //    inputFile = "Orig/0-7_geometry.WRL";
+            //}
 
-            Scene* scene = new Scene(inputFile);
-            if (scene->loadSceneFromVrmlFile(inputFile)) {
+            if (sm.loadScene(inputFile)) {
                 std::cout << "Loaded into a scene with index " << scenes.size() << std::endl;
-                scenes.push_back(scene);
             }
             else {
-                delete scene;
+                std::cout << "Scene load failed" << std::endl;
             }
             break;
         }
@@ -273,22 +271,20 @@ int main()
             std::string outputFile;
             std::cout << "Output file name: ";
             std::cin >> outputFile;
-            if (outputFile == "a")
-                outputFile = "files/out.wrl";
-            if (outputFile == "b")
-                outputFile = "files/out2.wrl";
-            scenes.at(numOfScene)->saveSceneToVrmlFile(outputFile);
+            sm.saveScene(outputFile, numOfScene);
             break;
         }
         case '3':
             std::cout << "The index of the scene: ";
             std::cin >> numOfScene;
-            scenes.at(numOfScene)->writeOutGeometries();
+            if (!sm.writeGeometriesOfScene(numOfScene)) {
+                std::cout << "Could not find the scene by this index" << std::endl;
+            }
             break;
         case '4':
             std::cout << "The index of the scene: ";
             std::cin >> numOfScene;
-            scenes.at(numOfScene)->findAndUseIdenticalGeometry();
+            sm.instanceGeometry(numOfScene);
             break;
         case '5':
             std::cout << "The index of the scene: ";
@@ -307,20 +303,9 @@ int main()
                 scene->findAndUseIdenticalGeometry();
             }
             break;
-        case '8':
-            for (auto scene : scenes) {
-                scene->saveSceneToVrmlFile("savedFiles/" + scene->name);
-            }
-            break;
         case '9':
-            SceneManager sm;
             sm.combineAllScenesIntoOne();
 
-            break;
-        case '10':
-            for (auto scene : scenes) {
-                scene->saveSceneToVrmlFile("savedFiles/" + scene->name);
-            }
             break;
         case '11':
 
