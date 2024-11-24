@@ -18,7 +18,7 @@ Scene* SceneManager::combineAllScenesIntoOne() {
 	return ret;
 }
 
-bool SceneManager::loadScene(std::string filePath)
+bool SceneManager::loadScene(const std::string& filePath)
 {
 	Scene* scene = vrmlParser.parseFile(filePath.c_str());
 	if (scene == nullptr) return false;
@@ -26,7 +26,15 @@ bool SceneManager::loadScene(std::string filePath)
 	return true;
 }
 
-bool SceneManager::saveScene(std::string outputFileName, std::string sceneName)
+bool SceneManager::loadTexturedScene(const std::string& filePath)
+{
+	Scene* scene = vrmlParser.parseFile(filePath.c_str());
+	if (scene == nullptr) return false;
+	scenesWithTextures.push_back(scene);
+	return true;
+}
+
+bool SceneManager::saveScene(const std::string& outputFileName, const std::string& sceneName)
 {
 	Scene* scene = getSceneByName(sceneName);
 	if (scene == nullptr) return false;
@@ -34,14 +42,14 @@ bool SceneManager::saveScene(std::string outputFileName, std::string sceneName)
 	return true;
 }
 
-bool SceneManager::saveScene(std::string outputFileName, int id)
+bool SceneManager::saveScene(const std::string& outputFileName, int id)
 {
 	if (id < 0 || id >= scenes.size()) return false;
 	vrmlSaver.saveSceneToVrml(outputFileName.c_str(), scenes.at(id));
 	return true;
 }
 
-bool SceneManager::writeGeometriesOfScene(std::string sceneName)
+bool SceneManager::writeGeometriesOfScene(const std::string& sceneName)
 {
 	Scene* scene = getSceneByName(sceneName);
 	if (scene == nullptr) return false;
@@ -58,7 +66,7 @@ bool SceneManager::writeGeometriesOfScene(int id)
 
 }
 
-bool SceneManager::instanceGeometry(std::string sceneName)
+bool SceneManager::instanceGeometry(const std::string& sceneName)
 {
 	Scene* scene = getSceneByName(sceneName);
 	if (scene == nullptr) return false;
@@ -75,7 +83,16 @@ bool SceneManager::instanceGeometry(int id)
 
 }
 
-bool SceneManager::copyTextureCoordinatesBetweenScenes(std::string fromSceneName, std::string toSceneName)
+void SceneManager::instanceAllGeometry() {
+	for (auto scene : scenes) {
+		scene->findAndUseIdenticalGeometry();
+	}
+	for (auto scene : scenesWithTextures) {
+		scene->findAndUseIdenticalGeometry();
+	}
+}
+
+bool SceneManager::copyTextureCoordinatesBetweenScenes(const std::string& fromSceneName, const std::string& toSceneName)
 {
 	Scene* sceneFrom = getSceneByName(fromSceneName);
 	if (sceneFrom == nullptr) return false;
@@ -92,17 +109,54 @@ bool SceneManager::copyTextureCoordinatesBetweenScenes(int fromSceneId, int toSc
 	return true;
 }
 
-void SceneManager::copyTextureCoordinatesFromAllMyScenesToExternalScene(Scene* externalScene)
+void SceneManager::copyTextureCoordinatesFromAllTexturedScenesToAllOtherLoadedScenes()
 {
-	externalScene->findAndUseSameObjectsFromOtherScenesInThisScene(scenes);
+	for (auto scene : scenes) {
+		scene->findAndUseSameObjectsFromOtherScenesInThisScene(scenesWithTextures);
+	}
 }
+
+void SceneManager::copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(Scene* specifiedScene)
+{
+	specifiedScene->findAndUseSameObjectsFromOtherScenesInThisScene(scenes);
+}
+
+void SceneManager::copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(int specifiedSceneId)
+{
+	scenes.at(specifiedSceneId)->findAndUseSameObjectsFromOtherScenesInThisScene(scenes);
+}
+
+void SceneManager::copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(const std::string& specifiedSceneName)
+{
+	Scene* specifiedScene = getSceneByName(specifiedSceneName);
+	specifiedScene->findAndUseSameObjectsFromOtherScenesInThisScene(scenes);
+}
+
 
 void SceneManager::exportAllToPBRT() {
 	Scene* combinedScene = combineAllScenesIntoOne();
 	pbrtExporter.exportScene(combinedScene);
 }
 
-Scene* SceneManager::getSceneByName(std::string name)
+void SceneManager::unifyTextrureCoordScaleOfAllScenes() {
+	float desiredTextureScale = getTextureCoordsToObjectCoordsScale();
+	for (auto scene : scenes) {
+		scene->scaleTextureCoordsForAllObjects(desiredTextureScale);
+	}
+}
+
+float SceneManager::getTextureCoordsToObjectCoordsScale() {
+	int i = 0;
+	float scale;
+	while ((scale = scenes[0]->geometries[i]->calculateTextureScale()) < 0)
+	{
+		i++;
+	}
+	return scale;
+}
+
+
+Scene* SceneManager::getSceneByName(const std::string& name)
 {
 	Scene* ret = nullptr;
 	for (Scene* scene : scenes) {
@@ -112,3 +166,4 @@ Scene* SceneManager::getSceneByName(std::string name)
 	}
 	return ret;
 }
+

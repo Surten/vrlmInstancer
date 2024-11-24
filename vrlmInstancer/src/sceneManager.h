@@ -16,26 +16,35 @@ public:
 
 	Scene* combineAllScenesIntoOne();
 	
-	bool loadScene(std::string filePath);
+	bool loadScene(const std::string& filePath);
+	bool loadTexturedScene(const std::string& filePath);
 	
-	bool saveScene(std::string outputFileName, std::string sceneName);
-	bool saveScene(std::string outputFileName, int id);
+	bool saveScene(const std::string& outputFileName, const std::string& sceneName);
+	bool saveScene(const std::string& outputFileName, int id);
 
-	bool writeGeometriesOfScene(std::string sceneName);
+	bool writeGeometriesOfScene(const std::string& sceneName);
 	bool writeGeometriesOfScene(int id);
 
-	bool instanceGeometry(std::string sceneName);
+	bool instanceGeometry(const std::string& sceneName);
 	bool instanceGeometry(int id);
 
-	bool copyTextureCoordinatesBetweenScenes(std::string fromSceneName, std::string toSceneName);
+	void instanceAllGeometry();
+
+	bool copyTextureCoordinatesBetweenScenes(const std::string& fromSceneName, const std::string& toSceneName);
 	bool copyTextureCoordinatesBetweenScenes(int fromSceneId, int toSceneId);
 
-	void copyTextureCoordinatesFromAllMyScenesToExternalScene(Scene* externalScene);
+	void copyTextureCoordinatesFromAllTexturedScenesToAllOtherLoadedScenes();
+	void copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(Scene* specifiedScene);
+	void copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(const std::string& specifiedSceneName);
+	void copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(int specifiedSceneId);
 
 	void exportAllToPBRT();
 
+	void unifyTextrureCoordScaleOfAllScenes();
+
 private:
 	std::vector<Scene*> scenes;
+	std::vector<Scene*> scenesWithTextures;
 
 	PbrtExporter pbrtExporter;
 	VrmlParser vrmlParser;
@@ -44,5 +53,6 @@ private:
 
 private:
 
-	Scene* getSceneByName(std::string name);
+	float getTextureCoordsToObjectCoordsScale();
+	Scene* getSceneByName(const std::string& name);
 };

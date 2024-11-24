@@ -26,8 +26,8 @@ public:
 
 private:
 	std::ofstream out;
-	int numOfPointsPerLine = 10;
-	int numOfIndicesPerLine = 8;
+	int numOfPointsPerLine = 3;
+	int numOfIndicesPerLine = 3;
 	Scene* scene;
 
 private:

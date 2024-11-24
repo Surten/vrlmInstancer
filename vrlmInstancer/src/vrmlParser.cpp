@@ -472,7 +472,7 @@ void VrmlParser::parseCoordIndex(ShapeNode* shapeNode) {
         {
             readSymbol();
             if (str[0] == ']') return;
-            vals[i] = n;
+            vals[i] = (int)n;
             readSymbol(); // read comma
         }
         shapeNode->geometry->facesPointsIndex.push_back(vec3i(vals[0], vals[1], vals[2]));
@@ -491,7 +491,7 @@ void VrmlParser::parseTexCoordIndex(ShapeNode* shapeNode) {
         {
             readSymbol();
             if (str[0] == ']') return;
-            vals[i] = n;
+            vals[i] = (int)n;
             readSymbol(); // read comma
         }
         shapeNode->geometry->facesTextureIndex.push_back(vec3i(vals[0], vals[1], vals[2]));

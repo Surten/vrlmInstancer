@@ -53,6 +53,16 @@ public:
 public:
     vec2() { x = y = 0; }
     vec2(float x, float y) : x(x), y(y) {}
+
+    vec2 operator*(float other) {
+        return vec2(x * other, y * other);
+    }
+    vec2 operator-(const vec2& other) {
+        return vec2(x - other.x, y - other.y);
+    }
+    float len() {
+        return std::sqrt(x * x + y * y);
+    }
 };
 /// <summary>
 /// Ordinary vec3 for integers class with overloaded operators and some common methods
@@ -115,7 +125,7 @@ public:
     float creaseAngle;
     ShapeNode* parent;
     std::vector<ShapeNode*> otherShapeNodesUsingMe;
-    Geometry() : ccw(true), solid(true), normalPerVertex(true), creaseAngle(0.0f), aabb(), parent(nullptr){}
+    Geometry() : ccw(true), solid(true), normalPerVertex(true), creaseAngle(0.0f), aabb(), parent(nullptr), colorPerVertex(false){}
 
 public:
     // calculate AABB if needed and return it
@@ -123,6 +133,9 @@ public:
 
     // get center of gravity of the mesh, calculated with area of triangles as mass
     vec3 getCenterOfGravity();
+
+    void scaleTextureCoords(float scale);
+    float calculateTextureScale();
 
 private:
     void calculateAABB();
@@ -144,6 +157,9 @@ public:
 
     void fillMaterial(float* diffuseColor, float ambientIntensity,
         float* specularColor, float shininess, float transparency);
+
+    bool compareDiffuseColor(const float* diffuseComponent);
+    bool compareDiffuseColor(const Material& otherMaterial);
 
 
 public:

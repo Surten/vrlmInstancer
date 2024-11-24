@@ -44,6 +44,12 @@ void Scene::writeOutGeometries() {
 	}
 }
 
+void Scene::scaleTextureCoordsForAllObjects(float desiredTextureScale) {
+	for (auto geometry : geometries) {
+		geometry->scaleTextureCoords(desiredTextureScale);
+	}
+}
+
 void Scene::findIdenticalGeometry(std::vector<std::pair<int, int>> & geoPairs) {
 
 	for (size_t i = 0; i < geometries.size(); i++)
@@ -126,6 +132,8 @@ void Scene::findAndUseSameObjects(Scene * otherScene) {
 	for (size_t i = 0; i < geoPairs.size(); i++)
 	{
 		//std::cout << geoPairs[i].second->name << " " << geoPairs[i].first->name << std::endl;
+		geoPairs[i].first->coords = geoPairs[i].second->coords;
+		geoPairs[i].first->facesPointsIndex = geoPairs[i].second->facesPointsIndex;
 		geoPairs[i].first->textureCoords = geoPairs[i].second->textureCoords;
 		geoPairs[i].first->facesTextureIndex = geoPairs[i].second->facesTextureIndex;
 		geoPairs[i].first->parent->textureFilePath = geoPairs[i].second->parent->textureFilePath;
@@ -139,9 +147,28 @@ void Scene::findAndUseSameObjects(Scene * otherScene) {
 
 }
 
-void Scene::findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*> scenes) {
+void Scene::findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*>& scenes) {
 	for (auto scene : scenes) {
+		if (this == scene) continue;
 		findAndUseSameObjects(scene);
 	}
 }
+
+/// <summary>
+/// WIP, maybe will not be finished
+/// </summary>
+/// <param name="diffuseComponent"></param>
+/// <param name="texturePath"></param>
+void Scene::findShapeNodesByTheirMaterialDiffuseComponentAndReplaceTheirTexturePath(float* diffuseComponent, std::string texturePath) {
+
+	for (auto shapeNode : ShapeNodes) {
+		if (shapeNode->material.compareDiffuseColor(diffuseComponent)) {
+			shapeNode->textureFilePath = texturePath;
+			if (shapeNode->geometry->textureCoords.size() == 0) {
+				std::cout << "we are missing textures on geometry " << shapeNode->geometry->name << std::endl;
+			}
+		}
+	}
+}
+
 

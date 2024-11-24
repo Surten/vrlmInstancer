@@ -30,6 +30,8 @@ public:
 	// write the list of geometries with some information about them to the standard output
 	void writeOutGeometries();
 
+	void scaleTextureCoordsForAllObjects(float desiredTextureScale);
+
 	/// <summary>
 	/// Iterates over the geometries of this scene and finds identical ones
 	/// based on three different properties, deleting one of the identical 
@@ -48,7 +50,9 @@ public:
 	/// If the geometries compare identical, it copies the texture coordinates
 	/// from the other scenes to this scene.
 	/// </summary>
-	void findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*> scenes);
+	void findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*>& scenes);
+
+	void findShapeNodesByTheirMaterialDiffuseComponentAndReplaceTheirTexturePath(float* diffuseComponent, std::string texturePath);
 
 private:
 

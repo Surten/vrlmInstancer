@@ -1,0 +1,151 @@
+Load Orig/0-6_equipment.WRL
+Load Orig/0-6_furniture_halls.WRL
+Load Orig/0-6_heating.WRL
+Load Orig/0-6_Lights.WRL
+Load Orig/0-6_stairs_fences.WRL
+Load Orig/0-7_construction.WRL
+Load Orig/0-7_geometry.WRL
+Load Orig/0-7_tin_plates.WRL
+Load Orig/0-7_ventilation.WRL
+Load Door/U-6_doors_F0_new.WRL
+Load Door/U-6_doors_F1_new.WRL
+Load Door/U-6_doors_F2_new.WRL
+Load Door/U-6_doors_F3_new.WRL
+Load Door/U-6_doors_F4_new.WRL
+Load Door/U-6_doors_F5_new.WRL
+Load Door/U-6_doors_F6_new.WRL
+Load Door/U-6_doors_FU_new.WRL
+Load Door/U-6_doors_Stair_Mid_new.WRL
+Load Door/U-6_doors_Stair_Side2_new.WRL
+Load Door/U-6_doors_Stair_Side1_new.WRL
+Load Door/U-6_windows_0F_new.WRL
+Load Door/U-6_windows_1F_new.WRL
+Load Door/U-6_windows_2F_new.WRL
+Load Door/U-6_windows_3F_new.WRL
+Load Door/U-6_windows_4F_new.WRL
+Load Door/U-6_windows_5F_new.WRL
+Load Door/U-6_windows_6F_new.WRL
+Load Door/U-6_windows_46_new.WRL
+Load Door/U-6_windows_shutters_0F.WRL
+Load Door/U-6_windows_shutters_1F.WRL
+Load Door/U-6_windows_shutters_2F.WRL
+Load Door/U-6_windows_shutters_3F.WRL
+Load Door/U-6_windows_shutters_4F.WRL
+Load Door/U-6_windows_shutters_5F.WRL
+Load Door/U-6_windows_shutters_6F.WRL
+Load Door/U-6_windows_shutters_UF.WRL
+Load Door/U-6_windows_Stairway01_new.WRL
+Load Door/U-6_windows_Stairway02_new.WRL
+Load Door/U-6_windows_UF_new.WRL
+LoadTextured textured/basket_01.wrl
+LoadTextured textured/basket_03.wrl
+LoadTextured textured/bench.wrl
+LoadTextured textured/blackboard_01.wrl
+LoadTextured textured/blackboard_02.wrl
+LoadTextured textured/blackboard_03.wrl
+LoadTextured textured/caffe_set.wrl
+LoadTextured textured/case_type_1_&_21_top.wrl
+LoadTextured textured/case_type_R-01.wrl
+LoadTextured textured/case_type_R-02.wrl
+LoadTextured textured/CaseType1.wrl
+LoadTextured textured/CaseType21.wrl
+LoadTextured textured/CaseTypeXX.wrl
+LoadTextured textured/chair_01new.wrl
+LoadTextured textured/chair_02new.wrl
+LoadTextured textured/chair_03new.wrl
+LoadTextured textured/chair_03oldB.wrl
+LoadTextured textured/circle_table_low.wrl
+LoadTextured textured/Door_06.wrl
+LoadTextured textured/fence2to1floorRight.wrl
+LoadTextured textured/fence3floorR.wrl
+LoadTextured textured/fence4floorEnd.wrl
+LoadTextured textured/fence5floorEnd.wrl
+LoadTextured textured/fence5floorO.wrl
+LoadTextured textured/fence5floorR.wrl
+LoadTextured textured/fence6floorEndL.wrl
+LoadTextured textured/fence6floorEndR.wrl
+LoadTextured textured/fenceClassicB.wrl
+LoadTextured textured/fenceCornerRT_02.wrl
+LoadTextured textured/FirstAidKit.wrl
+LoadTextured textured/Heater_01.wrl
+LoadTextured textured/Heater_01_b.wrl
+LoadTextured textured/Heater_02.wrl
+LoadTextured textured/Heater_03.wrl
+LoadTextured textured/Heater_03_b.wrl
+LoadTextured textured/Heater_04.wrl
+LoadTextured textured/Heater_04_b.wrl
+LoadTextured textured/Heater_04_c.wrl
+LoadTextured textured/Heater_04_d.wrl
+LoadTextured textured/Heater_05.wrl
+LoadTextured textured/Heater_06.wrl
+LoadTextured textured/Heater_06_b.wrl
+LoadTextured textured/netPlug.wrl
+LoadTextured textured/powerPlug.wrl
+LoadTextured textured/rack.wrl
+LoadTextured textured/radiumLamp02.wrl
+LoadTextured textured/roundTable01.wrl
+LoadTextured textured/Sofa01.wrl
+LoadTextured textured/Sofa02.wrl
+LoadTextured textured/Sofa03.wrl
+LoadTextured textured/table_03low.wrl
+LoadTextured textured/table_06.wrl
+LoadTextured textured/table_08.wrl
+LoadTextured textured/Table02.wrl
+LoadTextured textured/Table03.wrl
+LoadTextured textured/Table04.wrl
+LoadTextured textured/Table04_B.wrl
+LoadTextured textured/Table05.wrl
+LoadTextured textured/Table07.wrl
+LoadTextured textured/Table30.wrl
+LoadTextured textured/tableCornerLlongRshort.wrl
+LoadTextured textured/tableCornerLshortRlong.wrl
+LoadTextured textured/tableLength80.wrl
+LoadTextured textured/tableM4.wrl
+LoadTextured textured/tables3X_room211.wrl
+LoadTextured textured/tableSTM3a.wrl
+LoadTextured textured/tableWhite309A.wrl
+LoadTextured textured/tableWide.wrl
+LoadTextured textured/tableWideB.wrl
+LoadTextured textured/TreeBigGroundFloor.wrl
+LoadTextured textured/typ40a.wrl
+InstanceAll
+CopyAllTextureCoordsFromTexturedScenes
+SaveId 0 Output/0-6_equipment.WRL
+SaveId 1 Output/0-6_furniture_halls.WRL
+SaveId 2 Output/0-6_heating.WRL
+SaveId 3 Output/0-6_Lights.WRL
+SaveId 4 Output/0-6_stairs_fences.WRL
+SaveId 5 Output/0-7_construction.WRL
+SaveId 6 Output/0-7_geometry.WRL
+SaveId 7 Output/0-7_tin_plates.WRL
+SaveId 8 Output/0-7_ventilation.WRL
+SaveId 9 Output/U-6_doors_F0_new.WRL
+SaveId 10 Output/U-6_doors_F1_new.WRL
+SaveId 11 Output/U-6_doors_F2_new.WRL
+SaveId 12 Output/U-6_doors_F3_new.WRL
+SaveId 13 Output/U-6_doors_F4_new.WRL
+SaveId 14 Output/U-6_doors_F5_new.WRL
+SaveId 15 Output/U-6_doors_F6_new.WRL
+SaveId 16 Output/U-6_doors_FU_new.WRL
+SaveId 17 Output/U-6_doors_Stair_Mid_new.WRL
+SaveId 18 Output/U-6_doors_Stair_Side2_new.WRL
+SaveId 19 Output/U-6_doors_Stair_Side1_new.WRL
+SaveId 20 Output/U-6_windows_0F_new.WRL
+SaveId 21 Output/U-6_windows_1F_new.WRL
+SaveId 22 Output/U-6_windows_2F_new.WRL
+SaveId 23 Output/U-6_windows_3F_new.WRL
+SaveId 24 Output/U-6_windows_4F_new.WRL
+SaveId 25 Output/U-6_windows_5F_new.WRL
+SaveId 26 Output/U-6_windows_6F_new.WRL
+SaveId 27 Output/U-6_windows_46_new.WRL
+SaveId 28 Output/U-6_windows_shutters_0F.WRL
+SaveId 29 Output/U-6_windows_shutters_1F.WRL
+SaveId 30 Output/U-6_windows_shutters_2F.WRL
+SaveId 31 Output/U-6_windows_shutters_3F.WRL
+SaveId 32 Output/U-6_windows_shutters_4F.WRL
+SaveId 33 Output/U-6_windows_shutters_5F.WRL
+SaveId 34 Output/U-6_windows_shutters_6F.WRL
+SaveId 35 Output/U-6_windows_shutters_UF.WRL
+SaveId 36 Output/U-6_windows_Stairway01_new.WRL
+SaveId 37 Output/U-6_windows_Stairway02_new.WRL
+SaveId 38 Output/U-6_windows_UF_new.WRL

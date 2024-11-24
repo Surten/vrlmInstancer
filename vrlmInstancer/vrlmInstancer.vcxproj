@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\application.cpp" />
     <ClCompile Include="src\sceneManager.cpp" />
     <ClCompile Include="src\pbrtExporter.cpp" />
     <ClCompile Include="src\dataStructs.cpp" />
@@ -136,6 +137,7 @@
     <ClCompile Include="src\vrmlSaver.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\application.h" />
     <ClInclude Include="src\sceneManager.h" />
     <ClInclude Include="src\pbrtExporter.h" />
     <ClInclude Include="src\baseNode.h" />

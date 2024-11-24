@@ -75,7 +75,7 @@ AABB Geometry::getAABB() {
 
 float Geometry::triangleArea(vec3 A, vec3 B, vec3 C) {
     float a = (A - B).len(), b = (B - C).len(), c = (C - A).len();
-    float s = (a + b + c) * 0.5;
+    float s = (a + b + c) * 0.5f;
     float temp = std::abs(s * (s - a) * (s - b) * (s - c));
     return std::sqrtf(temp);;
 }
@@ -114,6 +114,28 @@ vec3 Geometry::getCenterOfGravity() {
     return centerOfGrav;
 }
 
+float Geometry::calculateTextureScale()
+{
+    if (textureCoords.size() == 0) return -1;
+
+    vec3i triangleCoordIndices = facesPointsIndex[0];
+    vec3i triangleTextureCoordIndices = facesTextureIndex[0];
+
+    float realWorldLength = (coords[triangleCoordIndices.x] - coords[triangleCoordIndices.y]).len();
+    float textureLength = (textureCoords[triangleTextureCoordIndices.x] - textureCoords[triangleTextureCoordIndices.y]).len();
+
+    return realWorldLength / textureLength;
+}
+
+void Geometry::scaleTextureCoords(float desiredTextureScale) {
+    float currentTextureScale = calculateTextureScale();
+    if (currentTextureScale < 0) return;
+    float textureScaleFactor = currentTextureScale / desiredTextureScale;
+    for (auto &texCoord : textureCoords) {
+        texCoord = texCoord * textureScaleFactor;
+    }
+}
+
 
 Material::Material() : ambientIntensity(0), shininess(0), transparency(0)
 {
@@ -136,4 +158,14 @@ void Material::fillMaterial(float* diffuseColor, float ambientIntensity,
     std::memcpy(this->specularColor, specularColor, sizeof(float) * 3);
     this->shininess = shininess;
     this->transparency = transparency;
+}
+
+bool Material::compareDiffuseColor(const float* diffuseComponent) {
+    float epsilon = 0.00001f;
+    return (std::abs(diffuseColor[0] - diffuseComponent[0]) < epsilon)
+        && (std::abs(diffuseColor[1] - diffuseComponent[1]) < epsilon)
+        && (std::abs(diffuseColor[2] - diffuseComponent[2]) < epsilon);
+}
+bool Material::compareDiffuseColor(const Material& otherMaterial) {
+    return compareDiffuseColor(otherMaterial.diffuseColor);
 }
