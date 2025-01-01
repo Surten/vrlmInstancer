@@ -118,13 +118,22 @@ float Geometry::calculateTextureScale()
 {
     if (textureCoords.size() == 0) return -1;
 
-    vec3i triangleCoordIndices = facesPointsIndex[0];
-    vec3i triangleTextureCoordIndices = facesTextureIndex[0];
+    float averageScale = 1.0f;
 
-    float realWorldLength = (coords[triangleCoordIndices.x] - coords[triangleCoordIndices.y]).len();
-    float textureLength = (textureCoords[triangleTextureCoordIndices.x] - textureCoords[triangleTextureCoordIndices.y]).len();
+    for (int i = 0; i < facesTextureIndex.size(); i++)
+    {
+        vec3i triangleCoordIndices = facesPointsIndex[i];
+        vec3i triangleTextureCoordIndices = facesTextureIndex[i];
 
-    return realWorldLength / textureLength;
+        float realWorldLength = (coords[triangleCoordIndices.x] - coords[triangleCoordIndices.y]).len();
+        float textureLength = (textureCoords[triangleTextureCoordIndices.x] - textureCoords[triangleTextureCoordIndices.y]).len();
+
+        averageScale += realWorldLength / textureLength; 
+    }
+
+    averageScale = averageScale / (float)facesTextureIndex.size();
+
+    return averageScale;
 }
 
 void Geometry::scaleTextureCoords(float desiredTextureScale) {

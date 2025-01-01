@@ -77,7 +77,7 @@ void VrmlParser::parseDEF(TransformNode* parent) {
     readSymbol();
 
     if (str != "Transform" && str != "," && str != "TimeSensor"
-        && str != "SpotLight" && str != "PointLight" && str != "Viewpoint"
+        && str != "SpotLight" && str != "PointLight" && str != "GonioLight" && str != "Viewpoint"
         && str != "NavigationInfo")
         //to determine if there is a name filter out all the possible node keywords, because I cannot think of a better solution
     {
@@ -131,6 +131,23 @@ void VrmlParser::parseDEF(TransformNode* parent) {
             lightNode->nodeDepth = parent->nodeDepth + 1;
         }
         parseSpotLight(lightNode);
+
+    }
+    else if (str == "GonioLight") {
+        LightNode* lightNode = new LightNode();
+        lightNode->name = name;
+        scene->AllNodes.push_back(lightNode);
+        scene->lights.push_back(lightNode);
+        if (parent == nullptr) {
+            scene->RootNodes.push_back(lightNode);
+            lightNode->nodeDepth = 0;
+        }
+        else {
+            parent->children.push_back(lightNode);
+            lightNode->parent = parent;
+            lightNode->nodeDepth = parent->nodeDepth + 1;
+        }
+        parseGonioLight(lightNode);
 
     }
     else if (str == "Viewpoint") {
@@ -621,6 +638,66 @@ void VrmlParser::parseSpotLight(LightNode* light) {
             break;      // if we successfully found the '}' ending symbol, we end the loop
     } while (true);
 
+    light->lightType = LightNode::LightType::SPOTLIGHT;
+}
+
+void VrmlParser::parseGonioLight(LightNode* light) {
+    readSymbol();
+    if (str[0] != '{') std::cout << "error: expected { at the start of light named " << light->name << std::endl;
+
+    do {
+        readSymbol();
+        if (str == "intensity") {
+            readSymbol();
+            light->intensity = n;
+            continue;
+        }
+        else if (str == "url") {
+            readSymbol();   // read "["
+            readSymbol();
+            light->url = str.substr(1, str.size() - 2);
+            readSymbol();   // read "]"
+            continue;
+        }
+        else if (str == "color") {
+            readSymbol();
+            light->color.x = n;
+            readSymbol();
+            light->color.y = n;
+            readSymbol();
+            light->color.z = n;
+            continue;
+        }
+        else if (str == "location") {
+            readSymbol();
+            light->location.x = n;
+            readSymbol();
+            light->location.y = n;
+            readSymbol();
+            light->location.z = n;
+            continue;
+        }
+        else if (str == "direction") {
+            readSymbol();
+            light->direction.x = n;
+            readSymbol();
+            light->direction.y = n;
+            readSymbol();
+            light->direction.z = n;
+            continue;
+        }
+        else if (str == "on") {
+            readSymbol();
+            str == "FALSE" ? light->on = false : light->on = true;
+            continue;
+        }
+        else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong
+            std::cout << "error reading properties of light named " << light->name << std::endl;
+        else
+            break;      // if we successfully found the '}' ending symbol, we end the loop
+    } while (true);
+
+    light->lightType = LightNode::LightType::GONIOLIGHT;
 }
 
 void VrmlParser::parseViewPoint(ViewPointNode* viewPointNode) {

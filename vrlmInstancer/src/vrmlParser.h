@@ -137,6 +137,12 @@ private:
 	void parseSpotLight(LightNode* light);
 
 	/// <summary>
+	/// Parses Goniometric light
+	/// </summary>
+	/// <param name="light">the Node to fill with data</param>
+	void parseGonioLight(LightNode* light);
+
+	/// <summary>
 	/// Parses ViewPoint
 	/// </summary>
 	/// <param name="viewPointNode">the Node to fill with data</param>

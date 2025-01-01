@@ -124,6 +124,19 @@ void Application::AutomaticMode(std::string fileName){
             sm.unifyTextrureCoordScaleOfAllScenes();
             std::cout << "Done - Texture coords scale" << std::endl;
         }
+        else if (command == "SwitchLightsToGonio")
+        {
+            autoIn >> nameStringPlaceholder;
+            autoIn >> fileStringPlaceholder;
+            if (!sm.loadScene(fileStringPlaceholder)) {
+                std::cout << "Could not load Scene " << fileStringPlaceholder << std::endl;
+            }
+            else {
+                std::cout << "Loaded, Id: " << sceneCount << "Name: " << fileStringPlaceholder << std::endl;
+                sceneCount++;
+            }
+            sm.convertSceneSpotLightsToGonioLights(nameStringPlaceholder, fileStringPlaceholder);
+        }
     }
 }
 

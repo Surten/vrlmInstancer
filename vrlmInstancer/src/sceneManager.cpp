@@ -145,6 +145,17 @@ void SceneManager::unifyTextrureCoordScaleOfAllScenes() {
 	}
 }
 
+
+bool SceneManager::convertSceneSpotLightsToGonioLights(std::string sceneName, std::string referenceSceneName)
+{
+	Scene* scene = getSceneByName(sceneName);
+	if (scene == nullptr) return false;
+	Scene* referenceScene = getSceneByName(referenceSceneName);
+	if (referenceScene == nullptr) std::cout << "No reference File" << std::endl;
+	scene->convertSpotLightsToGonioLights(referenceScene);
+	return true;
+}
+
 float SceneManager::getTextureCoordsToObjectCoordsScale() {
 	int i = 0;
 	float scale;

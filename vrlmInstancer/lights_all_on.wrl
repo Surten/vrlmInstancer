@@ -1,0 +1,5000 @@
+#VRML V2.0 utf8
+
+# Created by VRMLtoPBRT application, Copyright (C) Jiri Drahokoupil, 2008.
+# Some redundant definitions in original VRML file were deleted
+# Some new definitions(IES) were created
+#
+# For usage condition and copyright see the webpages at
+# http://www.mpi-inf.mpg.de/resources/mpimodel/v1.0
+# for the version of the model 1.0, released 12th December 2009.
+#
+# If you use this scene in your research paper, include the citation
+# to the paper or technical report that you find on the webpage:
+# http://www.mpi-inf.mpg.de/resources/mpimodel
+
+
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 903.2000 361.0000 -191.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1016.0000 361.0000 -189.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 796.1000 361.0000 -144.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1069.0000 361.5000 -34.0500
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 953.7000 361.5000 205.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 691.1000 361.0000 218.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 886.2000 361.0000 384.6000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1018.0000 361.0000 388.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1137.0000 354.3000 253.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1037.0000 354.3000 264.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 928.2000 354.3000 277.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 776.7000 354.3000 294.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 692.8000 354.3000 98.3200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 785.6000 354.3000 113.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 936.3000 354.3000 139.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1117.0000 354.3000 169.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1170.0000 354.3000 -87.2100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 980.3000 354.3000 -87.6200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 858.7000 354.3000 -87.7800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 732.0000 354.3000 -87.8800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1237.0000 354.3000 241.7000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 903.2000 776.0000 -191.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 732.0000 769.3000 -87.8800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 796.1000 776.0000 -144.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1069.0000 776.6000 -34.0500
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 953.7000 776.5000 205.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 691.1000 776.0000 218.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 886.2000 776.0000 384.6000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1018.0000 776.0000 388.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1137.0000 769.3000 253.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1037.0000 769.3000 264.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1016.0000 776.0000 -189.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 776.7000 769.3000 294.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 692.8000 769.3000 98.3200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 785.6000 769.3000 113.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 936.3000 769.3000 139.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1117.0000 769.3000 169.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1170.0000 769.3000 -87.2100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 980.3000 769.3000 -87.6200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 858.7000 769.3000 -87.7800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 928.2000 769.3000 277.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -415.5000 745.8000 -2022.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -290.6000 745.8000 -2022.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -165.3000 745.8000 -2022.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -165.3000 745.8000 -1896.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -165.3000 745.8000 -1771.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_20  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -290.7000 745.8000 -1771.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_21  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -415.5000 745.8000 -1771.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_22  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -415.5000 745.8000 -1897.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_23  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -290.6000 745.8000 -1897.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_24  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -304.9000 727.1000 -1582.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_25  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -224.9000 727.1000 -1582.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_26  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -144.8000 727.1000 -1582.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_27  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -384.8000 727.1000 -1582.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_28  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -464.8000 727.1000 -1582.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_29  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 569.6000 727.1000 -1873.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_30  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 730.8000 727.1000 -1873.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_31  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 730.8000 727.1000 -1753.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_32  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 690.8000 727.1000 -1753.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_33  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 610.0000 727.1000 -1753.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_34  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 570.0000 727.1000 -1753.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_35  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1525.0000 727.1000 -1793.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_36  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1525.0000 727.1000 -1873.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_37  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1525.0000 727.1000 -1953.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_38  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1525.0000 727.1000 -2033.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_39  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -165.3000 745.6000 865.8000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_40  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -290.8000 745.6000 865.8000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_41  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -415.5000 745.6000 865.8000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_42  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -415.5000 745.6000 990.7000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_43  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -415.5000 745.6000 1116.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_44  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -290.8000 745.6000 1116.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_45  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -290.8000 745.6000 990.7000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_46  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -165.3000 745.6000 990.7000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_47  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -165.3000 745.6000 1116.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESradium.ies" ]
+   location 40.7100 744.8000 1090.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESradium.ies" ]
+   location 40.7100 744.8000 889.6000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESradium.ies" ]
+   location 255.7000 744.8000 889.6000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESradium.ies" ]
+   location 540.7000 744.8000 889.6000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESradium.ies" ]
+   location 755.7000 744.8000 889.6000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1041.0000 744.8000 889.6000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1256.0000 744.8000 889.6000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1526.0000 744.8000 889.6000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESradium.ies" ]
+   location 255.7000 744.8000 1090.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESradium.ies" ]
+   location 540.7000 744.8000 1090.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESradium.ies" ]
+   location 755.7000 744.8000 1090.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1041.0000 744.8000 1090.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1256.0000 744.8000 1090.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1526.0000 744.8000 1090.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESradium.ies" ]
+   location -184.9000 744.8000 150.1000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESradium.ies" ]
+   location -384.9000 744.8000 150.1000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESradium.ies" ]
+   location -384.9000 744.8000 -64.8900
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESradium.ies" ]
+   location -384.9000 744.8000 -349.9000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESradium.ies" ]
+   location -384.9000 744.8000 -564.9000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_20  GonioLight {
+   url [ "IESradium.ies" ]
+   location -384.9000 744.8000 -850.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_21  GonioLight {
+   url [ "IESradium.ies" ]
+   location -384.9000 744.8000 -1065.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_22  GonioLight {
+   url [ "IESradium.ies" ]
+   location -384.9000 744.8000 -1350.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_23  GonioLight {
+   url [ "IESradium.ies" ]
+   location -184.9000 744.8000 -1350.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_24  GonioLight {
+   url [ "IESradium.ies" ]
+   location -184.9000 744.8000 -1065.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_25  GonioLight {
+   url [ "IESradium.ies" ]
+   location -184.9000 744.8000 -849.9000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_26  GonioLight {
+   url [ "IESradium.ies" ]
+   location -184.9000 744.8000 -564.9000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_27  GonioLight {
+   url [ "IESradium.ies" ]
+   location -184.9000 744.8000 -350.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_28  GonioLight {
+   url [ "IESradium.ies" ]
+   location -184.9000 744.8000 -64.9500
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_29  GonioLight {
+   url [ "IESradium.ies" ]
+   location 42.6000 744.8000 -1793.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_30  GonioLight {
+   url [ "IESradium.ies" ]
+   location 42.6000 744.8000 -1993.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_31  GonioLight {
+   url [ "IESradium.ies" ]
+   location 257.6000 744.8000 -1993.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_32  GonioLight {
+   url [ "IESradium.ies" ]
+   location 542.7000 744.8000 -1993.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_33  GonioLight {
+   url [ "IESradium.ies" ]
+   location 757.7000 744.8000 -1993.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_34  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1043.0000 744.8000 -1993.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_35  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1258.0000 744.8000 -1993.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_36  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1758.0000 744.8000 -1993.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_37  GonioLight {
+   url [ "IESradium.ies" ]
+   location 257.6000 744.8000 -1793.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_38  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1043.0000 744.8000 -1793.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_39  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1258.0000 744.8000 -1793.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_40  GonioLight {
+   url [ "IESradium.ies" ]
+   location 1758.0000 744.8000 -1793.0000
+   direction 0.0000 -1.0000 0.0003
+   color 1.0000 0.9853 0.8710
+   intensity 5.110000
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 903.2000 1091.0000 -191.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1016.0000 1091.0000 -189.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 796.1000 1091.0000 -144.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1069.0000 1091.0000 -34.0500
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 953.7000 1091.0000 205.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 691.1000 1091.0000 218.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 886.2000 1091.0000 384.6000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1018.0000 1091.0000 388.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1137.0000 1084.0000 253.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1037.0000 1084.0000 264.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 928.2000 1084.0000 277.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 776.7000 1084.0000 294.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 692.8000 1084.0000 98.3200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 785.6000 1084.0000 113.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 936.3000 1084.0000 139.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1117.0000 1084.0000 169.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1170.0000 1084.0000 -87.2100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 980.3000 1084.0000 -87.6200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 858.7000 1084.0000 -87.7800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 732.0000 1084.0000 -87.8800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 903.2000 1406.0000 -191.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1016.0000 1406.0000 -189.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 796.1000 1406.0000 -144.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1069.0000 1407.0000 -34.0500
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 953.7000 1407.0000 205.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 691.1000 1406.0000 218.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 886.2000 1406.0000 384.6000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1018.0000 1406.0000 388.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1137.0000 1399.0000 253.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1037.0000 1399.0000 264.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 928.2000 1399.0000 277.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 776.7000 1399.0000 294.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 692.8000 1399.0000 98.3200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 785.6000 1399.0000 113.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 936.3000 1399.0000 139.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1117.0000 1399.0000 169.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1170.0000 1399.0000 -87.2100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 980.3000 1399.0000 -87.6200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 858.7000 1399.0000 -87.7800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 732.0000 1399.0000 -87.8800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 903.2000 1721.0000 -191.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1016.0000 1721.0000 -189.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 796.1000 1721.0000 -144.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1069.0000 1722.0000 -34.0500
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 953.7000 1722.0000 205.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 691.1000 1721.0000 218.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 886.2000 1721.0000 384.6000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1018.0000 1721.0000 388.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1137.0000 1714.0000 253.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1037.0000 1714.0000 264.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 928.2000 1714.0000 277.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 776.7000 1714.0000 294.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 692.8000 1714.0000 98.3200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 785.6000 1714.0000 113.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 936.3000 1714.0000 139.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1117.0000 1714.0000 169.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1170.0000 1714.0000 -87.2100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 980.3000 1714.0000 -87.6200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 858.7000 1714.0000 -87.7800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 732.0000 1714.0000 -87.8800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 903.2000 2036.0000 -191.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1016.0000 2036.0000 -189.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 796.1000 2036.0000 -144.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1069.0000 2037.0000 -34.0500
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 953.7000 2037.0000 205.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 691.1000 2036.0000 218.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 886.2000 2036.0000 384.6000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 858.7000 2029.0000 -87.7800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1137.0000 2029.0000 253.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1037.0000 2029.0000 264.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 928.2000 2029.0000 277.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 776.7000 2029.0000 294.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 692.8000 2029.0000 98.3200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 785.6000 2029.0000 113.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 936.3000 2029.0000 139.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1117.0000 2029.0000 169.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1170.0000 2029.0000 -87.2100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 980.3000 2029.0000 -87.6200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 732.0000 2029.0000 -87.8800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1018.0000 2036.0000 388.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.0000 -172.6000 368.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 -33.9800 738.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 104.3000 368.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 242.6000 738.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 381.0000 368.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 519.3000 738.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 657.6000 368.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 796.0000 738.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 953.4000 368.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 1111.0000 738.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 1268.0000 368.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 1583.0000 368.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 1898.0000 368.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 2371.0000 368.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 2371.0000 738.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 2056.0000 738.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 1741.0000 738.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -472.2000 1426.0000 738.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 -172.4000 -1640.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_20  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 104.3000 -1640.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_21  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 381.0000 -1640.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_22  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 657.6000 -1640.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_23  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 953.4000 -1640.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_24  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 1268.0000 -1640.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_25  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 1583.0000 -1640.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_26  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 1898.0000 -1640.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_27  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 2371.0000 -1640.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_28  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 2371.0000 -1271.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_29  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 2056.0000 -1271.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_30  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 1741.0000 -1271.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_31  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 1426.0000 -1271.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_32  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 1111.0000 -1271.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_33  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 795.9000 -1271.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_34  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 519.2000 -1271.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_35  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 242.6000 -1271.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_36  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2766.0000 -34.0700 -1271.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -39.8900 317.4000 -133.7000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -164.7000 317.4000 -133.7000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -354.8000 317.4000 -133.7000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -354.8000 317.4000 53.8300
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -164.7000 317.4000 53.8300
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -39.8900 317.4000 53.8300
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -39.9100 317.4000 178.8000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -164.7000 317.4000 178.8000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -354.8000 317.4000 178.8000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -39.9100 317.4000 366.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -39.9100 317.4000 553.9000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -39.9100 317.4000 741.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -39.9100 317.4000 866.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -39.9100 317.4000 1054.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -164.6000 317.4000 1054.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -164.6000 317.4000 866.4000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -354.8000 317.4000 866.4000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location -354.8000 317.4000 1054.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 147.2000 317.4000 1054.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_20  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 147.2000 317.4000 866.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_21  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 147.2000 317.4000 741.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_22  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 334.4000 317.4000 741.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_23  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 334.4000 317.4000 866.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_24  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 334.4000 317.4000 1054.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_25  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 459.8000 317.4000 866.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_26  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 459.8000 317.4000 1054.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_27  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 459.8000 317.4000 741.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_28  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 647.8000 317.4000 866.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_29  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 647.8000 317.4000 1054.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_30  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 647.8000 317.4000 741.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_31  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 835.9000 317.4000 866.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_32  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 835.9000 317.4000 1054.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_33  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 835.9000 317.4000 741.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_34  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 961.3000 317.4000 866.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_35  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 961.3000 317.4000 1054.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_36  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 961.3000 317.4000 741.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_37  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 898.6000 317.4000 991.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_38  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 898.6000 317.4000 928.9000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_39  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1149.0000 317.4000 741.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_40  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1274.0000 317.4000 741.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_41  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 541.2000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_42  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 416.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_43  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 291.2000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_44  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 166.2000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_45  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 41.2400
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_46  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -83.7600
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_47  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -208.8000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_48  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -333.8000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_49  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -458.7000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_50  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -583.8000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_51  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -708.8000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_52  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -833.8000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_53  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -958.7000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_54  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -1084.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_55  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -1209.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_56  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -1334.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_57  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 362.1000 -1459.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_58  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 230.7000 -565.4000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_59  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 230.7000 -491.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2285.0000 380.9000 -1592.0000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2285.0000 380.9000 -703.9000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2285.0000 380.9000 -201.1000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2285.0000 380.9000 301.4000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2285.0000 380.9000 708.3000
+   direction 0.0000 -1.0000 -0.0014
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESosram.ies" ]
+   location 2327.0000 370.6000 -1692.0000
+   direction 0.0000 -0.6681 -0.7441
+   color 1.0000 0.9450 0.8784
+   intensity 22.000000
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESosram.ies" ]
+   location 2478.0000 370.6000 -1692.0000
+   direction 0.0000 -0.6681 -0.7441
+   color 1.0000 0.9450 0.8784
+   intensity 22.000000
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESosram.ies" ]
+   location 1473.0000 370.6000 -1692.0000
+   direction 0.0000 -0.6681 -0.7441
+   color 1.0000 0.9450 0.8784
+   intensity 22.000000
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESosram.ies" ]
+   location 1323.0000 370.6000 -1692.0000
+   direction 0.0000 -0.6681 -0.7441
+   color 1.0000 0.9450 0.8784
+   intensity 22.000000
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESosram.ies" ]
+   location 469.0000 370.6000 -1692.0000
+   direction 0.0000 -0.6681 -0.7441
+   color 1.0000 0.9450 0.8784
+   intensity 22.000000
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESosram.ies" ]
+   location 318.1000 370.6000 -1692.0000
+   direction 0.0000 -0.6681 -0.7441
+   color 1.0000 0.9450 0.8784
+   intensity 22.000000
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESosram.ies" ]
+   location 39.5600 370.6000 -1279.0000
+   direction -0.7441 -0.6681 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 22.000000
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESosram.ies" ]
+   location 39.5600 370.6000 -1129.0000
+   direction -0.7441 -0.6681 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 22.000000
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESosram.ies" ]
+   location 39.5600 370.6000 -274.6000
+   direction -0.7441 -0.6681 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 22.000000
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 387.3000 896.1000 440.7000
+   direction 0.0000 -0.8490 -0.5283
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 238.5000 895.3000 287.2000
+   direction 0.5283 -0.8490 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 238.5000 895.3000 -208.7000
+   direction 0.5283 -0.8490 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 245.1000 887.9000 -689.2000
+   direction 0.5352 -0.8447 0.0000
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 245.1000 887.9000 -720.5000
+   direction 0.5352 -0.8447 0.0000
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 245.1000 887.9000 -1201.0000
+   direction 0.5352 -0.8447 0.0000
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 461.0000 888.2000 -1314.0000
+   direction -0.0466 -0.8447 0.5332
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 785.0000 888.2000 -1285.0000
+   direction 0.5194 -0.7662 0.3784
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 815.7000 888.2000 -1282.0000
+   direction 0.4844 -0.7662 0.4223
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.2000 569.6000 -812.7000
+   direction 0.7270 -0.2349 0.6453
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.2000 426.5000 -812.4000
+   direction 0.7270 0.0000 0.6867
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.2000 278.4000 -812.5000
+   direction 0.6751 0.2999 0.6740
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 306.3000 190.0000 -812.6000
+   direction 0.5873 0.4521 0.6713
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 306.9000 189.9000 -574.0000
+   direction 0.6176 0.4521 -0.6435
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 306.9000 278.3000 -574.0000
+   direction 0.6796 0.2701 -0.6820
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.2000 426.5000 -573.7000
+   direction 0.7310 0.0214 -0.6820
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.2000 569.5000 -574.1000
+   direction 0.6736 -0.2688 -0.6885
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 591.0000 569.6000 -574.1000
+   direction -0.6664 -0.2251 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 590.6000 426.5000 -574.1000
+   direction -0.7032 0.0164 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 590.9000 278.4000 -574.1000
+   direction -0.6552 0.2559 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 592.0000 190.2000 -574.1000
+   direction -0.5282 0.4645 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 591.2000 190.2000 -812.5000
+   direction -0.6083 0.4645 0.6436
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_20  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 591.0000 278.4000 -812.5000
+   direction -0.7078 0.2341 0.6665
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_21  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 590.6000 426.5000 -812.5000
+   direction -0.7452 -0.0221 0.6665
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_22  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 590.9000 569.6000 -812.5000
+   direction -0.7141 -0.2142 0.6665
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_23  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.3000 569.6000 -1297.0000
+   direction 0.7270 -0.2349 0.6453
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_24  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.3000 426.5000 -1297.0000
+   direction 0.7270 0.0000 0.6867
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_25  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.3000 278.4000 -1297.0000
+   direction 0.6751 0.2999 0.6740
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_26  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 306.3000 190.0000 -1297.0000
+   direction 0.5873 0.4521 0.6713
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_27  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.0000 189.9000 -1059.0000
+   direction 0.6176 0.4521 -0.6435
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_28  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.0000 278.3000 -1059.0000
+   direction 0.6796 0.2701 -0.6820
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_29  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.2000 426.5000 -1058.0000
+   direction 0.7310 0.0214 -0.6820
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_30  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 307.2000 569.5000 -1059.0000
+   direction 0.6736 -0.2688 -0.6885
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_31  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 591.0000 569.6000 -1059.0000
+   direction -0.6664 -0.2251 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_32  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 590.7000 426.5000 -1059.0000
+   direction -0.7032 0.0164 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_33  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 591.0000 278.4000 -1059.0000
+   direction -0.6552 0.2559 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_34  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 592.1000 190.2000 -1059.0000
+   direction -0.5282 0.4645 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_35  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 591.3000 190.2000 -1297.0000
+   direction -0.6083 0.4645 0.6436
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_36  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 591.0000 278.4000 -1297.0000
+   direction -0.7078 0.2341 0.6665
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_37  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 590.7000 426.5000 -1297.0000
+   direction -0.7452 -0.0221 0.6665
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_38  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 591.0000 569.6000 -1297.0000
+   direction -0.7141 -0.2142 0.6665
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_39  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 792.1000 569.6000 -1298.0000
+   direction 0.7270 -0.2349 0.6453
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_40  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 792.1000 426.5000 -1297.0000
+   direction 0.7270 0.0000 0.6867
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_41  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 792.1000 278.4000 -1298.0000
+   direction 0.6751 0.2999 0.6740
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_42  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 791.2000 190.0000 -1298.0000
+   direction 0.5873 0.4521 0.6713
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_43  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 791.8000 189.9000 -1059.0000
+   direction 0.6176 0.4521 -0.6435
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_44  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 791.8000 278.3000 -1059.0000
+   direction 0.6796 0.2701 -0.6820
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_45  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 792.1000 426.5000 -1059.0000
+   direction 0.7310 0.0214 -0.6820
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_46  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 792.1000 569.5000 -1059.0000
+   direction 0.6736 -0.2688 -0.6885
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_47  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 1076.0000 569.6000 -1059.0000
+   direction -0.6664 -0.2251 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_48  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 1076.0000 426.5000 -1059.0000
+   direction -0.7032 0.0164 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_49  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 1076.0000 278.4000 -1059.0000
+   direction -0.6552 0.2559 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_50  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 1077.0000 190.2000 -1059.0000
+   direction -0.5282 0.4645 -0.7108
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_51  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 1076.0000 190.2000 -1298.0000
+   direction -0.6083 0.4645 0.6436
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_52  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 1076.0000 278.4000 -1298.0000
+   direction -0.7078 0.2341 0.6665
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_53  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 1076.0000 426.5000 -1298.0000
+   direction -0.7452 -0.0221 0.6665
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_54  GonioLight {
+   url [ "IESphilips.ies" ]
+   location 1076.0000 569.6000 -1298.0000
+   direction -0.7141 -0.2142 0.6665
+   color 1.0000 0.7730 0.5610
+   intensity 37.950001
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -1459.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -1334.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -1209.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -1084.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -958.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -833.7000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -708.7000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -583.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -458.7000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -333.7000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -208.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 776.9000 -83.7600
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 645.4000 -491.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 645.4000 -565.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2285.0000 795.6000 -1456.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2285.0000 795.6000 -704.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2285.0000 795.6000 -201.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2285.0000 795.6000 301.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2285.0000 795.6000 708.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2028.0000 795.6000 708.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1771.0000 795.6000 708.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1148.0000 795.6000 666.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 635.3000 795.6000 666.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 148.6000 795.6000 666.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 27.6800 795.6000 537.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 27.6800 795.6000 298.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 27.6800 795.6000 48.3100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 27.6800 795.6000 -201.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 27.6800 795.6000 -451.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 27.6800 795.6000 -952.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 27.6800 795.6000 -1204.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 27.6800 795.6000 -1454.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 148.6000 795.6000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_20  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 635.3000 795.6000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_21  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1148.0000 795.6000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_22  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2015.0000 795.6000 -1554.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -333.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -208.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -83.7600
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 41.2300
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 166.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 291.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 416.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 541.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -458.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -583.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -708.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -833.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -958.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -1084.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -1209.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -1334.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1092.0000 -1459.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 1061.0000 -565.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 1061.0000 -491.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1095.0000 -1592.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1095.0000 -1205.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1095.0000 -704.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1095.0000 -201.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1095.0000 301.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1095.0000 708.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1632.0000 1095.0000 694.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1148.0000 1095.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 635.4000 1095.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 148.6000 1095.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1095.0000 537.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1095.0000 48.3100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1095.0000 -451.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1095.0000 -952.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1095.0000 -1454.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 148.6000 1095.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 635.4000 1095.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1148.0000 1095.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1632.0000 1095.0000 -1612.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -333.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -208.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -83.7600
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 41.2300
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 166.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 291.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 416.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 541.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -458.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -583.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -708.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -833.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -958.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -1084.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -1209.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -1334.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1407.0000 -1459.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 1376.0000 -565.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 1376.0000 -491.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1410.0000 -1592.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1410.0000 -1205.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1410.0000 -704.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1410.0000 -201.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1410.0000 301.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1410.0000 708.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1632.0000 1410.0000 694.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1148.0000 1410.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 635.4000 1410.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 148.6000 1410.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1410.0000 537.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1410.0000 48.3100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1410.0000 -451.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1410.0000 -952.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1410.0000 -1454.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 148.6000 1410.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 635.4000 1410.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1148.0000 1410.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1632.0000 1410.0000 -1612.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 1691.0000 -491.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 1691.0000 -565.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -83.7600
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 41.2300
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 166.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 291.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 416.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 541.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -458.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -208.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -708.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -833.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -958.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -1084.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -1209.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -1334.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -1459.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -583.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 1722.0000 -333.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1725.0000 -1592.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1725.0000 -1205.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1725.0000 -704.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1725.0000 -201.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1725.0000 301.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 1725.0000 708.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1632.0000 1725.0000 694.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1148.0000 1725.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 635.4000 1725.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 148.6000 1725.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1725.0000 537.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1725.0000 48.3100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1725.0000 -451.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1725.0000 -952.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 1725.0000 -1454.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 148.6000 1725.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 635.4000 1725.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1148.0000 1725.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1632.0000 1725.0000 -1612.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 2006.0000 -491.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 2006.0000 -565.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -83.7600
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 41.2300
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 166.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 291.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 416.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 541.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -458.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -208.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -708.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -833.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -958.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -1084.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -1209.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -1334.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -1459.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -583.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2037.0000 -333.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2040.0000 -1592.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2040.0000 -1205.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2040.0000 -704.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2040.0000 -201.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2040.0000 301.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2040.0000 708.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1632.0000 2040.0000 694.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1148.0000 2040.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 635.4000 2040.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 148.6000 2040.0000 666.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 2040.0000 537.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 2040.0000 48.3100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 2040.0000 -451.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 2040.0000 -952.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 14.9100 2040.0000 -1454.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 148.6000 2040.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 635.4000 2040.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1148.0000 2040.0000 -1584.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1632.0000 2040.0000 -1612.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 903.2000 2351.0000 -191.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1016.0000 2351.0000 -189.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 796.1000 2351.0000 -144.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1069.0000 2351.0000 -34.0500
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 953.7000 2351.0000 205.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 691.1000 2351.0000 218.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 886.2000 2351.0000 384.6000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1018.0000 2351.0000 388.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1137.0000 2344.0000 253.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1037.0000 2344.0000 264.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 928.2000 2344.0000 277.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 776.7000 2344.0000 294.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 692.8000 2344.0000 98.3200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 785.6000 2344.0000 113.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 936.3000 2344.0000 139.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1117.0000 2344.0000 169.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1170.0000 2344.0000 -87.2100
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 980.3000 2344.0000 -87.6200
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 858.7000 2344.0000 -87.7800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 732.0000 2344.0000 -87.8800
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 2320.0000 -491.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1750.0000 2320.0000 -565.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -83.7600
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 41.2300
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 166.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 291.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 416.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 541.2000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -458.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -208.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -708.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -833.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -958.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -1084.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -1209.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -1334.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -1459.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_18  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -583.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_19  GonioLight {
+   url [ "IESlouis_poulsen.ies" ]
+   location 1515.0000 2352.0000 -333.8000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8705
+   intensity 106.230003
+   on TRUE
+ }
+DEF Light_01  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2355.0000 -1592.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_02  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2355.0000 -1205.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_03  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2355.0000 -704.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_04  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2355.0000 -201.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_05  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2355.0000 301.4000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_06  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 2322.0000 2355.0000 708.3000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_07  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1632.0000 2355.0000 694.5000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_08  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1146.0000 2371.0000 796.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_09  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 646.2000 2371.0000 796.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_10  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 146.2000 2371.0000 796.9000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_11  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -101.8000 2355.0000 49.8400
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_12  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -101.8000 2355.0000 -450.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_13  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location -101.8000 2355.0000 -950.1000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_16  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1146.0000 2371.0000 -1701.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_15  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 646.2000 2371.0000 -1701.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_17  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 1632.0000 2355.0000 -1612.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_14  GonioLight {
+   url [ "IESsiemens.ies" ]
+   location 268.4000 2371.0000 -1701.0000
+   direction 0.0000 -1.0000 0.0000
+   color 1.0000 0.9852 0.8710
+   intensity 3.920000
+   on TRUE
+ }
+DEF Light_84  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 142.0000 2428.0000 -1675.0000
+   direction 0.0000 0.8515 0.5244
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_83  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 394.6000 2428.0000 -1675.0000
+   direction 0.0000 0.8515 0.5244
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_82  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 646.2000 2428.0000 -1675.0000
+   direction 0.0000 0.8515 0.5244
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_81  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 896.3000 2428.0000 -1675.0000
+   direction 0.0000 0.8515 0.5244
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_80  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 1146.0000 2428.0000 -1675.0000
+   direction 0.0000 0.8515 0.5244
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_85  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location -67.4700 2455.0000 -1459.0000
+   direction 0.5244 0.8515 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_86  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location -67.4700 2455.0000 -1205.0000
+   direction 0.5244 0.8515 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_87  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location -67.4700 2455.0000 -950.5000
+   direction 0.5244 0.8515 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_88  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location -67.4700 2455.0000 -703.5000
+   direction 0.5244 0.8515 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_89  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location -67.4700 2455.0000 -450.0000
+   direction 0.5244 0.8515 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_90  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location -67.4700 2455.0000 -201.7000
+   direction 0.5244 0.8515 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_91  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location -67.4700 2455.0000 49.8200
+   direction 0.5244 0.8515 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_92  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location -67.4700 2455.0000 301.2000
+   direction 0.5244 0.8515 0.0000
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_93  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location -25.5800 2455.0000 769.6000
+   direction 0.0000 0.8515 -0.5244
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_94  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 146.3000 2455.0000 769.6000
+   direction 0.0000 0.8515 -0.5244
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_96  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 644.4000 2455.0000 769.6000
+   direction 0.0000 0.8515 -0.5244
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_97  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 896.5000 2429.0000 769.1000
+   direction 0.0000 0.8515 -0.5244
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_95  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 394.1000 2429.0000 769.1000
+   direction 0.0000 0.8515 -0.5244
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+DEF Light_98  GonioLight {
+   url [ "IESrjh_ts.ies" ]
+   location 1146.0000 2455.0000 769.6000
+   direction 0.0000 0.8515 -0.5244
+   color 1.0000 0.9450 0.8784
+   intensity 334.000000
+   on TRUE
+ }
+

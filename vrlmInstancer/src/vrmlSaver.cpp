@@ -326,18 +326,32 @@ void VrmlSaver::writeShapeNode(ShapeNode* node) {
 }
 
 void VrmlSaver::writeLightNode(LightNode* node) {
-	std::string leadingSpaces = getLeadingSpaces((4 * (node->nodeDepth)));
-	out << "DEF " << node->name << " SpotLight {" << std::endl;
-	out << "  intensity " << node->intensity << std::endl;
-	out << "  color " << node->color.x << " " << node->color.y << " " << node->color.z << std::endl;
-	out << "  location " << node->location.x << " " << node->location.y << " " << node->location.z << std::endl;
-	out << "  direction " << node->direction.x << " " << node->direction.y << " " << node->direction.z << std::endl;
-	out << "  cutOffAngle " << node->cutOffAngle << std::endl;
-	out << "  beamWidth " << node->beamWidth << std::endl;
-	out << "  on " << (node->on ? "TRUE" : "FALSE") << std::endl;
-	out << "  radius " << node->radius << std::endl;
-	out << "}" << std::endl;
+	switch (node->lightType)
+	{
+	case LightNode::LightType::SPOTLIGHT:
+		out << "DEF " << node->name << " SpotLight {" << std::endl;
+		out << "  intensity " << node->intensity << std::endl;
+		out << "  color " << node->color.x << " " << node->color.y << " " << node->color.z << std::endl;
+		out << "  location " << node->location.x << " " << node->location.y << " " << node->location.z << std::endl;
+		out << "  direction " << node->direction.x << " " << node->direction.y << " " << node->direction.z << std::endl;
+		out << "  cutOffAngle " << node->cutOffAngle << std::endl;
+		out << "  beamWidth " << node->beamWidth << std::endl;
+		out << "  on " << (node->on ? "TRUE" : "FALSE") << std::endl;
+		out << "  radius " << node->radius << std::endl;
+		out << "}" << std::endl;
+		break;
 
+	case LightNode::LightType::GONIOLIGHT:
+		out << "DEF " << node->name << " GonioLight {" << std::endl;
+		out << "  url [ \"" << node->url << "\" ]" << std::endl;
+		out << "  color " << node->color.x << " " << node->color.y << " " << node->color.z << std::endl;
+		out << "  location " << node->location.x << " " << node->location.y << " " << node->location.z << std::endl;
+		out << "  direction " << node->direction.x << " " << node->direction.y << " " << node->direction.z << std::endl;
+		out << "  on " << (node->on ? "TRUE" : "FALSE") << std::endl;
+		out << "  intensity " << node->intensity << std::endl;
+		out << "}" << std::endl;
+		break;
+	}
 }
 
 void VrmlSaver::writeViewPointNode(ViewPointNode* viewPointNode) {

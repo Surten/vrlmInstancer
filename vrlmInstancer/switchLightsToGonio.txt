@@ -1,0 +1,4 @@
+Load Orig/0-6_Lights.WRL
+InstanceAll
+SwitchLightsToGonio Orig/0-6_Lights.WRL lights_all_on.wrl
+SaveId 0 Output/0-6_Lights.WRL

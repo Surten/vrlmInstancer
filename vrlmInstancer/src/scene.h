@@ -54,9 +54,13 @@ public:
 
 	void findShapeNodesByTheirMaterialDiffuseComponentAndReplaceTheirTexturePath(float* diffuseComponent, std::string texturePath);
 
+	void convertSpotLightsToGonioLights(Scene* lightReferences);
+
 private:
 
 
 private:
 	void findIdenticalGeometry(std::vector<std::pair<int, int>>& geoPairs);
+
+	LightNode* findSameLightsByPosition(LightNode* light1, Scene* listOfOtherLights);
 };

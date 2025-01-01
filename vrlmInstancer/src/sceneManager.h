@@ -42,6 +42,8 @@ public:
 
 	void unifyTextrureCoordScaleOfAllScenes();
 
+	bool convertSceneSpotLightsToGonioLights(std::string sceneName, std::string referenceSceneName);
+
 private:
 	std::vector<Scene*> scenes;
 	std::vector<Scene*> scenesWithTextures;

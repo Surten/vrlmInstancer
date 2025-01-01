@@ -129,9 +129,18 @@ public:
 	float beamWidth;
 	bool on;
 	float radius;
+	std::string url;
+
+	enum class LightType {
+		SPOTLIGHT,
+		GONIOLIGHT
+	};
+	LightType lightType;
+	
+
 
 	LightNode() : BaseNode("", Light), intensity(0), color(), location(), direction(),
-		cutOffAngle(0), beamWidth(0), on(false), radius(0) {}
+		cutOffAngle(0), beamWidth(0), on(false), radius(0), lightType(LightType::SPOTLIGHT) {}
 
 private:
 };

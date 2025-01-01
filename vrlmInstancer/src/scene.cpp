@@ -171,4 +171,38 @@ void Scene::findShapeNodesByTheirMaterialDiffuseComponentAndReplaceTheirTextureP
 	}
 }
 
+LightNode* Scene::findSameLightsByPosition(LightNode* light, Scene* listOfOtherLights)
+{
+	for (int i = 0; i < listOfOtherLights->lights.size(); i++)
+	{
+		if (light->location.areEqual(listOfOtherLights->lights[i]->location))
+			return listOfOtherLights->lights[i];
+	}
+	return nullptr;
+}
+
+/// <summary>
+/// Converts spotlights to gonio lights, for our purpose, we only implement them using a determined url "IESrjh_ts.ies"
+/// </summary>
+/// <param name="lightReferences"> if some of the lights have a definition elsewhere </param>
+void Scene::convertSpotLightsToGonioLights(Scene* lightReferences) {
+
+	LightNode *referenceLight = nullptr;
+
+	for (int i = 0; i < lights.size(); i++)
+	{
+		if (referenceLight = findSameLightsByPosition(lights[i], lightReferences))
+		{
+			lights[i]->url = referenceLight->url;
+			lights[i]->intensity = referenceLight->intensity;
+		}
+		else
+		{
+			lights[i]->url = "IESrjh_ts.ies";
+			lights[i]->intensity = 106.230003;
+		}
+		lights[i]->lightType = LightNode::LightType::GONIOLIGHT;
+	}
+}
+
 
