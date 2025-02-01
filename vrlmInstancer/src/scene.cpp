@@ -45,8 +45,48 @@ void Scene::writeOutGeometries() {
 }
 
 void Scene::scaleTextureCoordsForAllObjects(float desiredTextureScale) {
-	for (auto geometry : geometries) {
+	for (auto &geometry : geometries) {
 		geometry->scaleTextureCoords(desiredTextureScale);
+	}
+}
+
+void Scene::scaleSceneGeometry(float scale)
+{
+	for (auto& geometry : geometries) {
+		geometry->scaleCoords(0.01f);
+	}
+
+	for (auto node : AllNodes)
+	{
+		switch (node->type)
+		{
+		case NodeTypes::Transform:
+		{
+			TransformNode* transformNode = static_cast<TransformNode*>(node);
+			transformNode->translation.x = transformNode->translation.x * scale;
+			transformNode->translation.y = transformNode->translation.y * scale;
+			transformNode->translation.z = transformNode->translation.z * scale;
+		}
+			break;
+		case NodeTypes::Light:
+		{
+			LightNode* lightNode = static_cast<LightNode*>(node);
+			lightNode->location.x = lightNode->location.x * scale;
+			lightNode->location.y = lightNode->location.y * scale;
+			lightNode->location.z = lightNode->location.z * scale;
+		}
+			break;
+		case NodeTypes::ViewPoint:
+		{
+			ViewPointNode* viewPointNode = static_cast<ViewPointNode*>(node);
+			viewPointNode->position.x = viewPointNode->position.x * scale;
+			viewPointNode->position.y = viewPointNode->position.y * scale;
+			viewPointNode->position.z = viewPointNode->position.z * scale;
+		}
+			break;
+		default:
+			break;
+		}
 	}
 }
 
@@ -199,7 +239,7 @@ void Scene::convertSpotLightsToGonioLights(Scene* lightReferences) {
 		else
 		{
 			lights[i]->url = "IESrjh_ts.ies";
-			lights[i]->intensity = 106.230003;
+			lights[i]->intensity = 106.230003f;
 		}
 		lights[i]->lightType = LightNode::LightType::GONIOLIGHT;
 	}

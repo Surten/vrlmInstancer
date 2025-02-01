@@ -31,6 +31,7 @@ public:
 	void writeOutGeometries();
 
 	void scaleTextureCoordsForAllObjects(float desiredTextureScale);
+	void scaleSceneGeometry(float scale);
 
 	/// <summary>
 	/// Iterates over the geometries of this scene and finds identical ones

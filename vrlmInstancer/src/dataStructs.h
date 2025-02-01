@@ -60,7 +60,7 @@ public:
     vec2 operator-(const vec2& other) {
         return vec2(x - other.x, y - other.y);
     }
-    float len() {
+    double len() {
         return std::sqrt(x * x + y * y);
     }
 };
@@ -135,6 +135,7 @@ public:
     vec3 getCenterOfGravity();
 
     void scaleTextureCoords(float scale);
+    void scaleCoords(float scale);
     float calculateTextureScale();
 
 private:

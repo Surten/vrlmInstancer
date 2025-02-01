@@ -3,7 +3,7 @@
 #include <ctime> 
 
 VrmlSaver::VrmlSaver() {
-
+	scene = nullptr;
 }
 
 
@@ -36,13 +36,13 @@ void VrmlSaver::writeNodesfromRoot() {
 
 	for (size_t i = 0; i < scene->RootNodes.size(); i++)
 	{
-		if (scene->RootNodes.at(i)->type == Transform)
+		if (scene->RootNodes.at(i)->type == NodeTypes::Transform)
 			writeTransformNode(static_cast<TransformNode*>(scene->RootNodes.at(i)));
-		else if (scene->RootNodes.at(i)->type == Shape)
+		else if (scene->RootNodes.at(i)->type == NodeTypes::Shape)
 			writeShapeNode(static_cast<ShapeNode*>(scene->RootNodes.at(i)));
-		else if (scene->RootNodes.at(i)->type == Light)
+		else if (scene->RootNodes.at(i)->type == NodeTypes::Light)
 			writeLightNode(static_cast<LightNode*>(scene->RootNodes.at(i)));
-		else if (scene->RootNodes.at(i)->type == ViewPoint)
+		else if (scene->RootNodes.at(i)->type == NodeTypes::ViewPoint)
 			writeViewPointNode(static_cast<ViewPointNode*>(scene->RootNodes.at(i)));
 
 	}
@@ -52,9 +52,9 @@ void VrmlSaver::writeChildren(TransformNode* node) {
 	// we write children of the given node, expecting only Transform nodes to have children
 	for (size_t i = 0; i < node->children.size(); i++)
 	{
-		if (node->children[i]->type == Transform)
+		if (node->children[i]->type == NodeTypes::Transform)
 			writeTransformNode(static_cast<TransformNode*>(node->children[i]));
-		else if (node->children[i]->type == Shape)
+		else if (node->children[i]->type == NodeTypes::Shape)
 			writeShapeNode(static_cast<ShapeNode*>(node->children[i]));
 	}
 }
@@ -63,7 +63,10 @@ void VrmlSaver::writeChildren(TransformNode* node) {
 
 void VrmlSaver::writeTransformNode(TransformNode* node) {
 	std::string leadingSpaces = getLeadingSpaces(4 * node->nodeDepth);
-	out << leadingSpaces << "DEF " << node->name << " Transform {" << std::endl;
+	out << leadingSpaces;
+	if (node->name != "")
+		out << "DEF " << node->name << " ";
+	out << "Transform {" << std::endl;
 	if (node->hasTranslation())
 		out << leadingSpaces << "  translation " << node->translation.x << " " << node->translation.y << " " << node->translation.z << std::endl;
 	if (node->hasRotation())
@@ -130,7 +133,10 @@ void VrmlSaver::writeGeometryDEF(ShapeNode* node) {
 void VrmlSaver::writeGeometryCoords(ShapeNode* node) 
 {
 	std::string leadingSpaces = getLeadingSpaces((4 * (node->nodeDepth + 1)));
-	out << leadingSpaces << "coord DEF " << node->geometry->name + "-COORD Coordinate { point [" << std::endl;
+	out << leadingSpaces << "coord ";
+	if (node->geometry->name != "")
+		out << "DEF " << node->geometry->name + "-COORD ";
+	out << "Coordinate { point [" << std::endl;
 
 	int i = 0, j = 0;
 	for (i = 0; i < ((int)node->geometry->coords.size() / numOfPointsPerLine); i++)
@@ -356,11 +362,13 @@ void VrmlSaver::writeLightNode(LightNode* node) {
 
 void VrmlSaver::writeViewPointNode(ViewPointNode* viewPointNode) {
 	std::string leadingSpaces = getLeadingSpaces((4 * (viewPointNode->nodeDepth)));
-	out << "DEF " << viewPointNode->name << " Viewpoint {" << std::endl;
+	if (viewPointNode->name != "")
+		out << "DEF " << viewPointNode->name << " ";
+	out << "Viewpoint {" << std::endl;
 	out << "  position " << viewPointNode->position.x << " " << viewPointNode->position.y << " " << viewPointNode->position.z << std::endl;
 	out << "  orientation " << viewPointNode->orientation[0] << " " << viewPointNode->orientation[1] << " " << viewPointNode->orientation[2] << " " << viewPointNode->orientation[3] << std::endl;
 	out << "  fieldOfView " << viewPointNode->fieldOfView << std::endl;
-	out << "  description " << viewPointNode->description << std::endl;
+	out << "  description " << '"' << viewPointNode->description << '"' << std::endl;
 	out << "}" << std::endl;
 
 }

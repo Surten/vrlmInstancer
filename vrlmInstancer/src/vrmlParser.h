@@ -45,7 +45,7 @@ private:
 	/// Parse different constructs that use the DEF keyword
 	/// </summary>
 	/// <param name="parent"> The parent Node, we only use Transform nodes as parents in this implemetation</param>
-	void parseDEF(TransformNode* parent);
+	void parseNode(TransformNode* parent, bool hasDEF);
 
 	/// <summary>
 	/// Parse a transform node

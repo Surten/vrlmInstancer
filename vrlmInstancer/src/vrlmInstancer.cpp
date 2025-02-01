@@ -98,7 +98,9 @@
 int main()
 {
     Application app;
-    std::string fileName = "switchLightsToGonio.txt";
+    //std::string fileName = "automaticFileTest.txt";
+    //std::string fileName = "switchLightsToGonio.txt";
+    std::string fileName = "SimpleScene.txt";
     app.AutomaticMode(fileName);
 
 

@@ -145,6 +145,12 @@ void SceneManager::unifyTextrureCoordScaleOfAllScenes() {
 	}
 }
 
+void SceneManager::scaleAllScenesGeometry(float scale) {
+	for (auto scene : scenes) {
+		scene->scaleSceneGeometry(scale);
+	}
+}
+
 
 bool SceneManager::convertSceneSpotLightsToGonioLights(std::string sceneName, std::string referenceSceneName)
 {

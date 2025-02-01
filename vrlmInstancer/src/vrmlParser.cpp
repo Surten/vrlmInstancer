@@ -42,7 +42,15 @@ void VrmlParser::readSymbol() {
     }
     else
     {
-        vrlmFile >> str;
+        if (c == ',' || c == '"') {
+            char temp;
+            vrlmFile.get(temp);
+            str = temp;
+        }
+        else
+        {
+            vrlmFile >> str;
+        }
         lastWasNumber = false;
     }
 
@@ -63,7 +71,13 @@ void VrmlParser::parseNextNode() {
     while (!vrlmFile.eof()) {   // read all root nodes
         readSymbol();
         if (str == "DEF") {     // we always expect the root nodes to start with a DEF keyword
-            parseDEF(nullptr);  // there is no parent node, so we pass nullptr
+            parseNode(nullptr, true);  // there is no parent node, so we pass nullptr
+        }
+        else if (str == "Transform" || str == "TimeSensor"
+            || str == "SpotLight" || str == "PointLight" || str == "GonioLight" || str == "Viewpoint"
+            || str == "NavigationInfo")
+        {
+            parseNode(nullptr, false);
         }
     }
     //std::cout << "done Parsing file" << std::endl;
@@ -72,15 +86,11 @@ void VrmlParser::parseNextNode() {
 
 
 
-void VrmlParser::parseDEF(TransformNode* parent) {
+void VrmlParser::parseNode(TransformNode* parent, bool hasDEF) {
     std::string name;
-    readSymbol();
-
-    if (str != "Transform" && str != "," && str != "TimeSensor"
-        && str != "SpotLight" && str != "PointLight" && str != "GonioLight" && str != "Viewpoint"
-        && str != "NavigationInfo")
-        //to determine if there is a name filter out all the possible node keywords, because I cannot think of a better solution
+    if (hasDEF)
     {
+        readSymbol();
         name = str;
         readSymbol();
     }
@@ -295,9 +305,10 @@ void VrmlParser::parseTexture(ShapeNode* shapeNode) {
     do {
         readSymbol();
         if (str == "url") {
+            readSymbol();   // read '"'
             readSymbol();
 
-            shapeNode->textureFilePath = str.substr(1, str.size() - 2);
+            shapeNode->textureFilePath = str.substr(0, str.size() - 1);
         }
         else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong
             std::cout << "error reading properties of Texture of node" << std::endl;
@@ -414,12 +425,15 @@ void VrmlParser::parseColor(ShapeNode* shapeNode) {
 void VrmlParser::parseCoords(ShapeNode* shapeNode) {
     std::string aaa = str;
     readSymbol();
-    if (str != "DEF")
-        std::cout << "error: expected DEF at the start of Coord node " << std::endl;
-    readSymbol();
-    std::string coordName = str;
-    readSymbol();
-    if (str != "Coordinate") std::cout << "error: expected Coordinate at the start of Coord node " << std::endl;
+    if (str == "DEF") { //read name for the coordinates if DEF
+        readSymbol();
+        std::string coordName = str;
+        readSymbol();
+    }
+
+
+    if (str != "Coordinate") 
+        std::cout << "error: expected Coordinate at the start of Coord node " << std::endl;
     readSymbol();
     if (str[0] != '{') std::cout << "error: expected { at the start of Coord node " << std::endl;
     readSymbol();
@@ -487,7 +501,7 @@ void VrmlParser::parseCoordIndex(ShapeNode* shapeNode) {
         int vals[] = { 0,0,0 };
         for (int i = 0; i < 3; i++)
         {
-            readSymbol();
+            if(!lastWasNumber) readSymbol();
             if (str[0] == ']') return;
             vals[i] = (int)n;
             readSymbol(); // read comma
@@ -528,6 +542,8 @@ void VrmlParser::parseShape(TransformNode* parent) {
     shapeNode->parent = parent;
     scene->AllNodes.push_back(shapeNode);
     scene->ShapeNodes.push_back(shapeNode);
+    if (scene->AllNodes.size() == 11)
+        std::cout << std::endl;
     do {
         readSymbol();
         if (str == "appearance") {
@@ -551,8 +567,14 @@ void VrmlParser::parseChildren(TransformNode* parent) {
     do {
         readSymbol();
         if (str == "DEF") {         // we foud a DEF keyword and need to determine what to parse, effectively doing recursion
-            parseDEF(parent);
+            parseNode(parent, true);
             continue;
+        }
+        else if (str == "Transform" || str == "TimeSensor"
+            || str == "SpotLight" || str == "PointLight" || str == "GonioLight" || str == "Viewpoint"
+            || str == "NavigationInfo")
+        {
+            parseNode(parent, false);
         }
         else if (str[0] == ',') {   // comma is somehow valid
             continue;
@@ -654,8 +676,9 @@ void VrmlParser::parseGonioLight(LightNode* light) {
         }
         else if (str == "url") {
             readSymbol();   // read "["
+            readSymbol();   // read '"'
             readSymbol();
-            light->url = str.substr(1, str.size() - 2);
+            light->url = str.substr(0, str.size() - 1);
             readSymbol();   // read "]"
             continue;
         }
@@ -702,7 +725,7 @@ void VrmlParser::parseGonioLight(LightNode* light) {
 
 void VrmlParser::parseViewPoint(ViewPointNode* viewPointNode) {
     readSymbol();
-    if (str[0] != '{') std::cout << "error: expected { at the start of light named " << viewPointNode->name << std::endl;
+    if (str[0] != '{') std::cout << "error: expected { at the start of viewport named " << viewPointNode->name << std::endl;
 
     do {
         readSymbol();
@@ -733,7 +756,15 @@ void VrmlParser::parseViewPoint(ViewPointNode* viewPointNode) {
         }
         if (str == "description") {
             readSymbol();
-            viewPointNode->description = str;
+            do 
+            {
+                readSymbol();
+                viewPointNode->description += str;
+            } while (str.find('"') == std::string::npos);
+
+            //get rid of the last '"'
+            viewPointNode->description = viewPointNode->description.substr(0, viewPointNode->description.size() - 1);
+
             continue;
         }
         else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong

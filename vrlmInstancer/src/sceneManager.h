@@ -41,6 +41,7 @@ public:
 	void exportAllToPBRT();
 
 	void unifyTextrureCoordScaleOfAllScenes();
+	void scaleAllScenesGeometry(float scale);
 
 	bool convertSceneSpotLightsToGonioLights(std::string sceneName, std::string referenceSceneName);
 

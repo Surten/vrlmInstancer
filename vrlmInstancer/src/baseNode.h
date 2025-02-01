@@ -5,7 +5,7 @@
 
 // enum to remember the different type of nodes inside base node,
 // so that they can be easily static_casted
-enum NodeTypes { Transform, Shape, Light, ViewPoint };
+enum class NodeTypes { Transform, Shape, Light, ViewPoint };
 
 /// <summary>
 /// Base node class to be derived from in the favor of polymorpism
@@ -23,6 +23,7 @@ public:
 		this->name = name;
 		this->type = type;
 		parent = nullptr;
+		nodeDepth = -1;
 	}
 protected:
 
@@ -37,12 +38,12 @@ private:
 /// </summary>
 class TransformNode : public BaseNode {
 public:
-	TransformNode(std::string name) : BaseNode(name, Transform), translation(), scale(1.0f, 1.0f, 1.0f){
+	TransformNode(std::string name) : BaseNode(name, NodeTypes::Transform), translation(), scale(1.0f, 1.0f, 1.0f){
 		rotation[0] = 0; rotation[1] = 0; rotation[2] = 0; rotation[3] = 0;
 		scaleOrientation[0] = 0; scaleOrientation[1] = 0; scaleOrientation[2] = 0; scaleOrientation[3] = 0;
 	}
 	TransformNode(std::string name, float* translation, float* rotation, float* scale, float* scaleOrientation)
-		: BaseNode(name, Transform), translation(translation[0], translation[1], translation[2]), scale(scale[0], scale[1], scale[2])
+		: BaseNode(name, NodeTypes::Transform), translation(translation[0], translation[1], translation[2]), scale(scale[0], scale[1], scale[2])
 	{
 		this->name = name;
 		std::memcpy(this->rotation, rotation, sizeof(float) * 4);
@@ -102,7 +103,7 @@ public:
 /// </summary>
 class ShapeNode : public BaseNode {
 public:
-	ShapeNode() : BaseNode("", Shape) {
+	ShapeNode() : BaseNode("", NodeTypes::Shape) {
 		geometry = nullptr;
 	}
 public:
@@ -139,7 +140,7 @@ public:
 	
 
 
-	LightNode() : BaseNode("", Light), intensity(0), color(), location(), direction(),
+	LightNode() : BaseNode("", NodeTypes::Light), intensity(0), color(), location(), direction(),
 		cutOffAngle(0), beamWidth(0), on(false), radius(0), lightType(LightType::SPOTLIGHT) {}
 
 private:
@@ -156,7 +157,7 @@ public:
 	float fieldOfView;
 	std::string description;
 
-	ViewPointNode() : BaseNode("", ViewPoint), position(), orientation(), fieldOfView(0), description("") {}
+	ViewPointNode() : BaseNode("", NodeTypes::ViewPoint), position(), orientation(), fieldOfView(0), description("") {}
 
 private:
 };

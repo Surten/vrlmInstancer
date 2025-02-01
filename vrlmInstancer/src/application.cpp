@@ -124,6 +124,12 @@ void Application::AutomaticMode(std::string fileName){
             sm.unifyTextrureCoordScaleOfAllScenes();
             std::cout << "Done - Texture coords scale" << std::endl;
         }
+        else if (command == "ScaleAllScenes")
+        {
+            std::cout << "Scaling all scenes by 0.01f" << std::endl;
+            sm.scaleAllScenesGeometry(0.01f);
+            std::cout << "Done - coord scale" << std::endl;
+        }
         else if (command == "SwitchLightsToGonio")
         {
             autoIn >> nameStringPlaceholder;
