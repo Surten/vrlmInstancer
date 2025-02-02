@@ -143,6 +143,11 @@ void Application::AutomaticMode(std::string fileName){
             }
             sm.convertSceneSpotLightsToGonioLights(nameStringPlaceholder, fileStringPlaceholder);
         }
+        else if (command == "ExportToPBRT")
+        {
+            autoIn >> idPlaceholder;
+            sm.exportAllToPBRT(idPlaceholder);
+        }
     }
 }
 

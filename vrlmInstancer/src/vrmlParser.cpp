@@ -164,6 +164,7 @@ void VrmlParser::parseNode(TransformNode* parent, bool hasDEF) {
         ViewPointNode* viewPointNode = new ViewPointNode();
         viewPointNode->name = name;
         scene->AllNodes.push_back(viewPointNode);
+        scene->Cameras.push_back(viewPointNode);
         if (parent == nullptr) {
             scene->RootNodes.push_back(viewPointNode);
             viewPointNode->nodeDepth = 0;

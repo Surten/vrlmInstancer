@@ -1,0 +1,7 @@
+Load data/0-7_construction.WRL
+Load data/0-7_geometry.WRL
+Load data/cameras.WRL
+Load data/0-6_Lights.WRL
+InstanceAll
+ScaleAllScenes
+ExportToPBRT 0

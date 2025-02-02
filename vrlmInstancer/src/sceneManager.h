@@ -38,7 +38,7 @@ public:
 	void copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(const std::string& specifiedSceneName);
 	void copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(int specifiedSceneId);
 
-	void exportAllToPBRT();
+	void exportAllToPBRT(int cameraIndex);
 
 	void unifyTextrureCoordScaleOfAllScenes();
 	void scaleAllScenesGeometry(float scale);
@@ -48,6 +48,8 @@ public:
 private:
 	std::vector<Scene*> scenes;
 	std::vector<Scene*> scenesWithTextures;
+
+	std::vector<ViewPointNode*> allCameras;
 
 	PbrtExporter pbrtExporter;
 	VrmlParser vrmlParser;

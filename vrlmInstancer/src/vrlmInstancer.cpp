@@ -100,7 +100,7 @@ int main()
     Application app;
     //std::string fileName = "automaticFileTest.txt";
     //std::string fileName = "switchLightsToGonio.txt";
-    std::string fileName = "SimpleScene.txt";
+    std::string fileName = "automaticControls/TestPBRTExport.txt";
     app.AutomaticMode(fileName);
 
 

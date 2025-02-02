@@ -17,6 +17,7 @@ public:
 	std::vector<BaseNode*> AllNodes;
 	std::vector<ShapeNode*> ShapeNodes;
 	std::vector<LightNode*> lights;
+	std::vector<ViewPointNode*> Cameras;
 
 
 public:

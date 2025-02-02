@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include "dataStructs.h"
+#include "matrix.h"
 
 // enum to remember the different type of nodes inside base node,
 // so that they can be easily static_casted
@@ -159,5 +160,38 @@ public:
 
 	ViewPointNode() : BaseNode("", NodeTypes::ViewPoint), position(), orientation(), fieldOfView(0), description("") {}
 
-private:
+	//----------------------------------------------------------------------------------------------
+	void computeLookAt(vec3& loc, vec3& dir, vec3& up) const
+		//----------------------------------------------------------------------------------------------
+	{
+		loc = position;
+
+
+		vec3 vec(orientation[0], orientation[1], orientation[2]);
+
+		// Normalizuju
+		vec.normalize();
+
+		// Matice identity
+		Matrix mat;
+		// Vytvorim rotacni matici kolem obecneho vektoru definovaneho pomoci 'dir' a uhlu v 'orientation'
+		mat = mat.mRotate(vec, orientation[3]);
+
+		// Urcim smer pohledu kamery
+		vec = mat * vec3(0.0, 0.0, -1.0);
+		// Urcim up-vector kamery
+		up = mat * vec3(0.0, 1.0, 0.0);
+
+		// Zbyva urcit bod, na ktery bude kamera centrovana. Pokud znam smerovy vektor
+		// pohledu kamery, staci vzit libovolne cislo a dosadit za parametr 't' v parametricke
+		// rci primky.
+		const float t = 10.0f;
+
+		// Get the current position of the camera
+		vec3 currentPosition = position;
+		dir.x = currentPosition.x + vec.x * t;
+		dir.y = currentPosition.y + vec.y * t;
+		dir.z = currentPosition.z + vec.z * t;
+	}
+
 };

@@ -6,21 +6,29 @@ SceneManager::SceneManager() : pbrtExporter()  {
 
 
 Scene* SceneManager::combineAllScenesIntoOne() {
+
+	//UNUSED, FRAGMENT OF THE PAST
+
 	//delete combinedScene;
-	Scene* ret = new Scene("combined scene");
-	for(auto scene: scenes)
-	{
-		TransformNode* tn = new TransformNode(scene->name);
-		tn->children = scene->RootNodes;
-		ret->RootNodes.push_back(tn);
-		ret->geometries.insert(ret->geometries.end(), scene->geometries.begin(), scene->geometries.end());
-	}
-	return ret;
+	//Scene* ret = new Scene("combined scene");
+	//for(auto scene: scenes)
+	//{
+	//	TransformNode* tn = new TransformNode(scene->name);
+	//	tn->children = scene->RootNodes;
+	//	ret->RootNodes.push_back(tn);
+	//	ret->geometries.insert(ret->geometries.end(), scene->geometries.begin(), scene->geometries.end());
+	//}
+	//return ret;
+	return nullptr;
 }
 
 bool SceneManager::loadScene(const std::string& filePath)
 {
 	Scene* scene = vrmlParser.parseFile(filePath.c_str());
+	for (auto camera : scene->Cameras)
+	{
+		allCameras.push_back(camera);
+	}
 	if (scene == nullptr) return false;
 	scenes.push_back(scene);
 	return true;
@@ -133,9 +141,8 @@ void SceneManager::copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(const s
 }
 
 
-void SceneManager::exportAllToPBRT() {
-	Scene* combinedScene = combineAllScenesIntoOne();
-	pbrtExporter.exportScene(combinedScene);
+void SceneManager::exportAllToPBRT(int cameraIndex) {
+	pbrtExporter.exportScene(scenes, allCameras[cameraIndex], "testHeader", "out.exr");
 }
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {

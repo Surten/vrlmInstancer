@@ -13,20 +13,20 @@ public:
 public:
     vec3() { x = y = z = 0; }
     vec3(float x, float y, float z): x(x), y(y), z(z) {}
-    vec3 operator+(const vec3 &other) {
+    vec3 operator+(const vec3 &other) const{
         return vec3(x + other.x, y + other.y, z + other.z);
     }
-    vec3 operator/(float num) {
+    vec3 operator/(float num) const {
         return vec3(x / num, y  / num, z / num);
     }
     vec3& operator+=(const vec3& other) {
         x += other.x; y += other.y; z += other.z;
         return *this;
     }
-    vec3 operator-(const vec3& other) {
+    vec3 operator-(const vec3& other) const {
         return vec3(x - other.x, y - other.y, z - other.z);
     }
-    vec3 operator*(float other) {
+    vec3 operator*(float other) const {
         return vec3(x * other, y * other, z * other);
     }
     void setVector(float a, float b, float c) {
@@ -40,6 +40,9 @@ public:
     }
     bool areEqual(vec3 other) {
         return (other - *this).len2() < 0.0001f ;
+    }
+    void normalize() {
+        *this = *this / len();
     }
 };
 std::ostream& operator<<(std::ostream& os, const vec3& obj);
@@ -64,6 +67,9 @@ public:
         return std::sqrt(x * x + y * y);
     }
 };
+
+std::ostream& operator<<(std::ostream& os, const vec2& obj);
+
 /// <summary>
 /// Ordinary vec3 for integers class with overloaded operators and some common methods
 /// </summary>
@@ -74,6 +80,7 @@ public:
     vec3i() { x = y = z = 0; }
     vec3i(int x, int y, int z) : x(x), y(y), z(z) {}
 };
+std::ostream& operator<<(std::ostream& os, const vec3i& obj);
 
 /// <summary>
 /// AABB class for Axis-aligned bounding box

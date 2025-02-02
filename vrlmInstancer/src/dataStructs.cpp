@@ -11,6 +11,18 @@ std::ostream& operator<<(std::ostream& os, const vec3& obj)
     return os;
 }
 
+std::ostream& operator<<(std::ostream& os, const vec3i& obj)
+{
+    os << obj.x << " " << obj.y << " " << obj.z << " ";
+    return os;
+}
+
+std::ostream& operator<<(std::ostream& os, const vec2& obj)
+{
+    os << obj.x << " " << obj.y << " ";
+    return os;
+}
+
 
 AABB::AABB(): min(), max() {}
 
