@@ -108,13 +108,16 @@ def replace_Mat(index):
                 output_lines.append(line)
             
             continue
-            
+        
+        if re.search(f'material-testball', line):
+            output_lines.append(f'    \"string filename\" [ \"matBallsOutput/material-testball{index}.png\" ]\n')
+            continue
         output_lines.append(line)
         
         if re.search(PATTERN_BEGIN, line):
             marker_found = True
             
-    with open(f'output/output{index}.pbrt', 'w') as file:
+    with open(f'material-testball/output{index}.pbrt', 'w') as file:
         for string in output_lines:
             file.write(string)
     

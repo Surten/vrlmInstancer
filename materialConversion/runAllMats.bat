@@ -1,5 +1,5 @@
 rem Set the directory path containing the files
-set "directory=output"
+set "directory=material-testball"
 
 rem Iterate over each file in the directory
 for %%f in ("%directory%\*") do (
