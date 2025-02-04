@@ -5,9 +5,7 @@
 
 std::ostream& operator<<(std::ostream& os, const vec3& obj)
 {
-    os << std::setw(9) << std::fixed << std::setprecision(3) << obj.x <<
-          std::setw(9) << std::fixed << std::setprecision(3) << obj.y <<
-          std::setw(9) << std::fixed << std::setprecision(3) << obj.z << " ";
+    os << obj.x << " " << obj.y << " " << obj.z << " ";
     return os;
 }
 
@@ -166,35 +164,32 @@ void Geometry::scaleCoords(float scale) {
 }
 
 
-Material::Material() : ambientIntensity(0), shininess(0), transparency(0)
+Material::Material() : diffuseColor(), ambientIntensity(0), specularColor(), shininess(0), transparency(0)
 {
-    diffuseColor[0] = 0; diffuseColor[1] = 0; diffuseColor[2] = 0;
-    specularColor[0] = 0; specularColor[1] = 0; specularColor[2] = 0;
+
 }
 Material::Material(float* diffuseColor, float ambientIntensity,
     float* specularColor, float shininess, float transparency)
     :ambientIntensity(ambientIntensity), shininess(shininess), transparency(transparency)
 {
-    std::memcpy(this->diffuseColor, diffuseColor, sizeof(float) * 3);
-    std::memcpy(this->specularColor, specularColor, sizeof(float) * 3);
+    this->diffuseColor.setVector(diffuseColor[0], diffuseColor[1], diffuseColor[2]);
+    this->specularColor.setVector(specularColor[0], specularColor[1], specularColor[2]);
 }
 
 void Material::fillMaterial(float* diffuseColor, float ambientIntensity,
     float* specularColor, float shininess, float transparency)
 {
-    std::memcpy(this->diffuseColor, diffuseColor, sizeof(float) * 3);
+    this->diffuseColor.setVector(diffuseColor[0], diffuseColor[1], diffuseColor[2]);
     this->ambientIntensity = ambientIntensity;
-    std::memcpy(this->specularColor, specularColor, sizeof(float) * 3);
+    this->specularColor.setVector(specularColor[0], specularColor[1], specularColor[2]);
     this->shininess = shininess;
     this->transparency = transparency;
 }
 
-bool Material::compareDiffuseColor(const float* diffuseComponent) {
-    float epsilon = 0.00001f;
-    return (std::abs(diffuseColor[0] - diffuseComponent[0]) < epsilon)
-        && (std::abs(diffuseColor[1] - diffuseComponent[1]) < epsilon)
-        && (std::abs(diffuseColor[2] - diffuseComponent[2]) < epsilon);
+bool Material::compareDiffuseColor(const vec3& diffuseComponent) const{
+    float epsilon = 0.0001f;
+    return (diffuseColor - diffuseComponent).len2() < epsilon;
 }
-bool Material::compareDiffuseColor(const Material& otherMaterial) {
+bool Material::compareDiffuseColor(const Material& otherMaterial) const {
     return compareDiffuseColor(otherMaterial.diffuseColor);
 }

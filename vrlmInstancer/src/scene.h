@@ -54,7 +54,7 @@ public:
 	/// </summary>
 	void findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*>& scenes);
 
-	void findShapeNodesByTheirMaterialDiffuseComponentAndReplaceTheirTexturePath(float* diffuseComponent, std::string texturePath);
+	void findShapeNodesByTheirMaterialDiffuseComponentAndReplaceTheirTexturePath(vec3 diffuseComponent, std::string texturePath);
 
 	void convertSpotLightsToGonioLights(Scene* lightReferences);
 

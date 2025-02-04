@@ -265,22 +265,24 @@ void VrmlParser::parseMaterial(ShapeNode* shapeNode) {
     do {
         readSymbol();
         if (str == "diffuseColor") {
-            for (int i = 0; i < 3; i++)
-            {
-                readSymbol();
-                shapeNode->material.diffuseColor[i] = n;
-            }
+            readSymbol();
+            shapeNode->material.diffuseColor.x = n;
+            readSymbol();
+            shapeNode->material.diffuseColor.y = n;
+            readSymbol();
+            shapeNode->material.diffuseColor.z = n;
         }
         else if (str == "ambientIntensity") {
             readSymbol();
             shapeNode->material.ambientIntensity = n;
         }
         else if (str == "specularColor") {
-            for (int i = 0; i < 3; i++)
-            {
-                readSymbol();
-                shapeNode->material.specularColor[i] = n;
-            }
+            readSymbol();
+            shapeNode->material.specularColor.x = n;
+            readSymbol();
+            shapeNode->material.specularColor.y = n;
+            readSymbol();
+            shapeNode->material.specularColor.z = n;
         }
         else if (str == "shininess") {
             readSymbol();
@@ -543,8 +545,6 @@ void VrmlParser::parseShape(TransformNode* parent) {
     shapeNode->parent = parent;
     scene->AllNodes.push_back(shapeNode);
     scene->ShapeNodes.push_back(shapeNode);
-    if (scene->AllNodes.size() == 11)
-        std::cout << std::endl;
     do {
         readSymbol();
         if (str == "appearance") {

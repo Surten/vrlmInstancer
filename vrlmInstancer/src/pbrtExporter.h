@@ -16,7 +16,7 @@ public:
 
 	PbrtExporter();
 
-	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string headerFileName, std::string renderImageFileName);
+	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName);
 
 private:
 	std::ofstream out;
@@ -40,7 +40,7 @@ private:
 	void writeLightSource(LightNode* camera);
 	void writeAllLightSourcesOfAScene(Scene* scene);
 	void writeTexture();
-	void writeGeometry(Scene* scene);
+	void writeGeometry(Scene* scene, std::string folder);
 	void writeObjectInstances(Scene* scene);
 	void writeSceneHierarchy(Scene* scene);
 	void writeTransformNode(TransformNode* node);

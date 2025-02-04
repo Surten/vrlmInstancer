@@ -142,7 +142,8 @@ void SceneManager::copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(const s
 
 
 void SceneManager::exportAllToPBRT(int cameraIndex) {
-	pbrtExporter.exportScene(scenes, allCameras[cameraIndex], "testHeader", "out.exr");
+	std::string folder("pbrtv4/");
+	pbrtExporter.exportScene(scenes, allCameras[cameraIndex], folder, "testHeader", "out.exr");
 }
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {

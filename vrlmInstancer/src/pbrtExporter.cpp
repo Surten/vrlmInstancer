@@ -6,16 +6,16 @@
 PbrtExporter::PbrtExporter(){
 }
 
-void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string headerFileName, std::string renderImageFileName)
+void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName)
 {
-	out.open(headerFileName + ".pbrt");
+	out.open(folder + headerFileName + ".pbrt");
 	writeSceneWideOptions(camera, renderImageFileName);
 	out << " WorldBegin" << std::endl;
 	writeTexture();
 	for (auto scene : scenes)
 	{
 		writeAllLightSourcesOfAScene(scene);
-		writeGeometry(scene);
+		writeGeometry(scene, folder);
 	}
 	out.close();
 
@@ -52,12 +52,12 @@ void PbrtExporter::writeIntegrator() {
 
 void PbrtExporter::writeFilter() {
 	out << " #Filter used for antialiasing" << std::endl;
-	out << " PixelFilter \"michell\"" << std::endl;
+	out << " PixelFilter \"mitchell\"" << std::endl;
 	out << std::endl;
 }
 void PbrtExporter::writeFilm(std::string renderImageFileName) {
 	out << " #Output file specification" << std::endl;
-	out << " Film \"image\" \"string filename\" " << renderImageFileName << std::endl;
+	out << " Film \"rgb\" \"string filename\" \"" << renderImageFileName << "\"" << std::endl;
 	out << "      \"integer xresolution\" [" << xResolution << "]" << std::endl;
 	out << "      \"integer yresolution\" [" << yResolution << "]" << std::endl;
 	out << std::endl;
@@ -80,6 +80,11 @@ void PbrtExporter::writeLightSource(LightNode* lightNode){
 	case LightNode::LightType::GONIOLIGHT:
 		out << "    Translate " << lightNode->location << std::endl;
 		out << " LightSource \"goniometric\"" << std::endl;
+		if (lightNode->url.find(".ies") != std::string::npos)
+		{
+			lightNode->url = lightNode->url.substr(0, lightNode->url.length() - 4);
+			lightNode->url = lightNode->url + ".exr";
+		}
 		out << "    \"string filename\" [ \"" << lightNode->url << "\" ]" << std::endl;
 		out << "    \"rgb I\" [" << lightNode->color * lightNode->intensity << " ]" << std::endl;
 
@@ -102,7 +107,7 @@ void PbrtExporter::writeTexture() {
 	out << "AttributeEnd" << std::endl;
 
 }
-void PbrtExporter::writeGeometry(Scene* scene){
+void PbrtExporter::writeGeometry(Scene* scene, std::string folder){
 	std::string geometryFileName = scene->name;
 	size_t a = geometryFileName.find_last_of("/");
 	if (a != std::string::npos)
@@ -113,12 +118,11 @@ void PbrtExporter::writeGeometry(Scene* scene){
 	{
 		geometryFileName = geometryFileName.substr(0, geometryFileName.length() - 4);
 	}
-
 	currentGeometryFileName = geometryFileName + ".pbrt";
 
 	out << "Include \"" << currentGeometryFileName << "\"";
 
-	outGeometry.open(currentGeometryFileName);
+	outGeometry.open(folder + currentGeometryFileName);
 
 	writeObjectInstances(scene);
 

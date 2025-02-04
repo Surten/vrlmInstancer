@@ -199,7 +199,7 @@ void Scene::findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*>&
 /// </summary>
 /// <param name="diffuseComponent"></param>
 /// <param name="texturePath"></param>
-void Scene::findShapeNodesByTheirMaterialDiffuseComponentAndReplaceTheirTexturePath(float* diffuseComponent, std::string texturePath) {
+void Scene::findShapeNodesByTheirMaterialDiffuseComponentAndReplaceTheirTexturePath(vec3 diffuseComponent, std::string texturePath) {
 
 	for (auto shapeNode : ShapeNodes) {
 		if (shapeNode->material.compareDiffuseColor(diffuseComponent)) {

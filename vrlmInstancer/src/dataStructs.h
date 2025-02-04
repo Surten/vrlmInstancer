@@ -166,14 +166,14 @@ public:
     void fillMaterial(float* diffuseColor, float ambientIntensity,
         float* specularColor, float shininess, float transparency);
 
-    bool compareDiffuseColor(const float* diffuseComponent);
-    bool compareDiffuseColor(const Material& otherMaterial);
+    bool compareDiffuseColor(const vec3& diffuseComponent) const;
+    bool compareDiffuseColor(const Material& otherMaterial) const;
 
 
 public:
-    float diffuseColor[3];
+    vec3 diffuseColor;
     float ambientIntensity;
-    float specularColor[3];
+    vec3 specularColor;
     float shininess;
     float transparency;
 };

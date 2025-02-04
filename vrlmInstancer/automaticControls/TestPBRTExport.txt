@@ -1,7 +1,3 @@
-Load data/0-7_construction.WRL
-Load data/0-7_geometry.WRL
-Load data/cameras.WRL
-Load data/0-6_Lights.WRL
+Load room215.wrl
 InstanceAll
-ScaleAllScenes
-ExportToPBRT 0
+ExportToPBRT 1
