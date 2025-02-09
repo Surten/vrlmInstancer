@@ -25,10 +25,14 @@ class Material():
     name: str = ""
     type: str = ""
     eta: float = 0
+    sigma: float = 0
     roughnness: float = 0
+    uroughnness: float = 0
+    vroughnness: float = 0
     diffuse: Vector3 = Vector3()
     specular: Vector3 = Vector3()
     transmittance: Vector3 = Vector3()
+    reflectance: Vector3 = Vector3()
 
 
 def read_material(material_text):
@@ -37,8 +41,10 @@ def read_material(material_text):
     m.name = words[0]
     m.type = words[4]
     index = 5
-    print(words)
     while index < len(words):
+        if words[index] == '\n':
+            index += 1
+            continue
         if words[index] == 'r':
             index += 2
             m.roughnness = float(words[index])
@@ -51,17 +57,41 @@ def read_material(material_text):
             index += 2
             m.specular = Vector3(float(words[index]), float(words[index+1]), float(words[index+2]))
             index += 4
-            
-    # if m.type == MATERIAL_DIFFUSE:
-    #     m.reflectance = Vector3(float(words[7]), float(words[8]), float(words[9]))
-    # if m.type == MATERIAL_DIELECTRIC:
-    #     m.eta = float(words[7])
-    # if m.type == MATERIAL_DIFFUSE_TRANSMISSION:
-    #     m.reflectance = Vector3(float(words[7]), float(words[8]), float(words[9]))
-    #     m.transmittance = Vector3(float(words[13]), float(words[14]), float(words[15]))
-    # if m.type == MATERIAL_CONDUCTOR:
-    #     m.roughnness = float(words[7])
-    #     m.reflectance = Vector3(float(words[11]), float(words[12]), float(words[13]))
+        elif words[index] == 'Kr':
+            index += 2
+            m.reflectance = Vector3(float(words[index]), float(words[index+1]), float(words[index+2]))
+            index += 4
+        elif words[index] == 'Kt':
+            index += 2
+            m.transmittance = Vector3(float(words[index]), float(words[index+1]), float(words[index+2]))
+            index += 4
+        elif words[index] == 's':
+            index += 2
+            m.sigma = float(words[index])
+            index += 2
+        elif words[index] == 'ur':
+            index += 2
+            m.uroughnness = float(words[index])
+            index += 2
+        elif words[index] == 'vr':
+            index += 2
+            m.vroughnness = float(words[index])
+            index += 2
+        elif words[index] == 'in':
+            index += 2
+            m.eta = float(words[index])
+            index += 2
+        elif words[index] == 'fl':
+            index += 2
+            m.reflectance = Vector3(float(words[index]), float(words[index+1]), float(words[index+2]))
+            index += 4
+        elif words[index] == 'tt':
+            index += 2
+            m.transmittance = Vector3(float(words[index]), float(words[index+1]), float(words[index+2]))
+            index += 4
+        else:
+            print("unrecognized")
+
     return m
 
 def add_new_material(index):
@@ -78,20 +108,35 @@ def add_new_material(index):
         output_lines.append(f'    "float roughness" [ {m.roughnness} ]\n')
         output_lines.append(f'    "color Kd" [ {m.diffuse.x} {m.diffuse.y} {m.diffuse.z} ]\n')
         output_lines.append(f'    "color Ks" [ {m.specular.x} {m.specular.y} {m.specular.z} ]\n')
-    # if m.type == MATERIAL_DIFFUSE:
-    #     output_lines.append('    "string type" [ "diffuse" ]\n')
-    #     output_lines.append(f'    "rgb reflectance" [ {m.reflectance.x} {m.reflectance.y} {m.reflectance.z} ]\n')
-    # if m.type == MATERIAL_DIELECTRIC:
-    #     output_lines.append('    "string type" [ "dielectric" ]\n')
-    #     output_lines.append(f'    "float roughness" [ {m.eta} ]\n')
-    # if m.type == MATERIAL_DIFFUSE_TRANSMISSION:
-    #     output_lines.append('    "string type" [ "diffusetransmission" ]\n')
-    #     output_lines.append(f'    "rgb reflectance" [ {m.reflectance.x} {m.reflectance.y} {m.reflectance.z} ]\n')
-    #     output_lines.append(f'    "rgb transmittance" [ {m.transmittance.x} {m.transmittance.y} {m.transmittance.z} ]\n')
-    # if m.type == MATERIAL_CONDUCTOR:
-    #     output_lines.append('    "string type" [ "conductor" ]\n')
-    #     output_lines.append(f'    "float roughness" [ {m.roughnness} ]\n')
-    #     output_lines.append(f'    "rgb reflectance" [ {m.reflectance.x} {m.reflectance.y} {m.reflectance.z} ]\n')
+    if m.type == MATERIAL_MATTE:
+        output_lines.append('    "string type" [ "diffuse" ]\n')
+        output_lines.append(f'    "rgb Kd" [ {m.diffuse.x} {m.diffuse.y} {m.diffuse.z} ]\n')
+        output_lines.append(f'    "float sigma" [ {m.sigma} ]\n')
+    if m.type == MATERIAL_GLASS:
+        output_lines.append('    "string type" [ "glass" ]\n')
+        output_lines.append(f'    "rgb Kr" [ {m.reflectance.x} {m.reflectance.y} {m.reflectance.z} ]\n')
+        output_lines.append(f'    "rgb Kt" [ {m.transmittance.x} {m.transmittance.y} {m.transmittance.z} ]\n')
+        output_lines.append(f'    "float in" [ {m.sigma} ]\n')
+    if m.type == MATERIAL_SUBSTRATE:
+        output_lines.append('    "string type" [ "substrate" ]\n')
+        output_lines.append(f'    "rgb Kd" [ {m.diffuse.x} {m.diffuse.y} {m.diffuse.z} ]\n')
+        output_lines.append(f'    "rgb Ks" [ {m.specular.x} {m.specular.y} {m.specular.z} ]\n')
+        output_lines.append(f'    "float uroughness" [ {m.uroughnness} ]\n')
+        output_lines.append(f'    "float vroughness" [ {m.vroughnness} ]\n')
+    if m.type == MATERIAL_TRANSLUCENT:
+        output_lines.append('    "string type" [ "translucent" ]\n')
+        output_lines.append(f'    "rgb Kd" [ {m.diffuse.x} {m.diffuse.y} {m.diffuse.z} ]\n')
+        output_lines.append(f'    "rgb Ks" [ {m.specular.x} {m.specular.y} {m.specular.z} ]\n')
+        output_lines.append(f'    "rgb fl" [ {m.reflectance.x} {m.reflectance.y} {m.reflectance.z} ]\n')
+        output_lines.append(f'    "float roughness" [ {m.roughnness} ]\n')
+        output_lines.append(f'    "rgb tt" [ {m.transmittance.x} {m.transmittance.y} {m.transmittance.z} ]\n')
+    if m.type == MATERIAL_UBER or m.type == MATERIAL_SHINY:
+        output_lines.append('    "string type" [ "uber" ]\n')
+        output_lines.append(f'    "rgb Kd" [ {m.diffuse.x} {m.diffuse.y} {m.diffuse.z} ]\n')
+        output_lines.append(f'    "rgb Ks" [ {m.specular.x} {m.specular.y} {m.specular.z} ]\n')
+        output_lines.append(f'    "rgb Kr" [ {m.reflectance.x} {m.reflectance.y} {m.reflectance.z} ]\n')
+        output_lines.append(f'    "float roughness" [ {m.roughnness} ]\n')
+
     
     
     return output_lines, m
@@ -120,19 +165,25 @@ def replace_Mat(index):
             
             continue
         
-        if re.search(f'material-testball', line):
-            output_lines.append(f'    \"string filename\" [ \"matBallsOutput/material-testball{index}.png\" ]\n')
-            continue
+        # if re.search(f'material-testball', line):
+        #     output_lines.append(f'    \"string filename\" [ \"matBallsOutput/{m.name}_{index}.png\" ]\n')
+        #     continue
         output_lines.append(line)
         
         if re.search(PATTERN_BEGIN, line):
             marker_found = True
-            
-    with open(f'material-testball/{m.name}_{index}.pbrt', 'w') as file:
-        for string in output_lines:
+    
+    output_lines_2 = []
+    for line in output_lines:
+        if re.search(f'material-testball', line):
+            output_lines_2.append(f'    \"string filename\" [ \"matBallsOutput/{m.name}.png\" ]\n')
+            continue
+        output_lines_2.append(line)
+    with open(f'material-testball/{m.name}.pbrt', 'w') as file:
+        for string in output_lines_2:
             file.write(string)
     
 
 if __name__ == '__main__':
-    for i in range(1):
+    for i in range(53):
         replace_Mat(i)

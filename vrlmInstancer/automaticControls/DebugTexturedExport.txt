@@ -1,0 +1,4 @@
+Load textured/Table30.wrl
+InstanceAll
+ExportToPBRT -1 Table30 png
+SaveId 0 Table30Out.wrl

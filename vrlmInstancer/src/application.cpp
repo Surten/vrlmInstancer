@@ -26,7 +26,7 @@ void Application::AutomaticMode(std::string fileName){
                 std::cout << "Could not load Scene " << fileStringPlaceholder << std::endl;
             }
             else {
-                std::cout << "Loaded, Id: " << sceneCount << "Name: " << fileStringPlaceholder << std::endl;
+                std::cout << std::endl << "Loaded, Id: " << sceneCount << " Name: " << fileStringPlaceholder << std::endl;
                 sceneCount++;
             }
         }
@@ -145,8 +145,14 @@ void Application::AutomaticMode(std::string fileName){
         }
         else if (command == "ExportToPBRT")
         {
+            autoIn >> idPlaceholder >> nameStringPlaceholder >> nameSecondStringPlaceholder;
+            sm.exportAllToPBRT(idPlaceholder, nameStringPlaceholder, nameSecondStringPlaceholder);
+        }
+        else if (command == "DeleteSceneByID")
+        {
             autoIn >> idPlaceholder;
-            sm.exportAllToPBRT(idPlaceholder);
+            sm.deleteScene(idPlaceholder);
+            sceneCount--;
         }
     }
 }

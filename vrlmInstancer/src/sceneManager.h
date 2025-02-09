@@ -22,6 +22,8 @@ public:
 	bool saveScene(const std::string& outputFileName, const std::string& sceneName);
 	bool saveScene(const std::string& outputFileName, int id);
 
+	bool deleteScene(int id);
+
 	bool writeGeometriesOfScene(const std::string& sceneName);
 	bool writeGeometriesOfScene(int id);
 
@@ -38,7 +40,9 @@ public:
 	void copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(const std::string& specifiedSceneName);
 	void copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(int specifiedSceneId);
 
-	void exportAllToPBRT(int cameraIndex);
+	void createDefaultCamera();
+	void createDefaultEnviromentalLight(std::string envirometMapFileName);
+	void exportAllToPBRT(int cameraIndex, std::string outputHeaderName, std::string outputImageName);
 
 	void unifyTextrureCoordScaleOfAllScenes();
 	void scaleAllScenesGeometry(float scale);

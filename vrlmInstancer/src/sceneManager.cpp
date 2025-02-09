@@ -57,6 +57,14 @@ bool SceneManager::saveScene(const std::string& outputFileName, int id)
 	return true;
 }
 
+bool SceneManager::deleteScene(int id)
+{
+	if (id < 0 || id >= scenes.size()) return false;
+	delete scenes.at(id);
+	scenes.erase(scenes.begin() + id);
+	return true;
+}
+
 bool SceneManager::writeGeometriesOfScene(const std::string& sceneName)
 {
 	Scene* scene = getSceneByName(sceneName);
@@ -140,10 +148,86 @@ void SceneManager::copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(const s
 	specifiedScene->findAndUseSameObjectsFromOtherScenesInThisScene(scenes);
 }
 
+void SceneManager::createDefaultCamera()
+{
+	ViewPointNode* viewPointNode = new ViewPointNode();
+	viewPointNode->name = "DefaultCamera";
+	scenes[0]->AllNodes.push_back(viewPointNode);
+	scenes[0]->Cameras.push_back(viewPointNode);
+	allCameras.push_back(viewPointNode);
+	scenes[0]->RootNodes.push_back(viewPointNode);
+	viewPointNode->type = NodeTypes::ViewPoint;
+	viewPointNode->nodeDepth = 0;
 
-void SceneManager::exportAllToPBRT(int cameraIndex) {
-	std::string folder("pbrtv4/");
-	pbrtExporter.exportScene(scenes, allCameras[cameraIndex], folder, "testHeader", "out.exr");
+	AABB retAABB = scenes[0]->geometries[0]->getAABB();
+	for (auto geometry : scenes[0]->geometries)
+	{
+		AABB toAdd = geometry->getAABB();
+		std::cout << "from " << toAdd.min << " to " << toAdd.max << std::endl;
+		retAABB.uniteWithAABB(toAdd);
+	}
+	vec3 cameraPosition(-188, 193.5, 212.2);
+	cameraPosition.normalize();
+	std::cout << "Lenght " << retAABB.getDiagonal().len() << std::endl;
+	cameraPosition = cameraPosition * retAABB.getDiagonal().len() * 0.75;
+	
+	for (auto node : scenes[0]->RootNodes)
+	{
+		if (node->type == NodeTypes::Transform)
+		{
+			static_cast<TransformNode*>(node)->translation.setVector(0, 0, 0);
+		}
+	}
+
+	viewPointNode->position = cameraPosition;
+	viewPointNode->position = viewPointNode->position * 2;
+	viewPointNode->orientation[0] = 0.5299;
+	viewPointNode->orientation[1] = 0.8192;
+	viewPointNode->orientation[2] = 0.2195;
+	viewPointNode->orientation[3] = -0.9363;
+	viewPointNode->fieldOfView = 0.9;
+	viewPointNode->description = "Generated Default Camera";
+
+	std::cout << "Created default camera for scene with index 0" << std::endl;
+}
+
+void SceneManager::createDefaultEnviromentalLight(std::string envirometMapFileName)
+{
+	LightNode* lightNode = new LightNode();
+	lightNode->name = "DefaultEnviromentalLight";
+	scenes[0]->AllNodes.push_back(lightNode);
+	scenes[0]->lights.push_back(lightNode);
+	scenes[0]->RootNodes.push_back(lightNode);
+	lightNode->type = NodeTypes::Light;
+	lightNode->lightType = LightNode::LightType::ENVIROMENTAL_LIGHT;
+	lightNode->url = envirometMapFileName;
+
+
+	std::cout << "Created default enviromental light for scene with index 0, because no lights were detected" << std::endl;
+}
+
+void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::string outputImageFormat) {
+	if (cameraIndex == -1 || allCameras.size() == 0)
+	{
+		createDefaultCamera();
+		cameraIndex = 0;
+		
+	}
+	bool hasLights = false;
+	for (auto scene : scenes)
+	{
+		if (scene->lights.size() > 0)
+		{
+			hasLights = true;
+			break;
+		}
+	}
+	if (!hasLights) createDefaultEnviromentalLight("sky.exr");
+
+	std::string outputFolder("pbrtv4/textured/");
+	std::string outputHeaderName = "headers/header_" + name;
+	std::string outputImageName = "output/" + name + "_render." + outputImageFormat;
+	pbrtExporter.exportScene(scenes, allCameras[cameraIndex], outputFolder, outputHeaderName, outputImageName);
 }
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {

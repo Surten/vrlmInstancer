@@ -135,7 +135,8 @@ public:
 
 	enum class LightType {
 		SPOTLIGHT,
-		GONIOLIGHT
+		GONIOLIGHT,
+		ENVIROMENTAL_LIGHT	// only default for pbrt, parsing not supported
 	};
 	LightType lightType;
 	

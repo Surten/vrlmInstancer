@@ -79,6 +79,10 @@ void VrmlParser::parseNextNode() {
         {
             parseNode(nullptr, false);
         }
+        else
+        {
+            //std::cout << "Ignored input: " << str << std::endl;
+        }
     }
     //std::cout << "done Parsing file" << std::endl;
     vrlmFile.close();           // finish

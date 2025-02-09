@@ -89,6 +89,10 @@ void PbrtExporter::writeLightSource(LightNode* lightNode){
 		out << "    \"rgb I\" [" << lightNode->color * lightNode->intensity << " ]" << std::endl;
 
 		break;
+	case LightNode::LightType::ENVIROMENTAL_LIGHT:
+		out << " LightSource \"infinite\"" << std::endl;
+		out << "    \"string filename\" [ \"" << lightNode->url << "\" ]" << std::endl;
+		break;
 	}
 	out << " AttributeEnd" << std::endl;
 	out << std::endl;
@@ -120,7 +124,7 @@ void PbrtExporter::writeGeometry(Scene* scene, std::string folder){
 	}
 	currentGeometryFileName = geometryFileName + ".pbrt";
 
-	out << "Include \"" << currentGeometryFileName << "\"";
+	out << "Include \"" << "../" + currentGeometryFileName << "\"";
 
 	outGeometry.open(folder + currentGeometryFileName);
 
@@ -133,12 +137,9 @@ void PbrtExporter::writeGeometry(Scene* scene, std::string folder){
 void PbrtExporter::writeObjectInstances(Scene* scene) {
 	for (auto geometry : scene->geometries)
 	{
-		
 		outGeometry << " ObjectBegin \"" << geometry->name << "_" << currentGeometryFileName << "\"" << std::endl;
 
 		bool hasTextureCoords = geometry->textureCoords.size() > 0;
-		// Pridruzim odpovidajici material
-		// Vytvorim ukazatel na geometrii uzlu
 		if (hasTextureCoords) {
 			writeMaterialWithTexture(&geometry->parent->material);
 			writeTriangleMeshWithTexture(geometry);
@@ -147,6 +148,7 @@ void PbrtExporter::writeObjectInstances(Scene* scene) {
 			writeMaterial(&geometry->parent->material);
 			writeTriangleMesh(geometry);
 		}
+
 		outGeometry << " ObjectEnd " << std::endl;
 		outGeometry << std::endl;
 	}
@@ -212,7 +214,8 @@ void PbrtExporter::writeNodeChildren(TransformNode* node)
 		}
 		else if (child->type == NodeTypes::Shape)
 		{
-			writeShapeNode(static_cast<ShapeNode*>(child));
+			if (static_cast<ShapeNode*>(child)->geometry != nullptr)
+				writeShapeNode(static_cast<ShapeNode*>(child));
 		}
 	}
 }
@@ -274,7 +277,7 @@ void PbrtExporter::convertTextureCoordsIntoPBRTFormat(Geometry* geometry, std::v
 {
 	std::unordered_map<std::pair<int, int>, int, pair_hash> map;
 
-	if (geometry->coords.size() != geometry->textureCoords.size())
+	if (geometry->facesPointsIndex.size() != geometry->facesTextureIndex.size())
 		std::cout << "How did I even get here, the sizes of coordinate indicies and texture coordinate indicies do not match, which should not happen in VRML" << std::endl;
 
 	for (int i = 0; i < geometry->facesPointsIndex.size(); i++)
@@ -351,6 +354,7 @@ void PbrtExporter::writeTriangleMeshWithTexture(Geometry * geometry) {
 	std::vector<vec3> newCoords;
 	std::vector<vec2> newTexCoords;
 	std::vector<vec3i> newCoordIndex;
+	convertTextureCoordsIntoPBRTFormat(geometry, newCoords, newTexCoords, newCoordIndex);
 
 	outGeometry << "   Shape \"trianglemesh\" " << std::endl;
 
