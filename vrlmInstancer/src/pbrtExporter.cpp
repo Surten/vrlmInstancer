@@ -6,12 +6,14 @@
 PbrtExporter::PbrtExporter(){
 }
 
-void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName)
+void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName, bool includeCustomFloor)
 {
+	this->scenes = scenes;
 	out.open(folder + headerFileName + ".pbrt");
 	writeSceneWideOptions(camera, renderImageFileName);
 	out << " WorldBegin" << std::endl;
 	writeTexture();
+	if (includeCustomFloor) writeFloor();
 	for (auto scene : scenes)
 	{
 		writeAllLightSourcesOfAScene(scene);
@@ -31,6 +33,41 @@ void PbrtExporter::writeSceneWideOptions(const ViewPointNode* camera, std::strin
 
 
 void PbrtExporter::writeCamera(const ViewPointNode* camera) {
+	if (camera == nullptr)
+	{
+		AABB retAABB = scenes[0]->geometries[0]->getAABB();
+		for (auto geometry : scenes[0]->geometries)
+		{
+			AABB toAdd = geometry->getAABB();
+			if (geometry->name.find("Bearer") != std::string::npos)
+				continue;
+			retAABB.uniteWithAABB(toAdd);
+		}
+		vec3 cameraPosition(-200, 100, 200);
+		cameraPosition.normalize();
+		float length = retAABB.getDiagonal().len();
+		if (length > 0.001)
+			cameraPosition = cameraPosition * length;
+
+		cameraPosition = cameraPosition + (retAABB.getArithmeticCenter() - vec3());
+
+		for (auto node : scenes[0]->RootNodes)
+		{
+			if (node->type == NodeTypes::Transform)
+			{
+				static_cast<TransformNode*>(node)->translation.setVector(0, 0, 0);
+			}
+		}
+		vec3 lookUp(-0.3, 1, 0.3);
+		lookUp.normalize();
+
+		out << "LookAt " << cameraPosition << std::endl;
+		out << "       " << 0 << " " << 0 << " " << 0 << std::endl;
+		out << "       " << lookUp << std::endl;
+		out << " Camera \"perspective\" \"float fov\" [ " << 80 << " ]" << std::endl;
+		out << std::endl;
+		return;
+	}
 	vec3 pos, lookAt, lookUp;
 	camera->computeLookAt(pos, lookAt, lookUp);
 	out << "LookAt " << pos << std::endl;
@@ -63,7 +100,18 @@ void PbrtExporter::writeFilm(std::string renderImageFileName) {
 	out << std::endl;
 }
 
-void PbrtExporter::writeLightSource(LightNode* lightNode){
+void PbrtExporter::writeFloor() {
+	//out << "AttributeBegin" << std::endl;
+	//out << "Material \"diffuse\" \"rgb reflectance\" [ 0.8 0.8 0.8 ]" << std::endl;
+	//out << "Shape \"trianglemesh\"" << std::endl;
+	////out << "\"point2 uv\" [0 0 1 0 1 1 0 1 ]" << std::endl;
+	////out << "\"normal N\" [ 1.2361e-7 -1 2.4837e-9 1.2361e-7 -1 2.4837e-9 1.2361e-7 -1 2.4837e-9 1.2361e-7 -1 2.4837e-9 ]" << std::endl;
+	//out << "\"point3 P\" [-1000 0 -1000 -1000 0 1000 1000 0 1000 1000 0 -1000 ]" << std::endl;
+	//out << "\"integer indices\" [ 0 1 2 0 2 3 ]" << std::endl;
+	//out << "AttributeEnd" << std::endl;
+}
+
+void PbrtExporter::writeLightSource(LightNode* lightNode) {
 
 	out << " AttributeBegin" << std::endl;
 
@@ -90,6 +138,7 @@ void PbrtExporter::writeLightSource(LightNode* lightNode){
 
 		break;
 	case LightNode::LightType::ENVIROMENTAL_LIGHT:
+		out << " Rotate -90 1 0 0" << std::endl;
 		out << " LightSource \"infinite\"" << std::endl;
 		out << "    \"string filename\" [ \"" << lightNode->url << "\" ]" << std::endl;
 		break;

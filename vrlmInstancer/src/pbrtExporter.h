@@ -16,13 +16,15 @@ public:
 
 	PbrtExporter();
 
-	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName);
+	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName, bool includeCustomFloor = false);
 
 private:
 	std::ofstream out;
 	std::ofstream outGeometry;
 
 	std::string currentGeometryFileName;
+
+	std::vector<Scene*> scenes;
 
 	int numberOfSamples = 32;
 	int maxDepth = 8;
@@ -37,6 +39,7 @@ private:
 	void writeIntegrator();
 	void writeFilter();
 	void writeFilm(std::string renderImageFileName);
+	void writeFloor();
 	void writeLightSource(LightNode* camera);
 	void writeAllLightSourcesOfAScene(Scene* scene);
 	void writeTexture();

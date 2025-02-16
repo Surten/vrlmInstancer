@@ -25,11 +25,11 @@ Scene* SceneManager::combineAllScenesIntoOne() {
 bool SceneManager::loadScene(const std::string& filePath)
 {
 	Scene* scene = vrmlParser.parseFile(filePath.c_str());
+	if (scene == nullptr) return false;
 	for (auto camera : scene->Cameras)
 	{
 		allCameras.push_back(camera);
 	}
-	if (scene == nullptr) return false;
 	scenes.push_back(scene);
 	return true;
 }
@@ -163,14 +163,18 @@ void SceneManager::createDefaultCamera()
 	for (auto geometry : scenes[0]->geometries)
 	{
 		AABB toAdd = geometry->getAABB();
-		std::cout << "from " << toAdd.min << " to " << toAdd.max << std::endl;
+		if (geometry->name.find("Bearer") != std::string::npos)
+			continue;
 		retAABB.uniteWithAABB(toAdd);
 	}
-	vec3 cameraPosition(-188, 193.5, 212.2);
+	vec3 cameraPosition(-200, 200, 200);
 	cameraPosition.normalize();
-	std::cout << "Lenght " << retAABB.getDiagonal().len() << std::endl;
-	cameraPosition = cameraPosition * retAABB.getDiagonal().len() * 0.75;
+	float length = retAABB.getDiagonal().len();
+	if(length > 0.001)
+		cameraPosition = cameraPosition * length;
 	
+	cameraPosition = cameraPosition + (retAABB.getArithmeticCenter() - vec3());
+
 	for (auto node : scenes[0]->RootNodes)
 	{
 		if (node->type == NodeTypes::Transform)
@@ -180,15 +184,7 @@ void SceneManager::createDefaultCamera()
 	}
 
 	viewPointNode->position = cameraPosition;
-	viewPointNode->position = viewPointNode->position * 2;
-	viewPointNode->orientation[0] = 0.5299;
-	viewPointNode->orientation[1] = 0.8192;
-	viewPointNode->orientation[2] = 0.2195;
-	viewPointNode->orientation[3] = -0.9363;
-	viewPointNode->fieldOfView = 0.9;
-	viewPointNode->description = "Generated Default Camera";
 
-	std::cout << "Created default camera for scene with index 0" << std::endl;
 }
 
 void SceneManager::createDefaultEnviromentalLight(std::string envirometMapFileName)
@@ -207,11 +203,15 @@ void SceneManager::createDefaultEnviromentalLight(std::string envirometMapFileNa
 }
 
 void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::string outputImageFormat) {
+	bool createdCustomFloor = false;
+	ViewPointNode* camera;
 	if (cameraIndex == -1 || allCameras.size() == 0)
 	{
-		createDefaultCamera();
-		cameraIndex = 0;
-		
+		camera = nullptr;
+	}
+	else
+	{
+		camera = allCameras[cameraIndex];
 	}
 	bool hasLights = false;
 	for (auto scene : scenes)
@@ -227,7 +227,7 @@ void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::strin
 	std::string outputFolder("pbrtv4/textured/");
 	std::string outputHeaderName = "headers/header_" + name;
 	std::string outputImageName = "output/" + name + "_render." + outputImageFormat;
-	pbrtExporter.exportScene(scenes, allCameras[cameraIndex], outputFolder, outputHeaderName, outputImageName);
+	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageName, createdCustomFloor);
 }
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {
@@ -256,11 +256,23 @@ bool SceneManager::convertSceneSpotLightsToGonioLights(std::string sceneName, st
 
 float SceneManager::getTextureCoordsToObjectCoordsScale() {
 	int i = 0;
-	float scale;
-	while ((scale = scenes[0]->geometries[i]->calculateTextureScale()) < 0)
+	double scale = 0;
+	int geoCount = 0;
+	for (auto scene : scenes)
 	{
-		i++;
+		for (auto geometry : scene->geometries)
+		{
+			float geoScale = geometry->calculateTextureScale();
+			if (geoScale > 0)
+			{
+				scale += geoScale;
+				geoCount++;
+			}
+		}
 	}
+
+	scale = scale / geoCount;
+
 	return scale;
 }
 
