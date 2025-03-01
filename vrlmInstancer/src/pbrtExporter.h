@@ -16,7 +16,7 @@ public:
 
 	PbrtExporter();
 
-	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName, bool includeCustomFloor = false);
+	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName, float customCameraZoom);
 
 private:
 	std::ofstream out;
@@ -26,15 +26,15 @@ private:
 
 	std::vector<Scene*> scenes;
 
-	int numberOfSamples = 32;
+	int numberOfSamples = 64;
 	int maxDepth = 8;
 	int xResolution = 500;
 	int yResolution = 500;
 
 private:
 
-	void writeSceneWideOptions(const ViewPointNode* camera, std::string renderImageFileName);
-	void writeCamera(const ViewPointNode* camera);
+	void writeSceneWideOptions(const ViewPointNode* camera, std::string renderImageFileName, float customCameraZoom);
+	void writeCamera(const ViewPointNode* camera, float customCameraZoom);
 	void writeSampler();
 	void writeIntegrator();
 	void writeFilter();

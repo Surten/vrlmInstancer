@@ -145,14 +145,20 @@ void Application::AutomaticMode(std::string fileName){
         }
         else if (command == "ExportToPBRT")
         {
-            autoIn >> idPlaceholder >> nameStringPlaceholder >> nameSecondStringPlaceholder;
-            sm.exportAllToPBRT(idPlaceholder, nameStringPlaceholder, nameSecondStringPlaceholder);
+            float customZoom = 1.f;
+            autoIn >> idPlaceholder >> nameStringPlaceholder >> nameSecondStringPlaceholder >> customZoom;
+            sm.exportAllToPBRT(idPlaceholder, nameStringPlaceholder, nameSecondStringPlaceholder, customZoom);
         }
         else if (command == "DeleteSceneByID")
         {
             autoIn >> idPlaceholder;
             sm.deleteScene(idPlaceholder);
             sceneCount--;
+        }
+        else if (command == "RotateAroundY")
+        {
+            autoIn >> idPlaceholder;
+            sm.rotateSceneAroundY(0, idPlaceholder);
         }
     }
 }

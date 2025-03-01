@@ -202,7 +202,7 @@ void SceneManager::createDefaultEnviromentalLight(std::string envirometMapFileNa
 	std::cout << "Created default enviromental light for scene with index 0, because no lights were detected" << std::endl;
 }
 
-void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::string outputImageFormat) {
+void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::string outputImageFormat, float customCameraZoom) {
 	bool createdCustomFloor = false;
 	ViewPointNode* camera;
 	if (cameraIndex == -1 || allCameras.size() == 0)
@@ -227,7 +227,7 @@ void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::strin
 	std::string outputFolder("pbrtv4/textured/");
 	std::string outputHeaderName = "headers/header_" + name;
 	std::string outputImageName = "output/" + name + "_render." + outputImageFormat;
-	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageName, createdCustomFloor);
+	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageName, customCameraZoom);
 }
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {
@@ -254,26 +254,46 @@ bool SceneManager::convertSceneSpotLightsToGonioLights(std::string sceneName, st
 	return true;
 }
 
-float SceneManager::getTextureCoordsToObjectCoordsScale() {
-	int i = 0;
-	double scale = 0;
-	int geoCount = 0;
-	for (auto scene : scenes)
+#define DEG_TO_RAD(angle)   ((angle) / 57.29577951308f)
+
+void SceneManager::rotateSceneAroundY(int sceneID, float angleDegrees)
+{
+	for (auto root_node : scenes.at(sceneID)->RootNodes)
 	{
-		for (auto geometry : scene->geometries)
+		if (root_node->type == NodeTypes::Transform)
 		{
-			float geoScale = geometry->calculateTextureScale();
-			if (geoScale > 0)
-			{
-				scale += geoScale;
-				geoCount++;
-			}
+			float rotation[4] = { 0, 1, 0, DEG_TO_RAD(angleDegrees) };
+			static_cast<TransformNode*>(root_node)->setRotation(rotation);
 		}
 	}
+}
 
-	scale = scale / geoCount;
+float SceneManager::getTextureCoordsToObjectCoordsScale() {
+	double scale = 0.0;
+	bool use_relative_scale = false;
+	if (use_relative_scale) {
+		int i = 0;
+		int geoCount = 0;
+		for (auto scene : scenes)
+		{
+			for (auto geometry : scene->geometries)
+			{
+				float geoScale = geometry->calculateTextureScale();
+				if (geoScale > 0)
+				{
+					scale += geoScale;
+					geoCount++;
+				}
+			}
+		}
 
-	return scale;
+		scale = scale / geoCount;
+	}
+	else
+	{
+		scale = 100.0;
+	}
+	return (float)scale;
 }
 
 

@@ -40,7 +40,7 @@ MakeNamedMaterial "Floor"
 AttributeBegin
     Transform [ -0.386527 0 0.922278 0 -0.922278 0 -0.386527 0 0 1 0 0 0 0 0 1  ]
     LightSource "infinite"
-        "string mapname" "textures/envmap.pfm"
+        "string mapname" "textures/envmap.hdr"
 AttributeEnd
 NamedMaterial "Floor"
 Shape "trianglemesh"

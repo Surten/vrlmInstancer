@@ -5,7 +5,7 @@
 
 std::ostream& operator<<(std::ostream& os, const vec3& obj)
 {
-    os << obj.x << " " << obj.y << " " << obj.z << " ";
+    os << std::setprecision(6) << obj.x << " " << obj.y << " " << obj.z << " ";
     return os;
 }
 
@@ -17,7 +17,7 @@ std::ostream& operator<<(std::ostream& os, const vec3i& obj)
 
 std::ostream& operator<<(std::ostream& os, const vec2& obj)
 {
-    os << obj.x << " " << obj.y << " ";
+    os << std::setprecision(6) << obj.x << " " << obj.y << " ";
     return os;
 }
 

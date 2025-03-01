@@ -42,12 +42,14 @@ public:
 
 	void createDefaultCamera();
 	void createDefaultEnviromentalLight(std::string envirometMapFileName);
-	void exportAllToPBRT(int cameraIndex, std::string outputHeaderName, std::string outputImageName);
+	void exportAllToPBRT(int cameraIndex, std::string outputHeaderName, std::string outputImageName, float customCameraZoom);
 
 	void unifyTextrureCoordScaleOfAllScenes();
 	void scaleAllScenesGeometry(float scale);
 
 	bool convertSceneSpotLightsToGonioLights(std::string sceneName, std::string referenceSceneName);
+
+	void rotateSceneAroundY(int sceneID, float angleDegrees);
 
 private:
 	std::vector<Scene*> scenes;

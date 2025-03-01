@@ -6,14 +6,14 @@
 PbrtExporter::PbrtExporter(){
 }
 
-void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName, bool includeCustomFloor)
+void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName, float customCameraZoom)
 {
 	this->scenes = scenes;
 	out.open(folder + headerFileName + ".pbrt");
-	writeSceneWideOptions(camera, renderImageFileName);
+	writeSceneWideOptions(camera, renderImageFileName, customCameraZoom);
 	out << " WorldBegin" << std::endl;
 	writeTexture();
-	if (includeCustomFloor) writeFloor();
+	//if (includeCustomFloor) writeFloor();
 	for (auto scene : scenes)
 	{
 		writeAllLightSourcesOfAScene(scene);
@@ -23,31 +23,51 @@ void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera
 
 }
 
-void PbrtExporter::writeSceneWideOptions(const ViewPointNode* camera, std::string renderImageFileName) {
+void PbrtExporter::writeSceneWideOptions(const ViewPointNode* camera, std::string renderImageFileName, float customCameraZoom) {
 	writeIntegrator();
-	writeCamera(camera);
+	writeCamera(camera, customCameraZoom);
 	writeSampler();
 	writeFilter();
 	writeFilm(renderImageFileName);
 }
 
 
-void PbrtExporter::writeCamera(const ViewPointNode* camera) {
+void PbrtExporter::writeCamera(const ViewPointNode* camera, float customCameraZoom) {
 	if (camera == nullptr)
 	{
 		AABB retAABB = scenes[0]->geometries[0]->getAABB();
+		BaseNode* currentNode = scenes[0]->geometries[0]->parent;
+		while (currentNode != nullptr)
+		{
+			if (currentNode->type == NodeTypes::Transform)
+			{
+				retAABB.min = retAABB.min + static_cast<TransformNode*>(currentNode)->translation;
+				retAABB.max = retAABB.max + static_cast<TransformNode*>(currentNode)->translation;
+			}
+			currentNode = currentNode->parent;
+		}
 		for (auto geometry : scenes[0]->geometries)
 		{
 			AABB toAdd = geometry->getAABB();
 			if (geometry->name.find("Bearer") != std::string::npos)
 				continue;
+			BaseNode* currentNode = geometry->parent;
+			while (currentNode != nullptr)
+			{
+				if (currentNode->type == NodeTypes::Transform)
+				{
+					toAdd.min = toAdd.min + static_cast<TransformNode*>(currentNode)->translation;
+					toAdd.max = toAdd.max + static_cast<TransformNode*>(currentNode)->translation;
+				}
+				currentNode = currentNode->parent;
+			}
 			retAABB.uniteWithAABB(toAdd);
 		}
-		vec3 cameraPosition(-200, 100, 200);
+		vec3 cameraPosition(-200, 120, 200);
 		cameraPosition.normalize();
-		float length = retAABB.getDiagonal().len();
-		if (length > 0.001)
-			cameraPosition = cameraPosition * length;
+		float length = retAABB.getDiagonal().len() / customCameraZoom;
+		
+		cameraPosition = cameraPosition * length;
 
 		cameraPosition = cameraPosition + (retAABB.getArithmeticCenter() - vec3());
 
@@ -58,7 +78,7 @@ void PbrtExporter::writeCamera(const ViewPointNode* camera) {
 				static_cast<TransformNode*>(node)->translation.setVector(0, 0, 0);
 			}
 		}
-		vec3 lookUp(-0.3, 1, 0.3);
+		vec3 lookUp(0.0f, 1.0f, 0.0f);
 		lookUp.normalize();
 
 		out << "LookAt " << cameraPosition << std::endl;
@@ -68,6 +88,8 @@ void PbrtExporter::writeCamera(const ViewPointNode* camera) {
 		out << std::endl;
 		return;
 	}
+
+
 	vec3 pos, lookAt, lookUp;
 	camera->computeLookAt(pos, lookAt, lookUp);
 	out << "LookAt " << pos << std::endl;
@@ -138,9 +160,9 @@ void PbrtExporter::writeLightSource(LightNode* lightNode) {
 
 		break;
 	case LightNode::LightType::ENVIROMENTAL_LIGHT:
-		out << " Rotate -90 1 0 0" << std::endl;
+		//out << " Rotate -90 1 0 0" << std::endl;
 		out << " LightSource \"infinite\"" << std::endl;
-		out << "    \"string filename\" [ \"" << lightNode->url << "\" ]" << std::endl;
+		//out << "    \"string filename\" [ \"" << lightNode->url << "\" ]" << std::endl;
 		break;
 	}
 	out << " AttributeEnd" << std::endl;
