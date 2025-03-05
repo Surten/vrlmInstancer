@@ -65,11 +65,12 @@ void PbrtExporter::writeCamera(const ViewPointNode* camera, float customCameraZo
 		}
 		vec3 cameraPosition(-200, 120, 200);
 		cameraPosition.normalize();
-		float length = retAABB.getDiagonal().len() / customCameraZoom;
+		float length = retAABB.getDiagonal().len();
 		
+		length = length / customCameraZoom;
 		cameraPosition = cameraPosition * length;
 
-		cameraPosition = cameraPosition + (retAABB.getArithmeticCenter() - vec3());
+		//cameraPosition = cameraPosition + (retAABB.getArithmeticCenter() - vec3());
 
 		for (auto node : scenes[0]->RootNodes)
 		{
@@ -82,9 +83,9 @@ void PbrtExporter::writeCamera(const ViewPointNode* camera, float customCameraZo
 		lookUp.normalize();
 
 		out << "LookAt " << cameraPosition << std::endl;
-		out << "       " << 0 << " " << 0 << " " << 0 << std::endl;
+		out << "       " << retAABB.getArithmeticCenter() << std::endl;
 		out << "       " << lookUp << std::endl;
-		out << " Camera \"perspective\" \"float fov\" [ " << 80 << " ]" << std::endl;
+		out << " Camera \"perspective\" \"float fov\" [ " << 40 << " ]" << std::endl;
 		out << std::endl;
 		return;
 	}

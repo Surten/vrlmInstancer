@@ -1,0 +1,27 @@
+Integrator "volpath" "integer maxdepth" [ 8 ]
+
+LookAt -164.553 119.277 164.553 
+       0 0 0
+       -0.276172 0.920575 0.276172 
+ Camera "perspective" "float fov" [ 80 ]
+
+Sampler "halton" "integer pixelsamples" 32
+ #Filter used for antialiasing
+ PixelFilter "mitchell"
+
+ #Output file specification
+ Film "rgb" "string filename" "output/table_08_render.png"
+      "integer xresolution" [500]
+      "integer yresolution" [500]
+
+ WorldBegin
+AttributeBegin
+Texture "checkerBoard" "spectrum" "imagemap" "string filename" [ "checkerboard-pattern.jpg" ]
+AttributeEnd
+ AttributeBegin
+ Rotate -90 1 0 0
+ LightSource "infinite"
+    "string filename" [ "sky.exr" ]
+ AttributeEnd
+
+Include "../table_08.pbrt"

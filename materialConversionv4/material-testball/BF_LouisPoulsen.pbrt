@@ -30,8 +30,8 @@ MakeNamedMaterial "RoughMetal"
     "rgb eta" [ 0.200438 0.924033 1.102212 ]
 MakeNamedMaterial "Material"
     "string type" [ "diffusetransmission" ]
-    "rgb reflectance" [ 0.9627 0.9627 0.9627 ]
-    "rgb transmittance" [ 0.9627 0.9627 0.9627 ]
+    "rgb reflectance" [ 0.7627 0.7627 0.7627 ]
+    "rgb transmittance" [ 0.7627 0.7627 0.7627 ]
 MakeNamedMaterial "Stand"
     "string type" [ "diffuse" ]
     "rgb reflectance" [ 0.2 0.2 0.2 ]

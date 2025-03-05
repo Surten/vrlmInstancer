@@ -1,0 +1,25 @@
+Integrator "volpath" "integer maxdepth" [ 8 ]
+
+LookAt -225.419 123.394 230.094 
+       0 0 0
+       0 1 0 
+ Camera "perspective" "float fov" [ 40 ]
+
+Sampler "halton" "integer pixelsamples" 64
+ #Filter used for antialiasing
+ PixelFilter "mitchell"
+
+ #Output file specification
+ Film "rgb" "string filename" "output/Heater_04_c_render.png"
+      "integer xresolution" [1280]
+      "integer yresolution" [900]
+
+ WorldBegin
+AttributeBegin
+Texture "checkerBoard" "spectrum" "imagemap" "string filename" [ "checkerboard-pattern.jpg" ]
+AttributeEnd
+ AttributeBegin
+ LightSource "infinite"
+ AttributeEnd
+
+Include "../Heater_04_c.pbrt"

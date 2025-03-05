@@ -28,7 +28,7 @@ MakeNamedMaterial "RoughMetal"
     "color k" [ 3.912949 2.452848 2.142188 ]
     "color eta" [ 0.200438 0.924033 1.102212 ]
 MakeNamedMaterial "Material"
-    "string type" [ "diffuse" ]
+    "string type" [ "matte" ]
     "rgb Kd" [ 0.01 0.01 0.01 ]
     "float sigma" [ 0.179776 ]
 MakeNamedMaterial "Stand"

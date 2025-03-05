@@ -1,0 +1,25 @@
+Integrator "volpath" "integer maxdepth" [ 8 ]
+
+LookAt -270.684 104.297 21.1821 
+       0 0 0
+       0 1 0 
+ Camera "perspective" "float fov" [ 80 ]
+
+Sampler "halton" "integer pixelsamples" 64
+ #Filter used for antialiasing
+ PixelFilter "mitchell"
+
+ #Output file specification
+ Film "rgb" "string filename" "output/tatableWideB_render.png"
+      "integer xresolution" [500]
+      "integer yresolution" [500]
+
+ WorldBegin
+AttributeBegin
+Texture "checkerBoard" "spectrum" "imagemap" "string filename" [ "checkerboard-pattern.jpg" ]
+AttributeEnd
+ AttributeBegin
+ LightSource "infinite"
+ AttributeEnd
+
+Include "../tableWideB.pbrt"

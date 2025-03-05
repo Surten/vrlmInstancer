@@ -28,8 +28,8 @@ private:
 
 	int numberOfSamples = 64;
 	int maxDepth = 8;
-	int xResolution = 500;
-	int yResolution = 500;
+	int xResolution = 1280;
+	int yResolution = 900;
 
 private:
 

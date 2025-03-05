@@ -32,11 +32,13 @@ class Material():
     roughnness: float
     reflectance: Vector3
     transmittance: Vector3
+    eta_conductor: str
+    k_conductor: str
 
 
 def read_material(material_text):
     words = material_text.split(" ")
-    m = Material("", "", 0, 0, Vector3(0,0,0), Vector3(0,0,0))
+    m = Material("", "", 0, 0, Vector3(0,0,0), Vector3(0,0,0), "", "")
     m.name = words[0]
     m.type = words[4]
     print(words)
@@ -51,8 +53,8 @@ def read_material(material_text):
         m.reflectance = Vector3(float(words[7]), float(words[8]), float(words[9]))
         m.transmittance = Vector3(float(words[13]), float(words[14]), float(words[15]))
     if m.type == MATERIAL_CONDUCTOR:
-        m.roughnness = float(words[7])
-        m.reflectance = Vector3(float(words[11]), float(words[12]), float(words[13]))
+        m.eta_conductor = words[7]
+        m.k_conductor = words[11]
     return m
 
 def add_new_material(index):
@@ -80,8 +82,8 @@ def add_new_material(index):
         output_lines.append(f'    "rgb transmittance" [ {m.transmittance.x} {m.transmittance.y} {m.transmittance.z} ]\n')
     if m.type == MATERIAL_CONDUCTOR:
         output_lines.append('    "string type" [ "conductor" ]\n')
-        output_lines.append(f'    "float roughness" [ {m.roughnness} ]\n')
-        output_lines.append(f'    "rgb reflectance" [ {m.reflectance.x} {m.reflectance.y} {m.reflectance.z} ]\n')
+        output_lines.append(f'    "spectrum eta" [ {m.eta_conductor} ]\n')
+        output_lines.append(f'    "spectrum k" [ {m.k_conductor} ]\n')
     
     
     return output_lines, m

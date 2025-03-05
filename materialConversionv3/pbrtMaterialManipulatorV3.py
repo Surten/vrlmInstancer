@@ -109,7 +109,7 @@ def add_new_material(index):
         output_lines.append(f'    "color Kd" [ {m.diffuse.x} {m.diffuse.y} {m.diffuse.z} ]\n')
         output_lines.append(f'    "color Ks" [ {m.specular.x} {m.specular.y} {m.specular.z} ]\n')
     if m.type == MATERIAL_MATTE:
-        output_lines.append('    "string type" [ "diffuse" ]\n')
+        output_lines.append('    "string type" [ "matte" ]\n')
         output_lines.append(f'    "rgb Kd" [ {m.diffuse.x} {m.diffuse.y} {m.diffuse.z} ]\n')
         output_lines.append(f'    "float sigma" [ {m.sigma} ]\n')
     if m.type == MATERIAL_GLASS:
