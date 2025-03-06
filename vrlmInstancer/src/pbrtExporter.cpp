@@ -35,6 +35,17 @@ void PbrtExporter::writeSceneWideOptions(const ViewPointNode* camera, std::strin
 void PbrtExporter::writeCamera(const ViewPointNode* camera, float customCameraZoom) {
 	if (camera == nullptr)
 	{
+
+
+		for (auto node : scenes[0]->RootNodes)
+		{
+			if (node->type == NodeTypes::Transform)
+			{
+				static_cast<TransformNode*>(node)->translation.setVector(0, 0, 0);
+			}
+		}
+
+
 		AABB retAABB = scenes[0]->geometries[0]->getAABB();
 		BaseNode* currentNode = scenes[0]->geometries[0]->parent;
 		while (currentNode != nullptr)
@@ -46,6 +57,7 @@ void PbrtExporter::writeCamera(const ViewPointNode* camera, float customCameraZo
 			}
 			currentNode = currentNode->parent;
 		}
+
 		for (auto geometry : scenes[0]->geometries)
 		{
 			AABB toAdd = geometry->getAABB();
@@ -63,22 +75,20 @@ void PbrtExporter::writeCamera(const ViewPointNode* camera, float customCameraZo
 			}
 			retAABB.uniteWithAABB(toAdd);
 		}
-		vec3 cameraPosition(-200, 120, 200);
+
+		vec3 cameraPosition(-20000, 12000, 20000);
 		cameraPosition.normalize();
 		float length = retAABB.getDiagonal().len();
+
 		
 		length = length / customCameraZoom;
 		cameraPosition = cameraPosition * length;
 
-		//cameraPosition = cameraPosition + (retAABB.getArithmeticCenter() - vec3());
+		cameraPosition = cameraPosition + (retAABB.getArithmeticCenter() - vec3());
 
-		for (auto node : scenes[0]->RootNodes)
-		{
-			if (node->type == NodeTypes::Transform)
-			{
-				static_cast<TransformNode*>(node)->translation.setVector(0, 0, 0);
-			}
-		}
+		std::cout << retAABB.min << "   " << retAABB.max << std::endl;
+		std::cout << cameraPosition << "   " << retAABB.getArithmeticCenter() << std::endl;
+
 		vec3 lookUp(0.0f, 1.0f, 0.0f);
 		lookUp.normalize();
 

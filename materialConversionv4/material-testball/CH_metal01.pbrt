@@ -32,6 +32,7 @@ MakeNamedMaterial "Material"
     "string type" [ "conductor" ]
     "spectrum eta" [ "metal-MgO-eta" ]
     "spectrum k" [ "metal-MgO-k" ]
+    "float roughness" [ 0.9 ]
 MakeNamedMaterial "Stand"
     "string type" [ "diffuse" ]
     "rgb reflectance" [ 0.2 0.2 0.2 ]

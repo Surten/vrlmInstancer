@@ -51,7 +51,7 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * ca
 	out.open(sceneFileName + ".xml");
 
 	out << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
-	depth = 0;
+	//depth = 0;
 	writeElementBegin("scene", { "version", "0.5.0" }, 0);
 	writeIntegrator(1);
 	writeSensor(1);
@@ -119,7 +119,7 @@ void MitsubaExporter::writeFilm(int depth)
 void MitsubaExporter::writeMaterial(Material* mat, int depth)
 {
 	char buffer[100];
-	sprintf(buffer, "%.6f %.6f %.6f", mat->diffuseColor.x, mat->diffuseColor.y, mat->diffuseColor.z);
+	sprintf_s(buffer, "%.6f %.6f %.6f", mat->diffuseColor.x, mat->diffuseColor.y, mat->diffuseColor.z);
 	writeElementBegin("bsdf", { "type", "diffuse" }, depth);
 		writeElement("rgb", { "name", "reflectance", "value", buffer }, depth + 1);
 	writeElementEnd("bsdf", depth);

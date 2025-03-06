@@ -1,7 +1,7 @@
 Integrator "volpath" "integer maxdepth" [ 8 ]
 
-LookAt -68.2981 74.286 68.2259 
-       0 0 0
+LookAt -68.237 40.946 68.2356 
+       0.000490189 0.00349808 -0.00185966 
        0 1 0 
  Camera "perspective" "float fov" [ 40 ]
 

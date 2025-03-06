@@ -31,7 +31,7 @@ MakeNamedMaterial "RoughMetal"
 MakeNamedMaterial "Material"
     "string type" [ "coateddiffuse" ]
     "float roughness" [ 0.6 ]
-    "rgb reflectance" [ 0.0902 0.07843 0.5804 ]
+    "rgb reflectance" [ 0.1002 0.13843 0.6804 ]
 MakeNamedMaterial "Stand"
     "string type" [ "diffuse" ]
     "rgb reflectance" [ 0.2 0.2 0.2 ]

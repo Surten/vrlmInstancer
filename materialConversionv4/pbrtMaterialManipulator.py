@@ -48,13 +48,14 @@ def read_material(material_text):
     if m.type == MATERIAL_DIFFUSE:
         m.reflectance = Vector3(float(words[7]), float(words[8]), float(words[9]))
     if m.type == MATERIAL_DIELECTRIC:
-        m.eta = float(words[7])
+        m.eta = words[7]
     if m.type == MATERIAL_DIFFUSE_TRANSMISSION:
         m.reflectance = Vector3(float(words[7]), float(words[8]), float(words[9]))
         m.transmittance = Vector3(float(words[13]), float(words[14]), float(words[15]))
     if m.type == MATERIAL_CONDUCTOR:
         m.eta_conductor = words[7]
         m.k_conductor = words[11]
+        m.roughnness = words[15]
     return m
 
 def add_new_material(index):
@@ -75,7 +76,7 @@ def add_new_material(index):
         output_lines.append(f'    "rgb reflectance" [ {m.reflectance.x} {m.reflectance.y} {m.reflectance.z} ]\n')
     if m.type == MATERIAL_DIELECTRIC:
         output_lines.append('    "string type" [ "dielectric" ]\n')
-        output_lines.append(f'    "float roughness" [ {m.eta} ]\n')
+        output_lines.append(f'    "spectrum eta" [ {m.eta} ]\n')
     if m.type == MATERIAL_DIFFUSE_TRANSMISSION:
         output_lines.append('    "string type" [ "diffusetransmission" ]\n')
         output_lines.append(f'    "rgb reflectance" [ {m.reflectance.x} {m.reflectance.y} {m.reflectance.z} ]\n')
@@ -84,6 +85,7 @@ def add_new_material(index):
         output_lines.append('    "string type" [ "conductor" ]\n')
         output_lines.append(f'    "spectrum eta" [ {m.eta_conductor} ]\n')
         output_lines.append(f'    "spectrum k" [ {m.k_conductor} ]\n')
+        output_lines.append(f'    "float roughness" [ {m.roughnness} ]\n')
     
     
     return output_lines, m
