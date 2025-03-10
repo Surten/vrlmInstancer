@@ -43,6 +43,8 @@ public:
 	/// Nastavi matici na jednotkovou
 	void Identity();
 
+	void Transpose();
+
 	/// Operator prirazeni
 	Matrix& operator=(const Matrix&);
 

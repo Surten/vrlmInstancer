@@ -9,7 +9,7 @@ PixelFilter "triangle"
 Film "rgb"
     "string filename" [ "matBallsOutput/BF_white02.png" ]
     "integer yresolution" [ 720 ]
-    "integer xresolution" [ 1280 ]
+    "integer xresolution" [ 720 ]
 Camera "perspective"
     "float fov" [ 20.114292 ]
 

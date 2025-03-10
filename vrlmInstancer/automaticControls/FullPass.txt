@@ -38,7 +38,6 @@ Load Door/U-6_windows_shutters_UF.WRL
 Load Door/U-6_windows_Stairway01_new.WRL
 Load Door/U-6_windows_Stairway02_new.WRL
 Load Door/U-6_windows_UF_new.WRL
-
 LoadTextured textured/basket_01.wrl
 LoadTextured textured/basket_03.wrl
 LoadTextured textured/bench.wrl
@@ -59,6 +58,11 @@ LoadTextured textured/chair_03oldB.wrl
 LoadTextured textured/circle_table_low.wrl
 LoadTextured textured/Door_06.wrl
 LoadTextured textured/Door_07.wrl
+LoadTextured textured/Door_08.wrl
+LoadTextured textured/Door_09.wrl
+LoadTextured textured/Door_09_B.wrl
+LoadTextured textured/Door_10.wrl
+LoadTextured textured/door_type_05.wrl
 LoadTextured textured/fence2to1floorRight.wrl
 LoadTextured textured/fence3floorR.wrl
 LoadTextured textured/fence4floorEnd.wrl
@@ -82,16 +86,20 @@ LoadTextured textured/Heater_04_d.wrl
 LoadTextured textured/Heater_05.wrl
 LoadTextured textured/Heater_06.wrl
 LoadTextured textured/Heater_06_b.wrl
+LoadTextured textured/library_door_02.wrl
+LoadTextured textured/library_door_02b.wrl
 LoadTextured textured/netPlug.wrl
 LoadTextured textured/powerPlug.wrl
 LoadTextured textured/rack.wrl
 LoadTextured textured/radiumLamp02.wrl
+LoadTextured textured/Roto_door_01.wrl
 LoadTextured textured/roundTable01.wrl
 LoadTextured textured/Sofa01.wrl
 LoadTextured textured/Sofa02.wrl
 LoadTextured textured/Sofa03.wrl
 LoadTextured textured/table_03low.wrl
 LoadTextured textured/table_06.wrl
+LoadTextured textured/table_08.wrl
 LoadTextured textured/Table02.wrl
 LoadTextured textured/Table03.wrl
 LoadTextured textured/Table04.wrl
@@ -112,8 +120,8 @@ LoadTextured textured/TreeBigGroundFloor.wrl
 LoadTextured textured/typ40a.wrl
 InstanceAll
 CopyAllTextureCoordsFromTexturedScenes
-ScaleAllScenes
 UnifyTextureScale
+ScaleAllScenes
 SaveId 0 Output/0-6_equipment.WRL
 SaveId 1 Output/0-6_furniture_halls.WRL
 SaveId 2 Output/0-6_heating.WRL

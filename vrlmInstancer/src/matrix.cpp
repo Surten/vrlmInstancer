@@ -88,6 +88,18 @@ void Matrix::Identity()
 	matrix[3][3] = 1;
 }
 
+//----------------------------------------------------------------------------------------------
+void Matrix::Transpose()
+//----------------------------------------------------------------------------------------------
+{
+	std::swap(matrix[0][1], matrix[1][0]);
+	std::swap(matrix[0][2], matrix[2][0]);
+	std::swap(matrix[0][3], matrix[3][0]);
+	std::swap(matrix[1][2], matrix[2][1]);
+	std::swap(matrix[1][3], matrix[3][1]);
+	std::swap(matrix[2][3], matrix[3][2]);
+}
+
 
 //----------------------------------------------------------------------------------------------
 Matrix& Matrix::operator=(const Matrix& m)
@@ -196,19 +208,19 @@ Matrix& Matrix::mRotate(const vec3& vec3D, const float angle)
 	float _sin = sinf(angle);
 	float _cos = cosf(angle);
 	
-	matrix[0][0] = v.x * v.x + (1.f - v.x * v.x) * _cos;
+	matrix[0][0] = v.x * v.x * (1.f - _cos) + _cos;
 	matrix[0][1] = v.x * v.y * (1.f - _cos) + v.z * _sin;
 	matrix[0][2] = v.x * v.z * (1.f - _cos) - v.y * _sin;
 	matrix[0][3] = 0;
 
 	matrix[1][0] = v.x * v.y * (1.f - _cos) - v.z * _sin;
-	matrix[1][1] = v.y * v.y + (1.f - v.y * v.y) * _cos;
+	matrix[1][1] = v.y * v.y * (1.f - _cos) + _cos;
 	matrix[1][2] = v.y * v.z * (1.f - _cos) + v.x * _sin;
 	matrix[1][3] = 0;
 
 	matrix[2][0] = v.x * v.z * (1.f - _cos) + v.y *_sin;
 	matrix[2][1] = v.y * v.z * (1.f - _cos) - v.x * _sin;
-	matrix[2][2] = v.z * v.z + (1.f - v.z * v.z) * _cos;
+	matrix[2][2] = v.z * v.z * (1.f - _cos) + _cos;
 	matrix[2][3] = 0;
 
 	matrix[3][0] = 0;
@@ -297,7 +309,7 @@ Matrix operator*(const Matrix& m1,const Matrix& m2)
 	// Treti radek vysledne matice
 	ret(0,2) = m1(0,2)*m2(0,0)+m1(1,2)*m2(0,1)+m1(2,2)*m2(0,2)+m1(3,2)*m2(0,3);
 	ret(1,2) = m1(0,2)*m2(1,0)+m1(1,2)*m2(1,1)+m1(2,2)*m2(1,2)+m1(3,2)*m2(1,3);
-	ret(2,2) = m1(0,2)*m2(3,0)+m1(1,2)*m2(2,1)+m1(2,2)*m2(2,2)+m1(3,2)*m2(2,3);
+	ret(2,2) = m1(0,2)*m2(2,0)+m1(1,2)*m2(2,1)+m1(2,2)*m2(2,2)+m1(3,2)*m2(2,3);
 	ret(3,2) = m1(0,2)*m2(3,0)+m1(1,2)*m2(3,1)+m1(2,2)*m2(3,2)+m1(3,2)*m2(3,3);
 
 	// Ctvrty radek vysledne matice
@@ -315,9 +327,9 @@ Matrix operator*(const Matrix& m1,const Matrix& m2)
 vec3 operator*(const Matrix& mat,const vec3& vec)
 //----------------------------------------------------------------------------------------------
 {
-	float vX = mat(0,0)*vec.x + mat(1,0)*vec.y + mat(2,0)*vec.z;
-	float vY = mat(0,1)*vec.x + mat(1,1)*vec.y + mat(2,1)*vec.z;
-	float vZ = mat(0,2)*vec.x + mat(1,2)*vec.y + mat(2,2)*vec.z;
+	float vX = mat(0,0)*vec.x + mat(1,0)*vec.y + mat(2,0)*vec.z + mat(3 ,0) * 1.f;
+	float vY = mat(0,1)*vec.x + mat(1,1)*vec.y + mat(2,1)*vec.z + mat(3, 1) * 1.f;
+	float vZ = mat(0,2)*vec.x + mat(1,2)*vec.y + mat(2,2)*vec.z + mat(3, 2) * 1.f;
 	float den = mat(0,3) + mat(1,3) + mat(2,3) + mat(3,3);
 	if(den!=1.f){
 		vX/=den;

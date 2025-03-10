@@ -9,7 +9,7 @@ PixelFilter "triangle"
 Film "rgb"
     "string filename" [ "matBallsOutput/CH_alum02.png" ]
     "integer yresolution" [ 720 ]
-    "integer xresolution" [ 1280 ]
+    "integer xresolution" [ 720 ]
 Camera "perspective"
     "float fov" [ 20.114292 ]
 
@@ -32,7 +32,7 @@ MakeNamedMaterial "Material"
     "string type" [ "conductor" ]
     "spectrum eta" [ "metal-Al-eta" ]
     "spectrum k" [ "metal-Al-k" ]
-    "float roughness" [ 0.9 ]
+    "float roughness" [ 0.6 ]
 MakeNamedMaterial "Stand"
     "string type" [ "diffuse" ]
     "rgb reflectance" [ 0.2 0.2 0.2 ]

@@ -33,11 +33,6 @@ InstanceAll
 UnifyTextureScale
 ExportToPBRT -1 caffe_set png 0.9
 DeleteSceneByID 0
-Load textured/case_type_1_&_21_top.wrl
-InstanceAll
-UnifyTextureScale
-ExportToPBRT -1 case_type_1_&_21_top png 2.9
-DeleteSceneByID 0
 Load textured/case_type_R-01.wrl
 InstanceAll
 UnifyTextureScale
@@ -99,6 +94,26 @@ Load textured/Door_07.wrl
 InstanceAll
 UnifyTextureScale
 ExportToPBRT -1 Door_07 png 1.0
+DeleteSceneByID 0
+Load textured/Door_08.wrl
+InstanceAll
+UnifyTextureScale
+ExportToPBRT -1 Door_08 png 1.0
+DeleteSceneByID 0
+Load textured/Door_09.wrl
+InstanceAll
+UnifyTextureScale
+ExportToPBRT -1 Door_09 png 1.0
+DeleteSceneByID 0
+Load textured/Door_10.wrl
+InstanceAll
+UnifyTextureScale
+ExportToPBRT -1 Door_10 png 1.0
+DeleteSceneByID 0
+Load textured/door_type_05.wrl
+InstanceAll
+UnifyTextureScale
+ExportToPBRT -1 door_type_05 png 1.0
 DeleteSceneByID 0
 Load textured/fence2to1floorRight.wrl
 InstanceAll
@@ -215,6 +230,16 @@ InstanceAll
 UnifyTextureScale
 ExportToPBRT -1 Heater_06_b png 1.0
 DeleteSceneByID 0
+Load textured/library_door_02.wrl
+InstanceAll
+UnifyTextureScale
+ExportToPBRT -1 library_door_02 png 1.0
+DeleteSceneByID 0
+Load textured/library_door_02b.wrl
+InstanceAll
+UnifyTextureScale
+ExportToPBRT -1 library_door_02b png 1.0
+DeleteSceneByID 0
 Load textured/netPlug.wrl
 InstanceAll
 UnifyTextureScale
@@ -235,6 +260,11 @@ Load textured/radiumLamp02.wrl
 InstanceAll
 UnifyTextureScale
 ExportToPBRT -1 radiumLamp02 png 3.5
+DeleteSceneByID 0
+Load textured/Roto_door_01.wrl
+InstanceAll
+UnifyTextureScale
+ExportToPBRT -1 Roto_door_01 png 3.5
 DeleteSceneByID 0
 Load textured/roundTable01.wrl
 InstanceAll
@@ -268,6 +298,11 @@ Load textured/table_06.wrl
 InstanceAll
 UnifyTextureScale
 ExportToPBRT -1 table_06 png 0.9
+DeleteSceneByID 0
+Load textured/table_08.wrl
+InstanceAll
+UnifyTextureScale
+ExportToPBRT -1 table_08 png 0.9
 DeleteSceneByID 0
 Load textured/Table02.wrl
 InstanceAll

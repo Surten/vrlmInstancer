@@ -150,7 +150,7 @@ void Scene::findAndUseIdenticalGeometry() {
 }
 
 
-void Scene::findAndUseSameObjects(Scene * otherScene) {
+void Scene::findAndUseSameObjects(Scene* otherScene) {
 	if (this == otherScene) return;
 	std::vector<std::pair<Geometry*, Geometry*>> geoPairs;
 	float epsilon = 0.001f;
@@ -245,4 +245,62 @@ void Scene::convertSpotLightsToGonioLights(Scene* lightReferences) {
 	}
 }
 
+
+
+void Scene::calculateAABBRecursive(TransformNode* transformNode, Matrix transformMatrix)
+{
+	Matrix translateMat;
+	Matrix rotateMat;
+	Matrix scaleMat;
+	vec3 rotationAxis(transformNode->rotation[0], transformNode->rotation[1], transformNode->rotation[2]);
+	if (transformNode->hasTranslation()) translateMat.mTranslate(transformNode->translation);
+	if (transformNode->hasRotation())
+		rotateMat.mRotate(rotationAxis, transformNode->rotation[3]);
+	if (transformNode->hasScale()) scaleMat.mScale(transformNode->scale);
+
+	transformMatrix = transformMatrix * translateMat * rotateMat * scaleMat;
+
+	for (auto node : transformNode->children)
+	{
+		if (node->type == NodeTypes::Transform)
+		{
+			calculateAABBRecursive(static_cast<TransformNode*>(node), transformMatrix);
+		}
+		else if (node->type == NodeTypes::Shape)
+		{
+			ShapeNode* shapeNode = static_cast<ShapeNode*>(node);
+
+			if (shapeNode->geometry == nullptr) continue;
+
+			AABB geometryAABB = shapeNode->geometry->getAABB();
+
+
+			vec3 min = transformMatrix * geometryAABB.min;
+			vec3 max = transformMatrix * geometryAABB.max;
+
+			sceneAABB.uniteWithPoint(min);
+			sceneAABB.uniteWithPoint(max);
+		}
+	}
+
+}
+
+void Scene::calculateAABB()
+{
+	for (auto node : RootNodes)
+	{
+		if (node->type == NodeTypes::Transform)
+		{
+			calculateAABBRecursive(static_cast<TransformNode*>(node), Matrix());
+		}
+	}
+}
+
+AABB& Scene::getSceneAABB()
+{
+	if (sceneAABB.min.areEqual(vec3()) && sceneAABB.max.areEqual(vec3()))
+		calculateAABB();
+	return sceneAABB;
+	
+}
 

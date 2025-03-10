@@ -20,6 +20,7 @@ public:
 	std::vector<ViewPointNode*> Cameras;
 
 
+
 public:
 	Scene(std::string name);
 	~Scene();
@@ -58,11 +59,15 @@ public:
 
 	void convertSpotLightsToGonioLights(Scene* lightReferences);
 
-private:
+	AABB& getSceneAABB();
 
+private:
+	AABB sceneAABB;
 
 private:
 	void findIdenticalGeometry(std::vector<std::pair<int, int>>& geoPairs);
 
 	LightNode* findSameLightsByPosition(LightNode* light1, Scene* listOfOtherLights);
+	void calculateAABBRecursive(TransformNode* transformNode, Matrix transformMatrix);
+	void calculateAABB();
 };

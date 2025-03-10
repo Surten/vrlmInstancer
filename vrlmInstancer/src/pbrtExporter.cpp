@@ -45,43 +45,14 @@ void PbrtExporter::writeCamera(const ViewPointNode* camera, float customCameraZo
 			}
 		}
 
-
-		AABB retAABB = scenes[0]->geometries[0]->getAABB();
-		BaseNode* currentNode = scenes[0]->geometries[0]->parent;
-		while (currentNode != nullptr)
-		{
-			if (currentNode->type == NodeTypes::Transform)
-			{
-				retAABB.min = retAABB.min + static_cast<TransformNode*>(currentNode)->translation;
-				retAABB.max = retAABB.max + static_cast<TransformNode*>(currentNode)->translation;
-			}
-			currentNode = currentNode->parent;
-		}
-
-		for (auto geometry : scenes[0]->geometries)
-		{
-			AABB toAdd = geometry->getAABB();
-			if (geometry->name.find("Bearer") != std::string::npos)
-				continue;
-			BaseNode* currentNode = geometry->parent;
-			while (currentNode != nullptr)
-			{
-				if (currentNode->type == NodeTypes::Transform)
-				{
-					toAdd.min = toAdd.min + static_cast<TransformNode*>(currentNode)->translation;
-					toAdd.max = toAdd.max + static_cast<TransformNode*>(currentNode)->translation;
-				}
-				currentNode = currentNode->parent;
-			}
-			retAABB.uniteWithAABB(toAdd);
-		}
+		AABB retAABB = scenes[0]->getSceneAABB();
 
 		vec3 cameraPosition(-20000, 12000, 20000);
 		cameraPosition.normalize();
 		float length = retAABB.getDiagonal().len();
 
-		
-		length = length / customCameraZoom;
+		customCameraZoom = 1.4;
+		length = length * customCameraZoom;
 		cameraPosition = cameraPosition * length;
 
 		cameraPosition = cameraPosition + (retAABB.getArithmeticCenter() - vec3());
