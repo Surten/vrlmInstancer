@@ -1,1 +1,0 @@
-copy the folder material-testball/ and the .bat file to a folder with build Release version of pbrtv3, CREATE A FOLDER NAMED 'matBallsOutput' and run the .bat file
