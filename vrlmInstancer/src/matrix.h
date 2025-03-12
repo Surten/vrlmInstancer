@@ -44,6 +44,7 @@ public:
 	void Identity();
 
 	void Transpose();
+	std::string GetAsString();
 
 	/// Operator prirazeni
 	Matrix& operator=(const Matrix&);

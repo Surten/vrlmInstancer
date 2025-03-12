@@ -61,6 +61,8 @@ public:
 
 	AABB& getSceneAABB();
 
+	void initShapeNodeTransformMatricies();
+
 private:
 	AABB sceneAABB;
 

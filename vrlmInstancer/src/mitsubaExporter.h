@@ -34,10 +34,12 @@ private:
 
 private:
 	void writeElement(std::string elementName, std::vector<std::string> attributes, int depth);
-	void writeElementBegin(std::string elementName, std::vector<std::string> attributes, int depth);
+	void writeElementBeg(std::string elementName, std::vector<std::string> attributes, int depth);
 	void writeElementEnd(std::string elementName, int depth);
 	std::string& getLeadingSpaces(int depth);
 
+	void writeGeometryToObj(Geometry* geometry, std::string filePath);
+	void writeAllGeometriesToObjFiles();
 
 	void writeIntegrator(int depth);
 	void writeSensor(int depth);
@@ -47,4 +49,7 @@ private:
 	void writeMaterial(Material* mat, int depth);
 	void writeShape(ShapeNode* shapeNode, std::string filename, int depth);
 	void writeTransform(ShapeNode* shapeNode, int depth);
+	void writeBsdfNamed(Material* material, int depth);
+	void writeBsdf(Material* material, int depth);
+	void writeLight(LightNode* lightNode, int depth);
 };

@@ -18,7 +18,7 @@ void MitsubaExporter::writeElement(std::string elementName, std::vector<std::str
 	out << "/>" << std::endl;
 }
 
-void MitsubaExporter::writeElementBegin(std::string elementName, std::vector<std::string> attributes, int depth)
+void MitsubaExporter::writeElementBeg(std::string elementName, std::vector<std::string> attributes, int depth)
 {
 	std::string leadingSpaces = getLeadingSpaces(depth);
 	out << leadingSpaces << "<" << elementName << " ";
@@ -45,67 +45,85 @@ std::string& MitsubaExporter::getLeadingSpaces(int depth)
 	return ret;
 }
 
+void MitsubaExporter::writeGeometryToObj(Geometry* geometry, std::string filePath)
+{
+	// how hard can it be to write a .obj exporter? (:
+}
+
+void MitsubaExporter::writeAllGeometriesToObjFiles()
+{
+	for (auto scene : scenes)
+	{
+		for (auto geometry : scene->geometries)
+		{
+			writeGeometryToObj(geometry, scene->name);
+		}
+	}
+}
+
+
 void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * camera, std::string sceneFileName)
 {
+	// figure out door animations...
 	this->scenes = scenes;
 	out.open(sceneFileName + ".xml");
 
+	// create the scene xml with hierarchy
+	for (auto scene : scenes)
+	{
+		for (auto shapeNode : scene->ShapeNodes)
+		{
+
+		}
+	}
 	out << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
-	//depth = 0;
-	writeElementBegin("scene", { "version", "0.5.0" }, 0);
-	writeIntegrator(1);
-	writeSensor(1);
+	int depth = 0;
+	writeElementBeg("scene", { "version", "0.5.0" }, depth);
+	writeIntegrator(depth + 1);
+	writeSensor(depth + 1);
 
 	// export all geometries into individual .obj files
-	
+	writeAllGeometriesToObjFiles();
 
 
-	// figure out door animations...
-	// create the scene xml with hierarchy
 
-	writeElementEnd("scene", 0);
+
+	writeElementEnd("scene", depth);
 	out.close();
 }
 
+
 void MitsubaExporter::writeIntegrator(int depth)
 {
-	writeElementBegin("integrator", { "type", "path" }, depth);
-	
-	writeElement("integer", { "name", "maxDepth", "value", std::to_string(pathTracingMaxDepth) }, depth + 1);
-	
-	writeElement("integer", { "name", "strictNormals", "value", "true" }, depth + 1);
-
+	writeElementBeg("integrator", { "type", "path" }, depth);
+		writeElement("integer", { "name", "maxDepth", "value", std::to_string(pathTracingMaxDepth) }, depth + 1);
+		writeElement("integer", { "name", "strictNormals", "value", "true" }, depth + 1);
 	writeElementEnd("integrator", depth);
 	
 }
 
 void MitsubaExporter::writeSensor(int depth)
 {
-	writeElementBegin("sensor", { "type", "path" }, depth);
-
-	writeElement("float", { "name", "fov", "value", std::to_string(cameraFOV) }, depth + 1);
-
-	//camera
-	writeElementBegin("transform", { "name", "toWorld" }, depth + 1);
-		writeElement("matrix", { "value", "1 0 0 0  0 1 0 0  0 0 1 0  0 0 0 1" }, depth + 2);
-	writeElementEnd("transform", depth + 1);
-
-	writeSampler(depth + 1);
-
-	writeFilm(depth + 1);
+	writeElementBeg("sensor", { "type", "perspective" }, depth);
+		writeElement("float", { "name", "fov", "value", std::to_string(cameraFOV) }, depth + 1);
+		writeElementBeg("transform", { "name", "toWorld" }, depth + 1);
+			writeElement("matrix", { "value", "1 0 0 0  0 1 0 0  0 0 1 0  0 0 0 1" }, depth + 2);
+		writeElementEnd("transform", depth + 1);
+		writeSampler(depth + 1);
+		writeFilm(depth + 1);
 	writeElementEnd("sensor", depth);
 }
 
 void MitsubaExporter::writeSampler(int depth)
 {
-	writeElementBegin("sampler", { "type", "sobol" }, depth);
+	writeElementBeg("sampler", { "type", "sobol" }, depth);
 		writeElement("integer", { "name", "sampleCount", "value", std::to_string(nSamples) }, depth + 1);
 	writeElementEnd("sampler", depth);
 }
 
 void MitsubaExporter::writeFilm(int depth)
 {
-	writeElementBegin("film", { "type", "ldrfilm" }, depth);
+	writeElementBeg("film", { "type", "ldrfilm" }, depth);
 		writeElement("integer", { "name", "width", "value", std::to_string(imageWidth) }, depth + 1);
 		writeElement("integer", { "name", "height", "value", std::to_string(imageHeight) }, depth + 1);
 		writeElement("string", { "name", "fileFormat", "value", "png"}, depth + 1);
@@ -118,24 +136,61 @@ void MitsubaExporter::writeFilm(int depth)
 
 void MitsubaExporter::writeMaterial(Material* mat, int depth)
 {
-	char buffer[100];
-	sprintf_s(buffer, "%.6f %.6f %.6f", mat->diffuseColor.x, mat->diffuseColor.y, mat->diffuseColor.z);
-	writeElementBegin("bsdf", { "type", "diffuse" }, depth);
-		writeElement("rgb", { "name", "reflectance", "value", buffer }, depth + 1);
+	writeElementBeg("bsdf", { "type", "diffuse" }, depth);
+		writeElement("rgb", { "name", "reflectance", "value", mat->diffuseColor.toString() }, depth + 1);
 	writeElementEnd("bsdf", depth);
 }
 
 void MitsubaExporter::writeShape(ShapeNode* shapeNode, std::string filename, int depth)
 {
-	writeElementBegin("shape", { "type", "obj" }, depth);
+	writeElementBeg("shape", { "type", "obj" }, depth);
 		writeElement("string", { "name", "filename", "value", shapeNode->geometry->name }, depth + 1);
+		writeTransform(shapeNode, depth + 1);
 	writeElementEnd("shape", depth);
 }
 
 void MitsubaExporter::writeTransform(ShapeNode* shapeNode, int depth)
 {
-	writeElementBegin("transform", { "name", "toWorld" }, depth);
-		
+	writeElementBeg("transform", { "name", "toWorld" }, depth);
+		writeElement("matrix", { "value", shapeNode->transformFromRootMatrix.GetAsString()}, depth + 1);
+	writeElementEnd("transform", depth);
+}
 
-	writeElementEnd("shape", depth);
+void MitsubaExporter::writeBsdfNamed(Material* material, int depth)
+{
+	writeElementBeg("bsdf", { "name", "toWorld" }, depth);
+		writeBsdf(material, depth + 1);
+	writeElementEnd("bsdf", depth);
+}
+
+void MitsubaExporter::writeBsdf(Material* material, int depth)
+{
+	writeElementBeg("bsdf", { "type", "twosided", "id", "TODO"}, depth);
+		writeElement("rgb", { "name", "reflectance", "value", material->diffuseColor.toString()}, depth + 1);
+	writeElementEnd("bsdf", depth);
+}
+
+void MitsubaExporter::writeBsdf(Material* material, int depth)
+{
+	writeElementBeg("bsdf", { "type", "" }, depth);
+		writeElement("rgb", { "name", "reflectance", "value", material->diffuseColor.toString()}, depth + 1);
+	writeElementEnd("bsdf", depth);
+}
+
+void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
+{
+	if (lightNode->lightType == LightNode::LightType::SPOTLIGHT)
+	{
+		writeElementBeg("emitter", { "type", "spot" }, depth);
+			writeElementBeg("transform", { "name", "toWorld" }, depth + 1);
+				writeElement("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString()}, depth + 2);
+			writeElementEnd("transform", depth + 1);
+			writeElement("beamWidth", { "type", "float", "value", std::to_string(lightNode->beamWidth) }, depth + 1);
+			writeElement("cutoffAngle", { "type", "float", "value", std::to_string(lightNode->cutOffAngle) }, depth + 1);
+		writeElementEnd("bsdf", depth);
+	}
+	else
+	{
+		std::cout << "unsupported light" << std::endl;
+	}
 }

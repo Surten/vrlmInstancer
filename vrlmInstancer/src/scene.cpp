@@ -274,7 +274,7 @@ void Scene::calculateAABBRecursive(TransformNode* transformNode, Matrix transfor
 
 			AABB geometryAABB = shapeNode->geometry->getAABB();
 
-
+			shapeNode->transformFromRootMatrix = transformMatrix;
 			vec3 min = transformMatrix * geometryAABB.min;
 			vec3 max = transformMatrix * geometryAABB.max;
 
@@ -302,5 +302,11 @@ AABB& Scene::getSceneAABB()
 		calculateAABB();
 	return sceneAABB;
 	
+}
+
+
+void Scene::initShapeNodeTransformMatricies()
+{
+	calculateAABB();
 }
 
