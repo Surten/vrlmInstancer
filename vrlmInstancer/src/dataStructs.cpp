@@ -107,6 +107,12 @@ vec3 Geometry::getWeightedMidPoint(vec3 a, float massA, vec3 b, float massB) {
 }
 
 vec3 Geometry::getCenterOfGravity() {
+
+    if (centerOfGravity.x != INFINITY)
+    {
+        return centerOfGravity;
+    }
+
     vec3 centerOfGrav;
     float massOfTheCenter = 0;
     for (size_t i = 0; i < facesPointsIndex.size(); i++)
@@ -117,30 +123,29 @@ vec3 Geometry::getCenterOfGravity() {
         float mass = triangleArea(a, b, c);
         centerOfGrav = getWeightedMidPoint(centerOfGrav, massOfTheCenter, COTriangle, mass);
         massOfTheCenter += mass;
-        if (i == 546) {
-            int k = 0;
-        }
     }
-    return centerOfGrav;
+    centerOfGravity = centerOfGrav;
+    return centerOfGravity;
 }
 
-float Geometry::calculateTextureScale()
+
+float Geometry::calculateTextureScale(vec3 sceneScale)
 {
     if (textureCoords.size() == 0) return -1;
 
-    double averageScale = 1.0;
+    double averageScale = 0.0;
 
     for (int i = 0; i < facesTextureIndex.size(); i++)
     {
         vec3i triangleCoordIndices = facesPointsIndex[i];
         vec3i triangleTextureCoordIndices = facesTextureIndex[i];
 
-        double realWorldLength = (coords[triangleCoordIndices.x] - coords[triangleCoordIndices.y]).len();
+        double realWorldLength = ((coords[triangleCoordIndices.x] - coords[triangleCoordIndices.y]) * sceneScale).len();
         double textureLength = (textureCoords[triangleTextureCoordIndices.x] - textureCoords[triangleTextureCoordIndices.y]).len();
 
-        if (textureLength < 0.00001) continue;
+        if (textureLength < 0.0000001) continue;
 
-        averageScale += realWorldLength / textureLength; 
+        averageScale += realWorldLength / textureLength;
     }
 
     averageScale = averageScale / (double)facesTextureIndex.size();
@@ -148,8 +153,8 @@ float Geometry::calculateTextureScale()
     return (float)averageScale;
 }
 
-void Geometry::scaleTextureCoords(float desiredTextureScale) {
-    float currentTextureScale = calculateTextureScale();
+void Geometry::scaleTextureCoords(float desiredTextureScale, vec3 sceneScale) {
+    float currentTextureScale = calculateTextureScale(sceneScale);
     if (currentTextureScale < 0) return;
     float textureScaleFactor = currentTextureScale / desiredTextureScale;
     for (auto &texCoord : textureCoords) {

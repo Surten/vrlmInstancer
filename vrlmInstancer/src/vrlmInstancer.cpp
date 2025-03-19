@@ -102,6 +102,7 @@ int main()
     //std::string fileName = "switchLightsToGonio.txt";
     std::string fileName = "automaticControls/ExportIndividualObjectsWithTextureToPBRT.txt";
     //std::string fileName = "automaticControls/FullPass.txt";
+    //std::string fileName = "automaticControls/FullPassNoTexture.txt";
     //std::string fileName = "automaticControls/geometryConvert.txt";
     //std::string fileName = "automaticControls/TestPBRTExport.txt";
     //std::string fileName = "automaticControls/DebugTexturedExport.txt";

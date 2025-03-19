@@ -1,0 +1,4 @@
+Load Orig/0-6_stairs_fences.WRL
+InstanceAll
+ScaleAllScenes
+SaveId 0 VRML2/0-6_stairs_fences.WRL

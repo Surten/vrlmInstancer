@@ -3,12 +3,6 @@
 # Produced by 3D Studio MAX VRML97 exporter, Version 26.02, Revision 221.56
 # MAX File: radiumLamp02.max, Date: Wed Aug 14 19:56:02 2024
 
-DEF PhysCamera001 Viewpoint {
-  position -102.4 174.5 231.7
-  orientation 0.8035 0.5721 0.1645 -0.6871
-  fieldOfView 0.6024
-  description "PhysCamera001"
-}
 DEF RADIUM_REFLECTOR_01 Transform {
   translation 0.03987 0.3711 0.1581
   children [

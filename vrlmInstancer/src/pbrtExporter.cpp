@@ -37,13 +37,13 @@ void PbrtExporter::writeCamera(const ViewPointNode* camera, float customCameraZo
 	{
 
 
-		for (auto node : scenes[0]->RootNodes)
-		{
-			if (node->type == NodeTypes::Transform)
-			{
-				static_cast<TransformNode*>(node)->translation.setVector(0, 0, 0);
-			}
-		}
+		//for (auto node : scenes[0]->RootNodes)
+		//{
+		//	if (node->type == NodeTypes::Transform)
+		//	{
+		//		static_cast<TransformNode*>(node)->translation.setVector(0, 0, 0);
+		//	}
+		//}
 
 		AABB retAABB = scenes[0]->getSceneAABB();
 

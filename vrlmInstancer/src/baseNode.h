@@ -106,11 +106,20 @@ class ShapeNode : public BaseNode {
 public:
 	ShapeNode() : BaseNode("", NodeTypes::Shape) {
 		geometry = nullptr;
+		transformFromRootMatrix = nullptr;
+		transformToRootMatrix = nullptr;
+	}
+
+	~ShapeNode()
+	{
+		delete transformFromRootMatrix;
+		delete transformToRootMatrix;
 	}
 public:
 	Geometry *geometry;
 	Material material;
-	Matrix transformFromRootMatrix; // only initialized after a special call to a Scene's method
+	Matrix* transformFromRootMatrix; // only initialized after a special call to a Scene's method
+	Matrix* transformToRootMatrix; // only initialized after a special call to a Scene's method
 	std::string textureFilePath;
 	std::string textureType;
 	bool usesOtherGeometry = false;

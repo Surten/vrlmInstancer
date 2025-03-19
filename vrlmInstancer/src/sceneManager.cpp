@@ -86,6 +86,7 @@ bool SceneManager::instanceGeometry(const std::string& sceneName)
 {
 	Scene* scene = getSceneByName(sceneName);
 	if (scene == nullptr) return false;
+	scene->initShapeNodeTransformMatricies();
 	scene->findAndUseIdenticalGeometry();
 	return true;
 
@@ -94,6 +95,7 @@ bool SceneManager::instanceGeometry(const std::string& sceneName)
 bool SceneManager::instanceGeometry(int id)
 {
 	if (id < 0 || id >= scenes.size()) return false;
+	scenes.at(id)->initShapeNodeTransformMatricies();
 	scenes.at(id)->findAndUseIdenticalGeometry();
 	return true;
 
@@ -101,9 +103,11 @@ bool SceneManager::instanceGeometry(int id)
 
 void SceneManager::instanceAllGeometry() {
 	for (auto scene : scenes) {
+		scene->initShapeNodeTransformMatricies();
 		scene->findAndUseIdenticalGeometry();
 	}
 	for (auto scene : scenesWithTextures) {
+		scene->initShapeNodeTransformMatricies();
 		scene->findAndUseIdenticalGeometry();
 	}
 }
@@ -272,22 +276,22 @@ float SceneManager::getTextureCoordsToObjectCoordsScale() {
 	double scale = 0.0;
 	bool use_relative_scale = false;
 	if (use_relative_scale) {
-		int i = 0;
-		int geoCount = 0;
-		for (auto scene : scenes)
-		{
-			for (auto geometry : scene->geometries)
-			{
-				float geoScale = geometry->calculateTextureScale();
-				if (geoScale > 0)
-				{
-					scale += geoScale;
-					geoCount++;
-				}
-			}
-		}
+		//int i = 0;
+		//int geoCount = 0;
+		//for (auto scene : scenes)
+		//{
+		//	for (auto geometry : scene->geometries)
+		//	{
+		//		float geoScale = geometry->calculateTextureScale();
+		//		if (geoScale > 0)
+		//		{
+		//			scale += geoScale;
+		//			geoCount++;
+		//		}
+		//	}
+		//}
 
-		scale = scale / geoCount;
+		//scale = scale / geoCount;
 	}
 	else
 	{

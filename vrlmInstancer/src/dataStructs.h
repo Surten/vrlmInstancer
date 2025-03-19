@@ -29,6 +29,9 @@ public:
     vec3 operator*(float other) const {
         return vec3(x * other, y * other, z * other);
     }
+    vec3 operator*(vec3 other) const {
+        return vec3(x * other.x, y * other.y, z * other.z);
+    }
     void setVector(float a, float b, float c) {
         x = a; y = b; z = c;
     }
@@ -134,8 +137,10 @@ public:
     bool colorPerVertex;
     float creaseAngle;
     ShapeNode* parent;
+
+    vec3 centerOfGravity;
     std::vector<ShapeNode*> otherShapeNodesUsingMe;
-    Geometry() : ccw(true), solid(true), normalPerVertex(true), creaseAngle(0.0f), aabb(), parent(nullptr), colorPerVertex(false){}
+    Geometry() : ccw(true), solid(true), normalPerVertex(true), creaseAngle(0.0f), aabb(), parent(nullptr), colorPerVertex(false), centerOfGravity(INFINITY, INFINITY, INFINITY){}
 
 public:
     // calculate AABB if needed and return it
@@ -144,9 +149,9 @@ public:
     // get center of gravity of the mesh, calculated with area of triangles as mass
     vec3 getCenterOfGravity();
 
-    void scaleTextureCoords(float scale);
+    void scaleTextureCoords(float desiredTextureScale, vec3 sceneScale);
     void scaleCoords(float scale);
-    float calculateTextureScale();
+    float calculateTextureScale(vec3 sceneScale);
 
 private:
     void calculateAABB();

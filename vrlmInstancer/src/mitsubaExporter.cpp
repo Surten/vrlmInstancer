@@ -152,7 +152,7 @@ void MitsubaExporter::writeShape(ShapeNode* shapeNode, std::string filename, int
 void MitsubaExporter::writeTransform(ShapeNode* shapeNode, int depth)
 {
 	writeElementBeg("transform", { "name", "toWorld" }, depth);
-		writeElement("matrix", { "value", shapeNode->transformFromRootMatrix.GetAsString()}, depth + 1);
+		writeElement("matrix", { "value", shapeNode->transformFromRootMatrix->GetAsString()}, depth + 1);
 	writeElementEnd("transform", depth);
 }
 
@@ -166,13 +166,6 @@ void MitsubaExporter::writeBsdfNamed(Material* material, int depth)
 void MitsubaExporter::writeBsdf(Material* material, int depth)
 {
 	writeElementBeg("bsdf", { "type", "twosided", "id", "TODO"}, depth);
-		writeElement("rgb", { "name", "reflectance", "value", material->diffuseColor.toString()}, depth + 1);
-	writeElementEnd("bsdf", depth);
-}
-
-void MitsubaExporter::writeBsdf(Material* material, int depth)
-{
-	writeElementBeg("bsdf", { "type", "" }, depth);
 		writeElement("rgb", { "name", "reflectance", "value", material->diffuseColor.toString()}, depth + 1);
 	writeElementEnd("bsdf", depth);
 }

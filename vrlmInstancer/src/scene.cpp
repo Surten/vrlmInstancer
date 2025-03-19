@@ -45,8 +45,19 @@ void Scene::writeOutGeometries() {
 }
 
 void Scene::scaleTextureCoordsForAllObjects(float desiredTextureScale) {
-	for (auto &geometry : geometries) {
-		geometry->scaleTextureCoords(desiredTextureScale);
+	for (auto geometry : geometries) {
+
+		BaseNode* node = geometry->parent->parent;
+		vec3 sceneScale(1.f, 1.f, 1.f);
+		while (node != nullptr)
+		{
+			if (node->type == NodeTypes::Transform)
+			{
+				sceneScale = static_cast<TransformNode*>(node)->scale * sceneScale;
+			}
+			node = node->parent;
+		}
+		geometry->scaleTextureCoords(desiredTextureScale, sceneScale);
 	}
 }
 
@@ -96,13 +107,26 @@ void Scene::findIdenticalGeometry(std::vector<std::pair<int, int>> & geoPairs) {
 	{
 		int nPoints = static_cast<int>(geometries.at(i)->coords.size());
 		AABB aabb = geometries[i]->getAABB();
+		vec3 centerOfGravity = geometries[i]->getCenterOfGravity();
+
+		aabb.max = *(geometries[i]->parent->transformToRootMatrix) * aabb.max;
+		aabb.min = *(geometries[i]->parent->transformToRootMatrix) * aabb.min;
+		centerOfGravity = *(geometries[i]->parent->transformToRootMatrix) * centerOfGravity;
+
 		vec3 diagonal = aabb.getDiagonal();
-		vec3 vectorToGravCenter = geometries[i]->getCenterOfGravity() - aabb.getArithmeticCenter();
+		vec3 vectorToGravCenter = centerOfGravity - aabb.getArithmeticCenter();
+
 		for (size_t j = i+1; j < geometries.size(); j++)
 		{
 			int otherNpoints = static_cast<int>(geometries.at(j)->coords.size());
 			AABB otherAabb = geometries[j]->getAABB();
-			if (nPoints == otherNpoints && diagonal.areEqual(otherAabb.getDiagonal()) && vectorToGravCenter.areEqual(geometries[j]->getCenterOfGravity() - otherAabb.getArithmeticCenter())) {
+			vec3 otherCenterOfGravity = geometries[j]->getCenterOfGravity();
+
+			otherAabb.max = *(geometries[j]->parent->transformToRootMatrix) * otherAabb.max;
+			otherAabb.min = *(geometries[j]->parent->transformToRootMatrix) * otherAabb.min;
+			otherCenterOfGravity = *(geometries[j]->parent->transformToRootMatrix) * otherCenterOfGravity;
+
+			if (nPoints == otherNpoints && diagonal.areEqual(otherAabb.getDiagonal()) && vectorToGravCenter.areEqual(otherCenterOfGravity - otherAabb.getArithmeticCenter())) {
 				bool addAsNewConnection = true;
 				for (size_t k = 0; k < geoPairs.size(); k++)
 				{
@@ -152,19 +176,36 @@ void Scene::findAndUseIdenticalGeometry() {
 
 void Scene::findAndUseSameObjects(Scene* otherScene) {
 	if (this == otherScene) return;
+
+	initShapeNodeTransformMatricies();
+	otherScene->initShapeNodeTransformMatricies();
+
 	std::vector<std::pair<Geometry*, Geometry*>> geoPairs;
 	float epsilon = 0.001f;
 	for (size_t i = 0; i < geometries.size(); i++)
 	{
 		int nPoints = static_cast<int>(geometries.at(i)->coords.size());
 		AABB aabb = geometries[i]->getAABB();
+		vec3 centerOfGravity = geometries[i]->getCenterOfGravity();
+
+		aabb.max = *(geometries[i]->parent->transformToRootMatrix) * aabb.max;
+		aabb.min = *(geometries[i]->parent->transformToRootMatrix) * aabb.min;
+		centerOfGravity = *(geometries[i]->parent->transformToRootMatrix) * centerOfGravity;
+
 		vec3 diagonal = aabb.getDiagonal();
-		vec3 vectorToGravCenter = (geometries[i]->getCenterOfGravity() - aabb.getArithmeticCenter());
+		vec3 vectorToGravCenter = centerOfGravity - aabb.getArithmeticCenter();
+
 		for (size_t j = 0; j < otherScene->geometries.size(); j++)
 		{
 			int otherNpoints = static_cast<int>(otherScene->geometries.at(j)->coords.size());
 			AABB otherAabb = otherScene->geometries[j]->getAABB();
-			if (nPoints == otherNpoints && diagonal.areEqual(otherAabb.getDiagonal()) && vectorToGravCenter.areEqual(otherScene->geometries[j]->getCenterOfGravity() - otherAabb.getArithmeticCenter())) {
+			vec3 otherCenterOfGravity = otherScene->geometries[j]->getCenterOfGravity();
+
+			otherAabb.max = *(otherScene->geometries[j]->parent->transformToRootMatrix) * otherAabb.max;
+			otherAabb.min = *(otherScene->geometries[j]->parent->transformToRootMatrix) * otherAabb.min;
+			otherCenterOfGravity = *(otherScene->geometries[j]->parent->transformToRootMatrix) * otherCenterOfGravity;
+
+			if (nPoints == otherNpoints && diagonal.areEqual(otherAabb.getDiagonal()) && vectorToGravCenter.areEqual(otherCenterOfGravity - otherAabb.getArithmeticCenter())) {
 				geoPairs.push_back(std::pair<Geometry*, Geometry*>(geometries.at(i), otherScene->geometries.at(j)));
 			}
 		}
@@ -274,10 +315,11 @@ void Scene::calculateAABBRecursive(TransformNode* transformNode, Matrix transfor
 
 			AABB geometryAABB = shapeNode->geometry->getAABB();
 
-			shapeNode->transformFromRootMatrix = transformMatrix;
 			vec3 min = transformMatrix * geometryAABB.min;
 			vec3 max = transformMatrix * geometryAABB.max;
 
+			shapeNode->transformFromRootMatrix = new Matrix(transformMatrix);
+			shapeNode->transformToRootMatrix = new Matrix(transformMatrix.mInverse());
 			sceneAABB.uniteWithPoint(min);
 			sceneAABB.uniteWithPoint(max);
 		}
