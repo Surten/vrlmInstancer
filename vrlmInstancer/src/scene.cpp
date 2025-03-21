@@ -243,7 +243,7 @@ void Scene::findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*>&
 void Scene::findShapeNodesByTheirMaterialDiffuseComponentAndReplaceTheirTexturePath(vec3 diffuseComponent, std::string texturePath) {
 
 	for (auto shapeNode : ShapeNodes) {
-		if (shapeNode->material.compareDiffuseColor(diffuseComponent)) {
+		if (shapeNode->material->compareDiffuseColor(diffuseComponent)) {
 			shapeNode->textureFilePath = texturePath;
 			if (shapeNode->geometry->textureCoords.size() == 0) {
 				std::cout << "we are missing textures on geometry " << shapeNode->geometry->name << std::endl;
@@ -317,6 +317,9 @@ void Scene::calculateAABBRecursive(TransformNode* transformNode, Matrix transfor
 
 			vec3 min = transformMatrix * geometryAABB.min;
 			vec3 max = transformMatrix * geometryAABB.max;
+
+			if (shapeNode->transformFromRootMatrix != nullptr) delete shapeNode->transformFromRootMatrix;
+			if (shapeNode->transformToRootMatrix != nullptr) delete shapeNode->transformToRootMatrix;
 
 			shapeNode->transformFromRootMatrix = new Matrix(transformMatrix);
 			shapeNode->transformToRootMatrix = new Matrix(transformMatrix.mInverse());

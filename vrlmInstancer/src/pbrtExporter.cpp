@@ -194,11 +194,11 @@ void PbrtExporter::writeObjectInstances(Scene* scene) {
 
 		bool hasTextureCoords = geometry->textureCoords.size() > 0;
 		if (hasTextureCoords) {
-			writeMaterialWithTexture(&geometry->parent->material);
+			writeMaterialWithTexture(geometry->parent->material);
 			writeTriangleMeshWithTexture(geometry);
 		}
 		else {
-			writeMaterial(&geometry->parent->material);
+			writeMaterial(geometry->parent->material);
 			writeTriangleMesh(geometry);
 		}
 

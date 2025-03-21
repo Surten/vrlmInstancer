@@ -149,6 +149,13 @@ void Application::AutomaticMode(std::string fileName){
             autoIn >> idPlaceholder >> nameStringPlaceholder >> nameSecondStringPlaceholder >> customZoom;
             sm.exportAllToPBRT(idPlaceholder, nameStringPlaceholder, nameSecondStringPlaceholder, customZoom);
         }
+        else if (command == "ExportToMitsuba")
+        {
+            std::string outputHeaderName;
+            std::string outputImageName;
+            autoIn >> idPlaceholder >> outputHeaderName >> outputImageName;
+            sm.exportAllToMitsuba(idPlaceholder, outputHeaderName, outputImageName);
+        }
         else if (command == "DeleteSceneByID")
         {
             autoIn >> idPlaceholder;

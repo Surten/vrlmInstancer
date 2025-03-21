@@ -1,6 +1,6 @@
 #include "sceneManager.h"
 
-SceneManager::SceneManager() : pbrtExporter()  {
+SceneManager::SceneManager() : pbrtExporter(), mitsubaExporter() {
 
 }
 
@@ -232,6 +232,24 @@ void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::strin
 	std::string outputHeaderName = "headers/header_" + name;
 	std::string outputImageName = "output/" + name + "_render." + outputImageFormat;
 	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageName, customCameraZoom);
+}
+
+void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName, std::string outputFolder) {
+	ViewPointNode* camera;
+	if (cameraIndex == -1 || allCameras.size() == 0)
+	{
+		camera = nullptr;
+	}
+	else
+	{
+		camera = allCameras[cameraIndex];
+	}
+	//bool hasLights = false;
+
+	//if (!hasLights) createDefaultEnviromentalLight("sky.exr");
+
+	//std::string outputImageName = "output/" + name + "_render." + outputImageFormat;
+	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder);
 }
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {

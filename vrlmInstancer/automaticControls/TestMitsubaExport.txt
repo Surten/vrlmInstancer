@@ -1,0 +1,4 @@
+Load room215.wrl
+InstanceAll
+ScaleAllScenes
+ExportToMitsuba 1 mainScene MitsubaExport

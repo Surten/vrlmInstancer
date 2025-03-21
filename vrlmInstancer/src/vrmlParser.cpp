@@ -266,35 +266,37 @@ void VrmlParser::parseMaterial(ShapeNode* shapeNode) {
     readSymbol();
     if (str[0] != '{') std::cout << "error: expected { at the start of Material node" << std::endl;
 
+    Material* mat = new Material();
+    shapeNode->material = mat;
     do {
         readSymbol();
         if (str == "diffuseColor") {
             readSymbol();
-            shapeNode->material.diffuseColor.x = n;
+            mat->diffuseColor.x = n;
             readSymbol();
-            shapeNode->material.diffuseColor.y = n;
+            mat->diffuseColor.y = n;
             readSymbol();
-            shapeNode->material.diffuseColor.z = n;
+            mat->diffuseColor.z = n;
         }
         else if (str == "ambientIntensity") {
             readSymbol();
-            shapeNode->material.ambientIntensity = n;
+            mat->ambientIntensity = n;
         }
         else if (str == "specularColor") {
             readSymbol();
-            shapeNode->material.specularColor.x = n;
+            mat->specularColor.x = n;
             readSymbol();
-            shapeNode->material.specularColor.y = n;
+            mat->specularColor.y = n;
             readSymbol();
-            shapeNode->material.specularColor.z = n;
+            mat->specularColor.z = n;
         }
         else if (str == "shininess") {
             readSymbol();
-            shapeNode->material.shininess = n;
+            mat->shininess = n;
         }
         else if (str == "transparency") {
             readSymbol();
-            shapeNode->material.transparency = n;
+            mat->transparency = n;
         }
         else if (str[0] != '}')     // if it does not contain a '}' any of the strings above, we assume there was someting wrong
             std::cout << "error reading properties of Material of node" << std::endl;

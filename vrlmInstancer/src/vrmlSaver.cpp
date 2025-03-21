@@ -97,11 +97,11 @@ void VrmlSaver::writeMaterial(ShapeNode* node) {
 	std::string leadingSpaces = getLeadingSpaces((4 * (node->nodeDepth + 1)));
 
 	out << leadingSpaces << "material Material {" << std::endl;
-	out << leadingSpaces << "  diffuseColor " << node->material.diffuseColor << std::endl;
-	out << leadingSpaces << "  ambientIntensity " << node->material.ambientIntensity << std::endl;
-	out << leadingSpaces << "  specularColor " << node->material.specularColor << std::endl;
-	out << leadingSpaces << "  shininess " << node->material.shininess << std::endl;
-	out << leadingSpaces << "  transparency " << node->material.transparency << std::endl;
+	out << leadingSpaces << "  diffuseColor " << node->material->diffuseColor << std::endl;
+	out << leadingSpaces << "  ambientIntensity " << node->material->ambientIntensity << std::endl;
+	out << leadingSpaces << "  specularColor " << node->material->specularColor << std::endl;
+	out << leadingSpaces << "  shininess " << node->material->shininess << std::endl;
+	out << leadingSpaces << "  transparency " << node->material->transparency << std::endl;
 	out << leadingSpaces << "}" << std::endl;
 }
 

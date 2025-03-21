@@ -48,7 +48,7 @@ public:
         *this = *this / len();
     }
     std::string toString() {
-        return std::string(std::to_string(x) + " " + std::to_string(y) + std::to_string(z));
+        return std::string(std::to_string(x) + " " + std::to_string(y) + " " + std::to_string(z));
     }
 };
 std::ostream& operator<<(std::ostream& os, const vec3& obj);

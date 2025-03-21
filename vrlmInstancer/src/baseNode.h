@@ -108,16 +108,18 @@ public:
 		geometry = nullptr;
 		transformFromRootMatrix = nullptr;
 		transformToRootMatrix = nullptr;
+		material = nullptr;
 	}
 
 	~ShapeNode()
 	{
 		delete transformFromRootMatrix;
 		delete transformToRootMatrix;
+		delete material;
 	}
 public:
-	Geometry *geometry;
-	Material material;
+	Geometry* geometry;
+	Material* material;
 	Matrix* transformFromRootMatrix; // only initialized after a special call to a Scene's method
 	Matrix* transformToRootMatrix; // only initialized after a special call to a Scene's method
 	std::string textureFilePath;

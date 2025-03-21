@@ -1,0 +1,2583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene version="3.0.0" >
+    <integrator type="path" >
+        <integer name="max_depth" value="65" />
+    </integrator>
+    <sensor type="perspective" >
+        <float name="fov" value="53.839127" />
+        <transform name="to_world" >
+            <lookat origin="-0.216880 9.962100 8.581400" target="-0.203015 9.107327 18.544792" up="-0.016187 0.996208 0.085489" />
+        </transform>
+        <sampler type="independent" >
+            <integer name="sample_count" value="64" />
+        </sampler>
+        <film type="hdrfilm" >
+            <integer name="width" value="500" />
+            <integer name="height" value="500" />
+            <string name="file_format" value="openexr" />
+            <string name="pixel_format" value="rgba" />
+            <boolean name="banner" value="false" />
+            <rfilter type="tent" />
+        </film>
+    </sensor>
+    <emitter type="point" >
+        <rgb name="intensity" value="3.000000 3.000000 3.000000" />
+        <point name="position" x="0.173249" y="11.093199" z="10.569499" />
+    </emitter>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000006 -0.000003 0.316758 0.000003 -0.000003 -1.000000 8.329678 0.000006 -1.000000 0.000003 10.272917 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.072160 0.000003 0.106130 0.316758 0.106130 -0.000001 -1.072160 8.329678 -0.000003 1.077400 -0.000001 10.272917 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 -0.000001 -0.000003 0.321475 0.000003 0.000863 1.000000 8.324924 -0.000001 -1.000000 0.000863 10.249825 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.309058 0.951043 -0.000004 0.539463 0.000003 -0.000003 -1.000000 8.329678 -0.951043 -0.309058 -0.000002 9.966600 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.331356 -1.024655 0.032801 0.539463 0.106130 -0.000001 -1.072160 8.329678 1.019672 0.332976 0.100934 9.966600 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.309053 0.951044 -0.000822 0.562881 0.000003 0.000863 1.000000 8.324924 0.951045 -0.309053 0.000264 9.963949 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.809020 0.587781 0.000001 0.899604 0.000003 -0.000003 -1.000000 8.329678 -0.587781 0.809020 -0.000004 10.083748 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.867401 -0.633272 -0.085861 0.899604 0.106130 -0.000001 -1.072160 8.329678 0.630192 -0.871640 0.062382 10.083748 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.809023 0.587777 -0.000505 0.909361 0.000003 0.000863 1.000000 8.324924 0.587777 0.809023 -0.000700 10.105201 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.809036 -0.587759 0.000004 0.899481 0.000003 -0.000003 -1.000000 8.329678 0.587759 0.809036 -0.000001 10.462465 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.867414 0.633255 -0.085863 0.899481 0.106130 -0.000001 -1.072160 8.329678 -0.630175 -0.871653 -0.062378 10.462465 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.809033 -0.587763 0.000510 0.882092 0.000003 0.000863 1.000000 8.324924 -0.587764 0.809032 -0.000697 10.478374 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.309046 -0.951047 0.000002 0.539261 0.000003 -0.000003 -1.000000 8.329678 0.951047 -0.309046 0.000004 10.579376 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.331351 1.024657 0.032798 0.539261 0.106130 -0.000001 -1.072160 8.329678 -1.019673 0.332970 -0.100935 10.579376 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.309051 -0.951045 0.000820 0.518758 0.000003 0.000863 1.000000 8.324924 -0.951045 -0.309051 0.000269 10.567754 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Chair_01_Construction_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000362 0.000000 100.000000 0.638913 0.000000 99.999992 0.000000 8.289485 -100.000000 0.000000 -0.000362 10.273022 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Chair_01_Knob_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000236 65.020264 5.690492 0.222218 0.000000 5.690492 -65.020256 8.878792 -65.268799 -0.000235 -0.000021 10.273045 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.290200 0.290200 0.290200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Chair_01_Seat_Bottom_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000362 0.000000 100.000000 0.632869 0.000000 99.999992 0.000000 8.682069 -100.000000 0.000000 -0.000362 10.273777 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Chair_01_Seat_Top_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000362 0.000000 100.000000 0.632869 0.000000 99.999992 0.000000 8.682069 -100.000000 0.000000 -0.000362 10.273777 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.290200 0.290200 0.290200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Chair_01_Seat_Top_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000362 0.000000 100.000000 0.632869 0.000000 99.999992 0.000000 8.682069 -100.000000 0.000000 -0.000362 12.088633 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.290200 0.290200 0.290200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000006 -0.000003 0.316758 0.000003 -0.000003 -1.000000 8.329678 0.000006 -1.000000 0.000003 12.087772 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.072160 0.000003 0.106130 0.316758 0.106130 -0.000001 -1.072160 8.329678 -0.000003 1.077400 -0.000001 12.087772 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 -0.000001 -0.000003 0.321475 0.000003 0.000863 1.000000 8.324924 -0.000001 -1.000000 0.000863 12.064681 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.309058 0.951043 -0.000004 0.539463 0.000003 -0.000003 -1.000000 8.329678 -0.951043 -0.309058 -0.000002 11.781456 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.331356 -1.024655 0.032801 0.539463 0.106130 -0.000001 -1.072160 8.329678 1.019672 0.332976 0.100934 11.781456 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.309053 0.951044 -0.000822 0.562882 0.000003 0.000863 1.000000 8.324924 0.951045 -0.309053 0.000264 11.778807 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.809020 0.587781 0.000001 0.899604 0.000003 -0.000003 -1.000000 8.329678 -0.587781 0.809020 -0.000004 11.898604 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.867401 -0.633272 -0.085861 0.899604 0.106130 -0.000001 -1.072160 8.329678 0.630192 -0.871640 0.062382 11.898604 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.809023 0.587777 -0.000505 0.909361 0.000003 0.000863 1.000000 8.324924 0.587777 0.809023 -0.000700 11.920056 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.809036 -0.587759 0.000004 0.899481 0.000003 -0.000003 -1.000000 8.329678 0.587759 0.809036 -0.000001 12.277321 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.867414 0.633255 -0.085863 0.899481 0.106130 -0.000001 -1.072160 8.329678 -0.630175 -0.871653 -0.062378 12.277321 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.809033 -0.587763 0.000510 0.882092 0.000003 0.000863 1.000000 8.324924 -0.587764 0.809032 -0.000697 12.293230 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.309046 -0.951047 0.000002 0.539261 0.000003 -0.000003 -1.000000 8.329678 0.951047 -0.309046 0.000004 12.394232 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.331351 1.024657 0.032798 0.539261 0.106130 -0.000001 -1.072160 8.329678 -1.019673 0.332970 -0.100935 12.394232 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.309051 -0.951045 0.000820 0.518758 0.000003 0.000863 1.000000 8.324924 -0.951045 -0.309051 0.000269 12.382609 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Chair_01_Construction_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000362 0.000000 100.000000 0.638913 0.000000 99.999992 0.000000 8.289485 -100.000000 0.000000 -0.000362 12.087877 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Chair_01_Knob_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000236 65.020264 5.690492 0.222218 0.000000 5.690492 -65.020256 8.878792 -65.268799 -0.000235 -0.000021 12.087900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.290200 0.290200 0.290200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Chair_01_Seat_Bottom_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000362 0.000000 100.000000 0.632869 0.000000 99.999992 0.000000 8.682069 -100.000000 0.000000 -0.000362 12.088633 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.192200 0.192200 0.192200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_L_Loft_63-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000007 0.000000 -0.156903 0.000007 -1.000000 0.000000 9.325001 0.000000 0.000000 1.000000 8.130722 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_L_Keyhole_67-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.222200 0.000277 0.000018 -0.231914 -0.000005 -0.067133 1.219443 9.263972 0.000339 0.997744 0.082050 8.175801 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_L_Cylinder_125-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.222200 0.000005 -0.000006 -0.231903 -0.000006 0.000000 1.222200 9.325001 0.000006 1.000000 0.000000 8.180722 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_L_Cylinder_125-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.222200 0.000005 -0.000006 -0.231902 -0.000006 0.000000 1.222200 9.254980 0.000006 1.000000 0.000000 8.180722 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_L_Border_82-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000000 -1.000000 0.173011 0.000000 1.000000 0.000000 10.249997 1.000000 0.000000 -0.000004 8.145434 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.784300 0.784300 0.784300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_L_Door_32-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.173011 0.000000 -0.000004 -1.000000 9.350000 0.000000 1.000000 -0.000004 8.180433 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.784300 0.784300 0.784300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_Joint_71-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000000 1.000000 0.653796 0.000000 1.000000 0.000000 8.599915 -1.000000 0.000000 -0.000004 8.236974 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_Joint_71-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000000 1.000000 0.653796 0.000000 1.000000 0.000000 10.240503 -1.000000 0.000000 -0.000004 8.236974 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_L_Loft_64-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000014 0.000000 -0.156903 -0.000014 1.000000 0.000000 9.325000 0.000000 0.000000 1.000000 8.269936 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_L_Keyhole_68-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.222200 -0.000277 -0.000027 -0.231914 -0.000004 0.067133 -1.219443 9.263973 0.000339 0.997744 0.082050 8.224856 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_L_Cylinder_127-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.222200 -0.000005 -0.000003 -0.231903 -0.000003 -0.000000 -1.222200 9.325001 0.000006 1.000000 0.000000 8.219935 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Door_Type_01_L_Cylinder_127-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.222200 -0.000005 -0.000003 -0.231902 -0.000003 -0.000000 -1.222200 9.254981 0.000006 1.000000 0.000000 8.219935 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Ventil_Head_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.683558 -0.000077 0.729896 0.984634 0.729896 0.000016 0.683558 8.775151 -0.000064 1.000000 0.000046 12.970723 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Ventil_Head_Bottom_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.582518 -0.812818 0.000075 0.996083 -0.812818 0.582518 -0.000014 8.785403 -0.000032 -0.000069 -1.000000 12.978224 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Front_Face_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 -0.000005 1.000000 0.193126 -0.000002 1.000000 0.000005 8.444996 -1.000000 -0.000002 0.000000 13.017451 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000010 0.000000 -0.559254 -0.000010 1.000000 0.000000 8.717426 -0.000000 -0.000000 -1.000000 13.032986 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -0.559253 0.000000 1.000000 0.000000 8.532393 0.000000 0.000000 1.000000 13.032985 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000005 -0.000004 0.945503 0.000005 -1.000000 0.000005 8.532401 -0.000004 -0.000005 -1.000000 13.032986 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000005 -0.000004 0.945502 -0.000005 -1.000000 -0.000005 8.717434 -0.000004 -0.000005 1.000000 13.032987 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Pipe_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 -0.000005 1.000000 0.193127 -0.000002 1.000000 0.000005 8.144450 -1.000000 -0.000002 0.000000 13.017449 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Pipe_End_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 -0.000005 1.000000 0.193126 -0.000002 1.000000 0.000005 8.444996 -1.000000 -0.000002 0.000000 13.017449 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Pipe_End_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 -0.000005 1.000000 0.193124 -0.000002 1.000000 0.000005 8.745562 -1.000000 -0.000002 0.000000 13.017451 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Ribs_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000005 1.000000 0.910758 -0.000005 -1.000000 0.000005 8.759346 1.000000 -0.000005 0.000000 12.995397 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Ring_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000003 1.000000 0.000003 1.365124 0.000007 0.000005 -0.660000 8.775286 -0.660000 0.000005 -0.000007 13.015599 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Ring_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000003 1.000000 0.000003 1.365126 0.000007 0.000005 -0.660000 8.474733 -0.660000 0.000005 -0.000007 13.015598 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Side_Face_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000005 -1.000000 -0.000005 0.943134 0.000000 -0.000005 1.000000 8.624995 -1.000000 -0.000005 0.000000 13.014946 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Side_Face_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000001 -0.555866 -0.000005 -0.000001 -1.000000 8.624988 1.000000 -0.000000 -0.000005 13.014946 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Top_Face_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 -0.000005 1.000000 0.193124 -0.000002 1.000000 0.000005 8.794996 -1.000000 -0.000002 0.000000 13.015967 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Heater_01_Ventil_Pipe_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 -0.000005 1.000000 0.193125 -0.000002 1.000000 0.000005 8.444996 -1.000000 -0.000002 0.000000 13.017451 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.776500 0.776500 0.776500" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Board_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 1.000000 0.000004 -1.021540 0.000000 -0.000004 1.000000 9.788767 1.000000 0.000004 0.000000 11.047403 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Conection_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000002 -0.000006 -1.008043 0.000006 0.000006 -1.000000 9.269767 0.000002 -1.000000 -0.000006 12.024903 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Bottom_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000002 -0.000006 -1.005543 0.000006 0.000006 -1.000000 9.255767 0.000002 -1.000000 -0.000006 12.034904 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Frame_32-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000005 -0.000005 -0.467059 0.000005 0.000000 -1.000000 9.947500 0.000005 -1.000000 0.000000 8.076354 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Number31-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000005 -0.000005 -0.463956 0.000005 0.000000 -1.000000 9.976745 0.000005 -1.000000 0.000000 8.070844 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Text_line_187-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000005 -0.000005 -0.467059 0.000005 0.000000 -1.000000 9.965748 0.000005 -1.000000 0.000000 8.070833 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Text_line_187-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000005 -0.000005 -0.467059 0.000005 0.000000 -1.000000 9.947500 0.000005 -1.000000 0.000000 8.076354 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Text_line_187-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000005 -0.000005 -0.467059 0.000005 0.000000 -1.000000 9.933748 0.000005 -1.000000 0.000000 8.070833 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Text_line_187-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000005 -0.000005 -0.467059 0.000005 0.000000 -1.000000 9.917748 0.000005 -1.000000 0.000000 8.070833 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Text_line_187-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000005 -0.000005 -0.467059 0.000005 0.000000 -1.000000 9.901749 0.000005 -1.000000 0.000000 8.070833 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Text_line_187-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000005 -0.000005 -0.467059 0.000005 0.000000 -1.000000 9.885748 0.000005 -1.000000 0.000000 8.070833 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.470600 0.470600 0.470600" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 0.000004 0.614000 0.574233 0.000000 -0.614000 0.000004 8.370348 0.614000 0.000000 0.000002 11.444242 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 -0.000009 -0.614000 0.574233 0.000000 0.614000 -0.000009 8.370348 0.614000 -0.000000 -0.000002 11.404243 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000007 0.000004 -0.613900 0.624233 0.000000 -0.614000 -0.000004 8.370348 -0.614000 0.000000 -0.000007 11.404243 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000002 -0.000004 0.614000 0.624233 -0.000004 0.614000 0.000004 8.370348 -0.614000 -0.000004 0.000002 11.444243 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000006 -0.000010 0.594434 -0.000010 0.000003 1.000000 8.329959 -0.000006 1.000000 -0.000003 11.424243 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Brake_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.072161 0.000003 0.106122 0.594434 -0.106122 0.000001 1.072161 8.329959 0.000003 -1.077400 0.000001 11.424243 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Cower_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 -0.000001 0.000004 0.589718 0.000004 -0.000863 -1.000000 8.325204 0.000001 1.000000 -0.000863 11.401152 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 -0.000001 0.000003 0.594436 0.000003 -0.000003 -1.000000 8.329959 0.000001 1.000000 -0.000003 11.109243 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 0.000000 -0.614000 0.574235 0.000000 0.614000 0.000000 8.370348 0.614000 0.000000 -0.000002 11.089243 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 0.000004 0.614000 0.574234 0.000000 -0.614000 0.000004 8.370348 0.614000 0.000000 0.000002 11.129243 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 0.000000 0.614000 0.624234 0.000000 0.614000 0.000000 8.370348 -0.613900 0.000000 -0.000002 11.129244 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000002 0.000000 -0.614000 0.624235 0.000004 -0.614000 0.000000 8.370348 -0.614000 -0.000004 -0.000002 11.089244 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.072160 0.000005 -0.106130 0.594436 0.106130 -0.000001 -1.072160 8.329959 -0.000005 -1.077400 0.000001 11.109243 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000006 0.000003 0.589719 0.000003 0.000863 1.000000 8.325204 -0.000006 1.000000 -0.000863 11.132335 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_06-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000006 0.000003 1.279034 -0.000003 0.000010 1.000000 8.329959 0.000006 -1.000000 0.000010 11.109246 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000002 0.000000 -0.614000 1.299235 0.000004 -0.614000 0.000000 8.370348 -0.614000 -0.000004 -0.000002 11.089247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000002 0.000004 0.614000 1.299235 0.000004 0.614000 -0.000004 8.370348 -0.614000 0.000004 0.000002 11.129247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000007 0.000000 0.614000 1.249234 -0.000004 -0.614000 -0.000000 8.370348 0.613900 -0.000004 0.000007 11.129247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 -0.000000 -0.614000 1.249235 -0.000009 0.614000 0.000000 8.370348 0.614000 0.000009 -0.000002 11.089247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Brake_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.072160 -0.000003 -0.106130 1.279034 -0.106130 -0.000007 1.072160 8.329959 -0.000003 1.077400 0.000006 11.109246 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Cower_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000001 0.000003 1.283750 -0.000003 -0.000856 -1.000000 8.325204 -0.000001 -1.000000 0.000856 11.132338 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000006 -0.000003 1.279032 0.000003 -0.000003 -1.000000 8.329959 0.000006 -1.000000 0.000003 11.424246 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 0.000000 0.614000 1.299233 0.000000 0.614000 0.000000 8.370348 -0.614000 0.000000 -0.000002 11.444245 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 -0.000004 -0.614000 1.299233 0.000000 -0.614000 0.000004 8.370348 -0.614000 0.000000 0.000002 11.404245 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000007 0.000000 -0.614000 1.249233 0.000000 0.614000 0.000000 8.370348 0.613900 0.000000 0.000007 11.404246 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000002 0.000000 0.614000 1.249233 0.000004 -0.614000 0.000000 8.370348 0.614000 0.000004 -0.000002 11.444246 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Brake_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.072160 0.000003 0.106130 1.279032 0.106130 -0.000001 -1.072160 8.329959 -0.000003 1.077400 -0.000001 11.424246 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Cower_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 -0.000001 -0.000003 1.283749 0.000003 0.000863 1.000000 8.325204 -0.000001 -1.000000 0.000863 11.401155 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000001 0.100000 0.589234 0.000000 -0.100000 0.000001 8.350705 0.100000 0.000000 0.000000 11.389243 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Holder_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000000 0.100000 1.284234 0.000000 0.100000 0.000000 8.350705 -0.100000 0.000000 -0.000000 11.389246 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Case-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000000 -1.000000 0.999234 0.000000 1.000000 0.000000 8.460701 1.000000 0.000000 -0.000004 11.266745 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Shelf_Big_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000007 1.000000 0.984234 0.000000 -1.000000 0.000007 8.230701 1.000000 0.000000 0.000004 11.266745 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Shelf_Middle_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000007 1.000000 0.984234 0.000000 -1.000000 0.000007 8.388201 1.000000 0.000000 0.000004 11.266745 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Shelf_Small_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000007 1.000000 0.984234 0.000000 -1.000000 0.000007 8.455701 1.000000 0.000000 0.000004 11.266745 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Top-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000000 -1.000000 0.999234 0.000000 1.000000 0.000000 8.470701 1.000000 0.000000 -0.000004 11.266745 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Top_Knob02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 -1.000000 -0.000003 0.867205 -0.000003 -0.000003 1.000000 10.549976 -1.000000 0.000003 -0.000003 8.739024 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Top_Case02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.097207 0.000000 1.000000 0.000000 8.799978 0.000000 0.000000 1.000000 8.699124 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Top_Door_05-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.107207 0.000000 1.000000 0.000000 8.799978 0.000000 0.000000 1.000000 8.699124 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Top_Door_06-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000007 0.000000 1.107207 0.000007 -1.000000 0.000000 8.799978 0.000000 0.000000 1.000000 8.699123 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Top_Knob02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000010 1.000000 0.000003 -0.570189 -0.000003 -0.000003 1.000000 10.549976 1.000000 -0.000010 0.000003 8.636183 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Top_Case02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000007 -0.800191 0.000000 1.000000 0.000000 8.799978 0.000007 0.000000 -1.000000 8.676085 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Top_Door_05-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000007 -0.810191 0.000000 1.000000 0.000000 8.799978 0.000007 0.000000 -1.000000 8.676085 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Top_Door_06-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000007 -0.000007 -0.810191 0.000007 -1.000000 0.000000 8.799978 -0.000007 -0.000000 -1.000000 8.676085 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Bottom-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000007 -0.800209 0.000000 1.000000 0.000000 8.399980 0.000007 0.000000 -1.000000 8.676094 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Case-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000007 -0.800209 0.000000 1.000000 0.000000 8.399980 0.000007 0.000000 -1.000000 8.676094 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Door_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000007 -0.810209 0.000000 1.000000 0.000000 8.399980 0.000007 0.000000 -1.000000 8.676094 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Door_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000007 -0.000007 -0.810209 0.000007 -1.000000 0.000000 8.399980 -0.000007 -0.000000 -1.000000 8.676094 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_1_Knob-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000002 1.000000 -0.000006 -0.570207 0.000006 0.000006 1.000000 9.274980 1.000000 -0.000002 -0.000006 8.636092 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_21_Bottom-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.097193 0.000000 1.000000 0.000000 8.399980 0.000000 0.000000 1.000000 8.699124 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_21_Case-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.097193 0.000000 1.000000 0.000000 8.399980 0.000000 0.000000 1.000000 8.699124 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_21_Case_Front_Plane-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.097193 0.000000 1.000000 0.000000 8.399980 0.000000 0.000000 1.000000 8.699124 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_21_Shelf_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.097193 0.000000 1.000000 0.000000 9.959980 0.000000 0.000000 1.000000 8.699124 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_21_Shelf_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.097193 0.000000 1.000000 0.000000 9.629980 0.000000 0.000000 1.000000 8.699124 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_21_Shelf_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.097193 0.000000 1.000000 0.000000 9.299980 0.000000 0.000000 1.000000 8.699124 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_21_Shelf_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.097193 0.000000 1.000000 0.000000 8.969980 0.000000 0.000000 1.000000 8.699124 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000000 -0.090000 1.247193 0.000000 -0.090000 0.000000 9.964680 -0.090000 -0.000000 0.000000 9.110567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000000 -0.090000 0.952193 0.000000 -0.090000 0.000000 9.964680 -0.090000 -0.000000 0.000000 9.110567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000000 0.090000 1.247193 0.000000 0.090000 0.000000 9.964680 -0.090000 0.000000 -0.000000 8.287682 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000000 0.090000 0.952193 0.000000 0.090000 0.000000 9.964680 -0.090000 0.000000 -0.000000 8.287682 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000000 -0.090000 1.247193 0.000000 -0.090000 0.000000 9.634680 -0.090000 -0.000000 0.000000 9.110567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000000 -0.090000 0.952193 0.000000 -0.090000 0.000000 9.634680 -0.090000 -0.000000 0.000000 9.110567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000000 0.090000 1.247193 0.000000 0.090000 0.000000 9.634680 -0.090000 0.000000 -0.000000 8.287682 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000000 0.090000 0.952193 0.000000 0.090000 0.000000 9.634680 -0.090000 0.000000 -0.000000 8.287682 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000000 -0.090000 1.247193 0.000000 -0.090000 0.000000 9.304680 -0.090000 -0.000000 0.000000 9.110567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000000 -0.090000 0.952193 0.000000 -0.090000 0.000000 9.304680 -0.090000 -0.000000 0.000000 9.110567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000000 0.090000 1.247193 0.000000 0.090000 0.000000 9.304680 -0.090000 0.000000 -0.000000 8.287682 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000000 0.090000 0.952193 0.000000 0.090000 0.000000 9.304680 -0.090000 0.000000 -0.000000 8.287682 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000000 -0.090000 1.247193 0.000000 -0.090000 0.000000 8.974680 -0.090000 -0.000000 0.000000 9.110567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000000 -0.090000 0.952193 0.000000 -0.090000 0.000000 8.974680 -0.090000 -0.000000 0.000000 9.110567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000000 0.090000 1.247193 0.000000 0.090000 0.000000 8.974680 -0.090000 0.000000 -0.000000 8.287682 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Shelf_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000000 0.090000 0.952193 0.000000 0.090000 0.000000 8.974680 -0.090000 0.000000 -0.000000 8.287682 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Bearer_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.020000 0.000000 0.000000 0.751736 0.000000 0.020000 0.000000 8.965029 0.000000 0.000000 0.020000 11.892144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Bearer_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.020000 0.000000 0.000000 1.091736 0.000000 0.020000 0.000000 8.965029 0.000000 0.000000 0.020000 11.892144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.751736 0.000000 -0.000004 -1.000000 8.970029 0.000000 1.000000 -0.000004 12.819821 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.091736 0.000000 -0.000004 -1.000000 8.970029 0.000000 1.000000 -0.000004 12.819821 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000005 -0.000005 1.091736 -0.000005 0.000000 1.000000 8.970029 0.000005 1.000000 0.000000 10.964467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000005 -0.000005 0.751736 -0.000005 0.000000 1.000000 8.970029 0.000005 1.000000 0.000000 10.964467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_Small_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.900000 -0.000007 0.000000 1.226736 0.000007 -0.900000 0.000000 9.004436 0.000000 0.000000 0.900000 10.967144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_Small_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.900000 0.000000 0.000000 1.226736 0.000000 0.900000 0.000000 9.004436 0.000000 0.000000 0.900000 12.817144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Desk-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.919236 0.000000 1.000000 0.000000 8.995028 0.000000 0.000000 1.000000 11.892144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.271736 0.000000 1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 10.967144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.571736 0.000000 1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 10.967144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000007 0.000000 1.271736 0.000007 -1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 12.817144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000007 0.000000 0.571736 0.000007 -1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 12.817144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Leg_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000000 1.000000 0.921736 0.000000 1.000000 0.000000 7.760029 -1.000000 0.000000 -0.000004 10.967144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Leg_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000005 -1.000000 0.921736 0.000005 -1.000000 0.000005 7.760029 -1.000000 -0.000005 0.000000 12.817144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Desk-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.919236 0.000000 1.000000 0.000000 8.995028 0.000000 0.000000 1.000000 11.892144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Bearer_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.020000 0.000000 0.000000 0.751736 0.000000 0.020000 0.000000 8.965029 0.000000 0.000000 0.020000 11.892144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Bearer_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.020000 0.000000 0.000000 1.091736 0.000000 0.020000 0.000000 8.965029 0.000000 0.000000 0.020000 11.892144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.751736 0.000000 -0.000004 -1.000000 8.970029 0.000000 1.000000 -0.000004 12.819821 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.091736 0.000000 -0.000004 -1.000000 8.970029 0.000000 1.000000 -0.000004 12.819821 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000005 -0.000005 1.091736 -0.000005 0.000000 1.000000 8.970029 0.000005 1.000000 0.000000 10.964467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000005 -0.000005 0.751736 -0.000005 0.000000 1.000000 8.970029 0.000005 1.000000 0.000000 10.964467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_Small_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.900000 -0.000007 0.000000 1.226736 0.000007 -0.900000 0.000000 9.004436 0.000000 0.000000 0.900000 10.967144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_Small_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.900000 0.000000 0.000000 1.226736 0.000000 0.900000 0.000000 9.004436 0.000000 0.000000 0.900000 12.817144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.271736 0.000000 1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 10.967144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.571736 0.000000 1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 10.967144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000007 0.000000 1.271736 0.000007 -1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 12.817144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000007 0.000000 0.571736 0.000007 -1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 12.817144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Leg_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000000 1.000000 0.921736 0.000000 1.000000 0.000000 7.760029 -1.000000 0.000000 -0.000004 10.967144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Leg_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000005 -1.000000 0.921736 0.000005 -1.000000 0.000005 7.760029 -1.000000 -0.000005 0.000000 12.817144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Desk-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.919236 0.000000 1.000000 0.000000 8.995028 0.000000 0.000000 1.000000 10.046527 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Bearer_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.020000 0.000000 0.000000 0.751736 0.000000 0.020000 0.000000 8.965029 0.000000 0.000000 0.020000 10.046527 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Bearer_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.020000 0.000000 0.000000 1.091736 0.000000 0.020000 0.000000 8.965029 0.000000 0.000000 0.020000 10.046527 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.751736 0.000000 -0.000004 -1.000000 8.970029 0.000000 1.000000 -0.000004 10.974204 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.091736 0.000000 -0.000004 -1.000000 8.970029 0.000000 1.000000 -0.000004 10.974204 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000005 -0.000005 1.091736 -0.000005 0.000000 1.000000 8.970029 0.000005 1.000000 0.000000 9.118850 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000005 -0.000005 0.751736 -0.000005 0.000000 1.000000 8.970029 0.000005 1.000000 0.000000 9.118850 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_Small_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.900000 -0.000007 0.000000 1.226736 0.000007 -0.900000 0.000000 9.004436 0.000000 0.000000 0.900000 9.121527 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Clench_Small_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.900000 0.000000 0.000000 1.226736 0.000000 0.900000 0.000000 9.004436 0.000000 0.000000 0.900000 10.971527 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 1.271736 0.000000 1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 9.121527 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.571736 0.000000 1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 9.121527 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000007 0.000000 1.271736 0.000007 -1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 10.971527 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Holder_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000007 0.000000 0.571736 0.000007 -1.000000 0.000000 8.300029 0.000000 0.000000 1.000000 10.971527 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Leg_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000000 1.000000 0.921736 0.000000 1.000000 0.000000 7.760029 -1.000000 0.000000 -0.000004 9.121527 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_30_Leg_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000005 -1.000000 0.921736 0.000005 -1.000000 0.000005 7.760029 -1.000000 -0.000005 0.000000 10.971527 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 0.000004 0.614000 0.574235 0.000000 -0.614000 0.000004 8.370348 0.614000 0.000000 0.000002 9.598263 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 -0.000009 -0.614000 0.574235 0.000000 0.614000 -0.000009 8.370348 0.614000 -0.000000 -0.000002 9.558263 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000007 0.000004 -0.613900 0.624235 0.000000 -0.614000 -0.000004 8.370348 -0.614000 0.000000 -0.000007 9.558264 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000002 -0.000004 0.614000 0.624235 -0.000004 0.614000 0.000004 8.370348 -0.614000 -0.000004 0.000002 9.598264 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000006 -0.000010 0.594436 -0.000010 0.000003 1.000000 8.329959 -0.000006 1.000000 -0.000003 9.578263 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Brake_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.072161 0.000003 0.106122 0.594436 -0.106122 0.000001 1.072161 8.329959 0.000003 -1.077400 0.000001 9.578263 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Cower_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 -0.000001 0.000004 0.589720 0.000004 -0.000863 -1.000000 8.325204 0.000001 1.000000 -0.000863 9.555172 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 0.000000 -0.614000 0.574237 0.000000 0.614000 0.000000 8.370348 0.614000 0.000000 -0.000002 9.243263 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 0.000004 0.614000 0.574236 0.000000 -0.614000 0.000004 8.370348 0.614000 0.000000 0.000002 9.283263 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 0.000000 0.614000 0.624236 0.000000 0.614000 0.000000 8.370348 -0.613900 0.000000 -0.000002 9.283264 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000002 0.000000 -0.614000 0.624237 0.000004 -0.614000 0.000000 8.370348 -0.614000 -0.000004 -0.000002 9.243264 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 -0.000001 0.000003 0.594437 0.000003 -0.000003 -1.000000 8.329959 0.000001 1.000000 -0.000003 9.263264 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Brake_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.072160 0.000005 -0.106130 0.594437 0.106130 -0.000001 -1.072160 8.329959 -0.000005 -1.077400 0.000001 9.263264 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Cower_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000006 0.000003 0.589720 0.000003 0.000863 1.000000 8.325204 -0.000006 1.000000 -0.000863 9.286355 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Cower_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 -0.000001 -0.000003 1.283751 0.000003 0.000863 1.000000 8.325205 -0.000001 -1.000000 0.000863 9.555175 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 0.000000 0.614000 1.299235 0.000000 0.614000 0.000000 8.370349 -0.614000 0.000000 -0.000002 9.598266 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 -0.000004 -0.614000 1.299235 0.000000 -0.614000 0.000004 8.370349 -0.614000 0.000000 0.000002 9.558266 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000007 0.000000 -0.614000 1.249235 0.000000 0.614000 0.000000 8.370349 0.613900 0.000000 0.000007 9.558268 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000002 0.000000 0.614000 1.249235 0.000004 -0.614000 0.000000 8.370349 0.614000 0.000004 -0.000002 9.598268 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000006 -0.000003 1.279034 0.000003 -0.000003 -1.000000 8.329959 0.000006 -1.000000 0.000003 9.578266 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Brake_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.072160 0.000003 0.106130 1.279034 0.106130 -0.000001 -1.072160 8.329959 -0.000003 1.077400 -0.000001 9.578266 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000002 0.000000 -0.614000 1.299237 0.000004 -0.614000 0.000000 8.370349 -0.614000 -0.000004 -0.000002 9.243267 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000002 0.000004 0.614000 1.299236 0.000004 0.614000 -0.000004 8.370349 -0.614000 0.000004 0.000002 9.283267 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000007 0.000000 0.614000 1.249236 -0.000004 -0.614000 -0.000000 8.370349 0.613900 -0.000004 0.000007 9.283268 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Clench_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000002 -0.000000 -0.614000 1.249237 -0.000009 0.614000 0.000000 8.370349 0.614000 0.000009 -0.000002 9.243268 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_06-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000006 0.000003 1.279035 -0.000003 0.000010 1.000000 8.329959 0.000006 -1.000000 0.000010 9.263267 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Brake_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.072160 -0.000003 -0.106130 1.279035 -0.106130 -0.000007 1.072160 8.329959 -0.000003 1.077400 0.000006 9.263267 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Cower_03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000001 0.000003 1.283751 -0.000003 -0.000856 -1.000000 8.325205 -0.000001 -1.000000 0.000856 9.286358 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000001 0.100000 0.589235 0.000000 -0.100000 0.000001 8.350705 0.100000 0.000000 0.000000 9.543263 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Wheel_Holder_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000000 0.000000 0.100000 1.284235 0.000000 0.100000 0.000000 8.350705 -0.100000 0.000000 -0.000000 9.543266 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_02_Case-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000000 -1.000000 0.999236 0.000000 1.000000 0.000000 8.460701 1.000000 0.000000 -0.000004 9.420764 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Shelf_Middle_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000007 1.000000 0.984236 0.000000 -1.000000 0.000007 8.388201 1.000000 0.000000 0.000004 9.420764 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Shelf_Middle_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000007 1.000000 0.984236 0.000000 -1.000000 0.000007 8.230701 1.000000 0.000000 0.000004 9.420764 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Shelf_Middle_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000007 1.000000 0.984236 0.000000 -1.000000 0.000007 8.073201 1.000000 0.000000 0.000004 9.420764 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Shelf_Small_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000007 1.000000 0.984236 0.000000 -1.000000 0.000007 8.455701 1.000000 0.000000 0.000004 9.420764 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Type_R_01_Top-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000004 0.000000 -1.000000 0.999236 0.000000 1.000000 0.000000 8.470701 1.000000 0.000000 -0.000004 9.420764 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_bottom_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000007 0.000000 0.171263 -0.000007 1.000000 0.000007 11.195777 -0.000000 0.000007 -1.000000 10.570030 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Neon_Holder_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000007 0.000000 0.171262 -0.000007 1.000000 0.000007 11.244078 -0.000000 0.000007 -1.000000 10.721132 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Neon_Holder_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.171263 0.000000 -1.000000 0.000007 11.244080 0.000000 -0.000007 -1.000000 10.418929 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_type_03_Body_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.235707 0.000000 0.000011 1.000000 11.152826 0.000000 -1.000000 0.000011 11.332530 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Tube_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000006 -0.000005 0.171314 0.000005 0.000009 -1.000000 11.173935 -0.000005 -1.258500 -0.000007 11.305968 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Tube_End_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000005 -0.000005 0.171314 0.000005 0.000007 -1.000000 11.173940 -0.000005 -1.000000 -0.000007 10.721021 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Tube_End_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.171314 0.000000 0.000011 1.000000 11.173942 0.000000 -1.000000 0.000011 10.419061 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144183 -1.027100 -0.000003 -0.000004 9.804673 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144464 -1.027100 -0.000003 -0.000004 9.881239 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000006 1.000000 -0.000006 0.241263 0.000013 -0.000006 -1.000000 11.144463 -1.027100 0.000006 -0.000013 9.958269 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144462 -1.027100 -0.000003 -0.000004 10.035298 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144462 -1.027100 -0.000003 -0.000004 10.112328 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144461 -1.027100 -0.000003 -0.000004 10.189357 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144461 -1.027100 -0.000003 -0.000004 10.266386 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144460 -1.027100 -0.000003 -0.000004 10.343416 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144460 -1.027100 -0.000003 -0.000004 10.420445 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144459 -1.027100 -0.000003 -0.000004 10.497476 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144458 -1.027100 -0.000003 -0.000004 10.574505 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144458 -1.027100 -0.000003 -0.000004 10.651534 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144457 -1.027100 -0.000003 -0.000004 10.728564 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144457 -1.027100 -0.000003 -0.000004 10.805593 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144456 -1.027100 -0.000003 -0.000004 10.882623 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144455 -1.027100 -0.000003 -0.000004 10.959652 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144455 -1.027100 -0.000003 -0.000004 11.036682 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144454 -1.027100 -0.000003 -0.000004 11.113712 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144454 -1.027100 -0.000003 -0.000004 11.190741 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 1.000000 0.000003 0.241263 0.000005 0.000003 -1.000000 11.144453 -1.027100 -0.000003 -0.000004 11.267770 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_21-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-0.000003 -1.000000 0.000003 0.241263 0.000010 0.000003 1.000000 11.144172 -1.027100 0.000003 0.000010 11.335386 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_Side_01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.121254 0.000000 -0.000004 -1.000000 11.151268 0.000000 1.000000 -0.000004 11.332530 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Lamp_03_Reflector_Side_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.221254 0.000000 0.000011 1.000000 11.151268 0.000000 -1.000000 0.000011 11.332530 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Windows_Top_04-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000007 0.000000 -3.906270 0.000007 -1.000000 0.000000 10.965000 0.000000 0.000000 1.000000 13.018229 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Window_In_10-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000007 1.428490 0.000000 1.000000 0.000000 11.035403 0.000007 0.000000 -1.000000 13.243633 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Window110_Frame_26-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.891205 0.000000 1.091900 0.000000 9.270435 0.000000 0.000000 1.000000 13.243643 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Window110_Glass_26-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.891205 0.000000 1.091900 0.000000 9.270435 0.000000 0.000000 1.000000 13.243643 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.584300 0.584300 0.584300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Window19_21-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -0.735121 0.000000 1.000000 0.000000 9.270401 0.000000 0.000000 1.000000 13.239977 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Window_101_Frame_38-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000014 -0.281297 0.000000 1.000000 0.000000 9.270401 -0.000014 0.000000 1.000000 13.243643 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Window_101_Handle_01_Base_38-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 -0.000002 -0.000005 0.209373 0.000005 0.000000 1.000000 10.004044 -0.000002 -1.000000 -0.000000 13.205191 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Window_101_Handle_38-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 -0.000002 -0.000005 0.209373 0.000005 0.000000 1.000000 10.004045 -0.000002 -1.000000 -0.000000 13.205191 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Window_101_Glass_38-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000014 -0.281297 0.000000 1.000000 0.000000 9.270401 -0.000014 0.000000 1.000000 13.243645 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.584300 0.584300 0.584300" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Window_101_Holders_38-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000014 -0.920797 0.000000 1.000000 0.000000 9.405657 -0.000014 0.000000 1.000000 13.196148 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Blinds_Rotator_Part_77-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000007 0.268685 0.000000 1.000000 0.000000 9.345403 0.000007 0.000000 -1.000000 13.173941 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Blinds_Rotator_Part_78-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000014 0.268685 0.000000 1.000000 0.000000 9.596403 -0.000014 0.000000 1.000000 13.173942 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Blinds_Rotator_Part_79-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000014 0.268685 0.000000 1.000000 0.000000 9.697403 -0.000014 0.000000 1.000000 13.173941 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Blinds_Rotator_Part_80-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000014 0.268685 0.000000 1.000000 0.000000 9.724041 -0.000014 0.000000 1.000000 13.173941 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Blinds_Rotator_Holder_20-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000007 0.268685 0.000000 1.000000 0.000000 9.560403 0.000007 0.000000 -1.000000 13.204037 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/Blinds_Clutch_20-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="0.000003 -0.000004 1.000000 0.268685 -1.000000 -0.000003 0.000003 10.912411 0.000003 -1.000000 -0.000004 13.205188 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/__WALLTOP01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="2.550900 0.000000 0.000000 14.707480 0.000000 2.550900 0.000000 9.126339 0.000000 0.000000 2.550900 -4.199531 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.588200 0.588200 0.588200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/__TWAND01_Bottom-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="2.550900 0.000000 0.000000 13.868979 0.000000 2.550900 0.000000 9.185301 0.000000 0.000000 2.550900 -3.758230 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.243100 0.243100 0.243100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/__WAND03-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 11.469680 0.000000 1.000000 0.000000 9.270000 0.000000 0.000000 1.000000 -4.523730 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.588200 0.588200 0.588200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/__WAND01_BOTTOM_02-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="2.550900 0.000000 0.000000 13.577480 0.000000 2.550900 0.000000 9.668177 0.000000 0.000000 2.550900 -4.662230 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.243100 0.243100 0.243100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/__GROUND01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.171092 0.000000 1.000000 0.000000 8.300003 0.000000 0.000000 1.000000 10.616420 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.243100 0.243100 0.243100" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/__WAND01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="2.550900 0.000000 0.000000 13.577480 0.000000 2.550900 0.000000 9.668176 0.000000 0.000000 2.550900 -4.662230 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.588200 0.588200 0.588200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/__GROUND01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.171092 0.000000 1.000000 0.000000 11.450003 0.000000 0.000000 1.000000 10.616420 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.588200 0.588200 0.588200" />
+        </bsdf>
+    </shape>
+    <shape type="obj" >
+        <string name="filename" value="room215/__TWAND01-FACES.obj" />
+        <transform name="to_world" >
+            <matrix value="2.550900 0.000000 0.000000 13.868979 0.000000 2.550900 0.000000 9.185301 0.000000 0.000000 2.550900 -3.758230 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <bsdf type="diffuse" >
+            <rgb name="reflectance" value="0.588200 0.588200 0.588200" />
+        </bsdf>
+    </shape>
+</scene>

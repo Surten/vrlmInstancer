@@ -109,7 +109,7 @@ std::string Matrix::GetAsString()
 	{
 		for (size_t j = 0; j < 4; j++)
 		{
-			ret += std::to_string(matrix[i][j]) + " ";
+			ret += std::to_string(matrix[j][i]) + " ";
 		}
 	}
 	return ret;

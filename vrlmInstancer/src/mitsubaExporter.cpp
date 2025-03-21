@@ -1,6 +1,8 @@
 #include "mitsubaExporter.h"
 
+#include <filesystem>
 
+#define RAD_TO_DEG(angle)   ((angle)*57.29577951308f)
 
 MitsubaExporter::MitsubaExporter()
 {
@@ -35,7 +37,7 @@ void MitsubaExporter::writeElementEnd(std::string elementName, int depth)
 	out << leadingSpaces << "</" << elementName << ">" << std::endl;
 }
 
-std::string& MitsubaExporter::getLeadingSpaces(int depth)
+std::string MitsubaExporter::getLeadingSpaces(int depth)
 {
 	std::string ret = "";
 	for (int i = 0; i < depth; i++)
@@ -47,45 +49,86 @@ std::string& MitsubaExporter::getLeadingSpaces(int depth)
 
 void MitsubaExporter::writeGeometryToObj(Geometry* geometry, std::string filePath)
 {
+	std::ofstream out_geom(filePath + "/" + geometry->name + ".obj");
 	// how hard can it be to write a .obj exporter? (:
+	for (const auto& coord : geometry->coords)
+	{
+		out_geom << "v " << coord << std::endl;
+	}
+	for (const auto& texCoord : geometry->textureCoords)
+	{
+		out_geom << "vt " << texCoord << std::endl;
+	}
+	if (geometry->facesTextureIndex.size() > 0)
+	{
+		for (size_t i = 0; i < geometry->facesPointsIndex.size(); i++)
+		{
+			out_geom << "f "
+				<< geometry->facesPointsIndex[i].x + 1 << "/" << geometry->facesTextureIndex[i].x + 1 << " "
+				<< geometry->facesPointsIndex[i].y + 1 << "/" << geometry->facesTextureIndex[i].y + 1 << " "
+				<< geometry->facesPointsIndex[i].z + 1 << "/" << geometry->facesTextureIndex[i].z + 1 << " "
+				<< std::endl;
+		}
+	}
+	else
+	{
+		for (size_t i = 0; i < geometry->facesPointsIndex.size(); i++)
+		{
+			out_geom << "f "
+				<< geometry->facesPointsIndex[i].x + 1 << " "
+				<< geometry->facesPointsIndex[i].y + 1 << " "
+				<< geometry->facesPointsIndex[i].z + 1 << " "
+				<< std::endl;
+		}
+	}
+
+	out_geom.close();
 }
 
 void MitsubaExporter::writeAllGeometriesToObjFiles()
 {
 	for (auto scene : scenes)
 	{
+		std::string sceneGeometryFolder = this->outputFolder + "/" + scene->name.substr(0, scene->name.size()-4);
+		std::filesystem::create_directory(sceneGeometryFolder);
 		for (auto geometry : scene->geometries)
 		{
-			writeGeometryToObj(geometry, scene->name);
+			writeGeometryToObj(geometry, sceneGeometryFolder);
 		}
 	}
 }
 
 
-void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * camera, std::string sceneFileName)
+void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * camera, std::string sceneFileName, std::string outputFolder)
 {
 	// figure out door animations...
 	this->scenes = scenes;
-	out.open(sceneFileName + ".xml");
+	this->outputFolder = outputFolder;
+	int depth = 0;
+
+	out.open(this->outputFolder + "/" + sceneFileName + ".xml");
+
+	// export all geometries into individual .obj files
+	writeAllGeometriesToObjFiles();
+	out << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
+	writeElementBeg("scene", { "version", "3.0.0" }, depth);
+	writeIntegrator(depth + 1);
+	writeSensor(camera, depth + 1);
+
 
 	// create the scene xml with hierarchy
 	for (auto scene : scenes)
 	{
+		scene->initShapeNodeTransformMatricies();
+		for (auto lightNode : scene->lights)
+		{
+			writeLight(lightNode, depth + 1);
+		}
 		for (auto shapeNode : scene->ShapeNodes)
 		{
-
+			writeShape(shapeNode, scene->name.substr(0, scene->name.size() - 4) + "/" + shapeNode->geometry->name, depth + 1);
 		}
 	}
-	out << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
-	int depth = 0;
-	writeElementBeg("scene", { "version", "0.5.0" }, depth);
-	writeIntegrator(depth + 1);
-	writeSensor(depth + 1);
-
-	// export all geometries into individual .obj files
-	writeAllGeometriesToObjFiles();
-
-
 
 
 	writeElementEnd("scene", depth);
@@ -96,18 +139,21 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * ca
 void MitsubaExporter::writeIntegrator(int depth)
 {
 	writeElementBeg("integrator", { "type", "path" }, depth);
-		writeElement("integer", { "name", "maxDepth", "value", std::to_string(pathTracingMaxDepth) }, depth + 1);
-		writeElement("integer", { "name", "strictNormals", "value", "true" }, depth + 1);
+		writeElement("integer", { "name", "max_depth", "value", std::to_string(pathTracingMaxDepth) }, depth + 1);
 	writeElementEnd("integrator", depth);
 	
 }
 
-void MitsubaExporter::writeSensor(int depth)
+void MitsubaExporter::writeSensor(ViewPointNode* camera, int depth)
 {
+
+	vec3 pos, lookAt, lookUp;
+	camera->computeLookAt(pos, lookAt, lookUp);
+
 	writeElementBeg("sensor", { "type", "perspective" }, depth);
-		writeElement("float", { "name", "fov", "value", std::to_string(cameraFOV) }, depth + 1);
-		writeElementBeg("transform", { "name", "toWorld" }, depth + 1);
-			writeElement("matrix", { "value", "1 0 0 0  0 1 0 0  0 0 1 0  0 0 0 1" }, depth + 2);
+		writeElement("float", { "name", "fov", "value", std::to_string(RAD_TO_DEG(camera->fieldOfView)) }, depth + 1);
+		writeElementBeg("transform", { "name", "to_world" }, depth + 1);
+			writeElement("lookat", { "origin", pos.toString(), "target", lookAt.toString(), "up", lookUp.toString() }, depth + 2);
 		writeElementEnd("transform", depth + 1);
 		writeSampler(depth + 1);
 		writeFilm(depth + 1);
@@ -116,19 +162,18 @@ void MitsubaExporter::writeSensor(int depth)
 
 void MitsubaExporter::writeSampler(int depth)
 {
-	writeElementBeg("sampler", { "type", "sobol" }, depth);
-		writeElement("integer", { "name", "sampleCount", "value", std::to_string(nSamples) }, depth + 1);
+	writeElementBeg("sampler", { "type", "independent" }, depth);
+		writeElement("integer", { "name", "sample_count", "value", std::to_string(nSamples) }, depth + 1);
 	writeElementEnd("sampler", depth);
 }
 
 void MitsubaExporter::writeFilm(int depth)
 {
-	writeElementBeg("film", { "type", "ldrfilm" }, depth);
+	writeElementBeg("film", { "type", "hdrfilm" }, depth);
 		writeElement("integer", { "name", "width", "value", std::to_string(imageWidth) }, depth + 1);
 		writeElement("integer", { "name", "height", "value", std::to_string(imageHeight) }, depth + 1);
-		writeElement("string", { "name", "fileFormat", "value", "png"}, depth + 1);
-		writeElement("string", { "name", "pixelFormat", "value", "rgb"}, depth + 1);
-		writeElement("float", { "name", "gamma", "value", "2.2"}, depth + 1);
+		writeElement("string", { "name", "file_format", "value", "openexr"}, depth + 1);
+		writeElement("string", { "name", "pixel_format", "value", "rgba"}, depth + 1);
 		writeElement("boolean", { "name", "banner", "value", "false"}, depth + 1);
 		writeElement("rfilter", { "type", "tent"}, depth + 1);
 	writeElementEnd("film", depth);
@@ -144,46 +189,61 @@ void MitsubaExporter::writeMaterial(Material* mat, int depth)
 void MitsubaExporter::writeShape(ShapeNode* shapeNode, std::string filename, int depth)
 {
 	writeElementBeg("shape", { "type", "obj" }, depth);
-		writeElement("string", { "name", "filename", "value", shapeNode->geometry->name }, depth + 1);
+		writeElement("string", { "name", "filename", "value", filename + ".obj"}, depth + 1);
 		writeTransform(shapeNode, depth + 1);
+		writeBsdf(shapeNode->material, depth + 1);
 	writeElementEnd("shape", depth);
 }
 
 void MitsubaExporter::writeTransform(ShapeNode* shapeNode, int depth)
 {
-	writeElementBeg("transform", { "name", "toWorld" }, depth);
+	writeElementBeg("transform", { "name", "to_world" }, depth);
 		writeElement("matrix", { "value", shapeNode->transformFromRootMatrix->GetAsString()}, depth + 1);
 	writeElementEnd("transform", depth);
 }
 
 void MitsubaExporter::writeBsdfNamed(Material* material, int depth)
 {
-	writeElementBeg("bsdf", { "name", "toWorld" }, depth);
+	writeElementBeg("bsdf", { "type", "twosided", "id", "TODO" }, depth);
 		writeBsdf(material, depth + 1);
 	writeElementEnd("bsdf", depth);
 }
 
 void MitsubaExporter::writeBsdf(Material* material, int depth)
 {
-	writeElementBeg("bsdf", { "type", "twosided", "id", "TODO"}, depth);
+	writeElementBeg("bsdf", { "type", "diffuse" }, depth);
 		writeElement("rgb", { "name", "reflectance", "value", material->diffuseColor.toString()}, depth + 1);
 	writeElementEnd("bsdf", depth);
 }
 
 void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
 {
-	if (lightNode->lightType == LightNode::LightType::SPOTLIGHT)
+	if (true)
+	{
+		writeElementBeg("emitter", { "type", "point" }, depth);
+			writeElement("rgb", { "name", "intensity", "value", lightNode->color.toString()}, depth + 1);
+			writeElement("point", { "name", "position", "x", std::to_string(lightNode->location.x), "y", std::to_string(lightNode->location.y), "z", std::to_string(lightNode->location.z), }, depth + 1);
+		writeElementEnd("emitter", depth);
+	}
+	else if (lightNode->lightType == LightNode::LightType::SPOTLIGHT)
 	{
 		writeElementBeg("emitter", { "type", "spot" }, depth);
-			writeElementBeg("transform", { "name", "toWorld" }, depth + 1);
+			writeElementBeg("transform", { "name", "to_world" }, depth + 1);
 				writeElement("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString()}, depth + 2);
 			writeElementEnd("transform", depth + 1);
-			writeElement("beamWidth", { "type", "float", "value", std::to_string(lightNode->beamWidth) }, depth + 1);
-			writeElement("cutoffAngle", { "type", "float", "value", std::to_string(lightNode->cutOffAngle) }, depth + 1);
-		writeElementEnd("bsdf", depth);
+			writeElement("beam_width", { "type", "float", "value", std::to_string(lightNode->beamWidth) }, depth + 1);
+			writeElement("cutoff_angle", { "type", "float", "value", std::to_string(lightNode->cutOffAngle) }, depth + 1);
+		writeElementEnd("emitter", depth);
 	}
-	else
+	else if (lightNode->lightType == LightNode::LightType::GONIOLIGHT)
 	{
-		std::cout << "unsupported light" << std::endl;
+		writeElementBeg("emitter", { "type", "spot" }, depth);
+			writeElementBeg("transform", { "name", "to_world" }, depth + 1);
+			writeElement("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString() }, depth + 2);
+			writeElementEnd("transform", depth + 1);
+			//writeElement("intensity", { "type", "float", "value", std::to_string(lightNode->intensity)}, depth + 1);
+			writeElement("beam_width", { "type", "float", "value", "80"}, depth + 1);
+			writeElement("cutoff_angle", { "type", "float", "value", "40"}, depth + 1);
+		writeElementEnd("emitter", depth);
 	}
 }

@@ -5,6 +5,7 @@
 
 #include "scene.h"
 #include "pbrtExporter.h"
+#include "mitsubaExporter.h"
 #include "vrmlParser.h"
 #include "vrmlSaver.h"
 
@@ -43,6 +44,7 @@ public:
 	void createDefaultCamera();
 	void createDefaultEnviromentalLight(std::string envirometMapFileName);
 	void exportAllToPBRT(int cameraIndex, std::string outputHeaderName, std::string outputImageName, float customCameraZoom);
+	void exportAllToMitsuba(int cameraIndex, std::string outputHeaderName, std::string outputFolder);
 
 	void unifyTextrureCoordScaleOfAllScenes();
 	void scaleAllScenesGeometry(float scale);
@@ -58,6 +60,7 @@ private:
 	std::vector<ViewPointNode*> allCameras;
 
 	PbrtExporter pbrtExporter;
+	MitsubaExporter mitsubaExporter;
 	VrmlParser vrmlParser;
 	VrmlSaver vrmlSaver;
 

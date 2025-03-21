@@ -173,6 +173,7 @@ Material::Material() : diffuseColor(), ambientIntensity(0), specularColor(), shi
 {
 
 }
+
 Material::Material(float* diffuseColor, float ambientIntensity,
     float* specularColor, float shininess, float transparency)
     :ambientIntensity(ambientIntensity), shininess(shininess), transparency(transparency)
