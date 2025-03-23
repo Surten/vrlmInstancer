@@ -105,7 +105,8 @@ int main()
     //std::string fileName = "automaticControls/FullPassNoTexture.txt";
     //std::string fileName = "automaticControls/geometryConvert.txt";
     //std::string fileName = "automaticControls/TestPBRTExport.txt";
-    std::string fileName = "automaticControls/TestMitsubaExport.txt";
+    //std::string fileName = "automaticControls/TestMitsubaExport.txt";
+    std::string fileName = "automaticControls/FullExportToMitsuba.txt";
     //std::string fileName = "automaticControls/DebugTexturedExport.txt";
     app.AutomaticMode(fileName);
 

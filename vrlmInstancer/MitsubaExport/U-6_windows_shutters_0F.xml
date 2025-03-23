@@ -1,0 +1,3107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene version="3.5.2" >
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_05-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blinds_Bottom_05-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blind_Holders_145-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_05-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blind_Top_05-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_10-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blind_01_Frame_10-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_05-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blinds_Bottom_01_Ends_05-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_17-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blinds_Bottom_17-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_17-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blinds_Bottom_01_Ends_17-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_22-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blind_01_Frame_22-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blind_Holders_361-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_17-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blind_Top_17-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_23-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blinds_Bottom_23-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blind_Holders_469-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_23-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blind_Top_23-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_28-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blind_01_Frame_28-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_23-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blinds_Bottom_01_Ends_23-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blinds_527-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blind_Holders_532-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blinds_599-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_shutters_0F/__Floor_Window_01_Blinds_367-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.706911 -0.000250 -0.707303 29.221298 0.707303 0.000104 -0.706911 0.920200 0.000240 -1.040000 0.000100 13.404200 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.117659 0.086953 -0.000009 -0.996213 0.914100 -0.000205 -1.000000 -0.000009 11.710580 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.159750 0.000000 1.000000 0.000000 1.842100 1.000000 0.000000 -0.000204 21.103199 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.159750 0.000000 1.000000 0.000000 1.172000 1.000000 0.000000 -0.000204 13.709200 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_10-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000300 0.000288 29.221788 0.000288 0.000000 1.000000 0.919700 -0.000288 1.040000 0.000000 11.256500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.706911 -0.000250 -0.707303 29.221298 0.707303 0.000104 -0.706911 0.920200 0.000240 -1.040000 0.000100 10.890200 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.117659 0.086953 -0.000009 -0.996213 0.914100 -0.000205 -1.000000 -0.000009 9.196580 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.159750 0.000000 1.000000 0.000000 1.842100 1.000000 0.000000 -0.000204 18.589199 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.159750 0.000000 1.000000 0.000000 1.172000 1.000000 0.000000 -0.000204 11.195200 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_10-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000300 0.000288 29.221788 0.000288 0.000000 1.000000 0.919700 -0.000288 1.040000 0.000000 8.742500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.706911 -0.000250 -0.707303 29.221298 0.707303 0.000104 -0.706911 0.920200 0.000240 -1.040000 0.000100 8.380200 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.117659 0.086953 -0.000009 -0.996213 0.914100 -0.000205 -1.000000 -0.000009 6.686580 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.159750 0.000000 1.000000 0.000000 1.842100 1.000000 0.000000 -0.000204 16.079201 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.159750 0.000000 1.000000 0.000000 1.172000 1.000000 0.000000 -0.000204 8.685200 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_10-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000300 0.000288 29.221788 0.000288 0.000000 1.000000 0.919700 -0.000288 1.040000 0.000000 6.232500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.707080 -0.000092 0.707134 29.221310 -0.707134 -0.000221 0.707079 0.920200 0.000088 -1.040000 -0.000212 2.688900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.221788 0.000000 -0.000212 -1.000000 0.919700 0.000000 1.040000 -0.000204 4.836200 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 29.159750 -0.000288 -1.000000 0.000288 1.172000 1.000000 -0.000288 0.000000 2.384200 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_22-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.117668 -0.087173 -0.000300 0.996193 0.914100 0.000013 -1.000000 -0.000300 4.382500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 29.159739 -0.000288 -1.000000 0.000288 1.842100 1.000000 -0.000288 0.000000 -5.010799 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.707080 -0.000092 0.707134 29.221310 -0.707134 -0.000221 0.707079 0.920200 0.000088 -1.040000 -0.000212 -1.078100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.221788 0.000000 -0.000212 -1.000000 0.919700 0.000000 1.040000 -0.000204 1.069200 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 29.159750 -0.000288 -1.000000 0.000288 1.172000 1.000000 -0.000288 0.000000 -1.382800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_22-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.117668 -0.087173 -0.000300 0.996193 0.914100 0.000013 -1.000000 -0.000300 0.615500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 29.159739 -0.000288 -1.000000 0.000288 1.842100 1.000000 -0.000288 0.000000 -8.777800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.707080 -0.000092 0.707134 29.221310 -0.707134 -0.000221 0.707079 0.920200 0.000088 -1.040000 -0.000212 -4.844100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.221788 0.000000 -0.000212 -1.000000 0.919700 0.000000 1.040000 -0.000204 -2.696800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 29.159750 -0.000288 -1.000000 0.000288 1.172000 1.000000 -0.000288 0.000000 -5.148800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_22-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.117668 -0.087173 -0.000300 0.996193 0.914100 0.000013 -1.000000 -0.000300 -3.150500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 29.159739 -0.000288 -1.000000 0.000288 1.842100 1.000000 -0.000288 0.000000 -12.543800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.706911 -0.000250 -0.707303 29.221298 0.707303 0.000104 -0.706911 0.920200 0.000240 -1.040000 0.000100 -6.676801 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000300 0.000288 29.221788 0.000288 0.000000 1.000000 0.919700 -0.000288 1.040000 0.000000 -8.824501 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.159750 0.000000 1.000000 0.000000 1.172000 1.000000 0.000000 -0.000204 -6.371800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_10-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.117659 0.086953 -0.000009 -0.996213 0.914100 -0.000205 -1.000000 -0.000009 -8.370420 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.159750 0.000000 1.000000 0.000000 1.842100 1.000000 0.000000 -0.000204 1.022200 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.706911 -0.000250 -0.707303 29.221298 0.707303 0.000104 -0.706911 0.920200 0.000240 -1.040000 0.000100 -9.195800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000300 0.000288 29.221788 0.000288 0.000000 1.000000 0.919700 -0.000288 1.040000 0.000000 -11.343500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.159750 0.000000 1.000000 0.000000 1.172000 1.000000 0.000000 -0.000204 -8.890800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_10-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.117659 0.086953 -0.000009 -0.996213 0.914100 -0.000205 -1.000000 -0.000009 -10.889420 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.159750 0.000000 1.000000 0.000000 1.842100 1.000000 0.000000 -0.000204 -1.496799 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000096 1.040000 0.000045 21.263699 0.707303 0.000104 -0.706911 0.920200 -0.706911 -0.000038 -0.707303 13.251176 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 22.957338 0.086953 -0.000009 -0.996212 0.914100 -0.996212 0.000409 -0.086953 13.147881 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 0.000407 13.564711 0.000000 1.000000 0.000000 1.842100 -0.000407 0.000000 -1.000000 13.188058 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 0.000407 20.958710 0.000000 1.000000 0.000000 1.172000 -0.000407 0.000000 -1.000000 13.189564 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_28-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000492 -1.040000 -0.000000 23.411398 0.000288 0.000000 1.000000 0.919700 -1.000000 -0.000511 0.000288 13.252103 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000096 1.040000 0.000045 18.746998 0.707303 0.000104 -0.706911 0.920200 -0.706911 -0.000038 -0.707303 13.251176 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 20.440638 0.086953 -0.000009 -0.996212 0.914100 -0.996212 0.000409 -0.086953 13.147881 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 0.000407 11.048010 0.000000 1.000000 0.000000 1.842100 -0.000407 0.000000 -1.000000 13.188058 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 0.000407 18.442009 0.000000 1.000000 0.000000 1.172000 -0.000407 0.000000 -1.000000 13.189564 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_28-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000492 -1.040000 -0.000000 20.894697 0.000288 0.000000 1.000000 0.919700 -1.000000 -0.000511 0.000288 13.252103 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000096 1.040000 0.000045 16.241997 0.707303 0.000104 -0.706911 0.920200 -0.706911 -0.000038 -0.707303 13.251176 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 17.935637 0.086953 -0.000009 -0.996212 0.914100 -0.996212 0.000409 -0.086953 13.147881 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 0.000407 8.543009 0.000000 1.000000 0.000000 1.842100 -0.000407 0.000000 -1.000000 13.188058 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 0.000407 15.937009 0.000000 1.000000 0.000000 1.172000 -0.000407 0.000000 -1.000000 13.189564 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_28-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000492 -1.040000 -0.000000 18.389696 0.000288 0.000000 1.000000 0.919700 -1.000000 -0.000511 0.000288 13.252103 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000096 1.040000 0.000045 13.723997 0.707303 0.000104 -0.706911 0.920200 -0.706911 -0.000038 -0.707303 13.251176 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 15.417638 0.086953 -0.000009 -0.996212 0.914100 -0.996212 0.000409 -0.086953 13.147881 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 0.000407 6.025009 0.000000 1.000000 0.000000 1.842100 -0.000407 0.000000 -1.000000 13.188058 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Top_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 0.000407 13.419009 0.000000 1.000000 0.000000 1.172000 -0.000407 0.000000 -1.000000 13.189564 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_01_Frame_28-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000492 -1.040000 -0.000000 15.871696 0.000288 0.000000 1.000000 0.919700 -1.000000 -0.000511 0.000288 13.252103 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_Bottom_01_Ends_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.494560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.634560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.144560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.844560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.914560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.774560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.704560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.564560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.424560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.354560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.284560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.214560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.074560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 0.004560 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 -0.065440 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 -0.135440 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 -0.205440 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 13.440895 0.766221 0.000158 -0.642576 -0.275440 -0.642577 -0.000135 -0.766222 13.146889 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 15.419639 0.086953 -0.000009 -0.996212 0.914100 -0.996212 0.000409 -0.086953 13.147680 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 15.419639 0.086953 -0.000009 -0.996212 0.774100 -0.996212 0.000409 -0.086953 13.147680 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 15.419639 0.086953 -0.000009 -0.996212 0.634100 -0.996212 0.000409 -0.086953 13.147680 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 15.419639 0.086953 -0.000009 -0.996212 0.494100 -0.996212 0.000409 -0.086953 13.147680 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 15.419639 0.086953 -0.000009 -0.996212 0.354000 -0.996212 0.000409 -0.086953 13.147680 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 15.419639 0.086953 -0.000009 -0.996212 0.214000 -0.996212 0.000409 -0.086953 13.147680 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 15.419639 0.086953 -0.000009 -0.996212 0.074000 -0.996212 0.000409 -0.086953 13.147680 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 15.419639 0.086953 -0.000009 -0.996212 -0.066000 -0.996212 0.000409 -0.086953 13.147680 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 15.419639 0.086953 -0.000009 -0.996212 -0.206000 -0.996212 0.000409 -0.086953 13.147680 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 15.212118 -0.087173 -0.000300 0.996193 -0.136000 0.996193 0.000191 0.087173 13.147637 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 15.212118 -0.087173 -0.000300 0.996193 -0.276000 0.996193 0.000191 0.087173 13.147637 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 15.212118 -0.087173 -0.000300 0.996193 0.844100 0.996193 0.000191 0.087173 13.147637 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 15.212118 -0.087173 -0.000300 0.996193 0.704100 0.996193 0.000191 0.087173 13.147637 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 15.212118 -0.087173 -0.000300 0.996193 0.564100 0.996193 0.000191 0.087173 13.147637 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 15.212118 -0.087173 -0.000300 0.996193 0.424000 0.996193 0.000191 0.087173 13.147637 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 15.212118 -0.087173 -0.000300 0.996193 0.284000 0.996193 0.000191 0.087173 13.147637 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 15.212118 -0.087173 -0.000300 0.996193 0.004000 0.996193 0.000191 0.087173 13.147637 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 15.212118 -0.087173 -0.000300 0.996193 0.144000 0.996193 0.000191 0.087173 13.147637 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.494560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.634560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.144560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.844560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.914560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.774560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.704560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.564560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.424560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.354560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.284560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.214560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.074560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 0.004560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 -0.065440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 -0.135440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 -0.205440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 15.959894 0.766221 0.000158 -0.642576 -0.275440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 17.938637 0.086953 -0.000009 -0.996212 0.914100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 17.938637 0.086953 -0.000009 -0.996212 0.774100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 17.938637 0.086953 -0.000009 -0.996212 0.634100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 17.938637 0.086953 -0.000009 -0.996212 0.494100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 17.938637 0.086953 -0.000009 -0.996212 0.354000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 17.938637 0.086953 -0.000009 -0.996212 0.214000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 17.938637 0.086953 -0.000009 -0.996212 0.074000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 17.938637 0.086953 -0.000009 -0.996212 -0.066000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 17.938637 0.086953 -0.000009 -0.996212 -0.206000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 17.731117 -0.087173 -0.000300 0.996193 -0.136000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 17.731117 -0.087173 -0.000300 0.996193 -0.276000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 17.731117 -0.087173 -0.000300 0.996193 0.844100 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 17.731117 -0.087173 -0.000300 0.996193 0.704100 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 17.731117 -0.087173 -0.000300 0.996193 0.564100 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 17.731117 -0.087173 -0.000300 0.996193 0.424000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 17.731117 -0.087173 -0.000300 0.996193 0.284000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 17.731117 -0.087173 -0.000300 0.996193 0.004000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 17.731117 -0.087173 -0.000300 0.996193 0.144000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.424560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.494560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.634560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.144560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.844560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.914560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.774560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.704560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.564560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.354560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.284560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.214560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.074560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 0.004560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 -0.065440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 -0.135440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 -0.205440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 18.462894 0.766221 0.000158 -0.642576 -0.275440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 20.441637 0.086953 -0.000009 -0.996212 0.914100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 20.441637 0.086953 -0.000009 -0.996212 0.774100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 20.441637 0.086953 -0.000009 -0.996212 0.634100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 20.441637 0.086953 -0.000009 -0.996212 0.494100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 20.441637 0.086953 -0.000009 -0.996212 0.354000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 20.441637 0.086953 -0.000009 -0.996212 0.214000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 20.441637 0.086953 -0.000009 -0.996212 0.074000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 20.441637 0.086953 -0.000009 -0.996212 -0.066000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 20.441637 0.086953 -0.000009 -0.996212 -0.206000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 20.234118 -0.087173 -0.000300 0.996193 -0.136000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 20.234118 -0.087173 -0.000300 0.996193 -0.276000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 20.234118 -0.087173 -0.000300 0.996193 0.844100 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 20.234118 -0.087173 -0.000300 0.996193 0.704100 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 20.234118 -0.087173 -0.000300 0.996193 0.564100 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 20.234118 -0.087173 -0.000300 0.996193 0.424000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 20.234118 -0.087173 -0.000300 0.996193 0.284000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 20.234118 -0.087173 -0.000300 0.996193 0.004000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 20.234118 -0.087173 -0.000300 0.996193 0.144000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.284560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.424560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.494560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.634560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.144560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.844560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.914560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.774560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.704560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.564560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.354560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.214560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.074560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 0.004560 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 -0.065440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 -0.135440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 -0.205440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000207 1.000000 -0.000002 20.981895 0.766221 0.000158 -0.642576 -0.275440 -0.642577 -0.000135 -0.766222 13.146892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_527-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 22.960638 0.086953 -0.000009 -0.996212 0.914100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 22.960638 0.086953 -0.000009 -0.996212 0.774100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 22.960638 0.086953 -0.000009 -0.996212 0.634100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 22.960638 0.086953 -0.000009 -0.996212 0.494100 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 22.960638 0.086953 -0.000009 -0.996212 0.354000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 22.960638 0.086953 -0.000009 -0.996212 0.214000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 22.960638 0.086953 -0.000009 -0.996212 0.074000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 22.960638 0.086953 -0.000009 -0.996212 -0.066000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000408 1.000000 0.000027 22.960638 0.086953 -0.000009 -0.996212 -0.206000 -0.996212 0.000409 -0.086953 13.147683 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_469-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 22.753119 -0.087173 -0.000300 0.996193 -0.136000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 22.753119 -0.087173 -0.000300 0.996193 -0.276000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 22.753119 -0.087173 -0.000300 0.996193 0.844100 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 22.753119 -0.087173 -0.000300 0.996193 0.704100 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 22.753119 -0.087173 -0.000300 0.996193 0.564100 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 22.753119 -0.087173 -0.000300 0.996193 0.424000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 22.753119 -0.087173 -0.000300 0.996193 0.284000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 22.753119 -0.087173 -0.000300 0.996193 0.004000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000216 1.000000 0.000282 22.753119 -0.087173 -0.000300 0.996193 0.144000 0.996193 0.000191 0.087173 13.147640 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_532-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.354560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.284560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.424560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.494560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.634560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.144560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.844560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.914560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.774560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.704560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.564560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.214560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.074560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.004560 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.065440 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.135440 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.205440 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.275440 0.000338 -1.000000 0.000158 13.695870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.914100 -0.000205 -1.000000 -0.000009 11.717127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.774100 -0.000205 -1.000000 -0.000009 11.717127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.634100 -0.000205 -1.000000 -0.000009 11.717127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.494100 -0.000205 -1.000000 -0.000009 11.717127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.354000 -0.000205 -1.000000 -0.000009 11.717127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.214000 -0.000205 -1.000000 -0.000009 11.717127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.074000 -0.000205 -1.000000 -0.000009 11.717127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 -0.066000 -0.000205 -1.000000 -0.000009 11.717127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 -0.206000 -0.000205 -1.000000 -0.000009 11.717127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 -0.136000 0.000013 -1.000000 -0.000300 11.924646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 -0.276000 0.000013 -1.000000 -0.000300 11.924646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.844100 0.000013 -1.000000 -0.000300 11.924646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.704100 0.000013 -1.000000 -0.000300 11.924646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.564100 0.000013 -1.000000 -0.000300 11.924646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.424000 0.000013 -1.000000 -0.000300 11.924646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.284000 0.000013 -1.000000 -0.000300 11.924646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.004000 0.000013 -1.000000 -0.000300 11.924646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.144000 0.000013 -1.000000 -0.000300 11.924646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.284560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.354560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.424560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.494560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.634560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.144560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.844560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.914560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.774560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.704560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.564560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.214560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.074560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.004560 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.065440 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.135440 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.205440 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.275440 0.000338 -1.000000 0.000158 11.176870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.914100 -0.000205 -1.000000 -0.000009 9.198127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.774100 -0.000205 -1.000000 -0.000009 9.198127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.634100 -0.000205 -1.000000 -0.000009 9.198127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.494100 -0.000205 -1.000000 -0.000009 9.198127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.354000 -0.000205 -1.000000 -0.000009 9.198127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.214000 -0.000205 -1.000000 -0.000009 9.198127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.074000 -0.000205 -1.000000 -0.000009 9.198127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 -0.066000 -0.000205 -1.000000 -0.000009 9.198127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 -0.206000 -0.000205 -1.000000 -0.000009 9.198127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 -0.136000 0.000013 -1.000000 -0.000300 9.405646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 -0.276000 0.000013 -1.000000 -0.000300 9.405646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.844100 0.000013 -1.000000 -0.000300 9.405646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.704100 0.000013 -1.000000 -0.000300 9.405646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.564100 0.000013 -1.000000 -0.000300 9.405646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.424000 0.000013 -1.000000 -0.000300 9.405646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.284000 0.000013 -1.000000 -0.000300 9.405646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.004000 0.000013 -1.000000 -0.000300 9.405646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.144000 0.000013 -1.000000 -0.000300 9.405646 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.284560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.354560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.424560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.494560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.634560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.144560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.844560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.914560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.774560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.704560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.564560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.214560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.074560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.004560 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.065440 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.135440 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.205440 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.275440 0.000338 -1.000000 0.000158 8.666870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.914100 -0.000205 -1.000000 -0.000009 6.688127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.774100 -0.000205 -1.000000 -0.000009 6.688127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.634100 -0.000205 -1.000000 -0.000009 6.688127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.494100 -0.000205 -1.000000 -0.000009 6.688127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.354000 -0.000205 -1.000000 -0.000009 6.688127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.214000 -0.000205 -1.000000 -0.000009 6.688127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.074000 -0.000205 -1.000000 -0.000009 6.688127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 -0.066000 -0.000205 -1.000000 -0.000009 6.688127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 -0.206000 -0.000205 -1.000000 -0.000009 6.688127 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 -0.136000 0.000013 -1.000000 -0.000300 6.895647 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 -0.276000 0.000013 -1.000000 -0.000300 6.895647 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.844100 0.000013 -1.000000 -0.000300 6.895647 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.704100 0.000013 -1.000000 -0.000300 6.895647 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.564100 0.000013 -1.000000 -0.000300 6.895647 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.424000 0.000013 -1.000000 -0.000300 6.895647 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.284000 0.000013 -1.000000 -0.000300 6.895647 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.004000 0.000013 -1.000000 -0.000300 6.895647 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.144000 0.000013 -1.000000 -0.000300 6.895647 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.284560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.354560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.424560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.494560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.634560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.144560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.844560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.914560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.774560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.704560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.564560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.214560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.074560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.004560 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.065440 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.135440 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.205440 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.275440 0.000338 -1.000000 0.000158 -6.393130 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.914100 -0.000205 -1.000000 -0.000009 -8.371874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.774100 -0.000205 -1.000000 -0.000009 -8.371874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.634100 -0.000205 -1.000000 -0.000009 -8.371874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.494100 -0.000205 -1.000000 -0.000009 -8.371874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.354000 -0.000205 -1.000000 -0.000009 -8.371874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.214000 -0.000205 -1.000000 -0.000009 -8.371874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.074000 -0.000205 -1.000000 -0.000009 -8.371874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 -0.066000 -0.000205 -1.000000 -0.000009 -8.371874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 -0.206000 -0.000205 -1.000000 -0.000009 -8.371874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 -0.136000 0.000013 -1.000000 -0.000300 -8.164354 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 -0.276000 0.000013 -1.000000 -0.000300 -8.164354 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.844100 0.000013 -1.000000 -0.000300 -8.164354 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.704100 0.000013 -1.000000 -0.000300 -8.164354 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.564100 0.000013 -1.000000 -0.000300 -8.164354 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.424000 0.000013 -1.000000 -0.000300 -8.164354 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.284000 0.000013 -1.000000 -0.000300 -8.164354 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.004000 0.000013 -1.000000 -0.000300 -8.164354 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.144000 0.000013 -1.000000 -0.000300 -8.164354 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.214560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.284560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.354560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.424560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.494560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.634560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.144560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.844560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.914560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.774560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.704560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.564560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.074560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 0.004560 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.065440 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.135440 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.205440 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.642576 -0.000338 -0.766222 29.121273 0.766221 0.000158 -0.642576 -0.275440 0.000338 -1.000000 0.000158 -8.913131 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_599-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.914100 -0.000205 -1.000000 -0.000009 -10.891874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.774100 -0.000205 -1.000000 -0.000009 -10.891874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.634100 -0.000205 -1.000000 -0.000009 -10.891874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.494100 -0.000205 -1.000000 -0.000009 -10.891874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.354000 -0.000205 -1.000000 -0.000009 -10.891874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.214000 -0.000205 -1.000000 -0.000009 -10.891874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 0.074000 -0.000205 -1.000000 -0.000009 -10.891874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 -0.066000 -0.000205 -1.000000 -0.000009 -10.891874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.121662 0.086953 -0.000009 -0.996212 -0.206000 -0.000205 -1.000000 -0.000009 -10.891874 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 -0.136000 0.000013 -1.000000 -0.000300 -10.684355 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 -0.276000 0.000013 -1.000000 -0.000300 -10.684355 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.844100 0.000013 -1.000000 -0.000300 -10.684355 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.704100 0.000013 -1.000000 -0.000300 -10.684355 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.564100 0.000013 -1.000000 -0.000300 -10.684355 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.424000 0.000013 -1.000000 -0.000300 -10.684355 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.284000 0.000013 -1.000000 -0.000300 -10.684355 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.004000 0.000013 -1.000000 -0.000300 -10.684355 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.121662 -0.087173 -0.000300 0.996193 0.144000 0.000013 -1.000000 -0.000300 -10.684355 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.834100 -0.000205 -1.000000 -0.000009 2.921270 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.694100 -0.000205 -1.000000 -0.000009 2.921270 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.554100 -0.000205 -1.000000 -0.000009 2.921270 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.414000 -0.000205 -1.000000 -0.000009 2.921270 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.274000 -0.000205 -1.000000 -0.000009 2.921270 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.134000 -0.000205 -1.000000 -0.000009 2.921270 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 -0.006000 -0.000205 -1.000000 -0.000009 2.921270 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 -0.146000 -0.000205 -1.000000 -0.000009 2.921270 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 -0.286000 -0.000205 -1.000000 -0.000009 2.921270 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 -0.206000 0.000013 -1.000000 -0.000300 4.384170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 -0.066000 0.000013 -1.000000 -0.000300 4.384170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.074000 0.000013 -1.000000 -0.000300 4.384170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.214000 0.000013 -1.000000 -0.000300 4.384170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.354000 0.000013 -1.000000 -0.000300 4.384170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.494100 0.000013 -1.000000 -0.000300 4.384170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.634100 0.000013 -1.000000 -0.000300 4.384170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.774100 0.000013 -1.000000 -0.000300 4.384170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.914100 0.000013 -1.000000 -0.000300 4.384170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.914560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.844560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.774560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.704560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.634560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.564560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.494560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.424560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.354560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.284560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.214560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.144560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.074560 -0.000150 -1.000000 0.000322 2.405743 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.004560 -0.000150 -1.000000 0.000322 2.405742 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.065440 -0.000150 -1.000000 0.000322 2.405742 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.135440 -0.000150 -1.000000 0.000322 2.405742 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.205440 -0.000150 -1.000000 0.000322 2.405742 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.275440 -0.000150 -1.000000 0.000322 2.405742 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.844100 -0.000205 -1.000000 -0.000009 -0.848729 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.704100 -0.000205 -1.000000 -0.000009 -0.848729 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.564100 -0.000205 -1.000000 -0.000009 -0.848729 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.424000 -0.000205 -1.000000 -0.000009 -0.848729 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.284000 -0.000205 -1.000000 -0.000009 -0.848729 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.144000 -0.000205 -1.000000 -0.000009 -0.848729 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.004000 -0.000205 -1.000000 -0.000009 -0.848729 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 -0.136000 -0.000205 -1.000000 -0.000009 -0.848729 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 -0.276000 -0.000205 -1.000000 -0.000009 -0.848729 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 -0.206000 0.000013 -1.000000 -0.000300 0.614170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 -0.066000 0.000013 -1.000000 -0.000300 0.614170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.074000 0.000013 -1.000000 -0.000300 0.614170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.214000 0.000013 -1.000000 -0.000300 0.614170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.354000 0.000013 -1.000000 -0.000300 0.614170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.494100 0.000013 -1.000000 -0.000300 0.614170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.634100 0.000013 -1.000000 -0.000300 0.614170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.774100 0.000013 -1.000000 -0.000300 0.614170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.914100 0.000013 -1.000000 -0.000300 0.614170 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.914560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.844560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.774560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.704560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.634560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.564560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.494560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.424560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.354560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.284560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.214560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.144560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.074560 -0.000150 -1.000000 0.000322 -1.364256 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.004560 -0.000150 -1.000000 0.000322 -1.364257 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.065440 -0.000150 -1.000000 0.000322 -1.364257 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.135440 -0.000150 -1.000000 0.000322 -1.364257 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.205440 -0.000150 -1.000000 0.000322 -1.364257 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.275440 -0.000150 -1.000000 0.000322 -1.364257 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.284560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.914560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.844560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.774560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.704560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.634560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.564560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.494560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.424560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.354560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.214560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.144560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.074560 -0.000150 -1.000000 0.000322 -5.124258 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 0.004560 -0.000150 -1.000000 0.000322 -5.124259 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.065440 -0.000150 -1.000000 0.000322 -5.124259 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.135440 -0.000150 -1.000000 0.000322 -5.124259 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.205440 -0.000150 -1.000000 0.000322 -5.124259 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.642863 0.000150 0.765981 29.123144 -0.765981 0.000322 0.642863 -0.275440 -0.000150 -1.000000 0.000322 -5.124259 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blinds_367-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.844100 -0.000205 -1.000000 -0.000009 -4.608731 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.704100 -0.000205 -1.000000 -0.000009 -4.608731 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.564100 -0.000205 -1.000000 -0.000009 -4.608731 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.424000 -0.000205 -1.000000 -0.000009 -4.608731 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.284000 -0.000205 -1.000000 -0.000009 -4.608731 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.144000 -0.000205 -1.000000 -0.000009 -4.608731 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 0.004000 -0.000205 -1.000000 -0.000009 -4.608731 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 -0.136000 -0.000205 -1.000000 -0.000009 -4.608731 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.996212 0.000205 -0.086953 29.123543 0.086953 -0.000009 -0.996213 -0.276000 -0.000205 -1.000000 -0.000009 -4.608731 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_145-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 -0.206000 0.000013 -1.000000 -0.000300 -3.145831 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 -0.066000 0.000013 -1.000000 -0.000300 -3.145831 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.074000 0.000013 -1.000000 -0.000300 -3.145831 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.214000 0.000013 -1.000000 -0.000300 -3.145831 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.354000 0.000013 -1.000000 -0.000300 -3.145831 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.494100 0.000013 -1.000000 -0.000300 -3.145831 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.634100 0.000013 -1.000000 -0.000300 -3.145831 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.774100 0.000013 -1.000000 -0.000300 -3.145831 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.996193 -0.000013 0.087173 29.123543 -0.087173 -0.000300 0.996193 0.914100 0.000013 -1.000000 -0.000300 -3.145831 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_shutters_0F___Floor_Window_01_Blind_Holders_361-FACES" />
+    </shape>
+</scene>

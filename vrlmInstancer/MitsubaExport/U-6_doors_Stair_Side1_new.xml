@@ -1,0 +1,1577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene version="3.5.2" >
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new___Glass_13-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/__Glass_13-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new___Box13-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/__Box13-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Object25-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Object25-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_ChamferBox23-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/ChamferBox23-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Object26-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Object26-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_U_12-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/U_12-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Screw_45-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Screw_45-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Screw_46-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Screw_46-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Screw_47-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Screw_47-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Screw_48-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Screw_48-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.451000 0.451000 0.451000" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_ChamferCyl56-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/ChamferCyl56-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_ChamferCyl57-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/ChamferCyl57-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_ChamferCyl58-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/ChamferCyl58-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Door_Window_Holders_23-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Door_Window_Holders_23-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Line51-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Line51-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new___Box29-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/__Box29-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Door_Window_Holders_24-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Door_Window_Holders_24-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new___Box14-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/__Box14-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Door_Frame-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Door_Frame-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Door_Glass-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Door_Glass-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Cylinder73-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Cylinder73-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Cylinder74-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Cylinder74-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Cone36-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Cone36-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Loft144-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Loft144-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.796100 0.796100 0.796100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_ChamferBox137-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/ChamferBox137-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Window_101_Handle_275-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Window_101_Handle_275-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_276-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Window_101_Handle_01_Base_276-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_63-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/__Door_Type_02_R_Keyhole_63-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.658800 0.658800 0.658800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Window_101_Handle_276-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Window_101_Handle_276-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_62-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/__Door_Type_02_R_Keyhole_62-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.658800 0.658800 0.658800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Handle1-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Handle1-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Handle2-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Handle2-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Line111-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Line111-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.929400 0.929400 0.929400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/ChamferCyl432-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Door_Frame05-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Door_Frame05-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new___Glass_14-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/__Glass_14-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_247-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_doors_Stair_Side1_new/Window_101_Handle_01_Base_247-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294826 0.000000 1.000000 0.000000 8.940001 0.000000 0.000000 1.000000 7.343467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Glass_13-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294827 0.000000 1.000000 0.000000 8.940001 0.000000 0.000000 1.000000 7.343467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Box13-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.223071 0.000000 -0.000204 1.000000 10.588600 0.000000 -1.000000 -0.000204 7.338497 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.241161 0.000000 1.000000 0.000000 10.581100 -1.000000 0.000000 -0.000204 7.367147 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 -0.000288 -6.223071 0.000288 0.000000 -1.000000 10.588600 0.000288 -1.000000 0.000000 7.784467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 0.000288 -6.261071 0.000288 0.000000 1.000000 10.588701 -0.000288 1.000000 0.000000 7.783867 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_U_12-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000144 -1.000000 -0.000493 -6.227630 0.000000 -0.000288 1.710999 -7.785656 -1.711000 0.000084 -0.000000 -10.594870 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_45-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000492 -1.000000 0.000986 -6.261878 0.000493 -0.000576 -1.710999 -7.785667 1.711000 0.000288 0.000493 -10.586894 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_46-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000493 1.000000 0.000985 -6.227754 0.000493 0.000576 -1.710999 -7.785656 -1.711000 -0.000288 -0.000493 -11.023904 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_47-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000841 1.000000 -0.000493 -6.258255 -0.000000 0.000288 1.710999 -7.785665 1.710999 -0.000492 -0.000000 -11.023895 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_48-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 -0.000248 0.999884 -6.235895 0.000012 1.000000 0.000248 10.559200 -0.999884 0.000016 -0.015203 7.702247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl56-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.013683 0.000000 0.899896 -6.240987 0.000000 1.000000 0.000000 10.576201 -0.899896 0.000000 -0.013683 7.367286 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl57-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 0.000000 0.999884 -6.235895 0.000000 1.000000 0.000000 10.571201 -0.999884 0.000000 -0.015203 7.702247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl58-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.800000 -0.000230 0.000230 -6.252521 0.000230 0.000000 0.800000 10.594001 -0.000230 0.800000 0.000000 6.746767 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Window_Holders_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.250361 0.000407 -1.000000 0.000000 10.315001 0.000000 0.000000 1.000000 7.910067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.250361 0.000407 -1.000000 0.000000 8.711000 0.000000 0.000000 1.000000 7.910067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294826 0.000000 1.000000 0.000000 12.089500 0.000000 0.000000 1.000000 7.343467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Glass_13-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294827 0.000000 1.000000 0.000000 12.089500 0.000000 0.000000 1.000000 7.343467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Box29-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.223071 0.000000 -0.000204 1.000000 13.738100 0.000000 -1.000000 -0.000204 7.338497 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.241161 0.000000 1.000000 0.000000 13.730600 -1.000000 0.000000 -0.000204 7.367147 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 -0.000288 -6.223071 0.000288 0.000000 -1.000000 13.738100 0.000288 -1.000000 0.000000 7.784467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 0.000288 -6.261071 0.000288 0.000000 1.000000 13.738201 -0.000288 1.000000 0.000000 7.783867 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_U_12-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000144 -1.000000 -0.000493 -6.228537 0.000000 -0.000288 1.710999 -7.785656 -1.711000 0.000084 -0.000000 -13.744370 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_45-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000492 -1.000000 0.000986 -6.262785 0.000493 -0.000576 -1.710999 -7.785667 1.711000 0.000288 0.000493 -13.736394 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_46-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000493 1.000000 0.000985 -6.228661 0.000493 0.000576 -1.710999 -7.785656 -1.711000 -0.000288 -0.000493 -14.173404 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_47-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000841 1.000000 -0.000493 -6.259162 -0.000000 0.000288 1.710999 -7.785665 1.710999 -0.000492 -0.000000 -14.173395 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_48-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 -0.000248 0.999884 -6.235895 0.000012 1.000000 0.000248 13.708700 -0.999884 0.000016 -0.015203 7.702247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl56-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.013683 0.000000 0.899896 -6.240987 0.000000 1.000000 0.000000 13.725701 -0.899896 0.000000 -0.013683 7.367286 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl57-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 0.000000 0.999884 -6.235895 0.000000 1.000000 0.000000 13.720701 -0.999884 0.000000 -0.015203 7.702247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl58-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.800000 -0.000230 0.000230 -6.252521 0.000230 0.000000 0.800000 13.743501 -0.000230 0.800000 0.000000 6.746767 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Window_Holders_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.250361 0.000407 -1.000000 0.000000 13.464500 0.000000 0.000000 1.000000 7.910067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.250361 0.000407 -1.000000 0.000000 11.860500 0.000000 0.000000 1.000000 7.910067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294826 0.000000 1.000000 0.000000 15.240000 0.000000 0.000000 1.000000 7.343467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Glass_13-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294827 0.000000 1.000000 0.000000 15.240000 0.000000 0.000000 1.000000 7.343467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Box13-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.223071 0.000000 -0.000204 1.000000 16.888599 0.000000 -1.000000 -0.000204 7.338497 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.241161 0.000000 1.000000 0.000000 16.881100 -1.000000 0.000000 -0.000204 7.367147 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 -0.000288 -6.223071 0.000288 0.000000 -1.000000 16.888599 0.000288 -1.000000 0.000000 7.784467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 0.000288 -6.261071 0.000288 0.000000 1.000000 16.888700 -0.000288 1.000000 0.000000 7.783867 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_U_12-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000144 -1.000000 -0.000493 -6.229445 0.000000 -0.000288 1.710999 -7.785655 -1.711000 0.000084 -0.000000 -16.894871 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_45-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000492 -1.000000 0.000986 -6.263692 0.000493 -0.000576 -1.710999 -7.785666 1.711000 0.000288 0.000493 -16.886894 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_46-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000493 1.000000 0.000985 -6.229568 0.000493 0.000576 -1.710999 -7.785655 -1.711000 -0.000288 -0.000493 -17.323904 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_47-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000841 1.000000 -0.000493 -6.260069 -0.000000 0.000288 1.710999 -7.785664 1.710999 -0.000492 -0.000000 -17.323895 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_48-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 -0.000248 0.999884 -6.235895 0.000012 1.000000 0.000248 16.859200 -0.999884 0.000016 -0.015203 7.702247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl56-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.013683 0.000000 0.899896 -6.240987 0.000000 1.000000 0.000000 16.876202 -0.899896 0.000000 -0.013683 7.367286 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl57-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 0.000000 0.999884 -6.235895 0.000000 1.000000 0.000000 16.871201 -0.999884 0.000000 -0.015203 7.702247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl58-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.800000 -0.000230 0.000230 -6.252521 0.000230 0.000000 0.800000 16.894001 -0.000230 0.800000 0.000000 6.746767 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Window_Holders_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.250361 0.000407 -1.000000 0.000000 16.615000 0.000000 0.000000 1.000000 7.910067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.250361 0.000407 -1.000000 0.000000 15.011000 0.000000 0.000000 1.000000 7.910067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294826 0.000000 1.000000 0.000000 18.389999 0.000000 0.000000 1.000000 7.343467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Glass_13-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294827 0.000000 1.000000 0.000000 18.389999 0.000000 0.000000 1.000000 7.343467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Box13-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.223071 0.000000 -0.000204 1.000000 20.038599 0.000000 -1.000000 -0.000204 7.338497 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.241161 0.000000 1.000000 0.000000 20.031099 -1.000000 0.000000 -0.000204 7.367147 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 -0.000288 -6.223071 0.000288 0.000000 -1.000000 20.038599 0.000288 -1.000000 0.000000 7.784467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 0.000288 -6.261071 0.000288 0.000000 1.000000 20.038698 -0.000288 1.000000 0.000000 7.783867 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_U_12-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000144 -1.000000 -0.000493 -6.230351 0.000000 -0.000288 1.710999 -7.785655 -1.711000 0.000084 -0.000000 -20.044867 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_45-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000492 -1.000000 0.000986 -6.264599 0.000493 -0.000576 -1.710999 -7.785666 1.711000 0.000288 0.000493 -20.036890 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_46-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000493 1.000000 0.000985 -6.230475 0.000493 0.000576 -1.710999 -7.785655 -1.711000 -0.000288 -0.000493 -20.473900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_47-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000841 1.000000 -0.000493 -6.260976 -0.000000 0.000288 1.710999 -7.785664 1.710999 -0.000492 -0.000000 -20.473890 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_48-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 -0.000248 0.999884 -6.235895 0.000012 1.000000 0.000248 20.009199 -0.999884 0.000016 -0.015203 7.702247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl56-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.013683 0.000000 0.899896 -6.240987 0.000000 1.000000 0.000000 20.026201 -0.899896 0.000000 -0.013683 7.367286 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl57-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 0.000000 0.999884 -6.235895 0.000000 1.000000 0.000000 20.021200 -0.999884 0.000000 -0.015203 7.702247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl58-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.800000 -0.000230 0.000230 -6.252521 0.000230 0.000000 0.800000 20.043999 -0.000230 0.800000 0.000000 6.746767 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Window_Holders_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.250361 0.000407 -1.000000 0.000000 19.764999 0.000000 0.000000 1.000000 7.910067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.250361 0.000407 -1.000000 0.000000 18.160999 0.000000 0.000000 1.000000 7.910067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294826 0.000000 1.000000 0.000000 21.540001 0.000000 0.000000 1.000000 7.343467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Glass_13-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294827 0.000000 1.000000 0.000000 21.540001 0.000000 0.000000 1.000000 7.343467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Box13-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.223071 0.000000 -0.000204 1.000000 23.188601 0.000000 -1.000000 -0.000204 7.338497 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.241161 0.000000 1.000000 0.000000 23.181101 -1.000000 0.000000 -0.000204 7.367147 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 -0.000288 -6.223071 0.000288 0.000000 -1.000000 23.188601 0.000288 -1.000000 0.000000 7.784467 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 0.000288 -6.261071 0.000288 0.000000 1.000000 23.188700 -0.000288 1.000000 0.000000 7.783867 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_U_12-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000144 -1.000000 -0.000493 -6.231259 0.000000 -0.000288 1.710999 -7.785656 -1.711000 0.000084 -0.000000 -23.194868 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_45-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000492 -1.000000 0.000986 -6.265507 0.000493 -0.000576 -1.710999 -7.785666 1.711000 0.000288 0.000493 -23.186892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_46-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000493 1.000000 0.000985 -6.231382 0.000493 0.000576 -1.710999 -7.785656 -1.711000 -0.000288 -0.000493 -23.623901 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_47-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000841 1.000000 -0.000493 -6.261884 -0.000000 0.000288 1.710999 -7.785665 1.710999 -0.000492 -0.000000 -23.623892 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_48-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 -0.000248 0.999884 -6.235895 0.000012 1.000000 0.000248 23.159201 -0.999884 0.000016 -0.015203 7.702247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl56-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.013683 0.000000 0.899896 -6.240987 0.000000 1.000000 0.000000 23.176203 -0.899896 0.000000 -0.013683 7.367286 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl57-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 0.000000 0.999884 -6.235895 0.000000 1.000000 0.000000 23.171202 -0.999884 0.000000 -0.015203 7.702247 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl58-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.800000 -0.000230 0.000230 -6.252521 0.000230 0.000000 0.800000 23.194000 -0.000230 0.800000 0.000000 6.746767 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Window_Holders_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.250361 0.000407 -1.000000 0.000000 22.915001 0.000000 0.000000 1.000000 7.910067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.250361 0.000407 -1.000000 0.000000 21.311001 0.000000 0.000000 1.000000 7.910067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.800000 0.000000 0.000000 -6.252531 0.000000 -0.000163 -0.800000 10.594001 0.000000 0.800000 -0.000163 7.915067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Window_Holders_24-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.800000 0.000000 0.000000 -6.252531 0.000000 -0.000163 -0.800000 13.743501 0.000000 0.800000 -0.000163 7.915067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Window_Holders_24-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.800000 0.000000 0.000000 -6.252531 0.000000 -0.000163 -0.800000 16.894001 0.000000 0.800000 -0.000163 7.915067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Window_Holders_24-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.800000 0.000000 0.000000 -6.252531 0.000000 -0.000163 -0.800000 20.043999 0.000000 0.800000 -0.000163 7.915067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Window_Holders_24-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.800000 0.000000 0.000000 -6.252531 0.000000 -0.000163 -0.800000 23.194000 0.000000 0.800000 -0.000163 7.915067 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Window_Holders_24-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.224589 0.000000 -0.000204 1.000000 2.407000 0.000000 -1.000000 -0.000204 7.340564 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.242679 0.000000 1.000000 0.000000 2.400000 -1.000000 0.000000 -0.000204 7.369214 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 -0.000288 -6.224589 0.000288 0.000000 -1.000000 2.407000 0.000288 -1.000000 0.000000 7.786533 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Object26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.296345 0.000000 1.000000 0.000000 0.642500 0.000000 0.000000 1.000000 7.345533 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Box14-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.251879 0.000407 -1.000000 0.000000 2.017470 0.000000 0.000000 1.000000 7.912144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 -0.000248 0.999884 -6.237413 0.000012 1.000000 0.000248 2.377570 -0.999884 0.000016 -0.015203 7.704324 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl56-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.013683 0.000000 0.899896 -6.242506 0.000000 1.000000 0.000000 2.394571 -0.899896 0.000000 -0.013683 7.369363 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl57-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.015203 0.000000 0.999884 -6.237413 0.000000 1.000000 0.000000 2.389571 -0.999884 0.000000 -0.015203 7.704324 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl58-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 0.000288 -6.262589 0.000288 0.000000 1.000000 2.407070 -0.000288 1.000000 0.000000 7.785944 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_U_12-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000144 -1.000000 -0.000493 -6.226791 0.000000 -0.000288 1.710999 -7.787735 -1.711000 0.000084 -0.000000 -2.413241 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_45-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000492 -1.000000 0.000986 -6.261039 0.000493 -0.000576 -1.710999 -7.787745 1.711000 0.000288 0.000493 -2.405265 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_46-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000493 1.000000 0.000985 -6.226914 0.000493 0.000576 -1.710999 -7.787735 -1.711000 -0.000288 -0.000493 -2.842275 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_47-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000841 1.000000 -0.000493 -6.257416 -0.000000 0.000288 1.710999 -7.787744 1.710999 -0.000492 -0.000000 -2.842266 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Screw_48-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000407 0.000000 -6.251879 0.000407 -1.000000 0.000000 0.413470 0.000000 0.000000 1.000000 7.912144 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.295000 0.000000 1.000000 0.000000 21.541000 0.000000 0.000000 1.000000 7.343500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Frame-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294746 0.000000 1.000000 0.000000 21.541000 0.000000 0.000000 1.000000 7.343500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Glass-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.689403 -0.000088 0.689456 -6.235740 -0.689456 -0.000212 0.689402 23.130100 0.000086 -1.000000 -0.000207 7.778500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder73-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.689238 -0.000240 -0.689620 -6.235740 0.689620 0.000100 -0.689238 23.130100 0.000234 -1.000000 0.000097 7.501100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder74-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 -6.236170 -0.000288 -1.000000 0.000288 23.100101 1.000000 -0.000288 0.000000 7.702300 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cone36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000005 0.994142 -0.088972 -6.211990 -0.000006 -0.108081 -0.818378 23.112600 -0.976800 0.000006 0.000004 7.548900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Loft144-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.235510 0.000000 1.000000 0.000000 23.100201 -1.000000 0.000000 -0.000204 7.639900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox137-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.258880 1.000000 -0.000204 0.000000 21.983601 0.000000 0.000000 1.000000 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_275-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 -1.000000 -0.000228 -6.258880 0.000228 0.000228 -1.000000 21.963600 1.000000 0.000228 0.000228 6.856700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000328 0.997751 0.081901 -6.255350 0.000103 0.067022 -1.219252 21.867701 -1.234000 0.000271 -0.000080 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_63-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000121 -1.000000 0.000121 -6.333440 0.000121 0.000121 1.000000 21.963600 -1.000000 -0.000121 0.000121 6.856700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.333440 -1.000000 0.000000 0.000288 21.983601 -0.000288 -0.000288 -1.000000 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000615 0.997749 0.081937 -6.336970 -0.000210 -0.067052 1.219250 21.867701 1.234000 -0.000508 0.000167 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_62-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.258880 1.000000 -0.000204 0.000000 21.983601 0.000000 0.000000 1.000000 6.836630 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle1-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.333440 -1.000000 0.000000 0.000288 21.983601 -0.000288 -0.000288 -1.000000 6.836630 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle2-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.250280 0.000000 1.000000 0.000000 22.961000 0.000000 0.000000 1.000000 7.852900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.250280 0.000000 1.000000 0.000000 21.356901 0.000000 0.000000 1.000000 7.852900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.240080 0.000000 1.000000 0.000000 22.959961 0.000000 0.000000 1.000000 7.881500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.240080 0.000000 1.000000 0.000000 21.355961 0.000000 0.000000 1.000000 7.881500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.295000 0.000000 1.000000 0.000000 18.390001 0.000000 0.000000 1.000000 7.343500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Frame-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294746 0.000000 1.000000 0.000000 18.390001 0.000000 0.000000 1.000000 7.343500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Glass-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.689403 -0.000088 0.689456 -6.235740 -0.689456 -0.000212 0.689402 19.979101 0.000086 -1.000000 -0.000207 7.778500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder73-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.689238 -0.000240 -0.689620 -6.235740 0.689620 0.000100 -0.689238 19.979101 0.000234 -1.000000 0.000097 7.501100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder74-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 -6.236170 -0.000288 -1.000000 0.000288 19.949100 1.000000 -0.000288 0.000000 7.702300 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cone36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000005 0.994142 -0.088972 -6.211990 -0.000006 -0.108081 -0.818378 19.961601 -0.976800 0.000006 0.000004 7.548900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Loft144-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.235510 0.000000 1.000000 0.000000 19.949202 -1.000000 0.000000 -0.000204 7.639900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox137-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.258880 1.000000 -0.000204 0.000000 18.832602 0.000000 0.000000 1.000000 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_275-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 -1.000000 -0.000228 -6.258880 0.000228 0.000228 -1.000000 18.812601 1.000000 0.000228 0.000228 6.856700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000328 0.997751 0.081901 -6.255350 0.000103 0.067022 -1.219252 18.716702 -1.234000 0.000271 -0.000080 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_63-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000121 -1.000000 0.000121 -6.333440 0.000121 0.000121 1.000000 18.812601 -1.000000 -0.000121 0.000121 6.856700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.333440 -1.000000 0.000000 0.000288 18.832602 -0.000288 -0.000288 -1.000000 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000615 0.997749 0.081937 -6.336970 -0.000210 -0.067052 1.219250 18.716702 1.234000 -0.000508 0.000167 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_62-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.258880 1.000000 -0.000204 0.000000 18.832602 0.000000 0.000000 1.000000 6.836630 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle1-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.333440 -1.000000 0.000000 0.000288 18.832602 -0.000288 -0.000288 -1.000000 6.836630 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle2-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.250280 0.000000 1.000000 0.000000 19.810001 0.000000 0.000000 1.000000 7.852900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.250280 0.000000 1.000000 0.000000 18.205902 0.000000 0.000000 1.000000 7.852900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.240080 0.000000 1.000000 0.000000 19.808962 0.000000 0.000000 1.000000 7.881500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.240080 0.000000 1.000000 0.000000 18.204962 0.000000 0.000000 1.000000 7.881500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.295000 0.000000 1.000000 0.000000 15.241000 0.000000 0.000000 1.000000 7.343500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Frame-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294746 0.000000 1.000000 0.000000 15.241000 0.000000 0.000000 1.000000 7.343500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Glass-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.689403 -0.000088 0.689456 -6.235740 -0.689456 -0.000212 0.689402 16.830101 0.000086 -1.000000 -0.000207 7.778500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder73-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.689238 -0.000240 -0.689620 -6.235740 0.689620 0.000100 -0.689238 16.830101 0.000234 -1.000000 0.000097 7.501100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder74-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 -6.236170 -0.000288 -1.000000 0.000288 16.800100 1.000000 -0.000288 0.000000 7.702300 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cone36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000005 0.994142 -0.088972 -6.211990 -0.000006 -0.108081 -0.818378 16.812601 -0.976800 0.000006 0.000004 7.548900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Loft144-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.235510 0.000000 1.000000 0.000000 16.800200 -1.000000 0.000000 -0.000204 7.639900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox137-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.258880 1.000000 -0.000204 0.000000 15.683600 0.000000 0.000000 1.000000 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_275-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 -1.000000 -0.000228 -6.258880 0.000228 0.000228 -1.000000 15.663600 1.000000 0.000228 0.000228 6.856700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000328 0.997751 0.081901 -6.255350 0.000103 0.067022 -1.219252 15.567700 -1.234000 0.000271 -0.000080 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_63-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000121 -1.000000 0.000121 -6.333440 0.000121 0.000121 1.000000 15.663600 -1.000000 -0.000121 0.000121 6.856700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.333440 -1.000000 0.000000 0.000288 15.683600 -0.000288 -0.000288 -1.000000 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000615 0.997749 0.081937 -6.336970 -0.000210 -0.067052 1.219250 15.567700 1.234000 -0.000508 0.000167 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_62-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.258880 1.000000 -0.000204 0.000000 15.683600 0.000000 0.000000 1.000000 6.836630 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle1-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.333440 -1.000000 0.000000 0.000288 15.683600 -0.000288 -0.000288 -1.000000 6.836630 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle2-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.250280 0.000000 1.000000 0.000000 16.661001 0.000000 0.000000 1.000000 7.852900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.250280 0.000000 1.000000 0.000000 15.056900 0.000000 0.000000 1.000000 7.852900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.240080 0.000000 1.000000 0.000000 16.659960 0.000000 0.000000 1.000000 7.881500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.240080 0.000000 1.000000 0.000000 15.055960 0.000000 0.000000 1.000000 7.881500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.295000 0.000000 1.000000 0.000000 12.092000 0.000000 0.000000 1.000000 7.343500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Frame-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294746 0.000000 1.000000 0.000000 12.092000 0.000000 0.000000 1.000000 7.343500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Glass-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.689403 -0.000088 0.689456 -6.235740 -0.689456 -0.000212 0.689402 13.681100 0.000086 -1.000000 -0.000207 7.778500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder73-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.689238 -0.000240 -0.689620 -6.235740 0.689620 0.000100 -0.689238 13.681100 0.000234 -1.000000 0.000097 7.501100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder74-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 -6.236170 -0.000288 -1.000000 0.000288 13.651100 1.000000 -0.000288 0.000000 7.702300 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cone36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000005 0.994142 -0.088972 -6.211990 -0.000006 -0.108081 -0.818378 13.663600 -0.976800 0.000006 0.000004 7.548900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Loft144-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.235510 0.000000 1.000000 0.000000 13.651200 -1.000000 0.000000 -0.000204 7.639900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox137-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.258880 1.000000 -0.000204 0.000000 12.534600 0.000000 0.000000 1.000000 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_275-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 -1.000000 -0.000228 -6.258880 0.000228 0.000228 -1.000000 12.514600 1.000000 0.000228 0.000228 6.856700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000328 0.997751 0.081901 -6.255350 0.000103 0.067022 -1.219252 12.418700 -1.234000 0.000271 -0.000080 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_63-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000121 -1.000000 0.000121 -6.333440 0.000121 0.000121 1.000000 12.514600 -1.000000 -0.000121 0.000121 6.856700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.333440 -1.000000 0.000000 0.000288 12.534600 -0.000288 -0.000288 -1.000000 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000615 0.997749 0.081937 -6.336970 -0.000210 -0.067052 1.219250 12.418700 1.234000 -0.000508 0.000167 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_62-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.258880 1.000000 -0.000204 0.000000 12.534600 0.000000 0.000000 1.000000 6.836630 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle1-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.333440 -1.000000 0.000000 0.000288 12.534600 -0.000288 -0.000288 -1.000000 6.836630 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle2-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.250280 0.000000 1.000000 0.000000 13.512000 0.000000 0.000000 1.000000 7.852900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.250280 0.000000 1.000000 0.000000 11.907900 0.000000 0.000000 1.000000 7.852900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.240080 0.000000 1.000000 0.000000 13.510960 0.000000 0.000000 1.000000 7.881500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.240080 0.000000 1.000000 0.000000 11.906960 0.000000 0.000000 1.000000 7.881500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.295000 0.000000 1.000000 0.000000 8.941000 0.000000 0.000000 1.000000 7.343500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Frame-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.294746 0.000000 1.000000 0.000000 8.941000 0.000000 0.000000 1.000000 7.343500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Glass-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.689403 -0.000088 0.689456 -6.235740 -0.689456 -0.000212 0.689402 10.530100 0.000086 -1.000000 -0.000207 7.778500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder73-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.689238 -0.000240 -0.689620 -6.235740 0.689620 0.000100 -0.689238 10.530100 0.000234 -1.000000 0.000097 7.501100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder74-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 -6.236170 -0.000288 -1.000000 0.000288 10.500100 1.000000 -0.000288 0.000000 7.702300 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cone36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000005 0.994142 -0.088972 -6.211990 -0.000006 -0.108081 -0.818378 10.512600 -0.976800 0.000006 0.000004 7.548900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Loft144-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.235510 0.000000 1.000000 0.000000 10.500200 -1.000000 0.000000 -0.000204 7.639900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox137-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.258880 1.000000 -0.000204 0.000000 9.383600 0.000000 0.000000 1.000000 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_275-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 -1.000000 -0.000228 -6.258880 0.000228 0.000228 -1.000000 9.363600 1.000000 0.000228 0.000228 6.856700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000328 0.997751 0.081901 -6.255350 0.000103 0.067022 -1.219252 9.267700 -1.234000 0.000271 -0.000080 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_63-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000121 -1.000000 0.000121 -6.333440 0.000121 0.000121 1.000000 9.363600 -1.000000 -0.000121 0.000121 6.856700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.333440 -1.000000 0.000000 0.000288 9.383600 -0.000288 -0.000288 -1.000000 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000615 0.997749 0.081937 -6.336970 -0.000210 -0.067052 1.219250 9.267700 1.234000 -0.000508 0.000167 6.836700 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_62-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.258880 1.000000 -0.000204 0.000000 9.383600 0.000000 0.000000 1.000000 6.836630 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle1-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.333440 -1.000000 0.000000 0.000288 9.383600 -0.000288 -0.000288 -1.000000 6.836630 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle2-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.250280 0.000000 1.000000 0.000000 10.361000 0.000000 0.000000 1.000000 7.852900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.250280 0.000000 1.000000 0.000000 8.756900 0.000000 0.000000 1.000000 7.852900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.240080 0.000000 1.000000 0.000000 10.359960 0.000000 0.000000 1.000000 7.881500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.240080 0.000000 1.000000 0.000000 8.755960 0.000000 0.000000 1.000000 7.881500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.298662 0.000000 1.000000 0.000000 0.645700 0.000000 0.000000 1.000000 7.345567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Door_Frame05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.296265 0.000000 1.000000 0.000000 0.645700 0.000000 0.000000 1.000000 7.345567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Glass_14-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.689403 -0.000088 0.689456 -6.237262 -0.689456 -0.000212 0.689402 2.351000 0.000086 -1.000000 -0.000207 7.780567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder73-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.689238 -0.000240 -0.689620 -6.237262 0.689620 0.000100 -0.689238 2.351000 0.000234 -1.000000 0.000097 7.503167 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cylinder74-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 0.000288 1.000000 -6.237692 -0.000288 -1.000000 0.000288 2.320800 1.000000 -0.000288 0.000000 7.704367 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Cone36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000005 0.994142 -0.088972 -6.213512 -0.000006 -0.108081 -0.818378 2.333200 -0.976800 0.000006 0.000004 7.550967 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Loft144-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 -6.237032 0.000000 1.000000 0.000000 2.320800 -1.000000 0.000000 -0.000204 7.641967 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferBox137-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.251792 0.000000 1.000000 0.000000 2.065700 0.000000 0.000000 1.000000 7.854967 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.251792 0.000000 1.000000 0.000000 0.461600 0.000000 0.000000 1.000000 7.854967 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Line111-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000121 -1.000000 0.000121 -6.334962 0.000121 0.000121 1.000000 1.068300 -1.000000 -0.000121 0.000121 6.858767 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_247-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000328 0.997751 0.081901 -6.256862 0.000103 0.067022 -1.219252 0.972400 -1.234000 0.000271 -0.000080 6.838767 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_63-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 -1.000000 -0.000228 -6.260392 0.000228 0.000228 -1.000000 1.068300 1.000000 0.000228 0.000228 6.858767 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_01_Base_247-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000615 0.997749 0.081937 -6.338492 -0.000210 -0.067052 1.219250 0.972400 1.234000 -0.000508 0.000167 6.838767 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new___Door_Type_02_R_Keyhole_62-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.334962 -1.000000 0.000000 0.000288 1.088300 -0.000288 -0.000288 -1.000000 6.838767 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_276-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.260392 1.000000 -0.000204 0.000000 1.088300 0.000000 0.000000 1.000000 6.838767 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Window_101_Handle_275-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 0.000000 -6.260398 1.000000 -0.000204 0.000000 1.088300 0.000000 0.000000 1.000000 6.838697 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle1-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -1.000000 0.000288 -6.334959 -1.000000 0.000000 0.000288 1.088300 -0.000288 -0.000288 -1.000000 6.838697 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_Handle2-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.241603 0.000000 1.000000 0.000000 2.064680 0.000000 0.000000 1.000000 7.883567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.241603 0.000000 1.000000 0.000000 0.460680 0.000000 0.000000 1.000000 7.883567 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_doors_Stair_Side1_new_ChamferCyl432-FACES" />
+    </shape>
+</scene>

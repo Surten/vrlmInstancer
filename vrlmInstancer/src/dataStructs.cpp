@@ -158,6 +158,8 @@ void Geometry::scaleTextureCoords(float desiredTextureScale, vec3 sceneScale) {
     if (currentTextureScale < 0) return;
     float textureScaleFactor = currentTextureScale / desiredTextureScale;
     for (auto &texCoord : textureCoords) {
+        if (textureScaleFactor < 0.0001)
+            std::cout << "problem" << std::endl;
         texCoord = texCoord * textureScaleFactor;
     }
 }

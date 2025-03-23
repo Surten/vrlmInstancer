@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene version="3.5.2" >
+    <integrator type="path" >
+        <integer name="max_depth" value="65" />
+    </integrator>
+    <sensor type="perspective" >
+        <float name="fov" value="68.894737" />
+        <transform name="to_world" >
+            <lookat origin="0.190169 9.847770 -14.234000" target="2.039141 9.847505 -4.406422" up="0.000002 1.000000 0.000027" />
+        </transform>
+        <sampler type="independent" >
+            <integer name="sample_count" value="512" />
+        </sampler>
+        <film type="hdrfilm" >
+            <integer name="width" value="1920" />
+            <integer name="height" value="1080" />
+            <string name="file_format" value="openexr" />
+            <string name="pixel_format" value="rgba" />
+            <rfilter type="tent" />
+        </film>
+    </sensor>
+    <include filename="0-6_equipment.xml" />
+    <include filename="0-6_furniture_halls.xml" />
+    <include filename="0-6_heating.xml" />
+    <include filename="0-6_Lights.xml" />
+    <include filename="0-6_stairs_fences.xml" />
+    <include filename="0-7_construction.xml" />
+    <include filename="0-7_geometry.xml" />
+    <include filename="0-7_tin_plates.xml" />
+    <include filename="0-7_ventilation.xml" />
+    <include filename="7_roof.xml" />
+    <include filename="U-6_doors_F0_new.xml" />
+    <include filename="U-6_doors_F1_new.xml" />
+    <include filename="U-6_doors_F2_new.xml" />
+    <include filename="U-6_doors_F3_new.xml" />
+    <include filename="U-6_doors_F4_new.xml" />
+    <include filename="U-6_doors_F5_new.xml" />
+    <include filename="U-6_doors_F6_new.xml" />
+    <include filename="U-6_doors_FU_new.xml" />
+    <include filename="U-6_doors_Stair_Mid_new.xml" />
+    <include filename="U-6_doors_Stair_Side2_new.xml" />
+    <include filename="U-6_doors_Stair_Side1_new.xml" />
+    <include filename="U-6_windows_0F_new.xml" />
+    <include filename="U-6_windows_1F_new.xml" />
+    <include filename="U-6_windows_2F_new.xml" />
+    <include filename="U-6_windows_3F_new.xml" />
+    <include filename="U-6_windows_4F_new.xml" />
+    <include filename="U-6_windows_5F_new.xml" />
+    <include filename="U-6_windows_6F_new.xml" />
+    <include filename="U-6_windows_46_new.xml" />
+    <include filename="U-6_windows_shutters_0F.xml" />
+    <include filename="U-6_windows_shutters_1F.xml" />
+    <include filename="U-6_windows_shutters_2F.xml" />
+    <include filename="U-6_windows_shutters_3F.xml" />
+    <include filename="U-6_windows_shutters_4F.xml" />
+    <include filename="U-6_windows_shutters_5F.xml" />
+    <include filename="U-6_windows_shutters_6F.xml" />
+    <include filename="U-6_windows_shutters_UF.xml" />
+    <include filename="U-6_windows_Stairway01_new.xml" />
+    <include filename="U-6_windows_Stairway02_new.xml" />
+    <include filename="U-6_windows_UF_new.xml" />
+</scene>

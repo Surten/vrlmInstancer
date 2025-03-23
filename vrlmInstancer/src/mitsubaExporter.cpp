@@ -37,6 +37,34 @@ void MitsubaExporter::writeElementEnd(std::string elementName, int depth)
 	out << leadingSpaces << "</" << elementName << ">" << std::endl;
 }
 
+void MitsubaExporter::writeElementScene(std::string elementName, std::vector<std::string> attributes, int depth)
+{
+	std::string leadingSpaces = getLeadingSpaces(depth);
+	outCurrentScene << leadingSpaces << "<" << elementName << " ";
+	for (int i = 0; i < attributes.size(); i+=2)
+	{
+		outCurrentScene << attributes[i] << "=\"" << attributes[i + 1] << "\" ";
+	}
+	outCurrentScene << "/>" << std::endl;
+}
+
+void MitsubaExporter::writeElementBegScene(std::string elementName, std::vector<std::string> attributes, int depth)
+{
+	std::string leadingSpaces = getLeadingSpaces(depth);
+	outCurrentScene << leadingSpaces << "<" << elementName << " ";
+	for (int i = 0; i < attributes.size(); i += 2)
+	{
+		outCurrentScene << attributes[i] << "=\"" << attributes[i + 1] << "\" ";
+	}
+	outCurrentScene << ">" << std::endl;
+}
+
+void MitsubaExporter::writeElementEndScene(std::string elementName, int depth)
+{
+	std::string leadingSpaces = getLeadingSpaces(depth);
+	outCurrentScene << leadingSpaces << "</" << elementName << ">" << std::endl;
+}
+
 std::string MitsubaExporter::getLeadingSpaces(int depth)
 {
 	std::string ret = "";
@@ -89,12 +117,16 @@ void MitsubaExporter::writeAllGeometriesToObjFiles()
 {
 	for (auto scene : scenes)
 	{
-		std::string sceneGeometryFolder = this->outputFolder + "/" + scene->name.substr(0, scene->name.size()-4);
+		std::string sceneGeometryFolder = scene->name;
+		size_t ind = scene->name.rfind('/');
+		if (ind != std::string::npos) sceneGeometryFolder = scene->name.substr(ind+1);
+		sceneGeometryFolder = this->outputFolder + "/" + sceneGeometryFolder.substr(0, sceneGeometryFolder.size()-4);
 		std::filesystem::create_directory(sceneGeometryFolder);
 		for (auto geometry : scene->geometries)
 		{
 			writeGeometryToObj(geometry, sceneGeometryFolder);
 		}
+		std::cout << "Exported geometries of scene: " << scene->name << std::endl;
 	}
 }
 
@@ -109,9 +141,13 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * ca
 	out.open(this->outputFolder + "/" + sceneFileName + ".xml");
 
 	// export all geometries into individual .obj files
-	writeAllGeometriesToObjFiles();
+	
+	//writeAllGeometriesToObjFiles();
+
+
+
 	out << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
-	writeElementBeg("scene", { "version", "3.0.0" }, depth);
+	writeElementBeg("scene", { "version", "3.5.2" }, depth);
 	writeIntegrator(depth + 1);
 	writeSensor(camera, depth + 1);
 
@@ -120,14 +156,38 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * ca
 	for (auto scene : scenes)
 	{
 		scene->initShapeNodeTransformMatricies();
+		std::string sceneGeometryFolder = scene->name;
+		size_t ind = scene->name.rfind('/');
+		if (ind != std::string::npos) sceneGeometryFolder = scene->name.substr(ind + 1);
+		sceneGeometryFolder = sceneGeometryFolder.substr(0, sceneGeometryFolder.size() - 4);
+		outCurrentScene.open(this->outputFolder + "/" + sceneGeometryFolder + ".xml");
+
+
+		outCurrentScene << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
+		writeElementBegScene("scene", { "version", "3.5.2" }, depth);
+
 		for (auto lightNode : scene->lights)
 		{
 			writeLight(lightNode, depth + 1);
 		}
 		for (auto shapeNode : scene->ShapeNodes)
 		{
-			writeShape(shapeNode, scene->name.substr(0, scene->name.size() - 4) + "/" + shapeNode->geometry->name, depth + 1);
+			if (!shapeNode->geometry) continue;
+			if (shapeNode->usesOtherGeometry) continue;
+			writeShapeGroup(shapeNode, sceneGeometryFolder, depth + 1);
 		}
+		for (auto shapeNode : scene->ShapeNodes)
+		{
+			if (!shapeNode->geometry) continue;
+			
+			writeShapeReference(shapeNode, sceneGeometryFolder, depth + 1);
+		}
+
+		writeElementEndScene("scene", depth);
+		outCurrentScene.close();
+
+		writeElement("include", { "filename", sceneGeometryFolder + ".xml" }, depth + 1);
+		std::cout << "Exported scene: " << scene->name << std::endl;
 	}
 
 
@@ -174,76 +234,90 @@ void MitsubaExporter::writeFilm(int depth)
 		writeElement("integer", { "name", "height", "value", std::to_string(imageHeight) }, depth + 1);
 		writeElement("string", { "name", "file_format", "value", "openexr"}, depth + 1);
 		writeElement("string", { "name", "pixel_format", "value", "rgba"}, depth + 1);
-		writeElement("boolean", { "name", "banner", "value", "false"}, depth + 1);
 		writeElement("rfilter", { "type", "tent"}, depth + 1);
 	writeElementEnd("film", depth);
 }
 
 void MitsubaExporter::writeMaterial(Material* mat, int depth)
 {
-	writeElementBeg("bsdf", { "type", "diffuse" }, depth);
-		writeElement("rgb", { "name", "reflectance", "value", mat->diffuseColor.toString() }, depth + 1);
-	writeElementEnd("bsdf", depth);
+	writeElementBegScene("bsdf", { "type", "diffuse" }, depth);
+		writeElementScene("rgb", { "name", "reflectance", "value", mat->diffuseColor.toString() }, depth + 1);
+	writeElementEndScene("bsdf", depth);
 }
 
-void MitsubaExporter::writeShape(ShapeNode* shapeNode, std::string filename, int depth)
+void MitsubaExporter::writeShape(ShapeNode* shapeNode, std::string filepath, int depth)
 {
-	writeElementBeg("shape", { "type", "obj" }, depth);
-		writeElement("string", { "name", "filename", "value", filename + ".obj"}, depth + 1);
-		writeTransform(shapeNode, depth + 1);
+	writeElementBegScene("shape", { "type", "obj" }, depth);
+		writeElementScene("string", { "name", "filename", "value", filepath + "/" + shapeNode->geometry->name + ".obj"}, depth + 1);
 		writeBsdf(shapeNode->material, depth + 1);
-	writeElementEnd("shape", depth);
+	writeElementEndScene("shape", depth);
+}
+void MitsubaExporter::writeShapeGroup(ShapeNode* shapeNode, std::string filepath, int depth)
+{
+	//if (shapeNode->geometry->name[0] == '_') shapeNode->geometry->name[0] = 'a';
+	writeElementBegScene("shape", { "type", "shapegroup", "id", filepath + "_" + shapeNode->geometry->name}, depth);
+		writeShape(shapeNode, filepath, depth + 1);
+	writeElementEndScene("shape", depth);
+}
+void MitsubaExporter::writeShapeReference(ShapeNode* shapeNode, std::string filepath, int depth)
+{
+	writeElementBegScene("shape", { "type", "instance" }, depth);
+		writeTransform(shapeNode, depth + 1);
+		writeElementScene("ref", { "id", filepath + "_" + shapeNode->geometry->name }, depth + 1);
+	writeElementEndScene("shape", depth);
 }
 
 void MitsubaExporter::writeTransform(ShapeNode* shapeNode, int depth)
 {
-	writeElementBeg("transform", { "name", "to_world" }, depth);
-		writeElement("matrix", { "value", shapeNode->transformFromRootMatrix->GetAsString()}, depth + 1);
-	writeElementEnd("transform", depth);
+	writeElementBegScene("transform", { "name", "to_world" }, depth);
+		writeElementScene("matrix", { "value", shapeNode->transformFromRootMatrix->GetAsString()}, depth + 1);
+	writeElementEndScene("transform", depth);
 }
 
 void MitsubaExporter::writeBsdfNamed(Material* material, int depth)
 {
-	writeElementBeg("bsdf", { "type", "twosided", "id", "TODO" }, depth);
+	writeElementBegScene("bsdf", { "type", "twosided", "id", "TODO" }, depth);
 		writeBsdf(material, depth + 1);
-	writeElementEnd("bsdf", depth);
+	writeElementEndScene("bsdf", depth);
 }
 
 void MitsubaExporter::writeBsdf(Material* material, int depth)
 {
-	writeElementBeg("bsdf", { "type", "diffuse" }, depth);
-		writeElement("rgb", { "name", "reflectance", "value", material->diffuseColor.toString()}, depth + 1);
-	writeElementEnd("bsdf", depth);
+	writeElementBegScene("bsdf", { "type", "diffuse" }, depth);
+		writeElementScene("rgb", { "name", "reflectance", "value", material->diffuseColor.toString()}, depth + 1);
+	writeElementEndScene("bsdf", depth);
 }
 
 void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
 {
-	if (true)
+	if (false)
 	{
-		writeElementBeg("emitter", { "type", "point" }, depth);
-			writeElement("rgb", { "name", "intensity", "value", lightNode->color.toString()}, depth + 1);
-			writeElement("point", { "name", "position", "x", std::to_string(lightNode->location.x), "y", std::to_string(lightNode->location.y), "z", std::to_string(lightNode->location.z), }, depth + 1);
-		writeElementEnd("emitter", depth);
+		writeElementBegScene("emitter", { "type", "point" }, depth);
+			writeElementScene("rgb", { "name", "intensity", "value", lightNode->color.toString()}, depth + 1);
+			writeElementScene("point", { "name", "position", "x", std::to_string(lightNode->location.x), "y", std::to_string(lightNode->location.y), "z", std::to_string(lightNode->location.z), }, depth + 1);
+		writeElementEndScene("emitter", depth);
 	}
 	else if (lightNode->lightType == LightNode::LightType::SPOTLIGHT)
 	{
-		writeElementBeg("emitter", { "type", "spot" }, depth);
-			writeElementBeg("transform", { "name", "to_world" }, depth + 1);
-				writeElement("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString()}, depth + 2);
-			writeElementEnd("transform", depth + 1);
-			writeElement("beam_width", { "type", "float", "value", std::to_string(lightNode->beamWidth) }, depth + 1);
-			writeElement("cutoff_angle", { "type", "float", "value", std::to_string(lightNode->cutOffAngle) }, depth + 1);
-		writeElementEnd("emitter", depth);
+		float mult = 10;
+		writeElementBegScene("emitter", { "type", "spot" }, depth);
+			writeElementBegScene("transform", { "name", "to_world" }, depth + 1);
+				writeElementScene("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString()}, depth + 2);
+			writeElementEndScene("transform", depth + 1);
+			writeElementScene("float", { "name", "intensity", "value", std::to_string((lightNode->color * lightNode->intensity).len()* mult) }, depth + 1);
+			writeElementScene("float", { "name", "beam_width", "value", std::to_string(RAD_TO_DEG(lightNode->beamWidth)*2) }, depth + 1);
+			writeElementScene("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle)) }, depth + 1);
+		writeElementEndScene("emitter", depth);
 	}
 	else if (lightNode->lightType == LightNode::LightType::GONIOLIGHT)
 	{
-		writeElementBeg("emitter", { "type", "spot" }, depth);
-			writeElementBeg("transform", { "name", "to_world" }, depth + 1);
-			writeElement("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString() }, depth + 2);
-			writeElementEnd("transform", depth + 1);
-			//writeElement("intensity", { "type", "float", "value", std::to_string(lightNode->intensity)}, depth + 1);
-			writeElement("beam_width", { "type", "float", "value", "80"}, depth + 1);
-			writeElement("cutoff_angle", { "type", "float", "value", "40"}, depth + 1);
-		writeElementEnd("emitter", depth);
+		writeElementBegScene("emitter", { "type", "spot" }, depth);
+			writeElementBegScene("transform", { "name", "to_world" }, depth + 1);
+			writeElementScene("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString() }, depth + 2);
+			writeElementEndScene("transform", depth + 1);
+			writeElementScene("float", { "name", "intensity", "value", std::to_string(lightNode->intensity)}, depth + 1);
+			writeElementScene("float", { "name", "beam_width", "value", "100"}, depth + 1);
+			writeElementScene("float", { "name", "cutoff_angle", "value", "50"}, depth + 1);
+		writeElementEndScene("emitter", depth);
 	}
 }

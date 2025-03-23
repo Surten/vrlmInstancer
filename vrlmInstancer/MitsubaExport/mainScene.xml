@@ -16,13 +16,16 @@
             <integer name="height" value="500" />
             <string name="file_format" value="openexr" />
             <string name="pixel_format" value="rgba" />
-            <boolean name="banner" value="false" />
             <rfilter type="tent" />
         </film>
     </sensor>
-    <emitter type="point" >
-        <rgb name="intensity" value="3.000000 3.000000 3.000000" />
-        <point name="position" x="0.173249" y="11.093199" z="10.569499" />
+    <emitter type="spot" >
+        <transform name="to_world" >
+            <lookat origin="0.173249 11.093199 10.569499" target="0.173249 10.093199 10.569499" />
+        </transform>
+        <float name="intensity" value="1.000000" />
+        <float name="beam_width" value="100" />
+        <float name="cutoff_angle" value="50" />
     </emitter>
     <shape type="obj" >
         <string name="filename" value="room215/Type_R_02_Wheel_03-FACES.obj" />

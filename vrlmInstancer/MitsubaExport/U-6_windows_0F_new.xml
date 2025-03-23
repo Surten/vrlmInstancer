@@ -1,0 +1,3057 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene version="3.5.2" >
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Squares_18-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Squares_16-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Squares_16-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Squares_25-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Office_Glass_02-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Office_Glass_02-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Windows_Glass_02-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Windows_Glass_02-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_26-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Glass_26-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Glass_38-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Glass_38-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Glass_44-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Glass_44-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Glass_36-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Glass_35-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Glass_17-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Glass_17-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Glass_17-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Glass_17-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Glass_19-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Glass_19-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Glass_20-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Glass_20-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Glass_20-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Glass_20-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Glass_51-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Glass_51-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Glass_49-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Glass_49-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Glass_48-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Glass_48-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Glass_38-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Glass_38-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Frame_52-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Frame_52-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Frame_51-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Frame_51-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Frame_48-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Frame_48-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Box02-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Box02-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Frame_45-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Frame_45-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Box_04-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Box_04-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Frame_23-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Frame_23-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Frame_38-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Frame_38-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Frame_23-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Frame_23-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Box_02-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Box_02-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Frame_18-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Frame_19-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Frame_19-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Frame_01-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Frame_16-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Frame_16-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Box_01-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Box_01-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Frame_36-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Frame_36-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Box_03-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Box_03-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Frame_36-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Frame_36-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Frame_44-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Frame_44-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Box01-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Box01-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Frame_42-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Frame_42-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_06-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Front_06-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_09-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Bottom_09-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_14-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Front_14-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_33-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Detector_33-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_38-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Detector_Cable_38-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_26-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Frame_26-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_17-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Bottom_17-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Windows_01-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Windows_01-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Windows_Dark_Glass_03-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Windows_Dark_Glass_03-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Office_Windows_02-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Office_Windows_02-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Squares_17-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Squares_17-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Squares_41-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Squares_41-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Squares_37-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Squares_37-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Squares_22-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Squares_22-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Squares_46-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Squares_46-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Squares_45-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Squares_45-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Squares_23-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Squares_23-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_220_Squares_19-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_220_Squares_19-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_05-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Front_05-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_08-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Bottom_08-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_02-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Front_02-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_05-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Bottom_05-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Glass_37-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Glass_37-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Frame_37-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Frame_37-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.078430 0.109800 0.258800" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Blue_Window_30_Squares_36-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Blue_Window_30_Squares_36-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.337300 0.337300 0.337300" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_01-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Front_01-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_01-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Bottom_01-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Object29-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Object29-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Window_101_Glass_29-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Window_101_Glass_29-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Window_101_Frame_29-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Window_101_Frame_29-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.921600 0.933300 0.000000" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Window_101_Handle_01_Base_29-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Window_101_Handle_01_Base_29-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Window_101_Handle_29-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Window_101_Handle_29-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_WINDOW_JOINTS-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/WINDOW_JOINTS-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Object27-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Object27-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Window_101_Glass_27-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Window_101_Glass_27-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Window_101_Frame_27-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Window_101_Frame_27-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.921600 0.933300 0.000000" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Window_101_Handle_01_Base_27-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Window_101_Handle_01_Base_27-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Window_101_Handle_27-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Window_101_Handle_27-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_WINDOW_JOINTS_0-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/WINDOW_JOINTS_0-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_WINDOW_JOINTS_01-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/WINDOW_JOINTS_01-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_06-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/GROUND_FLOOR_WINDOW_01_Handle_01_Base_06-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_06-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/GROUND_FLOOR_WINDOW_01_Handle_06-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_12-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Detector_12-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_18-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Detector_Cable_18-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_06-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Glass_06-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_06-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Frame_06-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_17-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Detector_17-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_23-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Detector_Cable_23-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_11-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Frame_11-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.196100 0.196100 0.196100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_11-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/GROUND_FLOOR_WINDOW_01_Handle_01_Base_11-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_11-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/GROUND_FLOOR_WINDOW_01_Handle_11-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_11-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/Ground_Floor_Window_01_Glass_11-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.823500 0.851000 0.882400" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="U-6_windows_0F_new_WINDOW_JOINTS_02-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="U-6_windows_0F_new/WINDOW_JOINTS_02-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.745100 0.745100 0.745100" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -7.970000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -7.680001 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_16-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -10.180001 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_16-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -26.687000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 11.428400 0.000000 1.000000 0.000000 3.299500 0.000000 0.000000 1.000000 5.583000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Office_Glass_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 6.217999 0.000000 1.000000 0.000000 1.000000 0.000000 0.000000 1.000000 -4.505000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Windows_Glass_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.119999 0.000000 1.000000 0.000000 -0.415000 -1.000000 0.000000 -0.000204 4.533000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.119999 0.000000 1.000000 0.000000 -0.415000 -1.000000 0.000000 -0.000204 0.762000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.119999 0.000000 1.000000 0.000000 -0.415000 -1.000000 0.000000 -0.000204 -3.004000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -5.670001 0.000000 -1.000000 0.000074 3.099600 0.000000 -0.000407 -0.181800 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_38-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.820001 0.000000 -1.000000 0.000074 3.099600 0.000000 -0.000407 -0.181800 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_38-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -7.970000 0.000000 -1.000000 0.000074 3.099600 0.000000 -0.000407 -0.181800 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_38-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -7.970000 0.000000 -1.000000 0.000074 2.299600 0.000000 -0.000407 -0.181800 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_38-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.820001 0.000000 -1.000000 0.000074 2.299600 0.000000 -0.000407 -0.181800 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_38-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -5.670001 0.000000 -1.000000 0.000074 2.299600 0.000000 -0.000407 -0.181800 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_38-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -5.670001 0.000000 -1.000000 0.000074 1.499600 0.000000 -0.000407 -0.181800 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_44-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.820001 0.000000 -1.000000 0.000074 1.499600 0.000000 -0.000407 -0.181800 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_44-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000204 -1.692000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -0.181800 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000037 -3.892000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000204 -4.192000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -0.181800 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000037 -6.392000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000204 -6.687000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -0.181800 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000037 -8.892000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000204 -9.187000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -0.181800 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000037 -11.392000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000204 -11.687000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -0.181800 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000037 -13.892401 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000204 -14.187401 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -0.181800 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000037 -16.392000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000204 -16.687000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -0.181800 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000037 -18.892000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000204 -19.187000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -0.181800 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000037 -21.392000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000204 -21.687000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -0.181800 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000037 -23.892000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000204 -24.187000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -0.181800 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000037 -26.392000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099600 1.000000 0.000000 -0.000204 -26.692001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -10.180001 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 -7.970000 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -7.680001 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 -5.470000 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -5.180000 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 -3.440001 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 -1.700001 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -1.400001 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 0.802999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 1.098000 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 3.302999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 3.598000 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 5.802999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 6.098000 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 8.302999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 8.598000 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 10.802500 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 11.097500 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 13.302999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 13.598000 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 15.802999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 16.098000 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 18.302999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 18.598000 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 20.799999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 21.099998 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 23.299999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 23.599998 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 25.799999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 26.099998 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 28.299999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_35-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 28.599998 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000074 30.799999 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -0.181800 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_19-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 30.599998 0.000000 1.000000 0.000000 3.099600 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099600 -1.000000 0.000000 -0.000204 -27.472000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_20-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 0.181800 31.169998 0.000000 1.000000 0.000000 3.099600 -1.000000 0.000000 -0.000037 -25.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_20-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099600 -1.000000 0.000000 -0.000204 -24.972000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_20-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 0.181800 31.169998 0.000000 1.000000 0.000000 3.099600 -1.000000 0.000000 -0.000037 -22.766001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_20-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099600 -1.000000 0.000000 -0.000204 -22.471001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_20-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 0.181800 31.169998 0.000000 1.000000 0.000000 3.099600 -1.000000 0.000000 -0.000037 -20.266001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_20-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099600 -1.000000 0.000000 -0.000204 -19.971001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_20-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 0.181800 31.169998 0.000000 1.000000 0.000000 3.099600 -1.000000 0.000000 -0.000037 -17.766001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_20-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.189999 0.000000 1.000000 0.000000 1.499600 0.000000 0.000000 0.181800 -16.865000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.189999 0.000000 1.000000 0.000000 2.299600 0.000000 0.000000 0.181800 -16.865000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_49-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 28.040001 0.000000 1.000000 0.000000 2.299600 0.000000 0.000000 0.181800 -16.865000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_48-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 28.040001 0.000000 1.000000 0.000000 3.099600 0.000000 0.000000 0.181800 -16.865000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_48-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 31.389999 0.000000 1.000000 0.000000 3.099600 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_38-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.189999 0.000000 1.000000 0.000000 3.099600 0.000000 0.000000 0.181800 -16.865000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Glass_49-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099600 -1.000000 0.000000 -0.000204 -17.471001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_20-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.189999 0.000000 1.000000 0.000000 1.499500 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_52-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 28.040001 0.000000 1.000000 0.000000 1.499500 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_51-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 28.040001 0.000000 1.000000 0.000000 2.299500 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_48-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 28.040001 0.000000 1.000000 0.000000 3.099500 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_48-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.259998 0.000000 1.000000 0.000000 3.799500 0.000000 0.000000 1.000000 -16.864000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Box02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.189999 0.000000 1.000000 0.000000 3.099500 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_45-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.189999 0.000000 1.000000 0.000000 2.299500 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_45-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 31.169998 0.000000 1.000000 0.000000 3.099500 0.000000 0.000000 1.000000 -16.881001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Box_04-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -17.471001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 31.389999 0.000000 1.000000 0.000000 3.099500 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_38-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -17.766001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -19.971001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -20.266001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -22.471001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -22.766001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -24.972000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -25.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -27.472000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 31.169998 0.000000 1.000000 0.000000 3.099500 0.000000 0.000000 1.000000 -27.252001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Box_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 30.599998 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 30.799999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_19-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 28.599998 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 28.299999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 26.099998 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 25.799999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 23.599998 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 23.299999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 21.099998 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 20.799999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 18.598000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 18.302999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 16.098000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 15.802999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 13.598000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 13.302999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 11.097500 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 10.802500 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 8.598000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 8.302999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 6.098000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 5.802999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 3.598000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 3.302999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 1.098000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 0.802999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -1.400001 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -1.700001 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_16-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -3.440001 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_16-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -5.180000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -5.470000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -7.680001 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -7.970000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -10.180001 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -9.960000 0.000000 1.000000 0.000000 3.099500 0.000000 0.000000 1.000000 -27.262001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Box_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -26.692001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -26.392000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -24.187000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -23.892000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -21.687000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -21.392000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -19.187000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -18.892000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -16.687000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -16.392000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -14.187401 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -13.892401 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -11.687000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -11.392000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -9.187000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -8.892000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -6.687000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -6.392000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -4.192000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -3.892000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -1.692000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -9.960000 0.000000 1.000000 0.000000 3.099500 0.000000 0.000000 1.000000 -1.892000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Box_03-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -7.970000 0.000000 -1.000000 0.000407 3.099500 0.000000 -0.000407 -1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.820001 0.000000 -1.000000 0.000407 3.099500 0.000000 -0.000407 -1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -5.670001 0.000000 -1.000000 0.000407 3.099500 0.000000 -0.000407 -1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -5.670001 0.000000 -1.000000 0.000407 2.299500 0.000000 -0.000407 -1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.820001 0.000000 -1.000000 0.000407 2.299500 0.000000 -0.000407 -1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -7.970000 0.000000 -1.000000 0.000407 2.299500 0.000000 -0.000407 -1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -5.670001 0.000000 -1.000000 0.000407 1.499500 0.000000 -0.000407 -1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_44-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.820001 0.000000 -1.000000 0.000407 1.499500 0.000000 -0.000407 -1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_44-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -9.650001 0.000000 1.000000 0.000000 3.899500 0.000000 0.000000 1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Box01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -7.970000 0.000000 -1.000000 0.000407 1.499500 0.000000 -0.000407 -1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Frame_42-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000286 -1.000000 -0.000113 29.254999 0.000286 0.000113 -1.000000 1.474200 1.000000 0.000286 0.000286 9.304001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000288 -0.000288 29.125000 -0.000288 0.000000 1.000000 0.811000 0.000288 1.000000 0.000000 7.406000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_09-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000286 -1.000000 -0.000113 29.254999 0.000286 0.000113 -1.000000 1.474200 1.000000 0.000286 0.000286 6.794000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000288 -0.000288 29.125000 -0.000288 0.000000 1.000000 0.811000 0.000288 1.000000 0.000000 4.896000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_09-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000286 -1.000000 -0.000113 29.254999 0.000286 0.000113 -1.000000 1.474200 1.000000 0.000286 0.000286 4.283000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_14-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.115000 0.000000 1.000000 0.000000 0.897000 -1.000000 0.000000 -0.000204 3.541000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_33-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.115000 0.000000 1.000000 0.000000 -0.365000 1.000000 0.000000 -0.000204 5.046000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_38-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.125000 0.000000 1.000000 0.000000 -0.415000 -1.000000 0.000000 -0.000204 4.528000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000288 -0.000288 29.125000 -0.000288 0.000000 1.000000 0.811000 0.000288 1.000000 0.000000 2.385000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000286 -1.000000 -0.000113 29.254999 0.000286 0.000113 -1.000000 1.474200 1.000000 0.000286 0.000286 0.516800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_14-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.115000 0.000000 1.000000 0.000000 0.897000 -1.000000 0.000000 -0.000204 -0.225000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_33-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.115000 0.000000 1.000000 0.000000 -0.365000 1.000000 0.000000 -0.000204 1.279400 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_38-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.125000 0.000000 1.000000 0.000000 -0.415000 -1.000000 0.000000 -0.000204 0.762000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000288 -0.000288 29.125000 -0.000288 0.000000 1.000000 0.811000 0.000288 1.000000 0.000000 -1.381000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000286 -1.000000 -0.000113 29.254999 0.000286 0.000113 -1.000000 1.474200 1.000000 0.000286 0.000286 -3.249000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_14-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.115000 0.000000 1.000000 0.000000 0.897000 -1.000000 0.000000 -0.000204 -3.991000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_33-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 29.115000 0.000000 1.000000 0.000000 -0.365000 1.000000 0.000000 -0.000204 -2.487000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_38-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.125000 0.000000 1.000000 0.000000 -0.415000 -1.000000 0.000000 -0.000204 -3.004000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_26-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000288 -0.000288 29.125000 -0.000288 0.000000 1.000000 0.811000 0.000288 1.000000 0.000000 -5.147000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000288 -0.000288 29.125000 -0.000288 0.000000 1.000000 0.811000 0.000288 1.000000 0.000000 -12.674999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_09-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000286 -1.000000 -0.000113 29.254999 0.000286 0.000113 -1.000000 1.474200 1.000000 0.000286 0.000286 -10.785000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 6.218000 0.000000 1.000000 0.000000 1.000000 0.000000 0.000000 1.000000 -4.505000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Windows_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 6.218000 0.000000 1.000000 0.000000 1.949500 0.000000 0.000000 1.000000 -4.505000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Windows_Dark_Glass_03-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 11.428100 0.000000 1.000000 0.000000 3.299500 0.000000 0.000000 1.000000 10.580999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Office_Windows_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -3.440001 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -26.396999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -5.470000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -1.700001 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -23.896999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -5.180000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -24.187000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -5.670001 0.000000 -1.000000 0.000407 2.269800 0.000000 -0.000407 -1.000000 -1.884000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_41-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.820001 0.000000 -1.000000 0.000407 2.269800 0.000000 -0.000407 -1.000000 -1.884000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_41-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -7.970000 0.000000 -1.000000 0.000407 2.269800 0.000000 -0.000407 -1.000000 -1.884000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_41-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -1.688000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -7.970000 0.000000 -1.000000 0.000407 3.069800 0.000000 -0.000407 -1.000000 -1.884000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_41-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -6.820001 0.000000 -1.000000 0.000407 3.069800 0.000000 -0.000407 -1.000000 -1.884000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_41-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -5.670001 0.000000 -1.000000 0.000407 3.069800 0.000000 -0.000407 -1.000000 -1.884000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_41-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -3.893000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 31.389999 0.000000 1.000000 0.000000 3.099500 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_37-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -4.188000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -6.687800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -9.188000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -11.688000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -14.188000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -16.688000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -19.187000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -21.687000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -17.466999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_22-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -19.966999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_22-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -22.466999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_22-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -24.966999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_22-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 30.599998 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_16-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -27.466999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_22-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 -1.400001 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 1.098000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 3.598000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 6.098000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 8.598000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 11.097500 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 13.598000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 16.098000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 18.598000 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 21.099998 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 23.599998 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 26.099998 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 28.599998 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_25-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.189999 0.000000 1.000000 0.000000 2.269800 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_46-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 28.040001 0.000000 1.000000 0.000000 2.269800 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_45-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 28.040001 0.000000 1.000000 0.000000 3.069800 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_45-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.189999 0.000000 1.000000 0.000000 3.069800 0.000000 0.000000 1.000000 -16.868000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_46-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -6.392800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -8.893000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -11.393000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -13.893000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -16.393000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -18.896999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -9.950000 0.000000 1.000000 0.000000 3.099500 1.000000 0.000000 -0.000204 -21.396999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -17.767000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -20.267000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -22.767000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 31.169998 0.000000 1.000000 0.000000 3.099500 -1.000000 0.000000 -0.000204 -25.267000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 30.799999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_19-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 0.802999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 3.302999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 5.802999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 8.302999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 10.802500 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 13.302999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 15.802999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 18.302999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 20.799999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 23.299999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 25.799999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000000 -0.000407 28.299999 0.000000 1.000000 0.000000 3.099500 0.000407 0.000000 -1.000000 -27.257000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_220_Squares_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 -0.000288 22.855000 0.000288 0.000000 -1.000000 1.474200 0.000288 -1.000000 0.000000 13.285000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 -1.000000 0.000228 24.744999 0.000228 0.000228 1.000000 0.811000 -1.000000 -0.000228 0.000228 13.145000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_08-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 -0.000288 -0.000288 17.830000 0.000288 0.000000 -1.000000 1.474200 0.000288 -1.000000 0.000000 13.285000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 -1.000000 0.000228 19.728001 0.000228 0.000228 1.000000 0.811000 -1.000000 -0.000228 0.000228 13.145000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_08-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 1.000000 -0.000228 29.254999 -0.000228 0.000228 1.000000 1.474200 1.000000 -0.000228 0.000228 11.815001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.125000 0.000000 -0.000204 -1.000000 0.811000 0.000000 1.000000 -0.000204 13.715000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 29.125000 0.000000 -0.000204 -1.000000 0.811000 0.000000 1.000000 -0.000204 -6.373000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_05-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 1.000000 -0.000228 29.254999 -0.000228 0.000228 1.000000 1.474200 1.000000 -0.000228 0.000228 -8.271000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -10.170001 0.000000 -1.000000 0.000407 3.099600 0.000000 -0.000407 -1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Glass_37-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -10.170001 0.000000 -1.000000 0.000407 3.099500 0.000000 -0.000407 -1.000000 -1.882001 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Frame_37-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -10.170001 0.000000 -1.000000 0.000407 3.099500 0.000000 -0.000407 -1.000000 -1.884000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Blue_Window_30_Squares_36-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000288 -0.000288 15.319000 -0.000288 0.000000 1.000000 1.474200 0.000288 1.000000 0.000000 13.285000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000121 -1.000000 -0.000121 13.421000 0.000121 0.000121 -1.000000 0.811000 1.000000 0.000121 0.000121 13.145000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-1.000000 0.000288 -0.000288 20.341000 -0.000288 0.000000 1.000000 1.474200 0.000288 1.000000 0.000000 13.285000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Front_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000121 -1.000000 -0.000121 18.443001 0.000121 0.000121 -1.000000 0.811000 1.000000 0.000121 0.000121 13.145000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Bottom_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 12.020000 0.000000 -1.000000 0.000407 1.050000 0.000000 -0.000407 -1.000000 12.357249 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Object29-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 12.020000 0.000000 -1.000000 0.000407 1.050000 0.000000 -0.000407 -1.000000 12.352250 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Glass_29-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 12.020000 0.000000 -1.000000 0.000407 1.050000 0.000000 -0.000407 -1.000000 12.352250 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Frame_29-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 11.522600 0.000000 -0.000204 -1.000000 1.742500 0.000000 1.000000 -0.000204 12.313799 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Handle_01_Base_29-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 11.522600 0.000000 -0.000204 -1.000000 1.742420 0.000000 1.000000 -0.000204 12.313800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Handle_29-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 12.634501 0.000000 -1.000000 0.000407 1.185300 0.000000 -0.000407 -1.000000 12.304740 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -2.330000 0.000000 -1.000000 0.000407 1.050000 0.000000 -0.000407 -1.000000 12.357249 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Object29-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -2.330000 0.000000 -1.000000 0.000407 1.050000 0.000000 -0.000407 -1.000000 12.352250 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Glass_29-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -2.330000 0.000000 -1.000000 0.000407 1.050000 0.000000 -0.000407 -1.000000 12.352250 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Frame_29-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -2.827400 0.000000 -0.000204 -1.000000 1.742500 0.000000 1.000000 -0.000204 12.313799 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Handle_01_Base_29-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -2.827400 0.000000 -0.000204 -1.000000 1.742420 0.000000 1.000000 -0.000204 12.313800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Handle_29-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 -1.715500 0.000000 -1.000000 0.000407 1.185300 0.000000 -0.000407 -1.000000 12.304740 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -5.287249 0.000000 1.000000 0.000000 1.050000 1.000000 0.000000 -0.000204 0.520000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Object27-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -5.282249 0.000000 1.000000 0.000000 1.050000 1.000000 0.000000 -0.000204 0.520000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Glass_27-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -5.282249 0.000000 1.000000 0.000000 1.050000 1.000000 0.000000 -0.000204 0.520000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Frame_27-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 1.000000 -0.000228 -5.243800 -0.000228 0.000228 1.000000 1.742500 1.000000 -0.000228 0.000228 1.017400 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Handle_01_Base_27-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000228 1.000000 -0.000228 -5.243799 -0.000228 0.000228 1.000000 1.742420 1.000000 -0.000228 0.000228 1.017400 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Window_101_Handle_27-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 -1.000000 -5.234749 0.000000 1.000000 0.000000 1.185300 1.000000 0.000000 -0.000204 -0.094500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_0-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 14.779700 0.000000 1.000000 0.000000 -0.280000 0.000000 0.000000 1.000000 13.097950 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 15.909901 0.000000 -0.000204 1.000000 0.251000 0.000000 -1.000000 -0.000204 13.106999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 15.909900 0.000000 -0.000204 1.000000 0.251690 0.000000 -1.000000 -0.000204 13.106999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 1.000000 -0.000288 14.936800 1.000000 0.000000 0.000288 -0.249000 0.000288 -0.000288 -1.000000 13.140300 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_12-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 1.000000 -0.000288 14.864100 1.000000 0.000000 0.000288 -0.249000 0.000288 -0.000288 -1.000000 13.140300 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 15.419200 0.000000 1.000000 0.000000 -0.415000 0.000000 0.000000 1.000000 13.145450 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 15.419200 0.000000 1.000000 0.000000 -0.415000 0.000000 0.000000 1.000000 13.145450 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 0.000000 18.207201 -1.000000 -0.000204 0.000000 -0.249000 0.000000 0.000000 1.000000 13.139800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 0.000000 18.279902 -1.000000 -0.000204 0.000000 -0.249000 0.000000 0.000000 1.000000 13.139800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 17.724800 0.000000 -1.000000 0.000407 -0.415000 0.000000 -0.000407 -1.000000 13.144950 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 17.234100 0.000000 -0.000204 -1.000000 0.251000 0.000000 1.000000 -0.000204 13.106501 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 17.234100 0.000000 -0.000204 -1.000000 0.251690 0.000000 1.000000 -0.000204 13.106500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 17.724800 0.000000 -1.000000 0.000407 -0.415000 0.000000 -0.000407 -1.000000 13.144950 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 18.364300 0.000000 -1.000000 0.000407 -0.280000 0.000000 -0.000407 -1.000000 13.097450 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 20.440201 0.000000 1.000000 0.000000 -0.415000 0.000000 0.000000 1.000000 13.145450 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 20.930901 0.000000 -0.000204 1.000000 0.251000 0.000000 -1.000000 -0.000204 13.106999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 20.930901 0.000000 -0.000204 1.000000 0.251690 0.000000 -1.000000 -0.000204 13.106999 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 1.000000 -0.000288 19.957800 1.000000 0.000000 0.000288 -0.249000 0.000288 -0.000288 -1.000000 13.140300 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_12-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 1.000000 -0.000288 19.885099 1.000000 0.000000 0.000288 -0.249000 0.000288 -0.000288 -1.000000 13.140300 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 20.440201 0.000000 1.000000 0.000000 -0.415000 0.000000 0.000000 1.000000 13.145450 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 19.800701 0.000000 1.000000 0.000000 -0.280000 0.000000 0.000000 1.000000 13.097950 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 0.000000 23.235201 -1.000000 -0.000204 0.000000 -0.249000 0.000000 0.000000 1.000000 13.139800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 0.000000 23.307901 -1.000000 -0.000204 0.000000 -0.249000 0.000000 0.000000 1.000000 13.139800 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 22.752800 0.000000 -1.000000 0.000407 -0.415000 0.000000 -0.000407 -1.000000 13.144950 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 22.262100 0.000000 -0.000204 -1.000000 0.251000 0.000000 1.000000 -0.000204 13.106501 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 22.262100 0.000000 -0.000204 -1.000000 0.251690 0.000000 1.000000 -0.000204 13.106500 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 22.752800 0.000000 -1.000000 0.000407 -0.415000 0.000000 -0.000407 -1.000000 13.144950 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 23.392300 0.000000 -1.000000 0.000407 -0.280000 0.000000 -0.000407 -1.000000 13.097450 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.124729 0.000000 1.000000 0.000000 -0.415000 -1.000000 0.000000 -0.000204 11.708793 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.124729 0.000000 1.000000 0.000000 -0.415000 -1.000000 0.000000 -0.000204 11.708793 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 -0.000204 29.086180 0.000000 -0.000204 1.000000 0.251000 -1.000000 0.000204 0.000000 11.218101 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 -0.000204 29.086180 0.000000 -0.000204 1.000000 0.251690 -1.000000 0.000204 0.000000 11.218102 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000288 -0.000492 -1.000000 29.119677 1.000000 0.000000 0.000288 -0.249000 -0.000000 -1.000000 0.000492 12.191194 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_12-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000288 -0.000492 -1.000000 29.119692 1.000000 0.000000 0.000288 -0.249000 -0.000000 -1.000000 0.000492 12.263894 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.077358 0.000000 1.000000 0.000000 -0.280000 -1.000000 0.000000 -0.000204 12.348303 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119514 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 8.920794 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119499 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 8.848093 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 9.403193 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251000 -1.000000 -0.000204 0.000000 9.893900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251690 -1.000000 -0.000204 0.000000 9.893901 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 9.403193 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.077141 0.000000 -1.000000 0.000407 -0.280000 -1.000000 0.000000 0.000204 8.763702 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119514 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 6.410794 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119499 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 6.338094 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 6.893193 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251000 -1.000000 -0.000204 0.000000 7.383901 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251690 -1.000000 -0.000204 0.000000 7.383901 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 6.893193 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.077141 0.000000 -1.000000 0.000407 -0.280000 -1.000000 0.000000 0.000204 6.253702 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119514 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 2.625793 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119499 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 2.553093 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 3.108192 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251000 -1.000000 -0.000204 0.000000 3.598900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251690 -1.000000 -0.000204 0.000000 3.598900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 3.108192 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.077141 0.000000 -1.000000 0.000407 -0.280000 -1.000000 0.000000 0.000204 2.468702 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119514 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 -1.145206 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119499 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 -1.217906 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 -0.662808 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251000 -1.000000 -0.000204 0.000000 -0.172100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251690 -1.000000 -0.000204 0.000000 -0.172100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 -0.662808 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.077141 0.000000 -1.000000 0.000407 -0.280000 -1.000000 0.000000 0.000204 -1.302298 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119514 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 -4.905207 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119499 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 -4.977907 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 -4.422808 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251000 -1.000000 -0.000204 0.000000 -3.932100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251690 -1.000000 -0.000204 0.000000 -3.932100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 -4.422808 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.077141 0.000000 -1.000000 0.000407 -0.280000 -1.000000 0.000000 0.000204 -5.062298 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_02-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.124729 0.000000 1.000000 0.000000 -0.415000 -1.000000 0.000000 -0.000204 -8.377208 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.124729 0.000000 1.000000 0.000000 -0.415000 -1.000000 0.000000 -0.000204 -8.377208 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 -0.000204 29.086180 0.000000 -0.000204 1.000000 0.251000 -1.000000 0.000204 0.000000 -8.867900 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -1.000000 -0.000204 29.086180 0.000000 -0.000204 1.000000 0.251690 -1.000000 0.000204 0.000000 -8.867899 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_06-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000288 -0.000492 -1.000000 29.119677 1.000000 0.000000 0.000288 -0.249000 -0.000000 -1.000000 0.000492 -7.894806 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_12-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000288 -0.000492 -1.000000 29.119692 1.000000 0.000000 0.000288 -0.249000 -0.000000 -1.000000 0.000492 -7.822106 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_18-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 0.000000 1.000000 29.077358 0.000000 1.000000 0.000000 -0.280000 -1.000000 0.000000 -0.000204 -7.737698 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119514 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 -11.155207 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_17-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000000 -0.000204 1.000000 29.119499 -1.000000 -0.000204 0.000000 -0.249000 0.000204 -1.000000 -0.000204 -11.227907 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Detector_Cable_23-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 -10.672808 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Frame_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251000 -1.000000 -0.000204 0.000000 -10.182100 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_01_Base_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 1.000000 -0.000204 29.086422 0.000000 -0.000204 -1.000000 0.251690 -1.000000 -0.000204 0.000000 -10.182099 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_GROUND_FLOOR_WINDOW_01_Handle_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.124771 0.000000 -1.000000 0.000407 -0.415000 -1.000000 0.000000 0.000204 -10.672808 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_Ground_Floor_Window_01_Glass_11-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="-0.000204 -0.000407 -1.000000 29.077141 0.000000 -1.000000 0.000407 -0.280000 -1.000000 0.000000 0.000204 -11.312298 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="U-6_windows_0F_new_WINDOW_JOINTS_02-FACES" />
+    </shape>
+</scene>

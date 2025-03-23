@@ -489,7 +489,8 @@ void VrmlParser::parseTexCoords(ShapeNode* shapeNode) {
         readSymbol();
     } while (str[0] == ',' || str[0] == '[');
     readSymbol();
-    if (str[0] != '}') std::cout << "error: expected } at the end of TexCoord node " << std::endl;
+    if (str[0] != '}')
+        std::cout << "error: expected } at the end of TexCoord node " << std::endl;
 }
 
 void VrmlParser::parseColorIndex(ShapeNode* shapeNode) {
