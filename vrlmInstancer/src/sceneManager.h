@@ -8,9 +8,11 @@
 #include "mitsubaExporter.h"
 #include "vrmlParser.h"
 #include "vrmlSaver.h"
+#include "materials.h"
 
 class SceneManager {
 public:
+	MaterialsFile* materialsFile;
 
 public:
 	SceneManager();
@@ -56,6 +58,7 @@ public:
 private:
 	std::vector<Scene*> scenes;
 	std::vector<Scene*> scenesWithTextures;
+
 
 	std::vector<ViewPointNode*> allCameras;
 

@@ -6,7 +6,7 @@
 
 MitsubaExporter::MitsubaExporter()
 {
-
+	matFile = nullptr;
 }
 
 void MitsubaExporter::writeElement(std::string elementName, std::vector<std::string> attributes, int depth)
@@ -131,11 +131,12 @@ void MitsubaExporter::writeAllGeometriesToObjFiles()
 }
 
 
-void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * camera, std::string sceneFileName, std::string outputFolder)
+void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * camera, std::string sceneFileName, std::string outputFolder, MaterialsFile* matFile)
 {
 	// figure out door animations...
 	this->scenes = scenes;
 	this->outputFolder = outputFolder;
+	this->matFile = matFile;
 	int depth = 0;
 
 	out.open(this->outputFolder + "/" + sceneFileName + ".xml");

@@ -129,6 +129,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\matData.cpp" />
+    <ClCompile Include="src\materials.cpp" />
     <ClCompile Include="src\mitsubaExporter.cpp" />
     <ClCompile Include="src\application.cpp" />
     <ClCompile Include="src\matrix.cpp" />
@@ -141,6 +143,8 @@
     <ClCompile Include="src\vrmlSaver.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\matData.h" />
+    <ClInclude Include="src\materials.h" />
     <ClInclude Include="src\mitsubaExporter.h" />
     <ClInclude Include="src\application.h" />
     <ClInclude Include="src\matrix.h" />

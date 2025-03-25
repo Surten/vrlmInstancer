@@ -1,7 +1,7 @@
 #include "sceneManager.h"
 
 SceneManager::SceneManager() : pbrtExporter(), mitsubaExporter() {
-
+	materialsFile = nullptr;
 }
 
 
@@ -249,7 +249,7 @@ void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName
 	//if (!hasLights) createDefaultEnviromentalLight("sky.exr");
 
 	//std::string outputImageName = "output/" + name + "_render." + outputImageFormat;
-	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder);
+	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, materialsFile);
 }
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {

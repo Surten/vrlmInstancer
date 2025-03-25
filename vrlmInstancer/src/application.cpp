@@ -167,6 +167,13 @@ void Application::AutomaticMode(std::string fileName){
             autoIn >> idPlaceholder;
             sm.rotateSceneAroundY(0, idPlaceholder);
         }
+        else if (command == "LoadMaterialsFile")
+        {
+            std::string file_path;
+            autoIn >> file_path;
+            bool success = sm.materialsFile.LoadMaterials(file_path);
+            if (!success) std::cout << "Cannot find Materials file: " << file_path << std::endl;
+        }
     }
 }
 

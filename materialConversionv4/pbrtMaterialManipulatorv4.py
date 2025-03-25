@@ -5,12 +5,6 @@ FILE_NAME = "material-testball/scene-v4.pbrt"
 FILE_NAME_MATERIALS = "materials.mat"
 PATTERN_BEGIN = "MakeNamedMaterial \"Material\""
 PATTERN_END = "MakeNamedMaterial"
-#BF_blue01 0.0902 0.07843 0.5804 MAT-coateddiffuse roughness [ 0.6 ] reflectance [ 0.0902 0.07843 0.5804 ]
-    # "string type" [ "coateddiffuse" ]
-    # "float vroughness" [ 0.001 ]
-    # "float uroughness" [ 0.001 ]
-    # "bool remaproughness" [ false ]
-    # "rgb reflectance" [ 0.243117 0.059106 0.000849 ]
 
 MATERIAL_COATED_DIFFUSE = 'MAT-coateddiffuse'
 MATERIAL_DIFFUSE = 'MAT-diffuse'
@@ -18,6 +12,7 @@ MATERIAL_DIELECTRIC = 'MAT-dielectric'
 MATERIAL_DIFFUSE_TRANSMISSION = 'MAT-diffusetransmission'
 MATERIAL_CONDUCTOR = 'MAT-conductor'
 MATERIAL_CONDUCTOR_REFLECTANCE = 'MAT-conductorreflectance'
+MATERIAL_COATED_CONDUCTOR = 'MAT-coatedconductor'
 
 @dataclass
 class Vector3():
@@ -57,6 +52,10 @@ def read_material(material_text):
         m.eta_conductor = words[7]
         m.k_conductor = words[11]
         m.roughnness = words[15]
+    if m.type == MATERIAL_COATED_CONDUCTOR:
+        m.eta_conductor = words[7]
+        m.k_conductor = words[11]
+        m.roughnness = words[15]
     if m.type == MATERIAL_CONDUCTOR_REFLECTANCE:
         m.reflectance = Vector3(float(words[7]), float(words[8]), float(words[9]))
         m.roughnness = words[13]
@@ -90,6 +89,11 @@ def add_new_material(index):
         output_lines.append(f'    "spectrum eta" [ {m.eta_conductor} ]\n')
         output_lines.append(f'    "spectrum k" [ {m.k_conductor} ]\n')
         output_lines.append(f'    "float roughness" [ {m.roughnness} ]\n')
+    if m.type == MATERIAL_COATED_CONDUCTOR:
+        output_lines.append('    "string type" [ "coatedconductor" ]\n')
+        output_lines.append(f'    "spectrum conductor.eta" [ {m.eta_conductor} ]\n')
+        output_lines.append(f'    "spectrum conductor.k" [ {m.k_conductor} ]\n')
+        output_lines.append(f'    "float conductor.roughness" [ {m.roughnness} ]\n')
     if m.type == MATERIAL_CONDUCTOR_REFLECTANCE:
         output_lines.append('    "string type" [ "conductor" ]\n')
         output_lines.append(f'    "rgb reflectance" [ {m.reflectance.x} {m.reflectance.y} {m.reflectance.z} ]\n')

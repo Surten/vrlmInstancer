@@ -7,6 +7,7 @@
 
 #include "baseNode.h"
 #include "scene.h"
+#include "materials.h"
 
 
 class MitsubaExporter {
@@ -17,13 +18,15 @@ public:
 
 	MitsubaExporter();
 
-	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName, std::string outputFolder);
+	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName, std::string outputFolder, MaterialsFile* matFile);
 
 private:
 	std::ofstream out;
 	std::ofstream outCurrentScene;
 
 	std::vector<Scene*> scenes;
+
+	MaterialsFile* matFile;
 
 	std::string outputFolder;
 
