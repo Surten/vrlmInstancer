@@ -79,7 +79,7 @@ def add_new_material(index):
         output_lines.append(f'            <rgb name="reflectance" value="{m.reflectance.x} {m.reflectance.y} {m.reflectance.z}" />\n')
     if m.type == MATERIAL_DIELECTRIC:
         output_lines.append('        <bsdf type="dielectric" >\n')
-        output_lines.append(f'            <float name="int_ior" value="{1.1}" />\n')
+        output_lines.append(f'            <float name="int_ior" value="{1.3}" />\n')
         output_lines.append(f'            <float name="ext_ior" value="{1.0}"/>\n')
     if m.type == MATERIAL_DIFFUSE_TRANSMISSION:
         output_lines.append('        <bsdf type="dielectric" >\n')

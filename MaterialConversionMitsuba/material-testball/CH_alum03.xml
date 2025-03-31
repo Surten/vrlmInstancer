@@ -5,7 +5,7 @@
 		<integer name="max_depth" value="65" />
 	</integrator>
 	<sensor type="perspective" >
-		<float name="fov" value="35" />
+		<float name="fov" value="20" />
 		<transform name="to_world" >
 			<matrix value="-0.721367 -0.373123 -0.583445 3.04068 -8.26273e-008 0.842456 -0.538765 3.17153 0.692553 -0.388647 -0.60772 3.20454 0 0 0 1"/>
 		</transform>
