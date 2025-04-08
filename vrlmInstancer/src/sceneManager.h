@@ -16,6 +16,7 @@ public:
 
 public:
 	SceneManager();
+	~SceneManager();
 
 	Scene* combineAllScenesIntoOne();
 	

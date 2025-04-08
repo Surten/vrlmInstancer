@@ -99,6 +99,7 @@ void Scene::scaleSceneGeometry(float scale)
 			break;
 		}
 	}
+	calculateAABB();
 }
 
 void Scene::findIdenticalGeometry(std::vector<std::pair<int, int>> & geoPairs) {

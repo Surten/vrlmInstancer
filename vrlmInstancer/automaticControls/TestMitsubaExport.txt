@@ -1,4 +1,3 @@
-Load room215.wrl
+Load textured/blackboard_01.wrl
 InstanceAll
-ScaleAllScenes
-ExportToMitsuba 1 mainScene MitsubaExport
+ExportToMitsuba -1 blackboard_header MitsubaExport

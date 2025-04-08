@@ -14,7 +14,7 @@ Mat::Mat()
 {
 	// Nastavim defaultni hodnoty
 	vrmlDiffuse = vec3(0,0,0);
-	material = NONE;
+	materialType = MaterialType::NONE;
 	sigma = 0.0f;
 	roughness = 0.1f;
 	u_roughness = 0.1f;
@@ -35,7 +35,7 @@ Mat::Mat(const Mat& m)
 //----------------------------------------------------------------------------------------------
 {
 	vrmlDiffuse = m.vrmlDiffuse;
-	material = m.material;
+	materialType = m.materialType;
 	sigma = m.sigma;
 	roughness = m.roughness;
 	u_roughness = m.u_roughness;
@@ -58,7 +58,7 @@ Mat& Mat::operator=(const Mat& m)
 	if(this==&m)
 		return *this;
 	vrmlDiffuse = m.vrmlDiffuse;
-	material = m.material;
+	materialType = m.materialType;
 	sigma = m.sigma;
 	roughness = m.roughness;
 	u_roughness = m.u_roughness;
@@ -75,10 +75,3 @@ Mat& Mat::operator=(const Mat& m)
 }
 
 
-//----------------------------------------------------------------------------------------------
-// Nastaveni jmena materialu
-void Mat::setName(std::string atName)
-//----------------------------------------------------------------------------------------------
-{
-	name = atName;
-}

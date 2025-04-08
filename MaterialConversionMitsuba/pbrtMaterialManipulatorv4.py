@@ -79,12 +79,11 @@ def add_new_material(index):
         output_lines.append(f'            <rgb name="reflectance" value="{m.reflectance.x} {m.reflectance.y} {m.reflectance.z}" />\n')
     if m.type == MATERIAL_DIELECTRIC:
         output_lines.append('        <bsdf type="dielectric" >\n')
-        output_lines.append(f'            <float name="int_ior" value="{1.3}" />\n')
-        output_lines.append(f'            <float name="ext_ior" value="{1.0}"/>\n')
+        # output_lines.append(f'            <float name="int_ior" value="{1.3}" />\n')
+        # output_lines.append(f'            <float name="ext_ior" value="{1.0}"/>\n')
     if m.type == MATERIAL_DIFFUSE_TRANSMISSION:
-        output_lines.append('        <bsdf type="dielectric" >\n')
-        output_lines.append(f'            <rgb name="specular_reflectance" value="{m.reflectance.x} {m.reflectance.y} {m.reflectance.z}" />\n')
-        output_lines.append(f'            <rgb name="specular_transmittance" value="{m.transmittance.x} {m.transmittance.y} {m.transmittance.z}"/>\n')
+        output_lines.append('        <bsdf type="roughdielectric" >\n')
+        output_lines.append(f'            <rgb name="alpha" value="0.5" />\n')
     if m.type == MATERIAL_CONDUCTOR:
         meltal_string = m.eta_conductor.split('-')[1]
         output_lines.append('        <bsdf type="roughconductor" >\n')

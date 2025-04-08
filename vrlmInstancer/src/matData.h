@@ -11,13 +11,25 @@ Definice tridy materialu
 #include "dataStructs.h"
 
 
-typedef enum { DIFFUSE, COATED_DIFFUSE, DIFFUSE_TRANSMISSIVE, DIELECTRIC, SHINY, SUBSTRATE, UBER, CONDUCTOR, CONDUCTOR_REFLECTANCE, COATED_CONDUCTOR, NONE } matType;
+enum class MaterialType{
+	DIFFUSE,
+	COATED_DIFFUSE,
+	DIFFUSE_TRANSMISSIVE,
+	DIELECTRIC,
+	SHINY,
+	SUBSTRATE,
+	UBER,
+	CONDUCTOR,
+	CONDUCTOR_REFLECTANCE,
+	COATED_CONDUCTOR,
+	NONE 
+};
 
 class Mat
 {
 public:
 	vec3 vrmlDiffuse;
-	matType material;
+	MaterialType materialType;
 	std::string name;
 	float sigma;
 	float roughness;

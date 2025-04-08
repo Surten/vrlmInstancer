@@ -38,6 +38,28 @@ Load Door/U-6_windows_shutters_UF.WRL
 Load Door/U-6_windows_Stairway01_new.WRL
 Load Door/U-6_windows_Stairway02_new.WRL
 Load Door/U-6_windows_UF_new.WRL
+Load Orig/0_fl_furniture.WRL
+Load Orig/1_fl_furniture.WRL
+Load Orig/2_fl_furniture_E.WRL
+Load Orig/2_fl_furniture_N.WRL
+Load Orig/2_fl_furniture_S.WRL
+Load Orig/2_fl_furniture_W.WRL
+Load Orig/3_fl_furniture_E.WRL
+Load Orig/3_fl_furniture_N.WRL
+Load Orig/3_fl_furniture_S.WRL
+Load Orig/3_fl_furniture_W.WRL
+Load Orig/4_fl_furniture_E.WRL
+Load Orig/4_fl_furniture_N.WRL
+Load Orig/4_fl_furniture_S.WRL
+Load Orig/4_fl_furniture_W.WRL
+Load Orig/5_fl_furniture_E.WRL
+Load Orig/5_fl_furniture_N.WRL
+Load Orig/5_fl_furniture_S.WRL
+Load Orig/5_fl_furniture_W.WRL
+Load Orig/6_fl_furniture_E.WRL
+Load Orig/6_fl_furniture_N.WRL
+Load Orig/6_fl_furniture_S.WRL
+Load Orig/6_fl_furniture_W.WRL
 LoadTextured textured/basket_01.wrl
 LoadTextured textured/basket_03.wrl
 LoadTextured textured/bench.wrl
@@ -162,3 +184,25 @@ SaveId 36 Output/U-6_windows_shutters_UF.WRL
 SaveId 37 Output/U-6_windows_Stairway01_new.WRL
 SaveId 38 Output/U-6_windows_Stairway02_new.WRL
 SaveId 39 Output/U-6_windows_UF_new.WRL
+SaveId 40 Output/0_fl_furniture.WRL
+SaveId 41 Output/1_fl_furniture.WRL
+SaveId 42 Output/2_fl_furniture_E.WRL
+SaveId 43 Output/2_fl_furniture_N.WRL
+SaveId 44 Output/2_fl_furniture_S.WRL
+SaveId 45 Output/2_fl_furniture_W.WRL
+SaveId 46 Output/3_fl_furniture_E.WRL
+SaveId 47 Output/3_fl_furniture_N.WRL
+SaveId 48 Output/3_fl_furniture_S.WRL
+SaveId 49 Output/3_fl_furniture_W.WRL
+SaveId 50 Output/4_fl_furniture_E.WRL
+SaveId 51 Output/4_fl_furniture_N.WRL
+SaveId 52 Output/4_fl_furniture_S.WRL
+SaveId 53 Output/4_fl_furniture_W.WRL
+SaveId 54 Output/5_fl_furniture_E.WRL
+SaveId 55 Output/5_fl_furniture_N.WRL
+SaveId 56 Output/5_fl_furniture_S.WRL
+SaveId 57 Output/5_fl_furniture_W.WRL
+SaveId 58 Output/6_fl_furniture_E.WRL
+SaveId 59 Output/6_fl_furniture_N.WRL
+SaveId 60 Output/6_fl_furniture_S.WRL
+SaveId 61 Output/6_fl_furniture_W.WRL

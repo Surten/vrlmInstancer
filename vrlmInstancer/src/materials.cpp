@@ -171,7 +171,7 @@ bool MaterialsFile::SaveMaterial(Mat* material)
 		}
 		if(dxOld == dxNew && dyOld == dyNew && dzOld == dzNew){
 			char * err = new char[100];
-			sprintf(err, "%.4f %.4f %.4f", dxNew, dyNew, dzNew);
+			printf_s(err, "%.4f %.4f %.4f", dxNew, dyNew, dzNew);
 			return false;
 		}
 	}
@@ -196,7 +196,7 @@ void MaterialsFile::LoadMaterialDiffuse(std::stringstream& matFile, Mat * mat)
 			matFile >> symbol >> mat->Kd.x >> mat->Kd.y >> mat->Kd.z >> symbol;
 		}
 	}
-	mat->material = DIFFUSE;
+	mat->materialType = MaterialType::DIFFUSE;
 }
 
 void MaterialsFile::LoadMaterialCoatedDiffuse(std::stringstream& matFile, Mat *mat)
@@ -216,7 +216,7 @@ void MaterialsFile::LoadMaterialCoatedDiffuse(std::stringstream& matFile, Mat *m
 			matFile >> symbol >> mat->Kd.x >> mat->Kd.y >> mat->Kd.z >> symbol;
 		}
 	}
-	mat->material = COATED_DIFFUSE;
+	mat->materialType = MaterialType::COATED_DIFFUSE;
 }
 
 void MaterialsFile::LoadMaterialDielectric(std::stringstream& matFile, Mat *mat)
@@ -232,7 +232,7 @@ void MaterialsFile::LoadMaterialDielectric(std::stringstream& matFile, Mat *mat)
 			matFile >> symbol >> mat->eta_str >> symbol;
 		}
 	}
-	mat->material = DIELECTRIC;
+	mat->materialType = MaterialType::DIELECTRIC;
 }
 
 void MaterialsFile::LoadMaterialDiffuseTransmissive(std::stringstream& matFile, Mat* mat)
@@ -252,7 +252,7 @@ void MaterialsFile::LoadMaterialDiffuseTransmissive(std::stringstream& matFile, 
 			matFile >> symbol >> mat->transmit.x >> mat->transmit.y >> mat->transmit.z >> symbol;
 		}
 	}
-	mat->material = DIFFUSE_TRANSMISSIVE;
+	mat->materialType = MaterialType::DIFFUSE_TRANSMISSIVE;
 }
 
 void MaterialsFile::LoadMaterialConductor(std::stringstream& matFile, Mat* mat)
@@ -276,7 +276,7 @@ void MaterialsFile::LoadMaterialConductor(std::stringstream& matFile, Mat* mat)
 			matFile >> symbol >> mat->roughness >> symbol;
 		}
 	}
-	mat->material = CONDUCTOR;
+	mat->materialType = MaterialType::CONDUCTOR;
 }
 
 void MaterialsFile::LoadMaterialConductorReflectance(std::stringstream& matFile, Mat* mat)
@@ -297,7 +297,7 @@ void MaterialsFile::LoadMaterialConductorReflectance(std::stringstream& matFile,
 			matFile >> symbol >> mat->reflect.x >> mat->reflect.y >> mat->reflect.z >> symbol;
 		}
 	}
-	mat->material = CONDUCTOR_REFLECTANCE;
+	mat->materialType = MaterialType::CONDUCTOR_REFLECTANCE;
 
 }
 void MaterialsFile::LoadMaterialCoatedConductor(std::stringstream& matFile, Mat* mat)
@@ -321,6 +321,6 @@ void MaterialsFile::LoadMaterialCoatedConductor(std::stringstream& matFile, Mat*
 			matFile >> symbol >> mat->roughness >> symbol;
 		}
 	}
-	mat->material = COATED_CONDUCTOR;
+	mat->materialType = MaterialType::COATED_CONDUCTOR;
 }
 

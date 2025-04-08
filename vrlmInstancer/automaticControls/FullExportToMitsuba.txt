@@ -38,4 +38,27 @@ Load Output/U-6_windows_shutters_UF.WRL
 Load Output/U-6_windows_Stairway01_new.WRL
 Load Output/U-6_windows_Stairway02_new.WRL
 Load Output/U-6_windows_UF_new.WRL
+Load Output/0_fl_furniture.WRL
+Load Output/1_fl_furniture.WRL
+Load Output/2_fl_furniture_E.WRL
+Load Output/2_fl_furniture_N.WRL
+Load Output/2_fl_furniture_S.WRL
+Load Output/2_fl_furniture_W.WRL
+Load Output/3_fl_furniture_E.WRL
+Load Output/3_fl_furniture_N.WRL
+Load Output/3_fl_furniture_S.WRL
+Load Output/3_fl_furniture_W.WRL
+Load Output/4_fl_furniture_E.WRL
+Load Output/4_fl_furniture_N.WRL
+Load Output/4_fl_furniture_S.WRL
+Load Output/4_fl_furniture_W.WRL
+Load Output/5_fl_furniture_E.WRL
+Load Output/5_fl_furniture_N.WRL
+Load Output/5_fl_furniture_S.WRL
+Load Output/5_fl_furniture_W.WRL
+Load Output/6_fl_furniture_E.WRL
+Load Output/6_fl_furniture_N.WRL
+Load Output/6_fl_furniture_S.WRL
+Load Output/6_fl_furniture_W.WRL
+LoadMaterialsFile materials.mat
 ExportToMitsuba 2 sceneFile MitsubaExport

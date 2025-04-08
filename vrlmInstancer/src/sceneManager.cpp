@@ -1,7 +1,10 @@
 #include "sceneManager.h"
 
 SceneManager::SceneManager() : pbrtExporter(), mitsubaExporter() {
-	materialsFile = nullptr;
+	materialsFile = new MaterialsFile();
+}
+SceneManager::~SceneManager() {
+	delete materialsFile;
 }
 
 
@@ -244,9 +247,16 @@ void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName
 	{
 		camera = allCameras[cameraIndex];
 	}
-	//bool hasLights = false;
-
-	//if (!hasLights) createDefaultEnviromentalLight("sky.exr");
+	bool hasLights = false;
+	for (auto scene : scenes)
+	{
+		if (scene->lights.size() > 0)
+		{
+			hasLights = true;
+			break;
+		}
+	}
+	if (!hasLights) createDefaultEnviromentalLight("material-testball/textures/envmap.hdr");
 
 	//std::string outputImageName = "output/" + name + "_render." + outputImageFormat;
 	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, materialsFile);
