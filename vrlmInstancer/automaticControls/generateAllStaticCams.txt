@@ -61,4 +61,27 @@ Load Output/6_fl_furniture_N.WRL
 Load Output/6_fl_furniture_S.WRL
 Load Output/6_fl_furniture_W.WRL
 LoadMaterialsFile materials.mat
-ExportToMitsuba 2 sceneFile MitsubaExport 1
+ExportToMitsuba 0 cam01 MitsubaExport/staticSceneCam 1
+ExportToMitsuba 1 cam02 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 2 cam03 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 3 cam04 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 4 cam05 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 5 cam06 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 6 cam07 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 7 cam08 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 8 cam09 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 9 cam10 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 10 cam11 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 11 cam12 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 12 cam13 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 13 cam14 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 14 cam15 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 15 cam16 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 16 cam17 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 17 cam18 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 18 cam19 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 19 cam20 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 20 cam21 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 21 cam22 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 22 cam23 MitsubaExport/staticSceneCam 0
+ExportToMitsuba 23 cam24 MitsubaExport/staticSceneCam 0

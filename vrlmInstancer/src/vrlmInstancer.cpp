@@ -8,6 +8,37 @@
 
 
 
+int main()
+{
+    Application app;
+    //std::string fileName = "automaticFileTest.txt";
+    //std::string fileName = "switchLightsToGonio.txt";
+    //std::string fileName = "automaticControls/ExportIndividualObjectsWithTextureToPBRT.txt";
+    //std::string fileName = "automaticControls/FullPass.txt";
+    //std::string fileName = "automaticControls/FullPassNoTexture.txt";
+    //std::string fileName = "automaticControls/geometryConvert.txt";
+    //std::string fileName = "automaticControls/TestPBRTExport.txt";
+    //std::string fileName = "automaticControls/TestMitsubaExport.txt";
+    //std::string fileName = "automaticControls/FullExportToMitsuba.txt";
+    std::string fileName = "automaticControls/generateAllStaticCams.txt";
+    //std::string fileName = "automaticControls/DebugTexturedExport.txt";
+    app.AutomaticMode(fileName);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 //#define MANUAL
 //#define AUTOMATIC
 
@@ -94,21 +125,6 @@
 #endif
 
 
-
-int main()
-{
-    Application app;
-    //std::string fileName = "automaticFileTest.txt";
-    //std::string fileName = "switchLightsToGonio.txt";
-    //std::string fileName = "automaticControls/ExportIndividualObjectsWithTextureToPBRT.txt";
-    //std::string fileName = "automaticControls/FullPass.txt";
-    //std::string fileName = "automaticControls/FullPassNoTexture.txt";
-    //std::string fileName = "automaticControls/geometryConvert.txt";
-    //std::string fileName = "automaticControls/TestPBRTExport.txt";
-    //std::string fileName = "automaticControls/TestMitsubaExport.txt";
-    std::string fileName = "automaticControls/FullExportToMitsuba.txt";
-    //std::string fileName = "automaticControls/DebugTexturedExport.txt";
-    app.AutomaticMode(fileName);
 
 
 
@@ -239,6 +255,3 @@ int main()
     //combineScenes(fileNames);
 
 #endif
-
-}
-

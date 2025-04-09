@@ -46,8 +46,8 @@ public:
 
 	void createDefaultCamera();
 	void createDefaultEnviromentalLight(std::string envirometMapFileName);
-	void exportAllToPBRT(int cameraIndex, std::string outputHeaderName, std::string outputImageName, float customCameraZoom);
-	void exportAllToMitsuba(int cameraIndex, std::string outputHeaderName, std::string outputFolder);
+	void exportAllToPBRT(int cameraIndex, std::string outputHeaderName, std::string outputImageName, bool createNewGeometry);
+	void exportAllToMitsuba(int cameraIndex, std::string outputHeaderName, std::string outputFolder, bool createNewGeometry);
 
 	void unifyTextrureCoordScaleOfAllScenes();
 	void scaleAllScenesGeometry(float scale);

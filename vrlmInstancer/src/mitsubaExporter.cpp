@@ -131,7 +131,7 @@ void MitsubaExporter::writeAllGeometriesToObjFiles()
 }
 
 
-void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * camera, std::string sceneFileName, std::string outputFolder, MaterialsFile* matFile)
+void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * camera, std::string sceneFileName, std::string outputFolder, bool createNewGeometry, MaterialsFile* matFile)
 {
 	// figure out door animations...
 	this->scenes = scenes;
@@ -142,9 +142,10 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * ca
 	out.open(this->outputFolder + "/" + sceneFileName + ".xml");
 
 	// export all geometries into individual .obj files
-	
-	writeAllGeometriesToObjFiles();
-
+	if (createNewGeometry)
+	{
+		writeAllGeometriesToObjFiles();
+	}
 
 
 	out << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;

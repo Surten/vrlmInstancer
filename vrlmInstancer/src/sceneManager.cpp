@@ -209,7 +209,7 @@ void SceneManager::createDefaultEnviromentalLight(std::string envirometMapFileNa
 	std::cout << "Created default enviromental light for scene with index 0, because no lights were detected" << std::endl;
 }
 
-void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::string outputImageFormat, float customCameraZoom) {
+void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::string outputImageFormat, bool createNewGeometry) {
 	bool createdCustomFloor = false;
 	ViewPointNode* camera;
 	if (cameraIndex == -1 || allCameras.size() == 0)
@@ -234,10 +234,10 @@ void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::strin
 	std::string outputFolder("pbrtv4/textured/");
 	std::string outputHeaderName = "headers/header_" + name;
 	std::string outputImageName = "output/" + name + "_render." + outputImageFormat;
-	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageName, customCameraZoom);
+	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageName, createNewGeometry);
 }
 
-void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName, std::string outputFolder) {
+void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName, std::string outputFolder, bool createNewGeometry) {
 	ViewPointNode* camera;
 	if (cameraIndex == -1 || allCameras.size() == 0)
 	{
@@ -259,7 +259,7 @@ void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName
 	if (!hasLights) createDefaultEnviromentalLight("material-testball/textures/envmap.hdr");
 
 	//std::string outputImageName = "output/" + name + "_render." + outputImageFormat;
-	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, materialsFile);
+	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, createNewGeometry, materialsFile);
 }
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {

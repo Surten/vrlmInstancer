@@ -21,29 +21,32 @@ void Application::AutomaticMode(std::string fileName){
     while (!autoIn.eof()) {
         autoIn >> command;
         if (command == "Load") {
-            autoIn >> fileStringPlaceholder;
-            if (!sm.loadScene(fileStringPlaceholder)) {
-                std::cout << "Could not load Scene " << fileStringPlaceholder << std::endl;
+            std::string sceneName;
+            autoIn >> sceneName;
+            if (!sm.loadScene(sceneName)) {
+                std::cout << "Could not load Scene " << sceneName << std::endl;
             }
             else {
-                std::cout << std::endl << "Loaded, Id: " << sceneCount << " Name: " << fileStringPlaceholder << std::endl;
+                std::cout << std::endl << "Loaded, Id: " << sceneCount << " Name: " << sceneName << std::endl;
                 sceneCount++;
             }
         }
         else if (command == "LoadTextured") {
-            autoIn >> fileStringPlaceholder;
-            if (!sm.loadTexturedScene(fileStringPlaceholder)) {
-                std::cout << "Could not load Scene " << fileStringPlaceholder << std::endl;
+            std::string sceneTexturedName;
+            autoIn >> sceneTexturedName;
+            if (!sm.loadTexturedScene(sceneTexturedName)) {
+                std::cout << "Could not load Scene " << sceneTexturedName << std::endl;
             }
             else {
-                std::cout << "Loaded " << fileStringPlaceholder << std::endl;
+                std::cout << "Loaded " << sceneTexturedName << std::endl;
             }
         }
         else if (command == "PrintId")
         {
-            autoIn >> idPlaceholder;
-            if (!sm.writeGeometriesOfScene(idPlaceholder)) {
-                std::cout << "Could not find and print the scene index " << idPlaceholder << std::endl;
+            int sceneID = -1;
+            autoIn >> sceneID;
+            if (!sm.writeGeometriesOfScene(sceneID)) {
+                std::cout << "Could not find and print the scene index " << sceneID << std::endl;
             }
             else
             {
@@ -52,16 +55,19 @@ void Application::AutomaticMode(std::string fileName){
         }
         else if (command == "PrintName")
         {
-            autoIn >> nameStringPlaceholder;
-            if (!sm.writeGeometriesOfScene(nameStringPlaceholder)) {
-                std::cout << "Could not find and print the scene " << nameStringPlaceholder << std::endl;
+            std::string sceneName;
+            autoIn >> sceneName;
+            if (!sm.writeGeometriesOfScene(sceneName)) {
+                std::cout << "Could not find and print the scene " << sceneName << std::endl;
             }
         }
         else if (command == "SaveId")
         {
-            autoIn >> idPlaceholder >> fileStringPlaceholder;
-            if (!sm.saveScene(fileStringPlaceholder, idPlaceholder)) {
-                std::cout << "Could not find and save the scene index " << idPlaceholder << std::endl;
+            int sceneID = -1;
+            std::string outFileName;
+            autoIn >> sceneID >> outFileName;
+            if (!sm.saveScene(outFileName, sceneID)) {
+                std::cout << "Could not find and save the scene index " << sceneID << std::endl;
             }
             else {
                 std::cout << "Saved " << idPlaceholder << std::endl;
@@ -69,23 +75,27 @@ void Application::AutomaticMode(std::string fileName){
         }
         else if (command == "SaveName") 
         {
-            autoIn >> nameStringPlaceholder >> fileStringPlaceholder;
-            if (sm.saveScene(fileStringPlaceholder, nameStringPlaceholder)) {
-                std::cout << "Could not find and save the scene " << nameStringPlaceholder << std::endl;
+            std::string sceneName;
+            std::string outFileName;
+            autoIn >> sceneName >> outFileName;
+            if (sm.saveScene(outFileName, sceneName)) {
+                std::cout << "Could not find and save the scene " << sceneName << std::endl;
             }
         }
         else if (command == "InstanceId")
         {
-            autoIn >> idPlaceholder;
-            if (!sm.instanceGeometry(idPlaceholder)) {
-                std::cout << "Could not find and instance the scene index " << idPlaceholder << std::endl;
+            int sceneID = -1;
+            autoIn >> sceneID;
+            if (!sm.instanceGeometry(sceneID)) {
+                std::cout << "Could not find and instance the scene index " << sceneID << std::endl;
             }
         }
         else if (command == "InstanceName")
         {
-            autoIn >> nameStringPlaceholder;
-            if (!sm.instanceGeometry(nameStringPlaceholder)) {
-                std::cout << "Could not find and instance the scene " << nameStringPlaceholder << std::endl;
+            std::string sceneName;
+            autoIn >> sceneName;
+            if (!sm.instanceGeometry(sceneName)) {
+                std::cout << "Could not find and instance the scene " << sceneName << std::endl;
             }
         }
         else if (command == "InstanceAll")
@@ -94,23 +104,29 @@ void Application::AutomaticMode(std::string fileName){
         }
         else if (command == "CopyTextureCoordsToFromId")
         {
-            autoIn >> idPlaceholder >> idSecondPlaceholder;
-            sm.copyTextureCoordinatesBetweenScenes(idSecondPlaceholder, idPlaceholder);
+            int sceneOneID = -1;
+            int sceneTwoID = -1;
+            autoIn >> sceneOneID >> sceneTwoID;
+            sm.copyTextureCoordinatesBetweenScenes(sceneTwoID, sceneOneID);
         }
         else if (command == "CopyTextureCoordsToFromName")
         {
-            autoIn >> nameStringPlaceholder >> nameSecondStringPlaceholder;
-            sm.copyTextureCoordinatesBetweenScenes(nameSecondStringPlaceholder, nameStringPlaceholder);
+            std::string sceneOneName;
+            std::string sceneTwoName;
+            autoIn >> sceneOneName >> sceneTwoName;
+            sm.copyTextureCoordinatesBetweenScenes(sceneTwoName, sceneOneName);
         }
         else if (command == "CopyAllTextureCoordsToId")
         {
-            autoIn >> idPlaceholder;
-            sm.copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(idPlaceholder);
+            int sceneID = -1;
+            autoIn >> sceneID;
+            sm.copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(sceneID);
         }
         else if (command == "CopyAllTextureCoordsToName")
         {
-            autoIn >> nameStringPlaceholder;
-            sm.copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(nameStringPlaceholder);
+            std::string sceneName;
+            autoIn >> sceneName;
+            sm.copyTextureCoordinatesFromAllMyScenesToSpecifiedScene(sceneName);
         }
         else if (command == "CopyAllTextureCoordsFromTexturedScenes")
         {
@@ -132,46 +148,55 @@ void Application::AutomaticMode(std::string fileName){
         }
         else if (command == "SwitchLightsToGonio")
         {
-            autoIn >> nameStringPlaceholder;
-            autoIn >> fileStringPlaceholder;
-            if (!sm.loadScene(fileStringPlaceholder)) {
-                std::cout << "Could not load Scene " << fileStringPlaceholder << std::endl;
+            std::string sceneName;
+            std::string referenceSceneFilePath;
+            autoIn >> sceneName;
+            autoIn >> referenceSceneFilePath;
+            if (!sm.loadScene(referenceSceneFilePath)) {
+                std::cout << "Could not load Scene " << referenceSceneFilePath << std::endl;
             }
             else {
-                std::cout << "Loaded, Id: " << sceneCount << "Name: " << fileStringPlaceholder << std::endl;
+                std::cout << "Loaded, Id: " << sceneCount << "Name: " << referenceSceneFilePath << std::endl;
                 sceneCount++;
             }
-            sm.convertSceneSpotLightsToGonioLights(nameStringPlaceholder, fileStringPlaceholder);
+            sm.convertSceneSpotLightsToGonioLights(sceneName, fileStringPlaceholder);
         }
         else if (command == "ExportToPBRT")
         {
-            float customZoom = 1.f;
-            autoIn >> idPlaceholder >> nameStringPlaceholder >> nameSecondStringPlaceholder >> customZoom;
-            sm.exportAllToPBRT(idPlaceholder, nameStringPlaceholder, nameSecondStringPlaceholder, customZoom);
+            int cameraID = -1;
+            int createNewGeometry = 1;
+            std::string outputHeaderName;
+            std::string outputImageName;
+            autoIn >> cameraID >> outputHeaderName >> outputImageName >> createNewGeometry;
+            sm.exportAllToPBRT(cameraID, outputHeaderName, outputImageName, (bool)createNewGeometry);
         }
         else if (command == "ExportToMitsuba")
         {
+            int cameraID = -1;
+            int createNewGeometry = 1;
             std::string outputHeaderName;
             std::string outputImageName;
-            autoIn >> idPlaceholder >> outputHeaderName >> outputImageName;
-            sm.exportAllToMitsuba(idPlaceholder, outputHeaderName, outputImageName);
+            autoIn >> cameraID >> outputHeaderName >> outputImageName >> createNewGeometry;
+            sm.exportAllToMitsuba(cameraID, outputHeaderName, outputImageName, (bool)createNewGeometry);
         }
         else if (command == "DeleteSceneByID")
         {
-            autoIn >> idPlaceholder;
-            sm.deleteScene(idPlaceholder);
+            int sceneID = 0;
+            autoIn >> sceneID;
+            sm.deleteScene(sceneID);
             sceneCount--;
         }
         else if (command == "RotateAroundY")
         {
-            autoIn >> idPlaceholder;
-            sm.rotateSceneAroundY(0, idPlaceholder);
+            int degrees = 0;
+            autoIn >> degrees;
+            sm.rotateSceneAroundY(0, degrees);
         }
         else if (command == "LoadMaterialsFile")
         {
             std::string file_path;
             autoIn >> file_path;
-            bool success = sm.materialsFile.LoadMaterials(file_path);
+            bool success = sm.materialsFile->LoadMaterials(file_path);
             if (!success) std::cout << "Cannot find Materials file: " << file_path << std::endl;
         }
     }

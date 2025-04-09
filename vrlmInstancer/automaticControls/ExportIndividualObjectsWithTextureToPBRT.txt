@@ -1,396 +1,396 @@
 Load textured/basket_01.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 basket_01 png 0.6
+ExportToPBRT -1 basket_01 png 1
 DeleteSceneByID 0
 Load textured/basket_03.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 basket_03 png 0.8
+ExportToPBRT -1 basket_03 png 1
 DeleteSceneByID 0
 Load textured/bench.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 bench png 0.8
+ExportToPBRT -1 bench png 1
 DeleteSceneByID 0
 Load textured/blackboard_01.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 blackboard_01 png 1.1
+ExportToPBRT -1 blackboard_01 png 1
 DeleteSceneByID 0
 Load textured/blackboard_02.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 blackboard_02 png 1.1
+ExportToPBRT -1 blackboard_02 png 1
 DeleteSceneByID 0
 Load textured/blackboard_03.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 blackboard_03 png 1.1
+ExportToPBRT -1 blackboard_03 png 1
 DeleteSceneByID 0
 Load textured/caffe_set.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 caffe_set png 0.9
+ExportToPBRT -1 caffe_set png 1
 DeleteSceneByID 0
 Load textured/case_type_R-01.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 case_type_R-01 png 3.5
+ExportToPBRT -1 case_type_R-01 png 1
 DeleteSceneByID 0
 Load textured/case_type_R-02.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 case_type_R-02 png 3.5
+ExportToPBRT -1 case_type_R-02 png 1
 DeleteSceneByID 0
 Load textured/CaseType1.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 CaseType1 png 1.2
+ExportToPBRT -1 CaseType1 png 1
 DeleteSceneByID 0
 Load textured/CaseType21.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 CaseType21 png 0.9
+ExportToPBRT -1 CaseType21 png 1
 DeleteSceneByID 0
 Load textured/CaseTypeXX.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 CaseTypeXX png 1.6
+ExportToPBRT -1 CaseTypeXX png 1
 DeleteSceneByID 0
 Load textured/chair_01new.wrl
 InstanceAll
 UnifyTextureScale
 RotateAroundY 180
-ExportToPBRT -1 chair_01new png 1.0
+ExportToPBRT -1 chair_01new png 1
 DeleteSceneByID 0
 Load textured/chair_02new.wrl
 InstanceAll
 UnifyTextureScale
 RotateAroundY 90
-ExportToPBRT -1 chair_02new png 0.9
+ExportToPBRT -1 chair_02new png 1
 DeleteSceneByID 0
 Load textured/chair_03new.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 chair_03new png 0.9
+ExportToPBRT -1 chair_03new png 1
 DeleteSceneByID 0
 Load textured/chair_03oldB.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 chair_03oldB png 0.8
+ExportToPBRT -1 chair_03oldB png 1
 DeleteSceneByID 0
 Load textured/circle_table_low.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 circle_table_low png 1.5
+ExportToPBRT -1 circle_table_low png 1
 DeleteSceneByID 0
 Load textured/Door_06.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Door_06 png 1.6
+ExportToPBRT -1 Door_06 png 1
 DeleteSceneByID 0
 Load textured/Door_07.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Door_07 png 1.0
+ExportToPBRT -1 Door_07 png 1
 DeleteSceneByID 0
 Load textured/Door_08.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Door_08 png 1.0
+ExportToPBRT -1 Door_08 png 1
 DeleteSceneByID 0
 Load textured/Door_09.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Door_09 png 1.0
+ExportToPBRT -1 Door_09 png 1
 DeleteSceneByID 0
 Load textured/Door_10.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Door_10 png 1.0
+ExportToPBRT -1 Door_10 png 1
 DeleteSceneByID 0
 Load textured/door_type_05.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 door_type_05 png 1.0
+ExportToPBRT -1 door_type_05 png 1
 DeleteSceneByID 0
 Load textured/fence2to1floorRight.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 fence2to1floorRight png 1.1
+ExportToPBRT -1 fence2to1floorRight png 1
 DeleteSceneByID 0
 Load textured/fence3floorR.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 fence3floorR png 1.0
+ExportToPBRT -1 fence3floorR png 1
 DeleteSceneByID 0
 Load textured/fence4floorEnd.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 fence4floorEnd png 1.0
+ExportToPBRT -1 fence4floorEnd png 1
 DeleteSceneByID 0
 Load textured/fence5floorEnd.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 fence5floorEnd png 1.0
+ExportToPBRT -1 fence5floorEnd png 1
 DeleteSceneByID 0
 Load textured/fence5floorO.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 fence5floorO png 1.0
+ExportToPBRT -1 fence5floorO png 1
 DeleteSceneByID 0
 Load textured/fence5floorR.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 fence5floorR png 1.0
+ExportToPBRT -1 fence5floorR png 1
 DeleteSceneByID 0
 Load textured/fence6floorEndL.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 fence6floorEndL png 1.5
+ExportToPBRT -1 fence6floorEndL png 1
 DeleteSceneByID 0
 Load textured/fence6floorEndR.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 fence6floorEndR png 1.5
+ExportToPBRT -1 fence6floorEndR png 1
 DeleteSceneByID 0
 Load textured/fenceClassicB.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 fenceClassicB png 1.1
+ExportToPBRT -1 fenceClassicB png 1
 DeleteSceneByID 0
 Load textured/fenceCornerRT_02.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 fenceCornerRT_02 png 0.8
+ExportToPBRT -1 fenceCornerRT_02 png 1
 DeleteSceneByID 0
 Load textured/FirstAidKit.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 FirstAidKit png 0.8
+ExportToPBRT -1 FirstAidKit png 1
 DeleteSceneByID 0
 Load textured/Heater_01.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_01 png 1.0
+ExportToPBRT -1 Heater_01 png 1
 DeleteSceneByID 0
 Load textured/Heater_01_b.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_01_b png 1.1
+ExportToPBRT -1 Heater_01_b png 1
 DeleteSceneByID 0
 Load textured/Heater_02.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_02 png 1.2
+ExportToPBRT -1 Heater_02 png 1
 DeleteSceneByID 0
 Load textured/Heater_03.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_03 png 1.0
+ExportToPBRT -1 Heater_03 png 1
 DeleteSceneByID 0
 Load textured/Heater_03_b.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_03_b png 1.0
+ExportToPBRT -1 Heater_03_b png 1
 DeleteSceneByID 0
 Load textured/Heater_04.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_04 png 2.8
+ExportToPBRT -1 Heater_04 png 1
 DeleteSceneByID 0
 Load textured/Heater_04_b.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_04_b png 2.8
+ExportToPBRT -1 Heater_04_b png 1
 DeleteSceneByID 0
 Load textured/Heater_04_c.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_04_c png 2.8
+ExportToPBRT -1 Heater_04_c png 1
 DeleteSceneByID 0
 Load textured/Heater_04_d.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_04_d png 2.8
+ExportToPBRT -1 Heater_04_d png 1
 DeleteSceneByID 0
 Load textured/Heater_05.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_05 png 1.0
+ExportToPBRT -1 Heater_05 png 1
 DeleteSceneByID 0
 Load textured/Heater_06.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_06 png 1.0
+ExportToPBRT -1 Heater_06 png 1
 DeleteSceneByID 0
 Load textured/Heater_06_b.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Heater_06_b png 1.0
+ExportToPBRT -1 Heater_06_b png 1
 DeleteSceneByID 0
 Load textured/library_door_02.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 library_door_02 png 1.0
+ExportToPBRT -1 library_door_02 png 1
 DeleteSceneByID 0
 Load textured/library_door_02b.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 library_door_02b png 1.0
+ExportToPBRT -1 library_door_02b png 1
 DeleteSceneByID 0
 Load textured/netPlug.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 netPlug png 0.7
+ExportToPBRT -1 netPlug png 1
 DeleteSceneByID 0
 Load textured/powerPlug.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 powerPlug png 0.7
+ExportToPBRT -1 powerPlug png 1
 DeleteSceneByID 0
 Load textured/rack.wrl
 InstanceAll
 UnifyTextureScale
 RotateAroundY 90
-ExportToPBRT -1 rack png 0.7
+ExportToPBRT -1 rack png 1
 DeleteSceneByID 0
 Load textured/radiumLamp02.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 radiumLamp02 png 3.5
+ExportToPBRT -1 radiumLamp02 png 1
 DeleteSceneByID 0
 Load textured/Roto_door_01.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Roto_door_01 png 3.5
+ExportToPBRT -1 Roto_door_01 png 1
 DeleteSceneByID 0
 Load textured/roundTable01.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 roundTable01 png 1.2
+ExportToPBRT -1 roundTable01 png 1
 DeleteSceneByID 0
 Load textured/Sofa01.wrl
 InstanceAll
 UnifyTextureScale
 RotateAroundY 180
-ExportToPBRT -1 Sofa01 png 0.8
+ExportToPBRT -1 Sofa01 png 1
 DeleteSceneByID 0
 Load textured/Sofa02.wrl
 InstanceAll
 UnifyTextureScale
 RotateAroundY 180
-ExportToPBRT -1 Sofa02 png 0.8
+ExportToPBRT -1 Sofa02 png 1
 DeleteSceneByID 0
 Load textured/Sofa03.wrl
 InstanceAll
 UnifyTextureScale
 RotateAroundY 180
-ExportToPBRT -1 Sofa03 png 0.8
+ExportToPBRT -1 Sofa03 png 1
 DeleteSceneByID 0
 Load textured/table_03low.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 table_03low png 1.8
+ExportToPBRT -1 table_03low png 1
 DeleteSceneByID 0
 Load textured/table_06.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 table_06 png 0.9
+ExportToPBRT -1 table_06 png 1
 DeleteSceneByID 0
 Load textured/table_08.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 table_08 png 0.9
+ExportToPBRT -1 table_08 png 1
 DeleteSceneByID 0
 Load textured/Table02.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Table02 png 0.3
+ExportToPBRT -1 Table02 png 1
 DeleteSceneByID 0
 Load textured/Table03.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Table03 png 1.6
+ExportToPBRT -1 Table03 png 1
 DeleteSceneByID 0
 Load textured/Table04.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Table04 png 0.7
+ExportToPBRT -1 Table04 png 1
 DeleteSceneByID 0
 Load textured/Table04_B.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Table04_B png 0.7
+ExportToPBRT -1 Table04_B png 1
 DeleteSceneByID 0
 Load textured/Table05.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Table05 png 0.7
+ExportToPBRT -1 Table05 png 1
 DeleteSceneByID 0
 Load textured/Table07.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Table07 png 1.0
+ExportToPBRT -1 Table07 png 1
 DeleteSceneByID 0
 Load textured/Table30.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 Table30 png 1.0
+ExportToPBRT -1 Table30 png 1
 DeleteSceneByID 0
 Load textured/tableCornerLlongRshort.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 tableCornerLlongRshort png 1.0
+ExportToPBRT -1 tableCornerLlongRshort png 1
 DeleteSceneByID 0
 Load textured/tableCornerLshortRlong.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 tableCornerLshortRlong png 22
+ExportToPBRT -1 tableCornerLshortRlong png 1
 DeleteSceneByID 0
 Load textured/tableLength80.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 tableLength80 png 2
+ExportToPBRT -1 tableLength80 png 1
 DeleteSceneByID 0
 Load textured/tableM4.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 tableM4 png 1.2
+ExportToPBRT -1 tableM4 png 1
 DeleteSceneByID 0
 Load textured/tables3X_room211.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 tables3X_room211 png 0.6
+ExportToPBRT -1 tables3X_room211 png 1
 DeleteSceneByID 0
 Load textured/tableSTM3a.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 tableSTM3a png 0.6
+ExportToPBRT -1 tableSTM3a png 1
 DeleteSceneByID 0
 Load textured/tableWhite309A.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 tableWhite309A png 0.9
+ExportToPBRT -1 tableWhite309A png 1
 DeleteSceneByID 0
 Load textured/tableWide.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 tableWide png 0.8
+ExportToPBRT -1 tableWide png 1
 DeleteSceneByID 0
 Load textured/tableWideB.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 tableWideB png 0.8
+ExportToPBRT -1 tableWideB png 1
 DeleteSceneByID 0
 Load textured/TreeBigGroundFloor.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 TreeBigGroundFloor png 1.1
+ExportToPBRT -1 TreeBigGroundFloor png 1
 DeleteSceneByID 0
 Load textured/typ40a.wrl
 InstanceAll
 UnifyTextureScale
-ExportToPBRT -1 typ40a png 0.9
+ExportToPBRT -1 typ40a png 1
 DeleteSceneByID 0

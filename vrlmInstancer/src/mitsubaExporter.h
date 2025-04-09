@@ -18,7 +18,7 @@ public:
 
 	MitsubaExporter();
 
-	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName, std::string outputFolder, MaterialsFile* matFile);
+	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName, std::string outputFolder, bool createNewGeometry, MaterialsFile* matFile);
 
 private:
 	std::ofstream out;

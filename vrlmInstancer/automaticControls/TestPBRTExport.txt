@@ -1,3 +1,0 @@
-Load room215.wrl
-InstanceAll
-ExportToPBRT 1

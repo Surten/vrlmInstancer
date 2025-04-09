@@ -6,33 +6,33 @@
 PbrtExporter::PbrtExporter(){
 }
 
-void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName, float customCameraZoom)
+void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string folder, std::string headerFileName, std::string renderImageFileName, bool createNewGeometry)
 {
 	this->scenes = scenes;
 	out.open(folder + headerFileName + ".pbrt");
-	writeSceneWideOptions(camera, renderImageFileName, customCameraZoom);
+	writeSceneWideOptions(camera, renderImageFileName);
 	out << " WorldBegin" << std::endl;
 	writeTexture();
 	//if (includeCustomFloor) writeFloor();
 	for (auto scene : scenes)
 	{
 		writeAllLightSourcesOfAScene(scene);
-		writeGeometry(scene, folder);
+		writeGeometry(scene, folder, createNewGeometry);
 	}
 	out.close();
 
 }
 
-void PbrtExporter::writeSceneWideOptions(const ViewPointNode* camera, std::string renderImageFileName, float customCameraZoom) {
+void PbrtExporter::writeSceneWideOptions(const ViewPointNode* camera, std::string renderImageFileName) {
 	writeIntegrator();
-	writeCamera(camera, customCameraZoom);
+	writeCamera(camera);
 	writeSampler();
 	writeFilter();
 	writeFilm(renderImageFileName);
 }
 
 
-void PbrtExporter::writeCamera(const ViewPointNode* camera, float customCameraZoom) {
+void PbrtExporter::writeCamera(const ViewPointNode* camera) {
 	if (camera == nullptr)
 	{
 
@@ -51,7 +51,7 @@ void PbrtExporter::writeCamera(const ViewPointNode* camera, float customCameraZo
 		cameraPosition.normalize();
 		float length = retAABB.getDiagonal().len();
 
-		customCameraZoom = 1.4;
+		int customCameraZoom = 1.4;		// adjust the camera distance manually, to include the entire object in the render
 		length = length * customCameraZoom;
 		cameraPosition = cameraPosition * length;
 
@@ -164,7 +164,7 @@ void PbrtExporter::writeTexture() {
 	out << "AttributeEnd" << std::endl;
 
 }
-void PbrtExporter::writeGeometry(Scene* scene, std::string folder){
+void PbrtExporter::writeGeometry(Scene* scene, std::string folder, bool createNewGeometry){
 	std::string geometryFileName = scene->name;
 	size_t a = geometryFileName.find_last_of("/");
 	if (a != std::string::npos)
@@ -179,12 +179,15 @@ void PbrtExporter::writeGeometry(Scene* scene, std::string folder){
 
 	out << "Include \"" << "../" + currentGeometryFileName << "\"";
 
-	outGeometry.open(folder + currentGeometryFileName);
+	if (createNewGeometry)
+	{
+		outGeometry.open(folder + currentGeometryFileName);
 
-	writeObjectInstances(scene);
+		writeObjectInstances(scene);
 
-	writeSceneHierarchy(scene);
-	outGeometry.close();
+		writeSceneHierarchy(scene);
+		outGeometry.close();
+	}
 }
 
 void PbrtExporter::writeObjectInstances(Scene* scene) {
