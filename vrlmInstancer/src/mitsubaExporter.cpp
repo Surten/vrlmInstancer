@@ -162,33 +162,36 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * ca
 		size_t ind = scene->name.rfind('/');
 		if (ind != std::string::npos) sceneGeometryFolder = scene->name.substr(ind + 1);
 		sceneGeometryFolder = sceneGeometryFolder.substr(0, sceneGeometryFolder.size() - 4);
-		outCurrentScene.open(this->outputFolder + "/" + sceneGeometryFolder + ".xml");
-
-
-		outCurrentScene << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
-		writeElementBegScene("scene", { "version", "3.5.2" }, depth);
-
-		for (auto lightNode : scene->lights)
-		{
-			writeLight(lightNode, depth + 1);
-		}
-		for (auto shapeNode : scene->ShapeNodes)
-		{
-			if (!shapeNode->geometry) continue;
-			if (shapeNode->usesOtherGeometry) continue;
-			writeShapeGroup(shapeNode, sceneGeometryFolder, depth + 1);
-		}
-		for (auto shapeNode : scene->ShapeNodes)
-		{
-			if (!shapeNode->geometry) continue;
-			
-			writeShapeReference(shapeNode, sceneGeometryFolder, depth + 1);
-		}
-
-		writeElementEndScene("scene", depth);
-		outCurrentScene.close();
 
 		writeElement("include", { "filename", sceneGeometryFolder + ".xml" }, depth + 1);
+
+		if (createNewGeometry)
+		{
+			outCurrentScene.open(this->outputFolder + "/" + sceneGeometryFolder + ".xml");
+			outCurrentScene << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
+			writeElementBegScene("scene", { "version", "3.5.2" }, depth);
+
+			for (auto lightNode : scene->lights)
+			{
+				writeLight(lightNode, depth + 1);
+			}
+			for (auto shapeNode : scene->ShapeNodes)
+			{
+				if (!shapeNode->geometry) continue;
+				if (shapeNode->usesOtherGeometry) continue;
+				writeShapeGroup(shapeNode, sceneGeometryFolder, depth + 1);
+			}
+			for (auto shapeNode : scene->ShapeNodes)
+			{
+				if (!shapeNode->geometry) continue;
+
+				writeShapeReference(shapeNode, sceneGeometryFolder, depth + 1);
+			}
+
+			writeElementEndScene("scene", depth);
+			outCurrentScene.close();
+		}
+
 		std::cout << "Exported scene: " << scene->name << std::endl;
 	}
 
@@ -341,13 +344,13 @@ void MitsubaExporter::writeBsdf(Material* material, int depth)
 	{
 		writeElementBegScene("bsdf", { "type", "roughplastic" }, depth);
 			writeElementScene("rgb", { "name", "diffuse_reflectance", "value", mat->Kd.toString()}, depth + 1);
-			writeElementScene("rgb", { "name", "alpha", "value", std::to_string(mat->roughness) }, depth + 1);
+			writeElementScene("float", { "name", "alpha", "value", std::to_string(mat->roughness) }, depth + 1);
 		writeElementEndScene("bsdf", depth);
 	}
 	else if(mat->materialType == MaterialType::DIFFUSE_TRANSMISSIVE)
 	{
 		writeElementBegScene("bsdf", { "type", "roughdielectric" }, depth);
-			writeElementScene("rgb", { "name", "alpha", "value", "0.5"}, depth + 1);
+			writeElementScene("float", { "name", "alpha", "value", "0.5"}, depth + 1);
 		writeElementEndScene("bsdf", depth);
 
 	}
@@ -361,6 +364,7 @@ void MitsubaExporter::writeBsdf(Material* material, int depth)
 	else if(mat->materialType == MaterialType::CONDUCTOR)
 	{
 		std::string metal = mat->eta_str.substr(mat->eta_str.find("-") + 1);
+		metal = metal.substr(0, metal.find("-"));
 		writeElementBegScene("bsdf", { "type", "roughconductor" }, depth);
 		writeElementScene("string", { "name", "material", "value", metal }, depth + 1);
 		writeElementScene("float", { "name", "alpha", "value", std::to_string(mat->roughness) }, depth + 1);
@@ -375,6 +379,7 @@ void MitsubaExporter::writeBsdf(Material* material, int depth)
 	else if(mat->materialType == MaterialType::COATED_CONDUCTOR)
 	{
 		std::string metal = mat->eta_str.substr(mat->eta_str.find("-") + 1);
+		metal = metal.substr(0, metal.find("-"));
 		writeElementBegScene("bsdf", { "type", "roughconductor" }, depth);
 		writeElementScene("string", { "name", "material", "value", metal }, depth + 1);
 		writeElementScene("float", { "name", "alpha", "value", std::to_string(mat->roughness) }, depth + 1);

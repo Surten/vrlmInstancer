@@ -20,6 +20,8 @@ void Application::AutomaticMode(std::string fileName){
     int idSecondPlaceholder = -1;
     while (!autoIn.eof()) {
         autoIn >> command;
+        if (autoIn.eof()) break;
+
         if (command == "Load") {
             std::string sceneName;
             autoIn >> sceneName;
