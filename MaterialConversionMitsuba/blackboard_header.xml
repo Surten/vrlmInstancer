@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene version="3.5.2" >
+    <integrator type="path" >
+        <integer name="max_depth" value="65" />
+    </integrator>
+    <sensor type="perspective" >
+        <float name="fov" value="40.000000" />
+        <transform name="to_world" >
+            <lookat origin="-207.070007 122.676300 205.475128" target="0.000000 -1.565693 -1.594874" up="0.000000 1.000000 0.000000" />
+        </transform>
+        <sampler type="independent" >
+            <integer name="sample_count" value="64" />
+        </sampler>
+        <film type="hdrfilm" >
+            <integer name="width" value="1920" />
+            <integer name="height" value="1080" />
+            <string name="file_format" value="openexr" />
+            <string name="pixel_format" value="rgba" />
+            <rfilter type="tent" />
+        </film>
+    </sensor>
+    <include filename="blackboard_01.xml" />
+</scene>

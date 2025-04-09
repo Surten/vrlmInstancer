@@ -27,9 +27,8 @@
 			<scale x="8.000000" y="8.000000" />
 		</transform>
 	</texture>
-        <bsdf type="dielectric" id="Material">
-            <rgb name="specular_reflectance" value="0.4627 0.4627 0.4627" />
-            <rgb name="specular_transmittance" value="0.4627 0.4627 0.4627"/>
+        <bsdf type="roughdielectric" id="Material">
+            <rgb name="alpha" value="0.5"/>
 	</bsdf>
 	<bsdf type="twosided" id="Stand" >
 		<bsdf type="diffuse" >

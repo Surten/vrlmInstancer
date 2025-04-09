@@ -28,8 +28,6 @@
 		</transform>
 	</texture>
         <bsdf type="dielectric" id="Material">
-            <float name="int_ior" value="1.1" />
-            <float name="ext_ior" value="1.0"/>
 	</bsdf>
 	<bsdf type="twosided" id="Stand" >
 		<bsdf type="diffuse" >

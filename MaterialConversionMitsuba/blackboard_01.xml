@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene version="3.5.2" >
+    <emitter type="envmap" >
+        <string name="filename" value="material-testball/textures/envmap.hdr" />
+    </emitter>
+    <shape type="shapegroup" id="blackboard_01_Board_01-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="blackboard_01/Board_01-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.588000 0.588000 0.588000" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="blackboard_01_Conection_01-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="blackboard_01/Conection_01-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.588000 0.588000 0.588000" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="shapegroup" id="blackboard_01_Bottom_01-FACES" >
+        <shape type="obj" >
+            <string name="filename" value="blackboard_01/Bottom_01-FACES.obj" />
+            <bsdf type="diffuse" >
+                <rgb name="reflectance" value="0.588000 0.588000 0.588000" />
+            </bsdf>
+        </shape>
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="1.000000 0.000000 0.000000 0.000000 0.000000 -0.000204 1.000000 0.000000 0.000000 -1.000000 -0.000204 1.500000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="blackboard_01_Board_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000121 -1.000000 -0.000121 97.750000 0.000121 0.000121 -1.000000 -51.905003 1.000000 0.000121 0.000121 0.150000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="blackboard_01_Conection_01-FACES" />
+    </shape>
+    <shape type="instance" >
+        <transform name="to_world" >
+            <matrix value="0.000121 -1.000000 -0.000121 98.750000 0.000121 0.000121 -1.000000 -53.305000 1.000000 0.000121 0.000121 -0.100000 0.000000 0.000000 0.000000 1.000000 " />
+        </transform>
+        <ref id="blackboard_01_Bottom_01-FACES" />
+    </shape>
+</scene>
