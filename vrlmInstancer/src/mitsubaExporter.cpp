@@ -252,6 +252,7 @@ void MitsubaExporter::writeSensor(ViewPointNode* camera, int depth)
 	{
 		camera->computeLookAt(pos, lookAt, lookUp);
 		fov = RAD_TO_DEG(camera->fieldOfView);
+		fov = 1.5 * fov;
 	}
 	writeElementBeg("sensor", { "type", "perspective" }, depth);
 		writeElement("float", { "name", "fov", "value", std::to_string(fov) }, depth + 1);
@@ -334,6 +335,8 @@ void MitsubaExporter::writeBsdf(Material* material, int depth)
 		return;
 	}
 
+
+
 	if (mat->materialType == MaterialType::DIFFUSE)
 	{
 		writeElementBegScene("bsdf", { "type", "diffuse" }, depth);
@@ -357,8 +360,8 @@ void MitsubaExporter::writeBsdf(Material* material, int depth)
 	else if(mat->materialType == MaterialType::DIELECTRIC)
 	{
 		writeElementBegScene("bsdf", { "type", "dielectric" }, depth);
-		//writeElementScene("float", { "name", "int_ior", "value", std::to_string(mat->roughness) }, depth + 1);
-		//writeElementScene("float", { "name", "ext_ior", "value", std::to_string(mat->roughness) }, depth + 1);
+		writeElementScene("float", { "name", "int_ior", "value", "1.2"}, depth + 1);
+		writeElementScene("float", { "name", "ext_ior", "value", "1.0"}, depth + 1);
 		writeElementEndScene("bsdf", depth);
 	}
 	else if(mat->materialType == MaterialType::CONDUCTOR)
@@ -406,14 +409,14 @@ void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
 	}
 	else if (lightNode->lightType == LightNode::LightType::SPOTLIGHT)
 	{
-		float mult = 10;
+		float mult = 106;
 		writeElementBegScene("emitter", { "type", "spot" }, depth);
 			writeElementBegScene("transform", { "name", "to_world" }, depth + 1);
 				writeElementScene("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString()}, depth + 2);
 			writeElementEndScene("transform", depth + 1);
 			writeElementScene("float", { "name", "intensity", "value", std::to_string((lightNode->color * lightNode->intensity).len()* mult) }, depth + 1);
 			writeElementScene("float", { "name", "beam_width", "value", std::to_string(RAD_TO_DEG(lightNode->beamWidth)*2) }, depth + 1);
-			writeElementScene("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle)) }, depth + 1);
+			writeElementScene("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle)*2) }, depth + 1);
 		writeElementEndScene("emitter", depth);
 	}
 	else if (lightNode->lightType == LightNode::LightType::GONIOLIGHT)

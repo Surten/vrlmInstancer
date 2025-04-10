@@ -20,6 +20,8 @@ public:
 	bool LoadMaterials(std::string filename);
 	Mat* retMaterial(vec3 vrmlDiffuse);
 
+	void LoadUseAsBTFMaterials(std::string filename);
+
 
 
 public:

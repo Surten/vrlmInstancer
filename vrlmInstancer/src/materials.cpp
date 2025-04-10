@@ -128,6 +128,10 @@ Mat* MaterialsFile::retMaterial(vec3 vrmlDiffuse)
 	return nullptr;
 }
 
+void MaterialsFile::LoadUseAsBTFMaterials(std::string fileName)
+{
+
+}
 
 
 

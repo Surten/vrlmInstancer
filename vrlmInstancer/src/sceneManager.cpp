@@ -233,7 +233,7 @@ void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::strin
 
 	std::string outputFolder("pbrtv4/textured/");
 	std::string outputHeaderName = "headers/header_" + name;
-	std::string outputImageName = "output/" + name + "_render." + outputImageFormat;
+	std::string outputImageName = "output/" + name + "." + outputImageFormat;
 	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageName, createNewGeometry);
 }
 
