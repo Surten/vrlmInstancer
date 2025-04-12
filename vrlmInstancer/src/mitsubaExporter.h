@@ -16,7 +16,7 @@ public:
 
 public:
 
-	MitsubaExporter();
+	MitsubaExporter(AnimationInfo* animInfo);
 
 	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName, std::string outputFolder, bool createNewGeometry, MaterialsFile* matFile);
 
@@ -28,10 +28,12 @@ private:
 
 	MaterialsFile* matFile;
 
+	AnimationInfo* animInfo;
+
 	std::string outputFolder;
 
 	int pathTracingMaxDepth = -1;
-	int nSamples = 128;
+	int nSamples = 2048;
 	int imageWidth = 1920;
 	int imageHeight = 1080;
 
@@ -53,12 +55,20 @@ private:
 	void writeSampler(int depth);
 	void writeFilm(int depth);
 
-	void writeMaterial(Material* mat, int depth);
 	void writeShape(ShapeNode* shapeNode, std::string filepath, int depth);
 	void writeShapeGroup(ShapeNode* shapeNode, std::string filepath, int depth);
 	void writeShapeReference(ShapeNode* shapeNode, std::string filepath, int depth);
 	void writeTransform(ShapeNode* shapeNode, int depth);
-	void writeBsdfNamed(Material* material, int depth);
-	void writeBsdf(Material* material, int depth);
+	void writeBsdfNamed(Mat* material, int depth);
+	void writeBsdfReference(Mat* material, int depth);
 	void writeLight(LightNode* lightNode, int depth);
+
+	void writeMaterialDiffuse(Mat* material, int depth);
+	void writeMaterialCoatedDiffuse(Mat* material, int depth);
+	void writeMaterialDiffuseTransmission(Mat* material, int depth);
+	void writeMaterialDielectric(Mat* material, int depth);
+	void writeMaterialConductor(Mat* material, int depth);
+	void writeMaterialConductorReflectance(Mat* material, int depth);
+	void writeMaterialCoatedConductor(Mat* material, int depth);
+	void writeMaterialBTF(Mat* material, int depth);
 };

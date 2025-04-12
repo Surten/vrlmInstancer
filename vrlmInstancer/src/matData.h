@@ -22,7 +22,8 @@ enum class MaterialType{
 	CONDUCTOR,
 	CONDUCTOR_REFLECTANCE,
 	COATED_CONDUCTOR,
-	NONE 
+	BTF_MATERIAL,
+	UNDEFINED 
 };
 
 class Mat
@@ -43,6 +44,8 @@ public:
 	vec3 reflect;
 	vec3 transmit;
 	int indexBRDF;
+
+	std::string btfFileName;
 
 	std::string eta_str;
 	std::string k_str;

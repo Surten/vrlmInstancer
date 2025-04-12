@@ -168,18 +168,19 @@ void Application::AutomaticMode(std::string fileName){
             int cameraID = -1;
             int createNewGeometry = 1;
             std::string outputHeaderName;
-            std::string outputImageName;
-            autoIn >> cameraID >> outputHeaderName >> outputImageName >> createNewGeometry;
-            sm.exportAllToPBRT(cameraID, outputHeaderName, outputImageName, (bool)createNewGeometry);
+            std::string outputFolder;
+            std::string outputImageFormat;
+            autoIn >> cameraID >> outputHeaderName >> outputFolder >> outputImageFormat >> createNewGeometry;
+            sm.exportAllToPBRT(cameraID, outputHeaderName, outputFolder, outputImageFormat, (bool)createNewGeometry);
         }
         else if (command == "ExportToMitsuba")
         {
             int cameraID = -1;
             int createNewGeometry = 1;
             std::string outputHeaderName;
-            std::string outputImageName;
-            autoIn >> cameraID >> outputHeaderName >> outputImageName >> createNewGeometry;
-            sm.exportAllToMitsuba(cameraID, outputHeaderName, outputImageName, (bool)createNewGeometry);
+            std::string outputFolder;
+            autoIn >> cameraID >> outputHeaderName >> outputFolder >> createNewGeometry;
+            sm.exportAllToMitsuba(cameraID, outputHeaderName, outputFolder, (bool)createNewGeometry);
         }
         else if (command == "DeleteSceneByID")
         {
@@ -199,12 +200,25 @@ void Application::AutomaticMode(std::string fileName){
             std::string file_path;
             autoIn >> file_path;
             bool success = sm.materialsFile->LoadMaterials(file_path);
-            std::cout << "Unrecognized materials:" << std::endl;
-            for (size_t i = 0; i < sm.materialsFile->unrecognizedMaterials.size(); i++)
-            {
-                std::cout << sm.materialsFile->unrecognizedMaterials[i] << std::endl;
-            }
+
             if (!success) std::cout << "Cannot find Materials file: " << file_path << std::endl;
+        }
+        else if (command == "SubstituteForBTF")
+        {
+            std::string materialName;
+            std::string BtfFilePath;
+            autoIn >> materialName >> BtfFilePath;
+            sm.materialsFile->replaceByBTF(materialName, BtfFilePath);
+        }
+        else if (command == "Anim")
+        {
+            int sceneID = -1;
+            autoIn >> sceneID;
+
+            std::string restOfLine;
+            std::getline(autoIn, restOfLine);
+            restOfLine = restOfLine.substr(1);
+            sm.project->readProject(restOfLine, sm.scenes[sceneID]);
         }
     }
 }

@@ -4,10 +4,86 @@
 
 #define RAD_TO_DEG(angle)   ((angle)*57.29577951308f)
 
-MitsubaExporter::MitsubaExporter()
+MitsubaExporter::MitsubaExporter(AnimationInfo* animInfo) : animInfo(animInfo)
 {
 	matFile = nullptr;
 }
+
+void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName, std::string outputFolder, bool createNewGeometry, MaterialsFile* matFile)
+{
+	// figure out door animations...
+	this->scenes = scenes;
+	this->outputFolder = outputFolder;
+	this->matFile = matFile;
+	int depth = 0;
+
+	out.open(this->outputFolder + "/" + sceneFileName + ".xml");
+
+	// export all geometries into individual .obj files
+	if (createNewGeometry && false)
+	{
+		writeAllGeometriesToObjFiles();
+	}
+
+
+	out << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
+	writeElementBeg("scene", { "version", "3.5.2" }, depth);
+	writeIntegrator(depth + 1);
+	writeSensor(camera, depth + 1);
+
+	for (Mat* material : matFile->materials)
+	{
+		writeBsdfNamed(material, depth + 1);
+	}
+
+	// create the scene xml with hierarchy
+	for (auto scene : scenes)
+	{
+		scene->initShapeNodeTransformMatricies();
+		std::string sceneGeometryFolder = scene->name;
+		size_t ind = scene->name.rfind('/');
+		if (ind != std::string::npos) sceneGeometryFolder = scene->name.substr(ind + 1);
+		sceneGeometryFolder = sceneGeometryFolder.substr(0, sceneGeometryFolder.size() - 4);
+
+		writeElement("include", { "filename", sceneGeometryFolder + ".xml" }, depth + 1);
+
+		if (createNewGeometry)
+		{
+			outCurrentScene.open(this->outputFolder + "/" + sceneGeometryFolder + ".xml");
+			outCurrentScene << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
+			writeElementBegScene("scene", { "version", "3.5.2" }, depth);
+
+			for (auto lightNode : scene->lights)
+			{
+				writeLight(lightNode, depth + 1);
+			}
+			for (auto shapeNode : scene->ShapeNodes)
+			{
+				if (!shapeNode->geometry) continue;
+				if (shapeNode->usesOtherGeometry) continue;
+				writeShapeGroup(shapeNode, sceneGeometryFolder, depth + 1);
+			}
+			for (auto shapeNode : scene->ShapeNodes)
+			{
+				if (!shapeNode->geometry) continue;
+
+				writeShapeReference(shapeNode, sceneGeometryFolder, depth + 1);
+			}
+
+			writeElementEndScene("scene", depth);
+			outCurrentScene.close();
+		}
+
+		std::cout << "Exported scene: " << scene->name << std::endl;
+	}
+
+
+	writeElementEnd("scene", depth);
+	out.close();
+}
+
+
+
 
 void MitsubaExporter::writeElement(std::string elementName, std::vector<std::string> attributes, int depth)
 {
@@ -159,76 +235,6 @@ void MitsubaExporter::writeAllGeometriesToObjFiles()
 }
 
 
-void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * camera, std::string sceneFileName, std::string outputFolder, bool createNewGeometry, MaterialsFile* matFile)
-{
-	// figure out door animations...
-	this->scenes = scenes;
-	this->outputFolder = outputFolder;
-	this->matFile = matFile;
-	int depth = 0;
-
-	out.open(this->outputFolder + "/" + sceneFileName + ".xml");
-
-	// export all geometries into individual .obj files
-	if (createNewGeometry && false)
-	{
-		writeAllGeometriesToObjFiles();
-	}
-
-
-	out << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
-	writeElementBeg("scene", { "version", "3.5.2" }, depth);
-	writeIntegrator(depth + 1);
-	writeSensor(camera, depth + 1);
-
-
-	// create the scene xml with hierarchy
-	for (auto scene : scenes)
-	{
-		scene->initShapeNodeTransformMatricies();
-		std::string sceneGeometryFolder = scene->name;
-		size_t ind = scene->name.rfind('/');
-		if (ind != std::string::npos) sceneGeometryFolder = scene->name.substr(ind + 1);
-		sceneGeometryFolder = sceneGeometryFolder.substr(0, sceneGeometryFolder.size() - 4);
-
-		writeElement("include", { "filename", sceneGeometryFolder + ".xml" }, depth + 1);
-
-		if (createNewGeometry)
-		{
-			outCurrentScene.open(this->outputFolder + "/" + sceneGeometryFolder + ".xml");
-			outCurrentScene << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
-			writeElementBegScene("scene", { "version", "3.5.2" }, depth);
-
-			for (auto lightNode : scene->lights)
-			{
-				writeLight(lightNode, depth + 1);
-			}
-			for (auto shapeNode : scene->ShapeNodes)
-			{
-				if (!shapeNode->geometry) continue;
-				if (shapeNode->usesOtherGeometry) continue;
-				writeShapeGroup(shapeNode, sceneGeometryFolder, depth + 1);
-			}
-			for (auto shapeNode : scene->ShapeNodes)
-			{
-				if (!shapeNode->geometry) continue;
-
-				writeShapeReference(shapeNode, sceneGeometryFolder, depth + 1);
-			}
-
-			writeElementEndScene("scene", depth);
-			outCurrentScene.close();
-		}
-
-		std::cout << "Exported scene: " << scene->name << std::endl;
-	}
-
-
-	writeElementEnd("scene", depth);
-	out.close();
-}
-
-
 void MitsubaExporter::writeIntegrator(int depth)
 {
 	writeElementBeg("integrator", { "type", "path" }, depth);
@@ -243,15 +249,6 @@ void MitsubaExporter::writeSensor(ViewPointNode* camera, int depth)
 	float fov;
 	if (camera == nullptr)
 	{
-
-
-		//for (auto node : scenes[0]->RootNodes)
-		//{
-		//	if (node->type == NodeTypes::Transform)
-		//	{
-		//		static_cast<TransformNode*>(node)->translation.setVector(0, 0, 0);
-		//	}
-		//}
 
 		AABB retAABB = scenes[0]->getSceneAABB();
 
@@ -310,19 +307,12 @@ void MitsubaExporter::writeFilm(int depth)
 	writeElementEnd("film", depth);
 }
 
-void MitsubaExporter::writeMaterial(Material* mat, int depth)
-{
-	writeElementBegScene("bsdf", { "type", "diffuse" }, depth);
-		writeElementScene("rgb", { "name", "reflectance", "value", mat->diffuseColor.toString() }, depth + 1);
-	writeElementEndScene("bsdf", depth);
-}
 
 void MitsubaExporter::writeShape(ShapeNode* shapeNode, std::string filepath, int depth)
 {
 	writeElementBegScene("shape", { "type", "obj" }, depth);
 		writeElementScene("string", { "name", "filename", "value", filepath + "/" + shapeNode->geometry->name + ".obj"}, depth + 1);
-		//writeBsdf(shapeNode->material, depth + 1);
-		writeBsdfNamed(shapeNode->material, depth + 1);
+		writeBsdfReference(shapeNode->exportMaterial, depth + 1);
 	writeElementEndScene("shape", depth);
 }
 void MitsubaExporter::writeShapeGroup(ShapeNode* shapeNode, std::string filepath, int depth)
@@ -347,92 +337,12 @@ void MitsubaExporter::writeTransform(ShapeNode* shapeNode, int depth)
 	writeElementEndScene("transform", depth);
 }
 
-void MitsubaExporter::writeBsdfNamed(Material* material, int depth)
-{
-	writeElementBegScene("bsdf", { "type", "twosided"}, depth);
-		writeMaterial(material, depth + 1);
-	writeElementEndScene("bsdf", depth);
-}
-
-void MitsubaExporter::writeBsdf(Material* material, int depth)
-{
-	Mat* mat = this->matFile->retMaterial(material->diffuseColor);
-	if (mat == nullptr) {
-		writeElementBegScene("bsdf", { "type", "diffuse" }, depth);
-			writeElementScene("rgb", { "name", "reflectance", "value", material->diffuseColor.toString() }, depth + 1);
-		writeElementEndScene("bsdf", depth);
-		return;
-	}
-
-
-
-	if (mat->materialType == MaterialType::DIFFUSE)
-	{
-		writeElementBegScene("bsdf", { "type", "diffuse" }, depth);
-			writeElementScene("rgb", { "name", "reflectance", "value", mat->Kd.toString()}, depth + 1);
-		writeElementEndScene("bsdf", depth);
-	}
-	else if(mat->materialType == MaterialType::COATED_DIFFUSE)
-	{
-		writeElementBegScene("bsdf", { "type", "roughplastic" }, depth);
-			writeElementScene("rgb", { "name", "diffuse_reflectance", "value", mat->Kd.toString()}, depth + 1);
-			writeElementScene("float", { "name", "alpha", "value", std::to_string(mat->roughness) }, depth + 1);
-		writeElementEndScene("bsdf", depth);
-	}
-	else if(mat->materialType == MaterialType::DIFFUSE_TRANSMISSIVE)
-	{
-		writeElementBegScene("bsdf", { "type", "roughdielectric" }, depth);
-			writeElementScene("float", { "name", "alpha", "value", "0.5"}, depth + 1);
-		writeElementEndScene("bsdf", depth);
-
-	}
-	else if(mat->materialType == MaterialType::DIELECTRIC)
-	{
-		writeElementBegScene("bsdf", { "type", "dielectric" }, depth);
-		writeElementScene("float", { "name", "int_ior", "value", "1.1"}, depth + 1);
-		writeElementScene("float", { "name", "ext_ior", "value", "1.0"}, depth + 1);
-		writeElementEndScene("bsdf", depth);
-	}
-	else if(mat->materialType == MaterialType::CONDUCTOR)
-	{
-		std::string metal = mat->eta_str.substr(mat->eta_str.find("-") + 1);
-		metal = metal.substr(0, metal.find("-"));
-		writeElementBegScene("bsdf", { "type", "roughconductor" }, depth);
-		writeElementScene("string", { "name", "material", "value", metal }, depth + 1);
-		writeElementScene("float", { "name", "alpha", "value", std::to_string(std::min(mat->roughness*4, 1.f)) }, depth + 1);
-		writeElementEndScene("bsdf", depth);
-	}
-	else if(mat->materialType == MaterialType::CONDUCTOR_REFLECTANCE)
-	{
-		writeElementBegScene("bsdf", { "type", "plastic" }, depth);
-		writeElementScene("rgb", { "name", "diffuse_reflectance", "value", mat->reflect.toString() }, depth + 1);
-		writeElementEndScene("bsdf", depth);
-	}
-	else if(mat->materialType == MaterialType::COATED_CONDUCTOR)
-	{
-		std::string metal = mat->eta_str.substr(mat->eta_str.find("-") + 1);
-		metal = metal.substr(0, metal.find("-"));
-		writeElementBegScene("bsdf", { "type", "roughconductor" }, depth);
-		writeElementScene("string", { "name", "material", "value", metal }, depth + 1);
-		writeElementScene("float", { "name", "alpha", "value", std::to_string(std::min(mat->roughness * 4, 1.f)) }, depth + 1);
-		writeElementEndScene("bsdf", depth);
-	}
-	else
-	{
-		writeElementBegScene("bsdf", { "type", "diffuse" }, depth);
-			writeElementScene("rgb", { "name", "reflectance", "value", material->diffuseColor.toString()}, depth + 1);
-		writeElementEndScene("bsdf", depth);
-	}
-
-
-}
-
 void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
 {
 	if (false)
 	{
 		writeElementBegScene("emitter", { "type", "point" }, depth);
-			writeElementScene("rgb", { "name", "intensity", "value", lightNode->color.toString()}, depth + 1);
+			writeElementScene("rgb", { "name", "intensity", "value", lightNode->color.toString() }, depth + 1);
 			writeElementScene("point", { "name", "position", "x", std::to_string(lightNode->location.x), "y", std::to_string(lightNode->location.y), "z", std::to_string(lightNode->location.z), }, depth + 1);
 		writeElementEndScene("emitter", depth);
 	}
@@ -441,22 +351,22 @@ void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
 		float mult = 106;
 		writeElementBegScene("emitter", { "type", "spot" }, depth);
 			writeElementBegScene("transform", { "name", "to_world" }, depth + 1);
-				writeElementScene("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString()}, depth + 2);
+				writeElementScene("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString() }, depth + 2);
 			writeElementEndScene("transform", depth + 1);
-			writeElementScene("float", { "name", "intensity", "value", std::to_string((lightNode->color * lightNode->intensity).len()* mult) }, depth + 1);
+			writeElementScene("float", { "name", "intensity", "value", std::to_string((lightNode->color * lightNode->intensity).len() * mult) }, depth + 1);
 			writeElementScene("float", { "name", "beam_width", "value", std::to_string(RAD_TO_DEG(lightNode->beamWidth)) }, depth + 1);
-			writeElementScene("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle)*2) }, depth + 1);
+			writeElementScene("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle) * 2) }, depth + 1);
 		writeElementEndScene("emitter", depth);
 	}
 	else if (lightNode->lightType == LightNode::LightType::GONIOLIGHT)
 	{
 		writeElementBegScene("emitter", { "type", "spot" }, depth);
 			writeElementBegScene("transform", { "name", "to_world" }, depth + 1);
-			writeElementScene("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString() }, depth + 2);
+				writeElementScene("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString() }, depth + 2);
 			writeElementEndScene("transform", depth + 1);
-			writeElementScene("float", { "name", "intensity", "value", std::to_string(lightNode->intensity)}, depth + 1);
-			writeElementScene("float", { "name", "beam_width", "value", "100"}, depth + 1);
-			writeElementScene("float", { "name", "cutoff_angle", "value", "50"}, depth + 1);
+			writeElementScene("float", { "name", "intensity", "value", std::to_string(lightNode->intensity) }, depth + 1);
+			writeElementScene("float", { "name", "beam_width", "value", "100" }, depth + 1);
+			writeElementScene("float", { "name", "cutoff_angle", "value", "50" }, depth + 1);
 		writeElementEndScene("emitter", depth);
 	}
 	else if (lightNode->lightType == LightNode::LightType::ENVIROMENTAL_LIGHT)
@@ -465,4 +375,129 @@ void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
 			writeElementScene("string", { "name", "filename", "value", lightNode->url }, depth + 1);
 		writeElementEndScene("emitter", depth);
 	}
+}
+
+void MitsubaExporter::writeBsdfReference(Mat* material, int depth)
+{
+	writeElementScene("ref", { "name", "bsdf", "id", material->name }, depth);
+}
+
+
+void MitsubaExporter::writeBsdfNamed(Mat* material, int depth)
+{
+
+	if (material->materialType == MaterialType::DIFFUSE)
+	{
+		writeMaterialDiffuse(material, depth);
+	}
+	else if(material->materialType == MaterialType::COATED_DIFFUSE)
+	{
+		writeMaterialCoatedDiffuse(material, depth);
+	}
+	else if(material->materialType == MaterialType::DIFFUSE_TRANSMISSIVE)
+	{
+		writeMaterialDiffuseTransmission(material, depth);
+	}
+	else if(material->materialType == MaterialType::DIELECTRIC)
+	{
+		writeMaterialDielectric(material, depth);
+	}
+	else if(material->materialType == MaterialType::CONDUCTOR)
+	{
+		writeMaterialConductor(material, depth);
+	}
+	else if(material->materialType == MaterialType::CONDUCTOR_REFLECTANCE)
+	{
+		writeMaterialConductorReflectance(material, depth);
+	}
+	else if(material->materialType == MaterialType::COATED_CONDUCTOR)
+	{
+		writeMaterialCoatedConductor(material, depth);
+	}
+	else if (material->materialType == MaterialType::BTF_MATERIAL)
+	{
+		writeMaterialBTF(material, depth);
+	}
+	else
+	{
+		writeMaterialDiffuse(material, depth);
+	}
+
+
+}
+
+
+void MitsubaExporter::writeMaterialDiffuse(Mat* material, int depth)
+{
+	writeElementBeg("bsdf", { "type", "twosided", "id", material->name}, depth);
+		writeElementBeg("bsdf", { "type", "diffuse" }, depth + 1);
+			writeElement("rgb", { "name", "reflectance", "value", material->Kd.toString() }, depth + 2);
+		writeElementEnd("bsdf", depth + 1);
+	writeElementEnd("bsdf", depth);
+}
+void MitsubaExporter::writeMaterialCoatedDiffuse(Mat* material, int depth)
+{
+	writeElementBeg("bsdf", { "type", "twosided", "id", material->name }, depth);
+		writeElementBeg("bsdf", { "type", "roughplastic" }, depth + 1);
+			writeElement("rgb", { "name", "diffuse_reflectance", "value", material->Kd.toString() }, depth + 2);
+			writeElement("float", { "name", "alpha", "value", std::to_string(material->roughness) }, depth + 2);
+		writeElementEnd("bsdf", depth + 1);
+	writeElementEnd("bsdf", depth);
+}
+void MitsubaExporter::writeMaterialDiffuseTransmission(Mat* material, int depth)
+{
+	writeElementBeg("bsdf", { "type", "roughdielectric", "id", material->name }, depth);
+		writeElement("float", { "name", "alpha", "value", "0.5" }, depth + 1);
+	writeElementEnd("bsdf", depth);
+}
+void MitsubaExporter::writeMaterialDielectric(Mat* material, int depth)
+{
+	writeElementBeg("bsdf", { "type", "dielectric", "id", material->name }, depth);
+		writeElement("float", { "name", "int_ior", "value", "1.5" }, depth + 1);
+		writeElement("float", { "name", "ext_ior", "value", "1.0" }, depth + 1);
+	writeElementEnd("bsdf", depth);
+}
+void MitsubaExporter::writeMaterialConductor(Mat* material, int depth)
+{
+	std::string metal = material->eta_str.substr(material->eta_str.find("-") + 1);
+	metal = metal.substr(0, metal.find("-"));
+	writeElementBeg("bsdf", { "type", "twosided", "id", material->name }, depth);
+		writeElementBeg("bsdf", { "type", "roughconductor" }, depth + 1);
+			writeElement("string", { "name", "material", "value", metal }, depth + 2);
+			writeElement("float", { "name", "alpha", "value", std::to_string(std::min(material->roughness * 4, 1.f)) }, depth + 2);
+		writeElementEnd("bsdf", depth + 1);
+	writeElementEnd("bsdf", depth);
+
+}
+void MitsubaExporter::writeMaterialConductorReflectance(Mat* material, int depth)
+{
+	writeElementBeg("bsdf", { "type", "twosided", "id", material->name }, depth);
+		writeElementBeg("bsdf", { "type", "plastic" }, depth + 1);
+			writeElement("rgb", { "name", "diffuse_reflectance", "value", material->reflect.toString() }, depth + 2);
+		writeElementEnd("bsdf", depth + 1);
+	writeElementEnd("bsdf", depth);
+
+}
+
+void MitsubaExporter::writeMaterialCoatedConductor(Mat* material, int depth)
+{
+	std::string metal = material->eta_str.substr(material->eta_str.find("-") + 1);
+	metal = metal.substr(0, metal.find("-"));
+	writeElementBeg("bsdf", { "type", "twosided", "id", material->name }, depth);
+		writeElementBeg("bsdf", { "type", "roughconductor" }, depth + 1);
+			writeElement("string", { "name", "material", "value", metal }, depth + 2);
+			writeElement("float", { "name", "alpha", "value", std::to_string(std::min(material->roughness * 4, 1.f)) }, depth + 2);
+		writeElementEnd("bsdf", depth + 1);
+	writeElementEnd("bsdf", depth);
+
+}
+
+void MitsubaExporter::writeMaterialBTF(Mat* material, int depth)
+{
+	writeElementBeg("bsdf", { "type", "twosided", "id", material->name }, depth);
+		writeElementBeg("bsdf", { "type", "custombsdf" }, depth + 1);
+			writeElement("string", { "name", "filename", "value", material->btfFileName }, depth + 2);
+		writeElementEnd("bsdf", depth + 1);
+	writeElementEnd("bsdf", depth);
+
 }

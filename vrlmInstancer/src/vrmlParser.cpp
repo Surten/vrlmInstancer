@@ -185,7 +185,8 @@ void VrmlParser::parseNode(TransformNode* parent, bool hasDEF) {
 
 }
 
-void VrmlParser::parseTransformNode(TransformNode* transformNode) {
+void VrmlParser::parseTransformNode(TransformNode* transformNode) 
+{
 
     readSymbol();
     if (str[0] != '{') std::cout << "error: expected { at the start of Transform node named " << transformNode->name << std::endl;
@@ -203,11 +204,14 @@ void VrmlParser::parseTransformNode(TransformNode* transformNode) {
         }
         // rotation
         else if (str == "rotation") {
-            for (int i = 0; i < 4; i++)
-            {
-                readSymbol();
-                transformNode->rotation[i] = n;
-            }
+            readSymbol();
+            transformNode->rotation.x = n;
+            readSymbol();
+            transformNode->rotation.y = n;
+            readSymbol();
+            transformNode->rotation.z = n;
+            readSymbol();
+            transformNode->rotation.par = n;
         }
         // scale
         else if (str == "scale") {
@@ -220,11 +224,15 @@ void VrmlParser::parseTransformNode(TransformNode* transformNode) {
         }
         // scaleOrientation
         else if (str == "scaleOrientation") {
-            for (int i = 0; i < 4; i++)
-            {
-                readSymbol();
-                transformNode->scaleOrientation[i] = n;
-            }
+            readSymbol();
+            transformNode->scaleOrientation.x = n;
+            readSymbol();
+            transformNode->scaleOrientation.y = n;
+            readSymbol();
+            transformNode->scaleOrientation.z = n;
+            readSymbol();
+            transformNode->scaleOrientation.par = n;
+
         }
         else if (str == "children") {
             parseChildren(transformNode);

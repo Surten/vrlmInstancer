@@ -10,9 +10,20 @@
 #include "vrmlSaver.h"
 #include "materials.h"
 
+#include "project.h"
+#include "animation.h"
+
+
 class SceneManager {
+
 public:
+
 	MaterialsFile* materialsFile;
+
+	AnimationInfo* animInfo;
+	Project* project;
+
+	std::vector<Scene*> scenes;
 
 public:
 	SceneManager();
@@ -46,7 +57,7 @@ public:
 
 	void createDefaultCamera();
 	void createDefaultEnviromentalLight(std::string envirometMapFileName);
-	void exportAllToPBRT(int cameraIndex, std::string outputHeaderName, std::string outputImageName, bool createNewGeometry);
+	void exportAllToPBRT(int cameraIndex, std::string outputHeaderName, std::string outputFolder, std::string outputImageName, bool createNewGeometry);
 	void exportAllToMitsuba(int cameraIndex, std::string outputHeaderName, std::string outputFolder, bool createNewGeometry);
 
 	void unifyTextrureCoordScaleOfAllScenes();
@@ -57,9 +68,7 @@ public:
 	void rotateSceneAroundY(int sceneID, float angleDegrees);
 
 private:
-	std::vector<Scene*> scenes;
 	std::vector<Scene*> scenesWithTextures;
-
 
 	std::vector<ViewPointNode*> allCameras;
 
@@ -69,8 +78,11 @@ private:
 	VrmlSaver vrmlSaver;
 
 
+
+
 private:
 
+	void initExportMaterials();
 	float getTextureCoordsToObjectCoordsScale();
 	Scene* getSceneByName(const std::string& name);
 };

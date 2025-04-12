@@ -189,9 +189,9 @@ void Scene::findAndUseSameObjects(Scene* otherScene) {
 		AABB aabb = geometries[i]->getAABB();
 		vec3 centerOfGravity = geometries[i]->getCenterOfGravity();
 
-		aabb.max = *(geometries[i]->parent->transformToRootMatrix) * aabb.max;
-		aabb.min = *(geometries[i]->parent->transformToRootMatrix) * aabb.min;
-		centerOfGravity = *(geometries[i]->parent->transformToRootMatrix) * centerOfGravity;
+		//aabb.max = *(geometries[i]->parent->transformToRootMatrix) * aabb.max;
+		//aabb.min = *(geometries[i]->parent->transformToRootMatrix) * aabb.min;
+		//centerOfGravity = *(geometries[i]->parent->transformToRootMatrix) * centerOfGravity;
 
 		vec3 diagonal = aabb.getDiagonal();
 		vec3 vectorToGravCenter = centerOfGravity - aabb.getArithmeticCenter();
@@ -202,9 +202,9 @@ void Scene::findAndUseSameObjects(Scene* otherScene) {
 			AABB otherAabb = otherScene->geometries[j]->getAABB();
 			vec3 otherCenterOfGravity = otherScene->geometries[j]->getCenterOfGravity();
 
-			otherAabb.max = *(otherScene->geometries[j]->parent->transformToRootMatrix) * otherAabb.max;
-			otherAabb.min = *(otherScene->geometries[j]->parent->transformToRootMatrix) * otherAabb.min;
-			otherCenterOfGravity = *(otherScene->geometries[j]->parent->transformToRootMatrix) * otherCenterOfGravity;
+			//otherAabb.max = *(otherScene->geometries[j]->parent->transformToRootMatrix) * otherAabb.max;
+			//otherAabb.min = *(otherScene->geometries[j]->parent->transformToRootMatrix) * otherAabb.min;
+			//otherCenterOfGravity = *(otherScene->geometries[j]->parent->transformToRootMatrix) * otherCenterOfGravity;
 
 			if (nPoints == otherNpoints && diagonal.areEqual(otherAabb.getDiagonal()) && vectorToGravCenter.areEqual(otherCenterOfGravity - otherAabb.getArithmeticCenter())) {
 				geoPairs.push_back(std::pair<Geometry*, Geometry*>(geometries.at(i), otherScene->geometries.at(j)));
@@ -294,10 +294,10 @@ void Scene::calculateAABBRecursive(TransformNode* transformNode, Matrix transfor
 	Matrix translateMat;
 	Matrix rotateMat;
 	Matrix scaleMat;
-	vec3 rotationAxis(transformNode->rotation[0], transformNode->rotation[1], transformNode->rotation[2]);
+	vec3 rotationAxis(transformNode->rotation.x, transformNode->rotation.y, transformNode->rotation.z);
 	if (transformNode->hasTranslation()) translateMat.mTranslate(transformNode->translation);
 	if (transformNode->hasRotation())
-		rotateMat.mRotate(rotationAxis, transformNode->rotation[3]);
+		rotateMat.mRotate(rotationAxis, transformNode->rotation.par);
 	if (transformNode->hasScale()) scaleMat.mScale(transformNode->scale);
 
 	transformMatrix = transformMatrix * translateMat * rotateMat * scaleMat;

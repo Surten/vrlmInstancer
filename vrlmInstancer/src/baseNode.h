@@ -1,7 +1,9 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "scene_anim.h"
 #include "dataStructs.h"
+#include "matData.h"
 #include "matrix.h"
 
 // enum to remember the different type of nodes inside base node,
@@ -39,29 +41,28 @@ private:
 /// </summary>
 class TransformNode : public BaseNode {
 public:
-	TransformNode(std::string name) : BaseNode(name, NodeTypes::Transform), translation(), scale(1.0f, 1.0f, 1.0f){
-		rotation[0] = 0; rotation[1] = 0; rotation[2] = 0; rotation[3] = 0;
-		scaleOrientation[0] = 0; scaleOrientation[1] = 0; scaleOrientation[2] = 0; scaleOrientation[3] = 0;
+	TransformNode(std::string name) : BaseNode(name, NodeTypes::Transform), translation(), scale(1.0f, 1.0f, 1.0f),
+		rotation(1,0,0,0), scaleOrientation(1,0,0,0), objectInfo(nullptr), objectType(_OBJECT_NDEF)
+	{
 	}
 	TransformNode(std::string name, float* translation, float* rotation, float* scale, float* scaleOrientation)
-		: BaseNode(name, NodeTypes::Transform), translation(translation[0], translation[1], translation[2]), scale(scale[0], scale[1], scale[2])
+		: BaseNode(name, NodeTypes::Transform), translation(translation[0], translation[1], translation[2]), scale(scale[0], scale[1], scale[2]),
+		rotation(rotation[0], rotation[1], rotation[2], rotation[3]), scaleOrientation(scaleOrientation[0], scaleOrientation[1], scaleOrientation[2], scaleOrientation[3]),
+		objectInfo(nullptr), objectType(_OBJECT_NDEF)
 	{
 		this->name = name;
-		std::memcpy(this->rotation, rotation, sizeof(float) * 4);
-		std::memcpy(this->scaleOrientation, scaleOrientation, sizeof(float) * 4);
-		
 	}
 	void setTranslation(float* translation) {
 		this->translation.setVector(translation[0], translation[1], translation[2]);
 	}
 	void setRotation(float* rotation) {
-		std::memcpy(this->rotation, rotation, sizeof(float) * 4);
+		this->rotation = vec4(rotation[0], rotation[1], rotation[2], rotation[3]);
 	}
 	void setScale(float* scale) {
 		this->scale.setVector(scale[0], scale[1], scale[2]);
 	}
 	void setScaleOrientation(float* scaleOrientation) {
-		std::memcpy(this->scaleOrientation, scaleOrientation, sizeof(float) * 4);
+		this->scaleOrientation = vec4(scaleOrientation[0], scaleOrientation[1], scaleOrientation[2], scaleOrientation[3]);
 	}
 
 	bool hasTranslation() {
@@ -71,7 +72,7 @@ public:
 	}
 	bool hasRotation() {
 		float eps = 0.0001f;
-		if (std::abs(rotation[0]) < eps && std::abs(rotation[1]) < eps && std::abs(rotation[2]) < eps && std::abs(rotation[3]) < eps)
+		if (std::abs(rotation.par) < eps)
 			return false;
 		return true;
 	}
@@ -82,18 +83,48 @@ public:
 	}
 	bool hasScaleOrientation() {
 		float eps = 0.0001f;
-		if (std::abs(scaleOrientation[0]) < eps && std::abs(scaleOrientation[1]) < eps && std::abs(scaleOrientation[2]) < eps && std::abs(scaleOrientation[3]) < eps)
+		if (std::abs(scaleOrientation.par) < eps)
 			return false;
 		return true;
 	}
+
+
+
+	// ANIM----------
+	/// Sets the type of the object
+	void setObjectType(ObjectType ot) { objectType = ot; }
+	/// Returns the type of the object
+	ObjectType retObjectType(void) { return objectType; }
+	/// Returns pointer to the object info object
+	ObjectInfo* retObjectInfo(void) { return objectInfo; }
+	/// Traverse the list of children, find the transform node that contains the moving parts of the door object and set the correct rotation
+	void setRotationDoor(void);
+	/// Traverse the list of children, sets the joint axis for rotating the door
+	void setDoorAxis(void);
+	/// Traverse the list of children, find the transform node that contains the moving parts of the window object and set the correct rotation
+	void setRotationWindow(void);
+	/// Traverse the list of children, sets the joint axis for rotating the window
+	void setWindowAxis(void);
+	/// Initializes the objectInfo pointer to the Door info object
+	void initDoorInfo(void) { objectInfo = new DoorInfo(); }
+	/// Initializes the objectInfo pointer to the Window info object
+	void initWindowInfo(void) { objectInfo = new WindowInfo(); }
+	/// Initializes the objectInfo pointer to the Shutter info object
+	void initShutterInfo(void) { objectInfo = new ShutterInfo(); }
+	//END ANIM
 	
 public:
 	vec3 translation;
-	float rotation[4];
+	vec4 rotation;
 	vec3 scale;
-	float scaleOrientation[4];
+	vec4 scaleOrientation;
 
 	std::vector<BaseNode*> children;
+
+	/// Type of the transform node object
+	ObjectType objectType;
+	/// Pointer to the objectInfo object, if this node is not an recognized object, this pointer is set to NULL
+	ObjectInfo* objectInfo;
 };
 
 /// <summary>
@@ -109,6 +140,7 @@ public:
 		transformFromRootMatrix = nullptr;
 		transformToRootMatrix = nullptr;
 		material = nullptr;
+		exportMaterial = nullptr;
 	}
 
 	~ShapeNode()
@@ -120,6 +152,7 @@ public:
 public:
 	Geometry* geometry;
 	Material* material;
+	Mat* exportMaterial;
 	Matrix* transformFromRootMatrix; // only initialized after a special call to a Scene's method
 	Matrix* transformToRootMatrix; // only initialized after a special call to a Scene's method
 	std::string textureFilePath;
@@ -157,6 +190,8 @@ public:
 	LightNode() : BaseNode("", NodeTypes::Light), intensity(0), color(), location(), direction(),
 		cutOffAngle(0), beamWidth(0), on(false), radius(0), lightType(LightType::SPOTLIGHT) {}
 
+
+
 private:
 };
 
@@ -171,40 +206,34 @@ public:
 	float fieldOfView;
 	std::string description;
 
-	ViewPointNode() : BaseNode("", NodeTypes::ViewPoint), position(), orientation(), fieldOfView(0), description("") {}
+
+	/// Determines if the camera is on - if it will be included in the output VRML file
+	bool m_bIsOn = false;
+	/// Determines if the camera has been animated
+	bool m_bHasAnimated = false;
+	/// Pointer to a list with animation checkpoints
+	AnimationList* animList;
+	/// Flag determining if the camera has been selected for PBRT - only one can be selected
+	bool m_bPBRTSelect = false;
+
+	ViewPointNode() : BaseNode("", NodeTypes::ViewPoint), position(), orientation(), fieldOfView(0), description(""), animList(nullptr){}
 
 	//----------------------------------------------------------------------------------------------
-	void computeLookAt(vec3& loc, vec3& dir, vec3& up) const
-		//----------------------------------------------------------------------------------------------
-	{
-		loc = position;
+	void computeLookAt(vec3& loc, vec3& dir, vec3& up) const;
 
-
-		vec3 vec(orientation[0], orientation[1], orientation[2]);
-
-		// Normalizuju
-		vec.normalize();
-
-		// Matice identity
-		Matrix mat;
-		// Vytvorim rotacni matici kolem obecneho vektoru definovaneho pomoci 'dir' a uhlu v 'orientation'
-		mat = mat.mRotate(vec, orientation[3]);
-
-		// Urcim smer pohledu kamery
-		vec = mat * vec3(0.0, 0.0, -1.0);
-		// Urcim up-vector kamery
-		up = mat * vec3(0.0, 1.0, 0.0);
-
-		// Zbyva urcit bod, na ktery bude kamera centrovana. Pokud znam smerovy vektor
-		// pohledu kamery, staci vzit libovolne cislo a dosadit za parametr 't' v parametricke
-		// rci primky.
-		const float t = 10.0f;
-
-		// Get the current position of the camera
-		vec3 currentPosition = position;
-		dir.x = currentPosition.x + vec.x * t;
-		dir.y = currentPosition.y + vec.y * t;
-		dir.z = currentPosition.z + vec.z * t;
-	}
+	/// Initializes the animationList object
+	void initAnimList(void) { animList = new AnimationList(); }
+	/// Clears the animtion lists objects
+	void clearAnimList(void);
+	/// Copies the provided animation list with doors
+	void copyAnimList(AnimationList* list);
+	/// Sets the PBRT selection flag
+	void setPBRTSelect(bool select) { m_bPBRTSelect = select; }
+	/// Returns the PBRT selection flag
+	bool retPBRTSelect(void) { return m_bPBRTSelect; }
+	/// Returns the current position of the camera during animation
+	vec3 retCurrentPosition(AnimationInfo* animInfo);
+	/// Returns the current orientation of the camera during animation
+	vec4 retCurrentOrientation(AnimationInfo* animInfo);
 
 };

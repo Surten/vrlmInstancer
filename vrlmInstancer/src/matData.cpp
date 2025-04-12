@@ -14,7 +14,7 @@ Mat::Mat()
 {
 	// Nastavim defaultni hodnoty
 	vrmlDiffuse = vec3(0,0,0);
-	materialType = MaterialType::NONE;
+	materialType = MaterialType::UNDEFINED;
 	sigma = 0.0f;
 	roughness = 0.1f;
 	u_roughness = 0.1f;

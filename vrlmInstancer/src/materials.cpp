@@ -19,6 +19,14 @@ MaterialsFile::MaterialsFile()
 
 }
 
+MaterialsFile::~MaterialsFile()
+{
+	for (size_t i = 0; i < materials.size(); i++)
+	{
+		delete materials[i];
+	}
+}
+
 //----------------------------------------------------------------------------------------------
 bool MaterialsFile::LoadMaterials(std::string fileName)
 //----------------------------------------------------------------------------------------------
@@ -96,51 +104,13 @@ bool MaterialsFile::LoadMaterials(std::string fileName)
 
 Mat* MaterialsFile::retMaterial(vec3 vrmlDiffuse)
 {
-	float fdX = vrmlDiffuse.x;
-	float fdY = vrmlDiffuse.y;
-	float fdZ = vrmlDiffuse.z;
-
-	int mtcount = materials.size();
-	//std::cout << "Matcount = " << mtcount << endl;
-	for (int i = 0; i < (int)mtcount; i++) {
-		Mat* mat = materials[i];
-		float ndX = mat->vrmlDiffuse.x;
-		float ndY = mat->vrmlDiffuse.y;
-		float ndZ = mat->vrmlDiffuse.z;
-		// Povolim nepatrnou toleranci, abych dosahl rovnosti materialu
-		if ((fdX >= ndX - 0.00005 && fdX <= ndX + 0.00005)
-			&& (fdY >= ndY - 0.00005 && fdY <= ndY + 0.00005)
-			&& (fdZ >= ndZ - 0.00005 && fdZ <= ndZ + 0.00005))
-			return mat;
-	}
-	if (unrecognizedMaterials.size() == 0)
-		unrecognizedMaterials.push_back(vrmlDiffuse);
-	else {
-		bool matInTable = false;
-		for (int i = 0; i < unrecognizedMaterials.size(); i++) {
-			if (unrecognizedMaterials[i].x == fdX && unrecognizedMaterials[i].y == fdY && unrecognizedMaterials[i].z == fdZ)
-				matInTable = true;
+	for (int i = 0; i < materials.size(); i++) {
+		vec3 difference = materials[i]->vrmlDiffuse - vrmlDiffuse;
+		if (difference.len() < 0.00005) {
+			return materials[i];
 		}
-		if (!matInTable)
-			unrecognizedMaterials.push_back(vrmlDiffuse);
 	}
-
 	return nullptr;
-}
-
-void MaterialsFile::LoadUseAsBTFMaterials(std::string fileName)
-{
-
-}
-
-
-
-
-
-float MaterialsFile::round (float x, int desetCisel)
-{
-	const float number = pow(10.0f, desetCisel);
-	return (x < 0.0 ? (float)ceil(x * number - 0.5) : (float)floor(x * number + 0.5)) / number;
 }
 
 
@@ -156,34 +126,64 @@ bool MaterialsFile::InitMatFile(std::string fileName)
 
 bool MaterialsFile::SaveMaterial(Mat* material)
 {	
-	const vec3 dif = material->vrmlDiffuse;
 	for(int i = 0; i < materials.size(); i++){
-		const vec3 difOld = materials[i]->vrmlDiffuse;
-		// Z duvodu odladeni nepresnosti takto vypisu..
-		float dxOld = round(difOld.x,5);
-		float dyOld = round(difOld.y,5);
-		float dzOld = round(difOld.z,5);
-		float dxNew = round(dif.x,5);
-		float dyNew = round(dif.y,5);
-		float dzNew = round(dif.z,5);
-		// Pokud je vrml difusni slozka stejna(nebo velmi podobna->pocitam s drobnou toleranci), jedna se o duplicitu!
-		if((dxOld >= dxNew-0.00005 && dxOld <= dxNew+0.00005) 
-			&& (dyOld >= dyNew-0.0005 && dyOld <= dyNew+0.00005) 
-			&& (dzOld >= dzNew-0.0005 && dzOld <= dzNew+0.00005)) {
-				//cerr <<"Warning:"<< dxNew <<" "<< dyNew <<" "<< dzNew <<" diffuse color is near early defined values:"<<dxOld<<" "<<dyOld<<" "<<dzOld<<endl;
-			return false;
-		}
-		if(dxOld == dxNew && dyOld == dyNew && dzOld == dzNew){
-			char * err = new char[100];
-			printf_s(err, "%.4f %.4f %.4f", dxNew, dyNew, dzNew);
+		vec3 difference = materials[i]->vrmlDiffuse - material->vrmlDiffuse;
+		if(difference.len() < 0.00005) {
 			return false;
 		}
 	}
-	vec3 difN(dif.x,dif.y,dif.z);
-	material->vrmlDiffuse = difN;
 	materials.push_back(material);
-	
 	return true;
+}
+
+
+
+void MaterialsFile::AddSceneMaterials(Scene* scene)
+{
+	int numOfGeometriesWithoutTexCoords = 0;
+	for (auto shapeNode : scene->ShapeNodes)
+	{
+		Mat* existing_material = retMaterial(shapeNode->material->diffuseColor);
+		if (existing_material == nullptr)
+		{
+			Mat* mat = new Mat();
+			mat->name = "UnregognizedMaterial" + std::to_string(unregognizedMaterialCount);
+			mat->vrmlDiffuse = shapeNode->material->diffuseColor;
+			mat->Kd = shapeNode->material->diffuseColor;
+			mat->materialType = MaterialType::UNDEFINED;
+
+			shapeNode->exportMaterial = mat;
+			materials.push_back(mat);
+
+			unregognizedMaterialCount++;
+		}
+		else
+		{
+			shapeNode->exportMaterial = existing_material;
+		}
+
+		if (shapeNode->exportMaterial->materialType == MaterialType::BTF_MATERIAL)
+		{
+			if (shapeNode->geometry && shapeNode->geometry->textureCoords.size() == 0)
+			{
+				//std::cout << "No Texture coordinates to use BTF: " << shapeNode->exportMaterial->name << " - " << scene->name << " - " << shapeNode->geometry->name << std::endl;
+				numOfGeometriesWithoutTexCoords++;
+			}
+		}
+	}
+	std::cout << "No Texture coordinates to use BTF for # " << numOfGeometriesWithoutTexCoords << " in scene: " << scene->name << std::endl;
+}
+
+void MaterialsFile::replaceByBTF(std::string matName, std::string btfFileName)
+{
+	for (Mat* material : materials)
+	{
+		if (material->name == matName)
+		{
+			material->materialType = MaterialType::BTF_MATERIAL;
+			material->btfFileName = btfFileName;
+		}
+	}
 }
 
 void MaterialsFile::LoadMaterialDiffuse(std::stringstream& matFile, Mat * mat)

@@ -70,11 +70,11 @@ void VrmlSaver::writeTransformNode(TransformNode* node) {
 	if (node->hasTranslation())
 		out << leadingSpaces << "  translation " << node->translation.x << " " << node->translation.y << " " << node->translation.z << std::endl;
 	if (node->hasRotation())
-		out << leadingSpaces << "  rotation " << node->rotation[0] << " " << node->rotation[1] << " " << node->rotation[2] << " " << node->rotation[3] << std::endl;
+		out << leadingSpaces << "  rotation " << node->rotation.x << " " << node->rotation.y << " " << node->rotation.z << " " << node->rotation.par << std::endl;
 	if (node->hasScale())
 		out << leadingSpaces << "  scale " << node->scale.x << " " << node->scale.y << " " << node->scale.z << std::endl;
 	if (node->hasScaleOrientation())
-		out << leadingSpaces << "  scaleOrientation " << node->scaleOrientation[0] << " " << node->scaleOrientation[1] << " " << node->scaleOrientation[2] << " " << node->scaleOrientation[2] << std::endl;
+		out << leadingSpaces << "  scaleOrientation " << node->scaleOrientation.x << " " << node->scaleOrientation.y << " " << node->scaleOrientation.z << " " << node->scaleOrientation.par << std::endl;
 	if (node->children.size() > 0) {
 		out << leadingSpaces << "  children [" << std::endl;
 		writeChildren(node);

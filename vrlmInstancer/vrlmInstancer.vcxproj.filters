@@ -51,6 +51,24 @@
     <ClCompile Include="src\materials.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\anim\animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\anim\geometryModify.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\anim\project.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\anim\scene_anim.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\anim\error.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\baseNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\vrmlParser.h">
@@ -87,6 +105,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\materials.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\anim\animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\anim\geometryModify.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\anim\project.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\anim\constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\anim\scene_anim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\anim\error.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

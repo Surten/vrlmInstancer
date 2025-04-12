@@ -74,6 +74,24 @@ public:
     }
 };
 
+class vec4 {
+public:
+    float x; float y; float z; float par;
+    vec4() : x(0.f), y(0.f), z(0.f), par(0.f) {}
+    vec4(float px, float py, float pz, float p) : x(px), y(py), z(pz), par(p) {}
+    vec4(const float* pp) : x(pp[0]), y(pp[1]), z(pp[2]), par(pp[3]) {}
+    /// Operator prirazeni
+    vec4& operator=(const vec4&);
+    /// Kopirovaci konstruktor
+    vec4(const vec4&);
+    // Metoda nastavi definovane hodnoty
+    void setVector(float vx, float vy, float vz, float vpar) { x = vx; y = vy; z = vz; par = vpar; }
+    /// Spratelena metoda pro vypis vektoru do proudu
+    friend std::ostream& operator<<(std::ostream&, const vec4&);
+    /// Vraci true, iff vektor nulovy
+    bool retEmptyVector();
+};
+
 std::ostream& operator<<(std::ostream& os, const vec2& obj);
 
 /// <summary>

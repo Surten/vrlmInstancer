@@ -9,19 +9,22 @@ Definice fci zpracovavajicich soubor s materialy
 #ifndef __MATERIALS_H__
 #define __MATERIALS_H__
 
-#include "matData.h"
 #include <string>
+#include "matData.h"
+#include "scene.h"
 
 class MaterialsFile
 {
 public:
 	MaterialsFile();
+	~MaterialsFile();
 
 	bool LoadMaterials(std::string filename);
 	Mat* retMaterial(vec3 vrmlDiffuse);
 
-	void LoadUseAsBTFMaterials(std::string filename);
+	void AddSceneMaterials(Scene* scene);
 
+	void replaceByBTF(std::string matName, std::string btfFileName);
 
 
 public:
@@ -31,7 +34,6 @@ public:
 
 
 private:
-	float round(float x, int desetCisel);
 	bool SaveMaterial(Mat* material);
 	bool InitMatFile(std::string fileName);
 
@@ -43,6 +45,8 @@ private:
 	void LoadMaterialConductorReflectance(std::stringstream& matFile, Mat* mat);
 	void LoadMaterialCoatedConductor(std::stringstream& matFile, Mat* mat);
 
+private:
+	int unregognizedMaterialCount = 0;
 
 };
 

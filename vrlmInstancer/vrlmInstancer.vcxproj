@@ -105,6 +105,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>src;src/anim</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,6 +121,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>src;src/anim</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,11 +131,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\anim\animation.cpp" />
+    <ClCompile Include="src\anim\error.cpp" />
+    <ClCompile Include="src\anim\geometryModify.cpp" />
+    <ClCompile Include="src\anim\scene_anim.cpp" />
+    <ClCompile Include="src\baseNode.cpp" />
     <ClCompile Include="src\matData.cpp" />
     <ClCompile Include="src\materials.cpp" />
     <ClCompile Include="src\mitsubaExporter.cpp" />
     <ClCompile Include="src\application.cpp" />
     <ClCompile Include="src\matrix.cpp" />
+    <ClCompile Include="src\anim\project.cpp" />
     <ClCompile Include="src\sceneManager.cpp" />
     <ClCompile Include="src\pbrtExporter.cpp" />
     <ClCompile Include="src\dataStructs.cpp" />
@@ -143,11 +151,17 @@
     <ClCompile Include="src\vrmlSaver.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\anim\animation.h" />
+    <ClInclude Include="src\anim\constants.h" />
+    <ClInclude Include="src\anim\error.h" />
+    <ClInclude Include="src\anim\geometryModify.h" />
+    <ClInclude Include="src\anim\scene_anim.h" />
     <ClInclude Include="src\matData.h" />
     <ClInclude Include="src\materials.h" />
     <ClInclude Include="src\mitsubaExporter.h" />
     <ClInclude Include="src\application.h" />
     <ClInclude Include="src\matrix.h" />
+    <ClInclude Include="src\anim\project.h" />
     <ClInclude Include="src\sceneManager.h" />
     <ClInclude Include="src\pbrtExporter.h" />
     <ClInclude Include="src\baseNode.h" />

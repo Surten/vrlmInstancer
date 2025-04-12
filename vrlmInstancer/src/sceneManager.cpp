@@ -1,10 +1,14 @@
 #include "sceneManager.h"
 
-SceneManager::SceneManager() : pbrtExporter(), mitsubaExporter() {
+SceneManager::SceneManager() : animInfo(new AnimationInfo()), project(new Project(animInfo)), pbrtExporter(animInfo), mitsubaExporter(animInfo)
+{
 	materialsFile = new MaterialsFile();
+	project->initProject();
 }
 SceneManager::~SceneManager() {
 	delete materialsFile;
+	delete animInfo;
+	delete project;
 }
 
 
@@ -209,7 +213,7 @@ void SceneManager::createDefaultEnviromentalLight(std::string envirometMapFileNa
 	std::cout << "Created default enviromental light for scene with index 0, because no lights were detected" << std::endl;
 }
 
-void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::string outputImageFormat, bool createNewGeometry) {
+void SceneManager::exportAllToPBRT(int cameraIndex, std::string outputHeaderName, std::string outputFolder, std::string outputImageFormat, bool createNewGeometry) {
 	bool createdCustomFloor = false;
 	ViewPointNode* camera;
 	if (cameraIndex == -1 || allCameras.size() == 0)
@@ -231,10 +235,11 @@ void SceneManager::exportAllToPBRT(int cameraIndex, std::string name, std::strin
 	}
 	if (!hasLights) createDefaultEnviromentalLight("sky.exr");
 
-	std::string outputFolder("pbrtv4/textured/");
-	std::string outputHeaderName = "headers/header_" + name;
-	std::string outputImageName = "output/" + name + "." + outputImageFormat;
-	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageName, createNewGeometry);
+	std::string outputImageName = outputHeaderName + "." + outputImageFormat;
+
+	initExportMaterials();
+	project->executeActions();
+	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageName, createNewGeometry, materialsFile);
 }
 
 void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName, std::string outputFolder, bool createNewGeometry) {
@@ -258,7 +263,9 @@ void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName
 	}
 	if (!hasLights) createDefaultEnviromentalLight("material-testball/textures/envmap.hdr");
 
-	//std::string outputImageName = "output/" + name + "_render." + outputImageFormat;
+
+	initExportMaterials();
+	project->executeActions();
 	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, createNewGeometry, materialsFile);
 }
 
@@ -326,6 +333,14 @@ float SceneManager::getTextureCoordsToObjectCoordsScale() {
 		scale = 100.0;
 	}
 	return (float)scale;
+}
+
+void SceneManager::initExportMaterials()
+{
+	for (auto scene : scenes)
+	{
+		materialsFile->AddSceneMaterials(scene);
+	}
 }
 
 

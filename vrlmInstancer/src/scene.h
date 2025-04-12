@@ -19,6 +19,8 @@ public:
 	std::vector<LightNode*> lights;
 	std::vector<ViewPointNode*> Cameras;
 
+	bool isAnimated = false;
+
 
 
 public:
