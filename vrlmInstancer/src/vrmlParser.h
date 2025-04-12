@@ -107,6 +107,12 @@ private:
 	void parseCoords(ShapeNode* shapeNode);
 
 	/// <summary>
+	/// Part of parseGeometry, parses Vertices
+	/// </summary>
+	/// <param name="shapeNode">The Shape node</param>
+	void parseNormalCoords(ShapeNode* shapeNode);
+
+	/// <summary>
 	/// Part of parseGeometry, parses texture vertices
 	/// </summary>
 	/// <param name="shapeNode">The Shape node</param>
@@ -122,7 +128,13 @@ private:
     /// Part of parseGeometry, parses indices
     /// </summary>
     /// <param name="shapeNode">The Shape node</param>
-	void parseCoordIndex(ShapeNode* shapeNode);
+	void parseCoordIndex(ShapeNode* shapeNode);	
+
+	/// <summary>
+    /// Part of parseGeometry, parses normal indices
+    /// </summary>
+    /// <param name="shapeNode">The Shape node</param>
+	void parseNormalCoordIndex(ShapeNode* shapeNode);
 
 	/// <summary>
 	/// Part of parseGeometry, parses texture indices

@@ -42,8 +42,10 @@ private:
 	void writeTexture(ShapeNode* node);
 	void writeGeometryDEF(ShapeNode* node);
 	void writeGeometryCoords(ShapeNode* node);
+	void writeGeometryNormalCoords(ShapeNode* node);
 	void writeGeometryTexCoords(ShapeNode* node);
 	void writeGeometryIndices(ShapeNode* node);
+	void writeGeometryNormalIndices(ShapeNode* node);
 	void writeGeometryTextureIndices(ShapeNode* node);
 	void writeGeometryUSE(ShapeNode* node);
 	void writeLightNode(LightNode* lightNode);

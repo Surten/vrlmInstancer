@@ -118,14 +118,21 @@ void VrmlSaver::writeGeometryDEF(ShapeNode* node) {
 	out << leadingSpaces << "geometry DEF " << node->geometry->name << " IndexedFaceSet {" << std::endl;
 	out << leadingSpaces << "  ccw " << ((node->geometry->ccw == true) ? "TRUE" : "FALSE") << std::endl;
 	out << leadingSpaces << "  solid " << ((node->geometry->solid == true) ? "TRUE" : "FALSE") << std::endl;
-	//out << leadingSpaces << "  normalPerVertex " << ((node->geometry.normalPerVertex == true) ? "TRUE" : "FALSE") << std::endl;
+	out << leadingSpaces << "  normalPerVertex " << ((node->geometry->normalPerVertex == true) ? "TRUE" : "FALSE") << std::endl;
 	//out << leadingSpaces << "  creaseAngle " << node->geometry.creaseAngle << std::endl;
 	writeGeometryCoords(node);
+
+	if(node->geometry->normals.size() > 0)
+		writeGeometryNormalCoords(node);
 	if(node->geometry->textureCoords.size() > 0)
 		writeGeometryTexCoords(node);
+
 	writeGeometryIndices(node);
+
 	if(node->geometry->facesTextureIndex.size() > 0)
 		writeGeometryTextureIndices(node);
+	if (node->geometry->facesNormalIndex.size() > 0)
+		writeGeometryNormalIndices(node);
 	out << leadingSpaces << "}" << std::endl;
 
 }
@@ -166,6 +173,53 @@ void VrmlSaver::writeGeometryCoords(ShapeNode* node)
 
 			// very dumb solve to how to write ']' instead of ',' after the last element
 			if (a + 1 == node->geometry->coords.size()) {
+				out << "] ";
+			}
+			else {
+				out << ", ";
+			}
+		}
+
+	}
+	out << std::endl;
+
+	out << leadingSpaces << "}" << std::endl;
+}
+
+void VrmlSaver::writeGeometryNormalCoords(ShapeNode* node) 
+{
+	std::string leadingSpaces = getLeadingSpaces((4 * (node->nodeDepth + 1)));
+	out << leadingSpaces << "normal ";
+	out << "Normal { vector [" << std::endl;
+
+	int i = 0, j = 0;
+	for (i = 0; i < ((int)node->geometry->normals.size() / numOfPointsPerLine); i++)
+	{
+		out << leadingSpaces << "  ";
+		for (j = 0; j < numOfPointsPerLine; j++)
+		{
+			int a = (i * numOfPointsPerLine) + j;
+			out << node->geometry->normals[a].x << " " << node->geometry->normals[a].y << " " << node->geometry->normals[a].z;
+
+			// very dumb solve to how to write ']' instead of ',' after the last element
+			if (a + 1 == node->geometry->normals.size()) {
+				out << "] ";
+			}
+			else {
+				out << ", ";
+			}
+		}
+		out << std::endl;
+	}
+	out << leadingSpaces << "  ";
+	for (j = 0; j < numOfPointsPerLine; j++)
+	{
+		int a = (i * numOfPointsPerLine) + j;
+		if (a < node->geometry->normals.size()) {
+			out << node->geometry->normals[a].x << " " << node->geometry->normals[a].y << " " << node->geometry->normals[a].z;
+
+			// very dumb solve to how to write ']' instead of ',' after the last element
+			if (a + 1 == node->geometry->normals.size()) {
 				out << "] ";
 			}
 			else {
@@ -258,6 +312,50 @@ void VrmlSaver::writeGeometryIndices(ShapeNode* node)
 			
 			// very dumb solve to how to write ']' instead of ',' after the last element
 			if (a + 1 == node->geometry->facesPointsIndex.size()) {
+				out << "] ";
+			}
+			else {
+				out << ", ";
+			}
+		}
+	}
+	out << std::endl;
+}
+
+void VrmlSaver::writeGeometryNormalIndices(ShapeNode* node)
+{
+	std::string leadingSpaces = getLeadingSpaces((4 * (node->nodeDepth + 1)));
+	out << leadingSpaces << "normalIndex [" << std::endl;
+
+	int i = 0, j = 0;
+	for (i = 0; i < ((int)node->geometry->facesNormalIndex.size() / numOfIndicesPerLine); i++)
+	{
+		out << leadingSpaces << "  ";
+		for (j = 0; j < numOfIndicesPerLine; j++)
+		{
+			int a = (i * numOfIndicesPerLine) + j;
+			out << node->geometry->facesNormalIndex[a].x << ", " << node->geometry->facesNormalIndex[a].y << ", " << node->geometry->facesNormalIndex[a].z << ", -1";
+			
+			// very dumb solve to how to write ']' instead of ',' after the last element
+			if (a + 1 == node->geometry->facesNormalIndex.size()) {
+				out << "] ";
+			}
+			else {
+				out << ", ";
+			}
+
+		}
+		out << std::endl;
+	}
+	out << leadingSpaces << "  ";
+	for (j = 0; j < numOfIndicesPerLine; j++)
+	{
+		int a = (i * numOfIndicesPerLine) + j;
+		if (a < node->geometry->facesNormalIndex.size()) {
+			out << node->geometry->facesNormalIndex[a].x << ", " << node->geometry->facesNormalIndex[a].y << ", " << node->geometry->facesNormalIndex[a].z << ", -1";
+			
+			// very dumb solve to how to write ']' instead of ',' after the last element
+			if (a + 1 == node->geometry->facesNormalIndex.size()) {
 				out << "] ";
 			}
 			else {

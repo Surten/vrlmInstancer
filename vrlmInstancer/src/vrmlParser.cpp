@@ -389,6 +389,9 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
         else if (str == "coord") {
             parseCoords(shapeNode);
         }
+        else if (str == "normal") {
+            parseNormalCoords(shapeNode);
+        }
         else if (str == "texCoord") {
             parseTexCoords(shapeNode);
         }
@@ -397,6 +400,9 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
         }
         else if (str == "coordIndex") {
             parseCoordIndex(shapeNode);
+        }
+        else if (str == "normalIndex") {
+            parseNormalCoordIndex(shapeNode);
         }
         else if (str == "texCoordIndex") {
             parseTexCoordIndex(shapeNode);
@@ -465,6 +471,40 @@ void VrmlParser::parseCoords(ShapeNode* shapeNode) {
     if (str[0] != '}') std::cout << "error: expected } at the end of Coord node " << std::endl;
 }
 
+void VrmlParser::parseNormalCoords(ShapeNode* shapeNode) {
+    std::string aaa = str;
+    readSymbol();
+    if (str == "DEF") { //read name for the coordinates if DEF
+        readSymbol();
+        std::string coordName = str;
+        readSymbol();
+    }
+
+
+    if (str != "Normal") 
+        std::cout << "error: expected Normal at the start of Normal node " << std::endl;
+    readSymbol();
+    if (str[0] != '{') std::cout << "error: expected { at the start of Normal node " << std::endl;
+    readSymbol();
+    if (str != "vector") std::cout << "error: expected vector at the start of Normal node " << std::endl;
+    readSymbol();
+    if (str[0] != '[') std::cout << "error: expected [ at the start of Normal node " << std::endl;
+    do {
+        readSymbol();
+        if (str[0] == ']') break;
+        float x = n;
+        readSymbol();
+        float y = n;
+        readSymbol();
+        float z = n;
+
+        shapeNode->geometry->normals.push_back(vec3(x, y, z));
+        readSymbol();   // read comma
+    } while (str[0] == ',' || str[0] == '[');
+    readSymbol();
+    if (str[0] != '}') std::cout << "error: expected } at the end of Normal node " << std::endl;
+}
+
 void VrmlParser::parseTexCoords(ShapeNode* shapeNode) {
     readSymbol();
     if (str != "DEF") std::cout << "error: expected DEF at the start of TexCoord node " << std::endl;
@@ -523,6 +563,25 @@ void VrmlParser::parseCoordIndex(ShapeNode* shapeNode) {
     } while (str[0] == ',' || str[0] == '[');
 }
 
+void VrmlParser::parseNormalCoordIndex(ShapeNode* shapeNode) {
+    readSymbol();
+    if (str[0] != '[') std::cout << "error: expected [ at the start of normalIndex node " << std::endl;
+    do {
+        int vals[] = { 0,0,0 };
+        for (int i = 0; i < 3; i++)
+        {
+            if(!lastWasNumber) readSymbol();
+            if (str[0] == ']') return;
+            vals[i] = (int)n;
+            readSymbol(); // read comma
+        }
+        shapeNode->geometry->facesNormalIndex.push_back(vec3i(vals[0], vals[1], vals[2]));
+        readSymbol(); // read -1
+        readSymbol(); // read comma
+        if (str[0] == ']') break;
+    } while (str[0] == ',' || str[0] == '[');
+}
+
 void VrmlParser::parseTexCoordIndex(ShapeNode* shapeNode) {
     readSymbol();
     if (str[0] != '[') std::cout << "error: expected [ at the start of TexCoordIndex node " << std::endl;
@@ -530,7 +589,7 @@ void VrmlParser::parseTexCoordIndex(ShapeNode* shapeNode) {
         int vals[] = { 0,0,0 };
         for (int i = 0; i < 3; i++)
         {
-            readSymbol();
+            if(!lastWasNumber) readSymbol();
             if (str[0] == ']') return;
             vals[i] = (int)n;
             readSymbol(); // read comma

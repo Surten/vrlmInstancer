@@ -72,7 +72,7 @@ void Application::AutomaticMode(std::string fileName){
                 std::cout << "Could not find and save the scene index " << sceneID << std::endl;
             }
             else {
-                std::cout << "Saved " << idPlaceholder << std::endl;
+                std::cout << "Saved " << sceneID << std::endl;
             }
         }
         else if (command == "SaveName") 
@@ -199,6 +199,11 @@ void Application::AutomaticMode(std::string fileName){
             std::string file_path;
             autoIn >> file_path;
             bool success = sm.materialsFile->LoadMaterials(file_path);
+            std::cout << "Unrecognized materials:" << std::endl;
+            for (size_t i = 0; i < sm.materialsFile->unrecognizedMaterials.size(); i++)
+            {
+                std::cout << sm.materialsFile->unrecognizedMaterials[i] << std::endl;
+            }
             if (!success) std::cout << "Cannot find Materials file: " << file_path << std::endl;
         }
     }
