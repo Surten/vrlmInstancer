@@ -8,11 +8,11 @@ OUTPUT_FOLDER = 'Output'
 mi.set_variant('scalar_rgb')
 
 
-if True:
-    FOLDER = 'material-testball'
+if False:
+    FOLDER = 'staticSceneCam'
     OUTPUT_FOLDER = 'Output'
     # file = 'blackboard_header.xml'
-    file = 'BF_glass01.xml'
+    file = 'cam01.xml'
     scene_file_name_stripped, _ = os.path.splitext(file)
     file_path = os.path.join(FOLDER, file)
     scene = mi.load_file(file_path)

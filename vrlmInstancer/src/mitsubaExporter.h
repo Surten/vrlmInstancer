@@ -30,8 +30,8 @@ private:
 
 	std::string outputFolder;
 
-	int pathTracingMaxDepth = 20;
-	int nSamples = 2048;
+	int pathTracingMaxDepth = -1;
+	int nSamples = 128;
 	int imageWidth = 1920;
 	int imageHeight = 1080;
 

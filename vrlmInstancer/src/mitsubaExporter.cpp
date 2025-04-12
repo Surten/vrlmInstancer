@@ -87,7 +87,35 @@ void MitsubaExporter::writeGeometryToObj(Geometry* geometry, std::string filePat
 	{
 		out_geom << "vt " << texCoord << std::endl;
 	}
-	if (geometry->facesTextureIndex.size() > 0)
+	for (const auto& texCoord : geometry->normals)
+	{
+		out_geom << "vn " << texCoord << std::endl;
+	}
+	if (geometry->facesNormalIndex.size() > 0) {
+		if (geometry->facesTextureIndex.size() > 0)
+		{
+			for (size_t i = 0; i < geometry->facesPointsIndex.size(); i++)
+			{
+				out_geom << "f "
+					<< geometry->facesPointsIndex[i].x + 1 << "/" << geometry->facesTextureIndex[i].x + 1 << "/" << geometry->facesNormalIndex[i].x + 1 << " "
+					<< geometry->facesPointsIndex[i].y + 1 << "/" << geometry->facesTextureIndex[i].y + 1 << "/" << geometry->facesNormalIndex[i].y + 1 << " "
+					<< geometry->facesPointsIndex[i].z + 1 << "/" << geometry->facesTextureIndex[i].z + 1 << "/" << geometry->facesNormalIndex[i].z + 1 << " "
+					<< std::endl;
+			}
+		}
+		else
+		{
+			for (size_t i = 0; i < geometry->facesPointsIndex.size(); i++)
+			{
+				out_geom << "f "
+					<< geometry->facesPointsIndex[i].x + 1 << "//" << geometry->facesNormalIndex[i].x + 1 << " "
+					<< geometry->facesPointsIndex[i].y + 1 << "//" << geometry->facesNormalIndex[i].y + 1 << " "
+					<< geometry->facesPointsIndex[i].z + 1 << "//" << geometry->facesNormalIndex[i].z + 1 << " "
+					<< std::endl;
+			}
+		}
+	}
+	else if (geometry->facesTextureIndex.size() > 0)
 	{
 		for (size_t i = 0; i < geometry->facesPointsIndex.size(); i++)
 		{
@@ -142,7 +170,7 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode * ca
 	out.open(this->outputFolder + "/" + sceneFileName + ".xml");
 
 	// export all geometries into individual .obj files
-	if (createNewGeometry)
+	if (createNewGeometry && false)
 	{
 		writeAllGeometriesToObjFiles();
 	}
@@ -252,9 +280,9 @@ void MitsubaExporter::writeSensor(ViewPointNode* camera, int depth)
 	{
 		camera->computeLookAt(pos, lookAt, lookUp);
 		fov = RAD_TO_DEG(camera->fieldOfView);
-		fov = 1.5 * fov;
+		fov = 1.3 * fov;
 	}
-	writeElementBeg("sensor", { "type", "perspective" }, depth);
+	writeElementBeg("sensor", { "type", "perspective", "id", "camera"}, depth);
 		writeElement("float", { "name", "fov", "value", std::to_string(fov) }, depth + 1);
 		writeElementBeg("transform", { "name", "to_world" }, depth + 1);
 			writeElement("lookat", { "origin", pos.toString(), "target", lookAt.toString(), "up", lookUp.toString() }, depth + 2);
@@ -277,15 +305,16 @@ void MitsubaExporter::writeFilm(int depth)
 		writeElement("integer", { "name", "width", "value", std::to_string(imageWidth) }, depth + 1);
 		writeElement("integer", { "name", "height", "value", std::to_string(imageHeight) }, depth + 1);
 		writeElement("string", { "name", "file_format", "value", "openexr"}, depth + 1);
-		writeElement("string", { "name", "pixel_format", "value", "rgba"}, depth + 1);
-		writeElement("rfilter", { "type", "tent"}, depth + 1);
+		writeElement("string", { "name", "pixel_format", "value", "rgb"}, depth + 1);
+		writeElement("rfilter", { "type", "gaussian"}, depth + 1);
 	writeElementEnd("film", depth);
 }
 
 void MitsubaExporter::writeMaterial(Material* mat, int depth)
 {
+	vec3 diffTest(1.f, 1.f, 1.f);
 	writeElementBegScene("bsdf", { "type", "diffuse" }, depth);
-		writeElementScene("rgb", { "name", "reflectance", "value", mat->diffuseColor.toString() }, depth + 1);
+		writeElementScene("rgb", { "name", "reflectance", "value", diffTest.toString() }, depth + 1);
 	writeElementEndScene("bsdf", depth);
 }
 
@@ -293,7 +322,8 @@ void MitsubaExporter::writeShape(ShapeNode* shapeNode, std::string filepath, int
 {
 	writeElementBegScene("shape", { "type", "obj" }, depth);
 		writeElementScene("string", { "name", "filename", "value", filepath + "/" + shapeNode->geometry->name + ".obj"}, depth + 1);
-		writeBsdf(shapeNode->material, depth + 1);
+		//writeBsdf(shapeNode->material, depth + 1);
+		writeMaterial(shapeNode->material, depth + 1);
 	writeElementEndScene("shape", depth);
 }
 void MitsubaExporter::writeShapeGroup(ShapeNode* shapeNode, std::string filepath, int depth)
@@ -360,7 +390,7 @@ void MitsubaExporter::writeBsdf(Material* material, int depth)
 	else if(mat->materialType == MaterialType::DIELECTRIC)
 	{
 		writeElementBegScene("bsdf", { "type", "dielectric" }, depth);
-		writeElementScene("float", { "name", "int_ior", "value", "1.2"}, depth + 1);
+		writeElementScene("float", { "name", "int_ior", "value", "1.1"}, depth + 1);
 		writeElementScene("float", { "name", "ext_ior", "value", "1.0"}, depth + 1);
 		writeElementEndScene("bsdf", depth);
 	}
@@ -370,7 +400,7 @@ void MitsubaExporter::writeBsdf(Material* material, int depth)
 		metal = metal.substr(0, metal.find("-"));
 		writeElementBegScene("bsdf", { "type", "roughconductor" }, depth);
 		writeElementScene("string", { "name", "material", "value", metal }, depth + 1);
-		writeElementScene("float", { "name", "alpha", "value", std::to_string(mat->roughness) }, depth + 1);
+		writeElementScene("float", { "name", "alpha", "value", std::to_string(std::min(mat->roughness*4, 1.f)) }, depth + 1);
 		writeElementEndScene("bsdf", depth);
 	}
 	else if(mat->materialType == MaterialType::CONDUCTOR_REFLECTANCE)
@@ -385,7 +415,7 @@ void MitsubaExporter::writeBsdf(Material* material, int depth)
 		metal = metal.substr(0, metal.find("-"));
 		writeElementBegScene("bsdf", { "type", "roughconductor" }, depth);
 		writeElementScene("string", { "name", "material", "value", metal }, depth + 1);
-		writeElementScene("float", { "name", "alpha", "value", std::to_string(mat->roughness) }, depth + 1);
+		writeElementScene("float", { "name", "alpha", "value", std::to_string(std::min(mat->roughness * 4, 1.f)) }, depth + 1);
 		writeElementEndScene("bsdf", depth);
 	}
 	else
@@ -416,7 +446,7 @@ void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
 			writeElementEndScene("transform", depth + 1);
 			writeElementScene("float", { "name", "intensity", "value", std::to_string((lightNode->color * lightNode->intensity).len()* mult) }, depth + 1);
 			writeElementScene("float", { "name", "beam_width", "value", std::to_string(RAD_TO_DEG(lightNode->beamWidth)) }, depth + 1);
-			writeElementScene("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle)) }, depth + 1);
+			writeElementScene("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle)*2) }, depth + 1);
 		writeElementEndScene("emitter", depth);
 	}
 	else if (lightNode->lightType == LightNode::LightType::GONIOLIGHT)
