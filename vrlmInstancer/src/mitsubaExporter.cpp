@@ -312,9 +312,8 @@ void MitsubaExporter::writeFilm(int depth)
 
 void MitsubaExporter::writeMaterial(Material* mat, int depth)
 {
-	vec3 diffTest(1.f, 1.f, 1.f);
 	writeElementBegScene("bsdf", { "type", "diffuse" }, depth);
-		writeElementScene("rgb", { "name", "reflectance", "value", diffTest.toString() }, depth + 1);
+		writeElementScene("rgb", { "name", "reflectance", "value", mat->diffuseColor.toString() }, depth + 1);
 	writeElementEndScene("bsdf", depth);
 }
 
@@ -323,7 +322,7 @@ void MitsubaExporter::writeShape(ShapeNode* shapeNode, std::string filepath, int
 	writeElementBegScene("shape", { "type", "obj" }, depth);
 		writeElementScene("string", { "name", "filename", "value", filepath + "/" + shapeNode->geometry->name + ".obj"}, depth + 1);
 		//writeBsdf(shapeNode->material, depth + 1);
-		writeMaterial(shapeNode->material, depth + 1);
+		writeBsdfNamed(shapeNode->material, depth + 1);
 	writeElementEndScene("shape", depth);
 }
 void MitsubaExporter::writeShapeGroup(ShapeNode* shapeNode, std::string filepath, int depth)
@@ -350,8 +349,8 @@ void MitsubaExporter::writeTransform(ShapeNode* shapeNode, int depth)
 
 void MitsubaExporter::writeBsdfNamed(Material* material, int depth)
 {
-	writeElementBegScene("bsdf", { "type", "twosided", "id", "TODO" }, depth);
-		writeBsdf(material, depth + 1);
+	writeElementBegScene("bsdf", { "type", "twosided"}, depth);
+		writeMaterial(material, depth + 1);
 	writeElementEndScene("bsdf", depth);
 }
 

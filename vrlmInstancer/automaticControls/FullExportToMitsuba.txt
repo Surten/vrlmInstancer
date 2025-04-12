@@ -8,7 +8,6 @@ Load Output/0-7_geometry.WRL
 Load Output/0-7_tin_plates.WRL
 Load Output/0-7_ventilation.WRL
 Load Output/7_roof.WRL
-Load Output/cameras.WRL
 Load Output/U-6_doors_F0_new.WRL
 Load Output/U-6_doors_F1_new.WRL
 Load Output/U-6_doors_F2_new.WRL

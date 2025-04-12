@@ -47,7 +47,7 @@ BF_bolts01 0.8824 0.8824 0.8824 MAT-coatedconductor eta [ "metal-Ag-eta" ] k [ "
 BF_shMetal01 0.949 0.949 0.949 MAT-conductor eta [ "metal-Ag-eta" ] k [ "metal-Ag-k" ] roughness [ 0.0 ]
 BF_alum01 0.9529 0.9529 0.9529 MAT-coatedconductor eta [ "metal-Al-eta" ] k [ "metal-Al-k" ] roughness [ 0.1 ]
 CH_alum01 0.7373 0.7373 0.7373 MAT-coatedconductor eta [ "metal-Al-eta" ] k [ "metal-Al-k" ] roughness [ 0.1 ]
-CH_alum02 0.7452 0.7452 0.7452 MAT-coatedconductor eta [ "metal-Al-eta" ] k [ "metal-Al-k" ] roughness [ 0.4 ]
+CH_alum02 0.7452 0.7452 0.7452 MAT-coateddiffuse roughness [ 0.05 ] reflectance [ 0.8745 0.8667 0.8882 ]
 CH_alum03 0.6588 0.6588 0.6588 MAT-coatedconductor eta [ "metal-Al-eta" ] k [ "metal-Al-k" ] roughness [ 0.3 ]
 BF_red02 0.8627 0.1137 0.1922 MAT-conductorreflectance reflectance [ 0.08 0.01 0.01 ] roughness [ 0.05 ]
 BF_red01 0.8196 0.2 0.09804 MAT-conductorreflectance reflectance [ 0.2 0.03 0.03 ] roughness [ 0.05 ]
