@@ -24,10 +24,9 @@ Definitions of functions for project save/load
 
 
 //----------------------------------------------------------------------------------------------
-void Project::readProject(std::string actualLine, Scene* scene)
+void Project::readProject(std::string actualLine)
 //----------------------------------------------------------------------------------------------
 {
-	this->scene = scene;
 	int index = 0;
 	// Global Animation - Animation Length
 	if(((int)actualLine.find("GA_AnimLength") > -1) && (actualLine.find("#") >= NOPE)){
@@ -107,6 +106,7 @@ void Project::readProject(std::string actualLine, Scene* scene)
 
 		this->retActionList()->insertNode(doorNode);
 		this->scene->isAnimated = true;
+		animInfo->setDoAnimFlag(true);
 	}
 
 	// Action - Window
@@ -121,6 +121,7 @@ void Project::readProject(std::string actualLine, Scene* scene)
 
 		this->retActionList()->insertNode(windowNode);	
 		this->scene->isAnimated = true;
+		animInfo->setDoAnimFlag(true);
 	}
 	// Action - Shutter
 	if(((int)actualLine.find("A_Shutter") > -1) && (actualLine.find("#") >= NOPE)){
@@ -134,6 +135,7 @@ void Project::readProject(std::string actualLine, Scene* scene)
 
 		this->retActionList()->insertNode(shutterNode);	
 		this->scene->isAnimated = true;
+		animInfo->setDoAnimFlag(true);
 	}
 
 	// Action - Camera
@@ -147,7 +149,8 @@ void Project::readProject(std::string actualLine, Scene* scene)
 		cameraNode->parseInput(line);
 
 		this->retActionList()->insertNode(cameraNode);
-		this->scene->isAnimated = true;
+		scene->hasAnimatedCamera = true;
+		animInfo->setDoAnimFlag(true);
 	}
 }
 
@@ -485,8 +488,7 @@ void ActionNodeDoor::executeNode(Scene* scene)
 
 					tempT = static_cast<TransformNode*> (tempCh);
 
-					tempDInfo = new DoorInfo();
-					tempT->objectInfo = tempDInfo;
+					tempDInfo = static_cast<DoorInfo*> (tempT->retObjectInfo());
 
 					if (this->retObjectIndex() == doorCounter) {
 
@@ -514,15 +516,15 @@ void ActionNodeDoor::executeNode(Scene* scene)
 						tempDInfo->retAnimationList()->setInterpMode(this->retInterpolation());
 
 						found = true;
-						//break;
+						break;
 					}
 					doorCounter++;
 					
 				}
 			}
-			//if (found) {
-			//	break;
-			//}
+			if (found) {
+				break;
+			}
 		}
 	}
 
@@ -908,8 +910,7 @@ void ActionNodeWindow::executeNode(Scene* scene)
 				{
 					// Retype the node to the correct transform node
 					tempWT = static_cast<TransformNode*> (tempW);
-					tempWInfo = new WindowInfo();
-					tempWT->objectInfo = tempWInfo;
+					tempWInfo = static_cast<WindowInfo*> (tempWT->retObjectInfo());
 
 					if ((windowCounter == this->retObjectIndex())) {
 
@@ -932,7 +933,7 @@ void ActionNodeWindow::executeNode(Scene* scene)
 						tempWInfo->copyAnimList(this->retAnimList());
 
 						found = true;
-						//break;
+						break;
 					}
 					windowCounter++;
 				}
@@ -941,9 +942,9 @@ void ActionNodeWindow::executeNode(Scene* scene)
 
 		}
 
-		//if (found) {
-		//	break;
-		//}
+		if (found) {
+			break;
+		}
 	}
 
 	// Single window object
@@ -1291,8 +1292,7 @@ void ActionNodeShutter::executeNode(Scene* scene)
 
 							// Retype the node to the correct transform node
 							tempShutChT = static_cast<TransformNode*> (tempShutCh);
-							tempSInfo = new ShutterInfo();
-							tempShutChT->objectInfo = tempSInfo;
+							tempSInfo = static_cast<ShutterInfo*> (tempShutChT->retObjectInfo());
 
 							if (this->retObjectIndex() == shutterCounter)
 							{
@@ -1318,10 +1318,15 @@ void ActionNodeShutter::executeNode(Scene* scene)
 
 								// Set the flag, that we had opened the dialog
 								found = true;
+								break;
 							}
 							shutterCounter++;
 						}
 					}
+				}
+				if (found)
+				{
+					break;
 				}
 			}
 		}
@@ -1764,7 +1769,11 @@ void ActionNodeCamera::executeNode(Scene* scene)
 //----------------------------------------------------------------------------------------------
 {	
 	// We have to identify the camera object with the same index
-	
+	if (scene->Cameras.size() == 0)
+	{
+		std::cout << "no cameras, there is no camera to animate from this scene" << std::endl;
+		return;
+	}
 	scene->Cameras[this->retObjectIndex()]->m_bIsOn = this->retOn();
 
 	// Deal with the PBRT selected camera, select the current one and make sure it is the only one selected

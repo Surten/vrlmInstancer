@@ -128,6 +128,23 @@ public:
     vec3 getArithmeticCenter();
 };
 
+enum class TransformType {
+    TRANSLATE,
+    ROTATE,
+    SCALE
+};
+
+struct Transform {
+    TransformType type;
+    vec3 vec;
+    float angle = 0.f;
+
+    void createTranslate(vec3 v) { vec = v; type = TransformType::TRANSLATE; }
+    void createRotate(vec4 v) { vec = vec3(v.x, v.y, v.z); angle = v.par; type = TransformType::ROTATE; }
+    void createScale(vec3 v) { vec = v; type = TransformType::SCALE; }
+};
+
+
 //we need this to remember the parent Shape node in the geometry
 class ShapeNode;
 

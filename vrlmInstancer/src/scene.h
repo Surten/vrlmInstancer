@@ -20,6 +20,7 @@ public:
 	std::vector<ViewPointNode*> Cameras;
 
 	bool isAnimated = false;
+	bool hasAnimatedCamera = false;
 
 
 

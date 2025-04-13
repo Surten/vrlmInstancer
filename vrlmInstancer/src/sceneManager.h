@@ -21,9 +21,9 @@ public:
 	MaterialsFile* materialsFile;
 
 	AnimationInfo* animInfo;
-	Project* project;
+	std::vector<Project*> projects;
 
-	std::vector<Scene*> scenes;
+
 
 public:
 	SceneManager();
@@ -66,6 +66,7 @@ public:
 	bool convertSceneSpotLightsToGonioLights(std::string sceneName, std::string referenceSceneName);
 
 	void rotateSceneAroundY(int sceneID, float angleDegrees);
+	void addProjectToScene(std::string lineCommands, int sceneID);
 
 private:
 	std::vector<Scene*> scenesWithTextures;
@@ -76,7 +77,7 @@ private:
 	MitsubaExporter mitsubaExporter;
 	VrmlParser vrmlParser;
 	VrmlSaver vrmlSaver;
-
+	std::vector<Scene*> scenes;
 
 
 

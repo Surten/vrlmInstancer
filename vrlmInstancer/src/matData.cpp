@@ -6,7 +6,7 @@ Metody tridy materialu
 */
 
 #include "matData.h"
-
+#include "dataStructs.h"
 
 //----------------------------------------------------------------------------------------------
 Mat::Mat() 

@@ -125,13 +125,15 @@ void TransformNode::setWindowAxis(void)
 
 
 //----------------------------------------------------------------------------------------------
-void ViewPointNode::computeLookAt(vec3 & loc, vec3 & dir, vec3 & up) const
+void ViewPointNode::computeLookAt(AnimationInfo* animInfo, vec3 & loc, vec3 & dir, vec3 & up) const
 //----------------------------------------------------------------------------------------------
 {
-	loc = position;
+	loc = retCurrentPosition(animInfo);
 
+	// Get the current orientation of camera
+	vec4 currentOrient = this->retCurrentOrientation(animInfo);
 
-	vec3 vec(orientation[0], orientation[1], orientation[2]);
+	vec3 vec(currentOrient.x, currentOrient.y, currentOrient.z);
 
 	// Normalizuju
 	vec.normalize();
@@ -139,7 +141,7 @@ void ViewPointNode::computeLookAt(vec3 & loc, vec3 & dir, vec3 & up) const
 	// Matice identity
 	Matrix mat;
 	// Vytvorim rotacni matici kolem obecneho vektoru definovaneho pomoci 'dir' a uhlu v 'orientation'
-	mat = mat.mRotate(vec, orientation[3]);
+	mat = mat.mRotate(vec, currentOrient.par);
 
 	// Urcim smer pohledu kamery
 	vec = mat * vec3(0.0, 0.0, -1.0);
@@ -152,7 +154,7 @@ void ViewPointNode::computeLookAt(vec3 & loc, vec3 & dir, vec3 & up) const
 	const float t = 10.0f;
 
 	// Get the current position of the camera
-	vec3 currentPosition = position;
+	vec3 currentPosition = loc;
 	dir.x = currentPosition.x + vec.x * t;
 	dir.y = currentPosition.y + vec.y * t;
 	dir.z = currentPosition.z + vec.z * t;
@@ -201,7 +203,7 @@ void ViewPointNode::copyAnimList(AnimationList* list)
 }
 
 //----------------------------------------------------------------------------------------------
-vec3 ViewPointNode::retCurrentPosition(AnimationInfo* animInfo)
+vec3 ViewPointNode::retCurrentPosition(AnimationInfo* animInfo) const
 //----------------------------------------------------------------------------------------------
 {
 	// if the camera is not animated, then just return its static position
@@ -395,7 +397,7 @@ vec3 ViewPointNode::retCurrentPosition(AnimationInfo* animInfo)
 
 
 //----------------------------------------------------------------------------------------------
-vec4 ViewPointNode::retCurrentOrientation(AnimationInfo* animInfo)
+vec4 ViewPointNode::retCurrentOrientation(AnimationInfo* animInfo) const
 //----------------------------------------------------------------------------------------------
 {
 	// if the camera is not animated, then just return its static orientation

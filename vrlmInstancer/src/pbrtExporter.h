@@ -17,7 +17,7 @@ public:
 
 	PbrtExporter(AnimationInfo* animInfo);
 
-	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder, std::string headerFileName, std::string renderImageFileName, bool createNewGeometry, MaterialsFile* matFile);
+	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder, std::string headerFileName, std::string outputImageFormat, bool createNewGeometry, MaterialsFile* matFile);
 
 private:
 	std::ofstream out;
@@ -31,7 +31,13 @@ private:
 	std::string outputFolder;
 	std::string headerFileName;
 
+	std::string geometryAppendString;
+
 	AnimationInfo* animInfo;
+
+	std::string outputImageFormat;
+	ViewPointNode* camera;
+	bool createNewGeometry;
 
 
 	int numberOfSamples = 64;
@@ -41,8 +47,10 @@ private:
 
 private:
 
-	void writeSceneWideOptions(const ViewPointNode* camera, std::string renderImageFileName);
-	void writeCamera(const ViewPointNode* camera);
+	void exportStatic();
+	void exportDynamic();
+	void writeSceneWideOptions(std::string renderImageFileName);
+	void writeCamera();
 	void writeSampler();
 	void writeIntegrator();
 	void writeFilter();
@@ -51,7 +59,9 @@ private:
 	void writeLightSource(LightNode* camera);
 	void writeAllLightSourcesOfAScene(Scene* scene);
 	void writeTexture();
-	void writeGeometry(Scene* scene, bool createNewGeometry);
+	std::string getStringWithLeadingZeros(int number);
+	void initCurrentGeometryFilename(const std::string& sceneName, bool animated = false, int animationTimeIndex = -1);
+	void writeGeometry(Scene* scene);
 	void writeObjectInstances(Scene* scene);
 	void writeSceneHierarchy(Scene* scene);
 	void writeTransformNode(TransformNode* node);

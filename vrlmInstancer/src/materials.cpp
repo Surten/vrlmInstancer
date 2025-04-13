@@ -7,7 +7,10 @@ Deklarace fci zpracovavajicich soubor s materialy
 
 #include "materials.h"
 #include "dataStructs.h"
+#include "matData.h"
+#include "scene.h"
 
+#include <string>
 #include <iostream>
 #include <fstream>
 #include <sstream>

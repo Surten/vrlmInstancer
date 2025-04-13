@@ -218,7 +218,7 @@ void Application::AutomaticMode(std::string fileName){
             std::string restOfLine;
             std::getline(autoIn, restOfLine);
             restOfLine = restOfLine.substr(1);
-            sm.project->readProject(restOfLine, sm.scenes[sceneID]);
+            sm.addProjectToScene(restOfLine, sceneID);
         }
     }
 }

@@ -1,14 +1,16 @@
 #include "sceneManager.h"
 
-SceneManager::SceneManager() : animInfo(new AnimationInfo()), project(new Project(animInfo)), pbrtExporter(animInfo), mitsubaExporter(animInfo)
+#include "geometryModify.h"
+
+SceneManager::SceneManager() : animInfo(new AnimationInfo()), pbrtExporter(animInfo), mitsubaExporter(animInfo)
 {
 	materialsFile = new MaterialsFile();
-	project->initProject();
 }
 SceneManager::~SceneManager() {
 	delete materialsFile;
 	delete animInfo;
-	delete project;
+	for(Project* p : projects)
+		delete p;
 }
 
 
@@ -37,6 +39,15 @@ bool SceneManager::loadScene(const std::string& filePath)
 	{
 		allCameras.push_back(camera);
 	}
+	// Check for door objects
+	CheckListDoors(scene->RootNodes);
+
+	// Check for the shutters objects
+	CheckListShutters(scene->RootNodes);
+
+	// Check for the windows objects
+	CheckListWindows(scene->RootNodes);
+
 	scenes.push_back(scene);
 	return true;
 }
@@ -235,11 +246,12 @@ void SceneManager::exportAllToPBRT(int cameraIndex, std::string outputHeaderName
 	}
 	if (!hasLights) createDefaultEnviromentalLight("sky.exr");
 
-	std::string outputImageName = outputHeaderName + "." + outputImageFormat;
+
+	for (Project* p : projects)
+		p->executeActions();
 
 	initExportMaterials();
-	project->executeActions();
-	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageName, createNewGeometry, materialsFile);
+	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageFormat, createNewGeometry, materialsFile);
 }
 
 void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName, std::string outputFolder, bool createNewGeometry) {
@@ -263,9 +275,10 @@ void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName
 	}
 	if (!hasLights) createDefaultEnviromentalLight("material-testball/textures/envmap.hdr");
 
+	for (Project* p : projects)
+		p->executeActions();
 
 	initExportMaterials();
-	project->executeActions();
 	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, createNewGeometry, materialsFile);
 }
 
@@ -335,6 +348,26 @@ float SceneManager::getTextureCoordsToObjectCoordsScale() {
 	return (float)scale;
 }
 
+void SceneManager::addProjectToScene(std::string lineCommands, int sceneID)
+{
+	Project* project = nullptr;
+	for (Project* p : projects)
+	{
+		if (p->scene == scenes[sceneID])
+		{
+			project = p;
+		}
+	}
+	if (project == nullptr)
+	{
+		project = new Project(animInfo, scenes[sceneID]);
+		project->initProject();
+		projects.push_back(project);
+	}
+
+	project->readProject(lineCommands);
+}
+
 void SceneManager::initExportMaterials()
 {
 	for (auto scene : scenes)
@@ -342,6 +375,7 @@ void SceneManager::initExportMaterials()
 		materialsFile->AddSceneMaterials(scene);
 	}
 }
+
 
 
 Scene* SceneManager::getSceneByName(const std::string& name)

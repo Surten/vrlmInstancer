@@ -7,7 +7,7 @@ Hlavickovy soubor tridy matice.
 
 #pragma once
 
-
+#include <stack>
 
 /// Format transformacni matice 4x4
 /**
@@ -130,6 +130,8 @@ public:
 	 @return Vysledna matice
 	*/
 	Matrix& mScale(const vec3& vec3D);
+
+	void applyTransforms(Matrix& mat, std::stack<Transform> transforms);
 
 	/// Metoda vraci inverzni matici 
 	Matrix& mInverse();

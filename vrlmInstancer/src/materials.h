@@ -9,9 +9,7 @@ Definice fci zpracovavajicich soubor s materialy
 #ifndef __MATERIALS_H__
 #define __MATERIALS_H__
 
-#include <string>
-#include "matData.h"
-#include "scene.h"
+
 
 class MaterialsFile
 {

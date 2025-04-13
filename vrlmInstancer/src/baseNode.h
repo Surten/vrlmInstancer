@@ -219,7 +219,7 @@ public:
 	ViewPointNode() : BaseNode("", NodeTypes::ViewPoint), position(), orientation(), fieldOfView(0), description(""), animList(nullptr){}
 
 	//----------------------------------------------------------------------------------------------
-	void computeLookAt(vec3& loc, vec3& dir, vec3& up) const;
+	void computeLookAt(AnimationInfo* animInfo, vec3& loc, vec3& dir, vec3& up) const;
 
 	/// Initializes the animationList object
 	void initAnimList(void) { animList = new AnimationList(); }
@@ -232,8 +232,8 @@ public:
 	/// Returns the PBRT selection flag
 	bool retPBRTSelect(void) { return m_bPBRTSelect; }
 	/// Returns the current position of the camera during animation
-	vec3 retCurrentPosition(AnimationInfo* animInfo);
+	vec3 retCurrentPosition(AnimationInfo* animInfo) const;
 	/// Returns the current orientation of the camera during animation
-	vec4 retCurrentOrientation(AnimationInfo* animInfo);
+	vec4 retCurrentOrientation(AnimationInfo* animInfo) const;
 
 };

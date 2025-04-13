@@ -4,6 +4,9 @@
 #include "animation.h"
 
 #include <unordered_map>
+#include <sstream>
+#include <string>
+#include <iomanip>
 
 
 #define RAD_TO_DEG(angle)   ((angle)*57.29577951308f)
@@ -16,46 +19,104 @@ PbrtExporter::PbrtExporter(AnimationInfo* animInfo) : animInfo(animInfo)
 }
 
 
-void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder, std::string headerFileName, std::string renderImageFileName, bool createNewGeometry, MaterialsFile* matFile)
+void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder, std::string headerFileName, std::string outputImageFormat, bool createNewGeometry, MaterialsFile* matFile)
 {
 	this->scenes = scenes;
 	this->outputFolder = outputFolder;
 	this->headerFileName = headerFileName;
+	this->outputImageFormat = outputImageFormat;
+	this->camera = camera;
+	this->createNewGeometry = createNewGeometry;
+	bool hasAnimatedCamera = false;
+	bool hasAnimatedGeometry = false;
+	for (Scene* scene : scenes)
+	{
+		if (scene->hasAnimatedCamera)
+			hasAnimatedCamera = true;
+		if (scene->isAnimated)
+			hasAnimatedGeometry = true;
 
-	out.open(outputFolder + headerFileName + ".pbrt");
-	writeSceneWideOptions(camera, renderImageFileName);
-
-	out << " WorldBegin" << std::endl;
-
-#ifdef USE_FOR_CHECKERBOARD_RENDER
-	writeTexture();
-#else
+	}
 	writeAllMaterials(matFile);
-#endif
-	
+
+	if (!hasAnimatedCamera && !hasAnimatedGeometry)
+	{
+		exportStatic();
+	}
+	else
+	{
+		exportDynamic();
+	}
+}
+
+void PbrtExporter::exportStatic()
+{
+	out.open(this->outputFolder + "/" + this->headerFileName + ".pbrt");
+	std::string renderImageFileName = headerFileName + "." + outputImageFormat;
+	writeSceneWideOptions(renderImageFileName);
+	out << " WorldBegin" << std::endl;
+	out << "Include \"" << this->headerFileName << "_Mats.pbrt" << "\"" << std::endl;
 
 	for (auto scene : scenes)
 	{
-		//if (scene->isAnimated && animInfo->retAnimLength() > 0)
-		//	writeAnimatedGeometry(scene);
-		//else
-			writeGeometry(scene, createNewGeometry);
+		initCurrentGeometryFilename(scene->name, false);
+		out << "Include \"" << currentGeometryFileName << "\"" << std::endl;
+		writeGeometry(scene);
 	}
 	out.close();
+}
+
+void PbrtExporter::exportDynamic()
+{
+	for (Scene* scene : scenes)
+	{
+		if (scene->isAnimated) continue;
+		initCurrentGeometryFilename(scene->name, false);
+		writeGeometry(scene);
+	}
+
+	int numberFiles = (int)(floor(animInfo->retAnimLength() * animInfo->retAnimFps()) + 1);
+	for (int i = 0; i < numberFiles; i++)
+	{
+		std::string indexStr = getStringWithLeadingZeros(i);
+		out.open(this->outputFolder + "/" + this->headerFileName + indexStr + ".pbrt");
+		std::string renderImageFileName = headerFileName + indexStr + "." + outputImageFormat;
+		writeSceneWideOptions(renderImageFileName);
+		out << " WorldBegin" << std::endl;
+		out << "Include \"" << this->headerFileName << "_Mats.pbrt" << "\"" << std::endl;
+
+		for (Scene* scene : scenes)
+		{
+			if (scene->isAnimated)
+			{
+				initCurrentGeometryFilename(scene->name, true, i);
+				writeGeometry(scene);
+			}
+			else
+				initCurrentGeometryFilename(scene->name, false);
+
+			out << "Include \"" << currentGeometryFileName << "\"" << std::endl;
+		}
+		out.close();
+		animInfo->incCurrentFrame();
+		animInfo->incCurrentTime();
+		std::cout << "Exported Frame: " << i << std::endl;
+	}
 
 }
 
 
-void PbrtExporter::writeSceneWideOptions(const ViewPointNode* camera, std::string renderImageFileName) {
+
+void PbrtExporter::writeSceneWideOptions(std::string renderImageFileName) {
 	writeIntegrator();
-	writeCamera(camera);
+	writeCamera();
 	writeSampler();
 	writeFilter();
 	writeFilm(renderImageFileName);
 }
 
 
-void PbrtExporter::writeCamera(const ViewPointNode* camera) {
+void PbrtExporter::writeCamera() {
 	if (camera == nullptr)
 	{
 
@@ -71,8 +132,8 @@ void PbrtExporter::writeCamera(const ViewPointNode* camera) {
 
 		cameraPosition = cameraPosition + (retAABB.getArithmeticCenter() - vec3());
 
-		std::cout << retAABB.min << "   " << retAABB.max << std::endl;
-		std::cout << cameraPosition << "   " << retAABB.getArithmeticCenter() << std::endl;
+		//std::cout << retAABB.min << "   " << retAABB.max << std::endl;
+		//std::cout << cameraPosition << "   " << retAABB.getArithmeticCenter() << std::endl;
 
 		vec3 lookUp(0.0f, 1.0f, 0.0f);
 		lookUp.normalize();
@@ -87,7 +148,7 @@ void PbrtExporter::writeCamera(const ViewPointNode* camera) {
 
 
 	vec3 pos, lookAt, lookUp;
-	camera->computeLookAt(pos, lookAt, lookUp);
+	camera->computeLookAt(animInfo, pos, lookAt, lookUp);
 	out << "LookAt " << pos << std::endl;
 	out << "       " << lookAt << std::endl;
 	out << "       " << lookUp << std::endl;
@@ -179,22 +240,42 @@ void PbrtExporter::writeTexture() {
 }
 #endif
 
-void PbrtExporter::writeGeometry(Scene* scene, bool createNewGeometry){
 
-	std::string geometryFileName = scene->name;
-	size_t ind = scene->name.rfind('/');
-	if (ind != std::string::npos) geometryFileName = scene->name.substr(ind + 1);
+std::string PbrtExporter::getStringWithLeadingZeros(int number) {
+	std::stringstream ss;
+	ss << std::setw(3) << std::setfill('0') << number;
+	std::string s = ss.str();
+	// Ensure we only have up to three leading zeros
+	if (s.length() > 3) {
+		return s.substr(s.length() - 3);
+	}
+	return s;
+}
+
+void PbrtExporter::initCurrentGeometryFilename(const std::string & sceneName, bool animated, int animationTimeIndex)
+{
+	std::string geometryFileName = sceneName;
+	size_t ind = sceneName.rfind('/');
+	if (ind != std::string::npos) geometryFileName = sceneName.substr(ind + 1);
 	if (geometryFileName.find(".wrl") != std::string::npos || geometryFileName.find(".WRL") != std::string::npos)
 	{
 		geometryFileName = geometryFileName.substr(0, geometryFileName.length() - 4);
 	}
-	currentGeometryFileName = geometryFileName + ".pbrt";
+	if (animated)
+	{
+		//int numberFiles = (int)(floor(animInfo->retAnimLength() * animInfo->retAnimFps()) + 1);
+		std::string fileNumber = getStringWithLeadingZeros(animationTimeIndex);
+		currentGeometryFileName = geometryFileName + fileNumber + ".pbrt";
+	}
+	else
+		currentGeometryFileName = geometryFileName + ".pbrt";
+}
 
-
-	out << "Include \"" << "../" + currentGeometryFileName << "\"" << std::endl;
+void PbrtExporter::writeGeometry(Scene* scene){
 
 	if (createNewGeometry)
 	{
+		geometryAppendString = scene->name.substr(4);
 		outGeometry.open(this->outputFolder + "/" + currentGeometryFileName);
 		writeAllLightSourcesOfAScene(scene);
 		writeObjectInstances(scene);
@@ -206,7 +287,7 @@ void PbrtExporter::writeGeometry(Scene* scene, bool createNewGeometry){
 void PbrtExporter::writeObjectInstances(Scene* scene) {
 	for (auto geometry : scene->geometries)
 	{
-		outGeometry << " ObjectBegin \"" << geometry->name << "_" << currentGeometryFileName << "\"" << std::endl;
+		outGeometry << " ObjectBegin \"" << geometry->name << "_" << geometryAppendString << "\"" << std::endl;
 
 		if (geometry->textureCoords.size() > 0)
 		{
@@ -324,7 +405,7 @@ void PbrtExporter::writeShapeNode(ShapeNode* node)
 {
 	outGeometry << " AttributeBegin" << std::endl;
 	writeMaterialReference(node->exportMaterial);
-	outGeometry << "    ObjectInstance \"" << node->geometry->name << "_" << currentGeometryFileName << "\"" << std::endl;
+	outGeometry << "    ObjectInstance \"" << node->geometry->name << "_" << geometryAppendString << "\"" << std::endl;
 	outGeometry << " AttributeEnd" << std::endl;
 
 }
@@ -515,7 +596,7 @@ void PbrtExporter::writeMaterialWithTexture(Material* material) {
 
 void PbrtExporter::writeMaterialReference(Mat* material)
 {
-	outGeometry << "    NamedMaterial \"" + material->name +"\"";
+	outGeometry << "    NamedMaterial \"" + material->name +"\"" << std::endl;
 }
 
 
@@ -640,7 +721,7 @@ void PbrtExporter::pbrtTransformDoor(TransformNode* tempT)
 
 	outGeometry << " AttributeBegin" << std::endl;
 	// If we defined 'Translation'
-	if (!tempT->hasTranslation()) {
+	if (tempT->hasTranslation()) {
 		outGeometry << "   Translate " << tempT->translation << std::endl;
 	}
 
@@ -708,7 +789,7 @@ void PbrtExporter::pbrtTransformDoor(TransformNode* tempT)
 	}
 
 	// Pokud byl definovan uzel 'scaleOrientation', pak ho prevedu na rotaci 'Rotate'
-	if (!tempT->hasScaleOrientation()) {
+	if (tempT->hasScaleOrientation()) {
 		vec4 temp4D = tempT->scaleOrientation;
 		vec3 temp3D(temp4D.x, temp4D.y, temp4D.z);
 		float angleRad = temp4D.par;
@@ -725,7 +806,7 @@ void PbrtExporter::pbrtTransformDoor(TransformNode* tempT)
 	}
 	else {
 		// Pokud byl definovan samostatny uzel 'Scale'
-		if (!tempT->hasScale())
+		if (tempT->hasScale())
 			outGeometry << "   Scale " << tempT->scale << std::endl;
 	}
 
@@ -783,7 +864,7 @@ void PbrtExporter::pbrtTransformDoorHandle(TransformNode* tempT)
 {
 	outGeometry << " AttributeBegin" << std::endl;
 	// Pokud byl definovan uzel 'Translation'
-	if (!tempT->hasTranslation()) {
+	if (tempT->hasTranslation()) {
 		outGeometry << "   Translate " << tempT->translation << std::endl;
 	}
 
@@ -812,7 +893,7 @@ void PbrtExporter::pbrtTransformDoorHandle(TransformNode* tempT)
 	}
 
 	// Pokud byl definovan uzel 'Rotation'
-	if (!tempT->hasRotation()) {
+	if (tempT->hasRotation()) {
 		vec4 temp = tempT->rotation;
 		vec3 tempV(temp.x, temp.y, temp.z);
 		float angleRad = temp.par;
@@ -844,7 +925,7 @@ void PbrtExporter::pbrtTransformDoorHandle(TransformNode* tempT)
 	}
 
 	// Pokud byl definovan uzel 'scaleOrientation', pak ho prevedu na rotaci 'Rotate'
-	if (!tempT->hasScaleOrientation()) {
+	if (tempT->hasScaleOrientation()) {
 		vec4 temp4D = tempT->scaleOrientation;
 		vec3 temp3D(temp4D.x, temp4D.y, temp4D.z);
 		float angleRad = temp4D.par;
@@ -861,7 +942,7 @@ void PbrtExporter::pbrtTransformDoorHandle(TransformNode* tempT)
 	}
 	else {
 		// Pokud byl definovan samostatny uzel 'Scale'
-		if (!tempT->hasScale())
+		if (tempT->hasScale())
 			outGeometry << "   Scale " << tempT->scale << std::endl;
 	}
 
@@ -904,7 +985,7 @@ void PbrtExporter::pbrtTransformWindow(TransformNode* tempT)
 
 	outGeometry << " AttributeBegin" << std::endl;
 	// Pokud byl definovan uzel 'Translation'
-	if (!tempT->hasTranslation()) {
+	if (tempT->hasTranslation()) {
 		outGeometry << "   Translate " << tempT->translation << std::endl;
 	}
 
@@ -931,7 +1012,7 @@ void PbrtExporter::pbrtTransformWindow(TransformNode* tempT)
 
 
 	// Pokud byl definovan uzel 'Rotation'
-	if (!tempT->hasRotation()) {
+	if (tempT->hasRotation()) {
 		vec4 temp = tempT->rotation;
 		vec3 tempV(temp.x, temp.y, temp.z);
 		float angleRad = temp.par;
@@ -991,7 +1072,7 @@ void PbrtExporter::pbrtTransformWindow(TransformNode* tempT)
 	}
 
 	// Pokud byl definovan uzel 'scaleOrientation', pak ho prevedu na rotaci 'Rotate'
-	if (!tempT->hasScaleOrientation()) {
+	if (tempT->hasScaleOrientation()) {
 		vec4 temp4D = tempT->scaleOrientation;
 		vec3 temp3D(temp4D.x, temp4D.y, temp4D.z);
 		float angleRad = temp4D.par;
@@ -1008,7 +1089,7 @@ void PbrtExporter::pbrtTransformWindow(TransformNode* tempT)
 	}
 	else {
 		// Pokud byl definovan samostatny uzel 'Scale'
-		if (!tempT->hasScale())
+		if (tempT->hasScale())
 			outGeometry << "   Scale " << tempT->scale << std::endl;
 	}
 
@@ -1047,7 +1128,7 @@ void PbrtExporter::pbrtTransformWindowHandle(TransformNode* tempT)
 {
 	outGeometry << " AttributeBegin" << std::endl;
 	// Pokud byl definovan uzel 'Translation'
-	if (!tempT->hasTranslation()) {
+	if (tempT->hasTranslation()) {
 		outGeometry << "   Translate " << tempT->translation << std::endl;
 	}
 
@@ -1074,7 +1155,7 @@ void PbrtExporter::pbrtTransformWindowHandle(TransformNode* tempT)
 	}
 
 	// Pokud byl definovan uzel 'scaleOrientation', pak ho prevedu na rotaci 'Rotate'
-	if (!tempT->hasScaleOrientation()) {
+	if (tempT->hasScaleOrientation()) {
 		vec4 temp4D = tempT->scaleOrientation;
 		vec3 temp3D(temp4D.x, temp4D.y, temp4D.z);
 		float angleRad = temp4D.par;
@@ -1091,7 +1172,7 @@ void PbrtExporter::pbrtTransformWindowHandle(TransformNode* tempT)
 	}
 	else {
 		// Pokud byl definovan samostatny uzel 'Scale'
-		if (!tempT->hasScale())
+		if (tempT->hasScale())
 			outGeometry << "   Scale " << tempT->scale << std::endl;
 	}
 
@@ -1149,7 +1230,7 @@ void PbrtExporter::pbrtTransformWindowShutter(TransformNode* tempT)
 	outGeometry << "   Translate " << trans.x << " " << yOff << " " << trans.z << std::endl;
 
 	// Pokud byl definovan uzel 'Rotation'
-	if (!tempT->hasRotation()) {
+	if (tempT->hasRotation()) {
 		vec4 temp = tempT->rotation;
 		vec3 tempV(temp.x, temp.y, temp.z);
 		float angleRad = temp.par;
@@ -1158,7 +1239,7 @@ void PbrtExporter::pbrtTransformWindowShutter(TransformNode* tempT)
 
 
 	// Perform the scaling operation
-	if (tempT->hasScaleOrientation()) {
+	if (!tempT->hasScaleOrientation()) {
 		ShutterInfo* tempSInfo = static_cast<ShutterInfo*> (tempT->retObjectInfo());
 
 		outGeometry << "   Scale 1 " << tempSInfo->retCurrentOpening(animInfo) / 100.0f << " 1 " << std::endl;

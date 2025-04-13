@@ -22,7 +22,8 @@ int main()
     //std::string fileName = "automaticControls/FullExportToMitsuba.txt";
     //std::string fileName = "automaticControls/generateAllStaticCamsMitsuba.txt";
     //std::string fileName = "automaticControls/generateAllStaticCamsPBRT.txt";
-    std::string fileName = "automaticControls/animTest.txt";
+    //std::string fileName = "automaticControls/animTest.txt";
+    std::string fileName = "automaticControls/generateDynamicPBRT.txt";
     //std::string fileName = "automaticControls/DebugTexturedExport.txt";
     app.AutomaticMode(fileName);
 

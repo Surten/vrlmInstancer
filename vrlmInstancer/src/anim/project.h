@@ -341,16 +341,18 @@ class Project{
 
 	AnimationInfo* animInfo;
 
-	Scene* scene;
+
 
 public:
+
+	Scene* scene;
 	/// Constructors
-	Project(AnimationInfo* animInfo) : m_bInitialized(false), fileName(""), dataFile(""), m_iNumberAllNodes(0), m_iNumberBaseNodes(0), m_iNumberLights(0), 
+	Project(AnimationInfo* animInfo, Scene* scene) : m_bInitialized(false), fileName(""), dataFile(""), m_iNumberAllNodes(0), m_iNumberBaseNodes(0), m_iNumberLights(0), 
 		m_iNumberCameras(0), m_iNumberDoors(0), m_iNumberWindows(0), m_iNumberShutters(0)
 	{
 		this->animInfo = animInfo;
 		list = nullptr;
-		scene = nullptr;
+		this->scene = scene;
 	}
 
 	/// Set the initialzed flag
@@ -402,7 +404,7 @@ public:
 	 @param fileName File name of the file to be loaded
 	 @param render Pointer to the renderer object
 	*/
-	void readProject(std::string actualLine, Scene* scene);
+	void readProject(std::string actualLine);
 
 	/// Returns the action list
 	ActionList * retActionList(void){return this->list;}
