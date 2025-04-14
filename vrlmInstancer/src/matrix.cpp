@@ -258,22 +258,22 @@ Matrix& Matrix::mScale(const vec3& vec3D)
 	return *this;
 }
 
-void Matrix::applyTransforms(Matrix& mat, std::stack<Transform> transforms)
+void Matrix::applyTransforms(std::stack<Transform> transforms)
 {
 	while (!transforms.empty())
 	{
 		Transform transform = transforms.top();
 		if (transform.type == TransformType::TRANSLATE)
 		{
-			mat.mTranslate(transform.vec);
+			mTranslate(transform.vec);
 		}
 		else if (transform.type == TransformType::ROTATE)
 		{
-			mat.mRotate(transform.vec, transform.angle);
+			mRotate(transform.vec, transform.angle);
 		}
 		else if (transform.type == TransformType::SCALE)
 		{
-			mat.mScale(transform.vec);
+			mScale(transform.vec);
 		}
 		transforms.pop();
 	}

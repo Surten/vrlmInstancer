@@ -131,7 +131,7 @@ public:
 	*/
 	Matrix& mScale(const vec3& vec3D);
 
-	void applyTransforms(Matrix& mat, std::stack<Transform> transforms);
+	void applyTransforms(std::stack<Transform> transforms);
 
 	/// Metoda vraci inverzni matici 
 	Matrix& mInverse();

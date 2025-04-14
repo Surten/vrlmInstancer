@@ -33,7 +33,6 @@ private:
 
 	std::string outputFolder;
 	std::string sceneFileName;
-	std::string outputFolder;
 	std::string currentGeometryFileName;
 	std::string currentGeometryFolderPath;
 

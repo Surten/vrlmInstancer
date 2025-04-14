@@ -273,7 +273,7 @@ void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName
 			break;
 		}
 	}
-	if (!hasLights) createDefaultEnviromentalLight("material-testball/textures/envmap.hdr");
+	if (!hasLights) createDefaultEnviromentalLight("envmap.hdr");
 
 	for (Project* p : projects)
 		p->executeActions();

@@ -2,6 +2,7 @@
 
 #include"geometryModify.h"
 #include "constants.h"
+#include "dataStructs.h"
 
 #include <filesystem>
 #include <sstream>
@@ -26,7 +27,7 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* cam
 	this->createNewGeometry = createNewGeometry;
 
 	// export all geometries into individual .obj files
-	if (createNewGeometry && false)
+	if (createNewGeometry)
 	{
 		writeAllGeometriesToObjFiles();
 	}
@@ -112,11 +113,11 @@ void MitsubaExporter::exportDynamic()
 			writeElement("include", { "filename", currentGeometryFileName + ".xml" }, depth + 1);
 			animInfo->incCurrentFrame();
 			animInfo->incCurrentTime();
-			std::cout << "Exported frame " << i << " of scene: " << scene->name << std::endl;
 		}
 
 		writeElementEnd("scene", depth);
 		out.close();
+		std::cout << "Exported frame " << i << std::endl;
 	}
 }
 
@@ -224,17 +225,18 @@ void MitsubaExporter::writeGeometryToObj(Geometry* geometry, std::string filePat
 {
 	std::ofstream out_geom(filePath + "/" + geometry->name + ".obj");
 	// how hard can it be to write a .obj exporter? (:
-	for (const auto& coord : geometry->coords)
+	for (const vec3& coord : geometry->coords)
 	{
 		out_geom << "v " << coord << std::endl;
 	}
-	for (const auto& texCoord : geometry->textureCoords)
+	for (const vec2& texCoord : geometry->textureCoords)
 	{
 		out_geom << "vt " << texCoord << std::endl;
 	}
-	for (const auto& texCoord : geometry->normals)
+	for (vec3& normalCoord : geometry->normals)
 	{
-		out_geom << "vn " << texCoord << std::endl;
+		if (normalCoord.len() < 0.01) normalCoord.y = 1;
+		out_geom << "vn " << normalCoord << std::endl;
 	}
 	if (geometry->facesNormalIndex.size() > 0) {
 		if (geometry->facesTextureIndex.size() > 0)
@@ -291,10 +293,10 @@ void MitsubaExporter::writeAllGeometriesToObjFiles()
 	for (auto scene : scenes)
 	{
 		initCurrentGeometryFilename(scene->name);
-		std::filesystem::create_directory(currentGeometryFolderPath);
+		std::filesystem::create_directory(this->outputFolder + "/" + currentGeometryFolderPath);
 		for (auto geometry : scene->geometries)
 		{
-			writeGeometryToObj(geometry, currentGeometryFolderPath);
+			writeGeometryToObj(geometry, this->outputFolder + "/" + currentGeometryFolderPath);
 		}
 		std::cout << "Exported geometries of scene: " << scene->name << std::endl;
 	}
@@ -328,8 +330,8 @@ void MitsubaExporter::writeSensor(int depth)
 
 		cameraPosition = cameraPosition + (retAABB.getArithmeticCenter() - vec3());
 
-		std::cout << retAABB.min << "   " << retAABB.max << std::endl;
-		std::cout << cameraPosition << "   " << retAABB.getArithmeticCenter() << std::endl;
+		//std::cout << retAABB.min << "   " << retAABB.max << std::endl;
+		//std::cout << cameraPosition << "   " << retAABB.getArithmeticCenter() << std::endl;
 
 		vec3 Up(0.0f, 1.0f, 0.0f);
 		Up.normalize();
@@ -457,10 +459,12 @@ void MitsubaExporter::writeTransform(ShapeNode* shapeNode, int depth)
 		else {
 			mitsubaTransformNodeBase(parent, transforms);
 		}
+		parent = static_cast<TransformNode*>(parent->parent);
 	}
-
+	Matrix m;
+	m.applyTransforms(transforms);
 	writeElementBegScene("transform", { "name", "to_world" }, depth);
-	writeElementScene("matrix", { "value", shapeNode->transformFromRootMatrix->GetAsString() }, depth + 1);
+	writeElementScene("matrix", { "value", m.GetAsString() }, depth + 1);
 	writeElementEndScene("transform", depth);
 }
 
@@ -653,22 +657,29 @@ void MitsubaExporter::writeMaterialBTF(Mat* material, int depth)
 
 
 
-void MitsubaExporter::mitsubaTransformNodeBase(TransformNode* transformNode, std::stack<Transform>& transforms)
+
+void addTransformTranslate(TransformNode* transformNode, std::stack<Transform>& transforms)
 {
-	if (transformNode->hasTranslation())
-	{
+	if (transformNode->hasTranslation()) {
 		Transform t;
 		t.createTranslate(transformNode->translation);
 		transforms.push(t);
 	}
-	if (transformNode->hasRotation())
-	{
+}
+
+void addTransformRotation(TransformNode* transformNode, std::stack<Transform>& transforms)
+{
+	if (!transformNode->hasRotation()) {
 		Transform t;
 		t.createRotate(transformNode->rotation);
 		transforms.push(t);
 	}
-	if (transformNode->hasScaleOrientation()) 
-	{
+}
+
+void addTransformScaleOrientationorScale(TransformNode* transformNode, std::stack<Transform>& transforms) 
+{
+	// Pokud byl definovan uzel 'scaleOrientation', pak ho prevedu na rotaci 'Rotate'
+	if (transformNode->hasScaleOrientation()) {
 		vec4 temp4D = transformNode->scaleOrientation;
 		vec3 temp3D(temp4D.x, temp4D.y, temp4D.z);
 		float angleRad = temp4D.par;
@@ -683,100 +694,34 @@ void MitsubaExporter::mitsubaTransformNodeBase(TransformNode* transformNode, std
 		transforms.push(t1);
 		transforms.push(t2);
 		transforms.push(t3);
-	}else if (transformNode->hasScale())
-	{
-		Transform t;
-		t.createScale(transformNode->scale);
-		transforms.push(t);
+	}
+	else {
+		// Pokud byl definovan samostatny uzel 'Scale'
+		if (transformNode->hasScale())
+		{
+			Transform t;
+			t.createScale(transformNode->scale);
+			transforms.push(t);
+		}
 	}
 }
 
 
 
-//----------------------------------------------------------------------------------------------
-void MitsubaExporter::mitsubaTransformDoor(TransformNode* tempT, std::stack<Transform>& transforms)
-//----------------------------------------------------------------------------------------------
+
+void MitsubaExporter::mitsubaTransformNodeBase(TransformNode* transformNode, std::stack<Transform>& transforms)
 {
-	// Find the parent, which stores the information on the joint axis
-	TransformNode* tempPar = static_cast<TransformNode*> (tempT->parent);
-	// Get the doorInfo object
-	DoorInfo* tempDInfo = static_cast<DoorInfo*> (tempPar->retObjectInfo());
+	addTransformScaleOrientationorScale(transformNode, transforms);
+	addTransformRotation(transformNode, transforms);
+	addTransformTranslate(transformNode, transforms);
+}
 
-	// The order is reverse from PBRT export, we are going from shape node to the top, so we use stack and append the Transforms in the coorect order
-
-	// Now we have do the reversed center translation
-	if (tempDInfo->retCurrentOpening(animInfo) > 0) {
-		vec3 vec;
-		if ((tempDInfo->retObjectConstructTypeNumber() == 1) || (tempDInfo->retObjectConstructTypeNumber() == 2) ||
-			(tempDInfo->retObjectConstructTypeNumber() == 7) ||
-			(tempDInfo->retObjectConstructTypeNumber() == 10) || (tempDInfo->retObjectConstructTypeNumber() == 11) ||
-			(tempDInfo->retObjectConstructTypeNumber() == 15) || (tempDInfo->retObjectConstructTypeNumber() == 16)) {
-
-			vec = vec3() - tempDInfo->retAxis();
-		}
-		else if (tempDInfo->retObjectConstructTypeNumber() == 3) {
-			vec = vec3(0, 0, -CENTER_DOOR_NO_JOINTS);
-		}
-		else if (tempDInfo->retObjectConstructTypeNumber() == 4) {
-			vec = vec3(0, 0, CENTER_DOOR_NO_JOINTS);
-		}
-		else if (tempDInfo->retObjectConstructTypeNumber() == 6) {
-			vec = vec3(0, 0, CENTER_DOOR_NO_JOINTS_4);
-		}
-		else if (tempDInfo->retObjectConstructTypeNumber() == 8) {
-			vec3 vecAxis = tempDInfo->retAxis();
-			vec = vec3(0, -vecAxis.y, -vecAxis.z);
-		}
-		else if (tempDInfo->retObjectConstructTypeNumber() == 9) {
-			vec = vec3(0, 0, CENTER_DOOR_NO_JOINTS_NARROW);
-		}
-		else if (tempDInfo->retObjectConstructTypeNumber() == 12) {
-			vec = vec3(CENTER_DOOR_NO_JOINTS_12, 0, 0);
-		}
-		else if (tempDInfo->retObjectConstructTypeNumber() == 13) {
-			vec = vec3(0, 0, CENTER_DOOR_NO_JOINTS_12);
-		}
-		else if (tempDInfo->retObjectConstructTypeNumber() == 14) {
-			vec = vec3(-CENTER_DOOR_NO_JOINTS_12, 0, 0);
-		}
-		Transform t;
-		t.createTranslate(vec);
-		transforms.push(t);
-	}
-
-
-	// Pokud byl definovan uzel 'scaleOrientation', pak ho prevedu na rotaci 'Rotate'
-	if (tempT->hasScaleOrientation()) {
-		vec4 temp4D = tempT->scaleOrientation;
-		vec3 temp3D(temp4D.x, temp4D.y, temp4D.z);
-		float angleRad = temp4D.par;
-		float angle = RAD_TO_DEG(angleRad);
-		if (angle < 0)
-			angle = -angle;
-
-		Transform t1, t2, t3;
-		t1.createRotate(vec4(temp3D.x, temp3D.y, temp3D.z, angle));
-		t2.createScale(tempT->scale);
-		t3.createRotate(temp4D);
-		transforms.push(t1);
-		transforms.push(t2);
-		transforms.push(t3);
-	}
-	else {
-		// Pokud byl definovan samostatny uzel 'Scale'
-		if (tempT->hasScale())
-		{
-			Transform t;
-			t.createScale(tempT->scale);
-			transforms.push(t);
-		}
-	}
-
-
+void addTransformDoorRotation(TransformNode* transformNode, DoorInfo* tempDInfo, AnimationInfo* animInfo, std::stack<Transform>& transforms)
+{
 	// Rotate the door object 
 	if (tempDInfo->retCurrentOpening(animInfo) > 0) {
 		// Find the parent, which stores the information about the door object
-		TransformNode* tempParT = static_cast<TransformNode*> (tempT->parent);
+		TransformNode* tempParT = static_cast<TransformNode*> (transformNode->parent);
 
 		DoorInfo* doorInfoParT = static_cast<DoorInfo*> (tempParT->retObjectInfo());
 
@@ -795,7 +740,10 @@ void MitsubaExporter::mitsubaTransformDoor(TransformNode* tempT, std::stack<Tran
 		t.createRotate(tempRot);
 		transforms.push(t);
 	}
+}
 
+void addTransformDoorCenterTranslation(TransformNode* transformNode, DoorInfo* tempDInfo, AnimationInfo* animInfo, std::stack<Transform>& transforms, bool isBackwards)
+{
 	if (tempDInfo->retCurrentOpening(animInfo) > 0) {
 		vec3 vec;
 		if ((tempDInfo->retObjectConstructTypeNumber() == 1) || (tempDInfo->retObjectConstructTypeNumber() == 2) ||
@@ -830,19 +778,100 @@ void MitsubaExporter::mitsubaTransformDoor(TransformNode* tempT, std::stack<Tran
 		else if (tempDInfo->retObjectConstructTypeNumber() == 14) {
 			vec = vec3(CENTER_DOOR_NO_JOINTS_12, 0, 0);
 		}
+		if (isBackwards)
+		{
+			vec = vec3() - vec;
+		}
 		Transform t;
 		t.createTranslate(vec);
 		transforms.push(t);
 
 	}
+}
 
-	if (tempT->hasTranslation()) {
-		Transform t;
-		t.createTranslate(tempT->translation);
-		transforms.push(t);
+
+//----------------------------------------------------------------------------------------------
+void MitsubaExporter::mitsubaTransformDoor(TransformNode* tempT, std::stack<Transform>& transforms)
+//----------------------------------------------------------------------------------------------
+{
+	// Find the parent, which stores the information on the joint axis
+	TransformNode* tempPar = static_cast<TransformNode*> (tempT->parent);
+	// Get the doorInfo object
+	DoorInfo* tempDInfo = static_cast<DoorInfo*> (tempPar->retObjectInfo());
+
+	addTransformDoorCenterTranslation(tempT, tempDInfo, animInfo, transforms, true);
+	addTransformScaleOrientationorScale(tempT, transforms);
+	addTransformDoorRotation(tempT, tempDInfo, animInfo, transforms);
+	addTransformDoorCenterTranslation(tempT, tempDInfo, animInfo, transforms, false);
+	addTransformTranslate(tempT, transforms);
+
+
+}
+
+void addTransformDoorHandleCenterTranslation(TransformNode* transformNode, std::stack<Transform>& transforms, bool isBackwards)
+{
+	vec3 vec;
+	TransformNode* tempParT = static_cast<TransformNode*> (transformNode->parent->parent);
+
+	if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 1) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 3) ||
+		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 7) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 8)) {
+		vec = vec3(0, 0, -CENTER_DOOR_HANDLES);
+	}
+	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 2) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 4) ||
+		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 9) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 11) ||
+		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 13)) {
+		vec = vec3(0, 0, CENTER_DOOR_HANDLES);
+	}
+	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 10) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 14) ||
+		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 15)) {
+		vec = vec3(-CENTER_DOOR_HANDLES, 0, 0);
+	}
+	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 12)) {
+		vec = vec3(CENTER_DOOR_HANDLES, 0, 0);
+	}
+	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 16)) {
+		vec = vec3(CENTER_DOOR_HANDLES3, 0, 0);
 	}
 
+	if (isBackwards)
+	{
+		vec = vec3() - vec;
+	}
+	Transform t;
+	t.createTranslate(vec);
+	transforms.push(t);
+}
 
+void addTransformDoorHandleRotation(TransformNode* transformNode, AnimationInfo* animInfo, std::stack<Transform>& transforms)
+{
+	TransformNode* tempParT = static_cast<TransformNode*> (transformNode->parent->parent);
+	// Get the doorInfo object
+	DoorInfo* doorInfoT = static_cast<DoorInfo*> (tempParT->retObjectInfo());
+
+	vec4 vec;
+	if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 1) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 3) ||
+		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 7) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 8))
+	{
+		vec = vec4(1, 0, 0, RAD_TO_DEG(1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
+	}
+	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 2) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 4) ||
+		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 9) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 11) ||
+		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 13))
+	{
+		vec = vec4(1, 0, 0, RAD_TO_DEG(-1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
+	}
+	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 10) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 14) ||
+		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 15))
+	{
+		vec = vec4(0, 0, 1, RAD_TO_DEG(-1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
+	}
+	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 12) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 16)) 
+	{
+		vec = vec4(0, 0, 1, RAD_TO_DEG(1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
+	}
+	Transform t;
+	t.createRotate(vec);
+	transforms.push(t);
 }
 
 
@@ -850,114 +879,85 @@ void MitsubaExporter::mitsubaTransformDoor(TransformNode* tempT, std::stack<Tran
 void MitsubaExporter::mitsubaTransformDoorHandle(TransformNode* tempT, std::stack<Transform>& transforms)
 //----------------------------------------------------------------------------------------------
 {
-	outGeometry << " AttributeBegin" << std::endl;
-	// Pokud byl definovan uzel 'Translation'
-	if (!tempT->hasTranslation()) {
-		outGeometry << "   Translate " << tempT->translation << std::endl;
-	}
-
-	// Insert the translation for the Center operation
-	// get the parent with the handle rotation rate (parent->parent)
-	TransformNode* tempParT = static_cast<TransformNode*> (tempT->parent->parent);
-
-	if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 1) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 3) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 7) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 8)) {
-		outGeometry << "   Translate 0 0 " << -CENTER_DOOR_HANDLES << std::endl;
-	}
-	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 2) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 4) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 9) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 11) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 13)) {
-		outGeometry << "   Translate 0 0 " << CENTER_DOOR_HANDLES << std::endl;
-	}
-	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 10) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 14) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 15)) {
-		outGeometry << "   Translate " << -CENTER_DOOR_HANDLES << " 0 0 " << std::endl;
-	}
-	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 12)) {
-		outGeometry << "   Translate " << CENTER_DOOR_HANDLES << " 0 0 " << std::endl;
-	}
-	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 16)) {
-		outGeometry << "   Translate " << CENTER_DOOR_HANDLES3 << " 0 0 " << std::endl;
-	}
-
-	// Pokud byl definovan uzel 'Rotation'
-	if (!tempT->hasRotation()) {
-		vec4 temp = tempT->rotation;
-		vec3 tempV(temp.x, temp.y, temp.z);
-		float angleRad = temp.par;
-		outGeometry << "   Rotate " << RAD_TO_DEG(angleRad) << " " << tempV << std::endl;
-	}
-
-	// Get the doorInfo object
-	DoorInfo* doorInfoT = static_cast<DoorInfo*> (tempParT->retObjectInfo());
-
-	if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 1) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 3) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 7) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 8)) {
-
-		outGeometry << "   Rotate " << RAD_TO_DEG(1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)) << " 1 0 0" << std::endl;
-	}
-	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 2) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 4) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 9) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 11) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 13)) {
-
-		outGeometry << "   Rotate " << RAD_TO_DEG(-1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)) << " 1 0 0" << std::endl;
-	}
-	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 10) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 14) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 15)) {
-
-		outGeometry << "   Rotate " << RAD_TO_DEG(-1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)) << " 0 0 1" << std::endl;
-	}
-	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 12) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 16)) {
-
-		outGeometry << "   Rotate " << RAD_TO_DEG(1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)) << " 0 0 1" << std::endl;
-	}
-
-	// Pokud byl definovan uzel 'scaleOrientation', pak ho prevedu na rotaci 'Rotate'
-	if (!tempT->hasScaleOrientation()) {
-		vec4 temp4D = tempT->scaleOrientation;
-		vec3 temp3D(temp4D.x, temp4D.y, temp4D.z);
-		float angleRad = temp4D.par;
-		// Operaci 'scaleOrientation' prevedu na rotaci
-		outGeometry << "   Rotate " << RAD_TO_DEG(angleRad) << " " << temp3D << std::endl;
-		outGeometry << "   Scale " << tempT->scale << std::endl;
-		// Inverzni operaci '-scaleOrientation' ziskam jako rotaci o opacny uhel
-		outGeometry << "   Rotate ";
-		float angle = RAD_TO_DEG(angleRad);
-		if (angle >= 0)
-			outGeometry << angle << " " << temp3D << std::endl;
-		else
-			outGeometry << -angle << " " << temp3D << std::endl;
-	}
-	else {
-		// Pokud byl definovan samostatny uzel 'Scale'
-		if (!tempT->hasScale())
-			outGeometry << "   Scale " << tempT->scale << std::endl;
-	}
-
-	// Perform the inverse translation for the center node	
-	if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 1) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 3) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 7) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 8)) {
-		outGeometry << "   Translate 0 0 " << CENTER_DOOR_HANDLES << std::endl;
-	}
-	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 2) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 4) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 9) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 11) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 13)) {
-		outGeometry << "   Translate 0 0 " << -CENTER_DOOR_HANDLES << std::endl;
-	}
-	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 10) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 14) ||
-		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 15)) {
-		outGeometry << "   Translate " << CENTER_DOOR_HANDLES << " 0 0 " << std::endl;
-	}
-	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 12)) {
-		outGeometry << "   Translate " << -CENTER_DOOR_HANDLES << " 0 0 " << std::endl;
-	}
-	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 16)) {
-		outGeometry << "   Translate " << -CENTER_DOOR_HANDLES3 << " 0 0 " << std::endl;
-	}
-
-	outGeometry << " AttributeEnd" << std::endl << std::endl;
+	addTransformDoorHandleCenterTranslation(tempT, transforms, true);
+	addTransformScaleOrientationorScale(tempT, transforms);
+	addTransformDoorHandleRotation(tempT, animInfo, transforms);
+	addTransformRotation(tempT, transforms);
+	addTransformDoorHandleCenterTranslation(tempT, transforms, false);
+	addTransformTranslate(tempT, transforms);
 }
 
+
+void addTransformWindowTranslation(WindowInfo* tempWInfo,  AnimationInfo* animInfo, std::stack<Transform>& transforms, bool isBackwards)
+{
+	if (tempWInfo->retCurrentOpening(animInfo) > 0) {
+
+		vec3 vec;
+		// Now test how the window should be opened, if vertically or horizontally
+		if (tempWInfo->retOpenType() == 0) {
+			vec3 vecAxis = tempWInfo->retAxis();
+			if ((tempWInfo->retObjectConstructTypeNumber() < 5) || tempWInfo->retObjectConstructTypeNumber() == 7) {
+				vec = vecAxis;
+			}
+			else if (tempWInfo->retObjectConstructTypeNumber() == 5) {
+				vec = vec3(vecAxis.x + CENTER_WINDOW_TYPE_56, vecAxis.y, vecAxis.z);
+			}
+			else if (tempWInfo->retObjectConstructTypeNumber() == 6) {
+				vec = vec3(vecAxis.x - CENTER_WINDOW_TYPE_56, vecAxis.y, vecAxis.z);
+			}
+		}
+		else {
+			vec = vec3(0, -CENTER_WINDOW_VERTICAL, 0);
+		}
+
+		if (isBackwards)
+		{
+			vec = vec3() - vec;
+		}
+		Transform t;
+		t.createTranslate(vec);
+		transforms.push(t);
+	}
+}
+
+void addTransformWindowRotation(WindowInfo* tempWInfo, AnimationInfo* animInfo, std::stack<Transform>& transforms)
+{
+	vec4 vec;
+	// Check what type of rotation is supposed to be done
+	float rotateRate = 0;
+
+	if (tempWInfo->retCurrentOpenType(animInfo) == 0) {
+		rotateRate = (float)(DEG_TO_RAD(90.0 * tempWInfo->retCurrentOpening(animInfo) / 100.0f));
+		if ((tempWInfo->retObjectConstructTypeNumber() == 1) || (tempWInfo->retObjectConstructTypeNumber() == 3) ||
+			(tempWInfo->retObjectConstructTypeNumber() == 5)) {
+			vec = vec4(0, 1, 0, -rotateRate);
+		}
+		else {
+			vec = vec4(0, 1, 0, rotateRate);
+		}
+	}
+	else {
+		rotateRate = (float)(DEG_TO_RAD(10.0 * tempWInfo->retCurrentOpening(animInfo) / 100.0f));
+		if ((tempWInfo->retObjectConstructTypeNumber() == 1) || (tempWInfo->retObjectConstructTypeNumber() == 5)) {
+			vec = vec4(1, 0, 0, -rotateRate);
+		}
+		else if ((tempWInfo->retObjectConstructTypeNumber() == 2) || (tempWInfo->retObjectConstructTypeNumber() == 6)) {
+			vec = vec4(1, 0, 0, -rotateRate);
+		}
+		else if (tempWInfo->retObjectConstructTypeNumber() == 3) {
+			vec = vec4(0, 0, 1, rotateRate);
+		}
+		else if (tempWInfo->retObjectConstructTypeNumber() == 4) {
+			vec = vec4(0, 0, 1, rotateRate);
+		}
+		else if (tempWInfo->retObjectConstructTypeNumber() == 7) {
+			vec = vec4(0, 0, 1, -rotateRate);
+		}
+	}
+	Transform t;
+	t.createRotate(vec);
+	transforms.push(t);
+}
 
 //----------------------------------------------------------------------------------------------
 void MitsubaExporter::mitsubaTransformWindow(TransformNode* tempT, std::stack<Transform>& transforms)
@@ -968,200 +968,58 @@ void MitsubaExporter::mitsubaTransformWindow(TransformNode* tempT, std::stack<Tr
 	TransformNode* tempPar = static_cast<TransformNode*> (tempT->parent);
 	WindowInfo* tempWInfo = static_cast<WindowInfo*> (tempPar->retObjectInfo());
 
-	outGeometry << " AttributeBegin" << std::endl;
-	// Pokud byl definovan uzel 'Translation'
-	if (!tempT->hasTranslation()) {
-		outGeometry << "   Translate " << tempT->translation << std::endl;
-	}
-
-	// Perform the Translation for the Center operation
-	if (tempWInfo->retCurrentOpening(animInfo) > 0) {
-
-		// Now test how the window should be opened, if vertically or horizontally
-		if (tempWInfo->retOpenType() == 0) {
-			vec3 vecAxis = tempWInfo->retAxis();
-			if ((tempWInfo->retObjectConstructTypeNumber() < 5) || tempWInfo->retObjectConstructTypeNumber() == 7) {
-				outGeometry << "   Translate " << vecAxis.x << " " << vecAxis.y << " " << vecAxis.z << std::endl;
-			}
-			else if (tempWInfo->retObjectConstructTypeNumber() == 5) {
-				outGeometry << "   Translate " << vecAxis.x + CENTER_WINDOW_TYPE_56 << " " << vecAxis.y << " " << vecAxis.z << std::endl;
-			}
-			else if (tempWInfo->retObjectConstructTypeNumber() == 6) {
-				outGeometry << "   Translate " << vecAxis.x - CENTER_WINDOW_TYPE_56 << " " << vecAxis.y << " " << vecAxis.z << std::endl;
-			}
-		}
-		else {
-			outGeometry << "   Translate 0 " << -CENTER_WINDOW_VERTICAL << " 0" << std::endl;
-		}
-	}
-
-
-	// Pokud byl definovan uzel 'Rotation'
-	if (!tempT->hasRotation()) {
-		vec4 temp = tempT->rotation;
-		vec3 tempV(temp.x, temp.y, temp.z);
-		float angleRad = temp.par;
-		outGeometry << "   Rotate " << RAD_TO_DEG(angleRad) << " " << tempV << std::endl;
-	}
-
-	// Implement the rotation of the window
-	// Find the parent, which stores the information about the window object
-	TransformNode* tempParT = static_cast<TransformNode*> (tempT->parent);
-
-	WindowInfo* windowInfoT = static_cast<WindowInfo*> (tempParT->retObjectInfo());
-
-	// Check what type of rotation is supposed to be done
-	float rotateRate = 0;
-
-	if (windowInfoT->retCurrentOpenType(animInfo) == 0) {
-		rotateRate = (float)(DEG_TO_RAD(90.0 * windowInfoT->retCurrentOpening(animInfo) / 100.0f));
-		if ((windowInfoT->retObjectConstructTypeNumber() == 1) || (windowInfoT->retObjectConstructTypeNumber() == 3) ||
-			(windowInfoT->retObjectConstructTypeNumber() == 5)) {
-			vec4 tempRot(0, 1, 0, -rotateRate);
-
-			outGeometry << "   Rotate " << RAD_TO_DEG(tempRot.par) << " " << tempRot.x << " " << tempRot.y << " " << tempRot.z << std::endl;
-		}
-		else {
-			vec4 tempRot(0, 1, 0, rotateRate);
-
-			outGeometry << "   Rotate " << RAD_TO_DEG(tempRot.par) << " " << tempRot.x << " " << tempRot.y << " " << tempRot.z << std::endl;
-		}
-	}
-	else {
-		rotateRate = (float)(DEG_TO_RAD(10.0 * windowInfoT->retCurrentOpening(animInfo) / 100.0f));
-		if ((windowInfoT->retObjectConstructTypeNumber() == 1) || (windowInfoT->retObjectConstructTypeNumber() == 5)) {
-			vec4 tempRot(1, 0, 0, -rotateRate);
-
-			outGeometry << "   Rotate " << RAD_TO_DEG(tempRot.par) << " " << tempRot.x << " " << tempRot.y << " " << tempRot.z << std::endl;
-		}
-		else if ((windowInfoT->retObjectConstructTypeNumber() == 2) || (windowInfoT->retObjectConstructTypeNumber() == 6)) {
-			vec4 tempRot(1, 0, 0, -rotateRate);
-
-			outGeometry << "   Rotate " << RAD_TO_DEG(tempRot.par) << " " << tempRot.x << " " << tempRot.y << " " << tempRot.z << std::endl;
-		}
-		else if (windowInfoT->retObjectConstructTypeNumber() == 3) {
-			vec4 tempRot(0, 0, 1, rotateRate);
-
-			outGeometry << "   Rotate " << RAD_TO_DEG(tempRot.par) << " " << tempRot.x << " " << tempRot.y << " " << tempRot.z << std::endl;
-		}
-		else if (windowInfoT->retObjectConstructTypeNumber() == 4) {
-			vec4 tempRot(0, 0, 1, rotateRate);
-
-			outGeometry << "   Rotate " << RAD_TO_DEG(tempRot.par) << " " << tempRot.x << " " << tempRot.y << " " << tempRot.z << std::endl;
-		}
-		else if (windowInfoT->retObjectConstructTypeNumber() == 7) {
-			vec4 tempRot(0, 0, 1, -rotateRate);
-
-			outGeometry << "   Rotate " << RAD_TO_DEG(tempRot.par) << " " << tempRot.x << " " << tempRot.y << " " << tempRot.z << std::endl;
-		}
-	}
-
-	// Pokud byl definovan uzel 'scaleOrientation', pak ho prevedu na rotaci 'Rotate'
-	if (!tempT->hasScaleOrientation()) {
-		vec4 temp4D = tempT->scaleOrientation;
-		vec3 temp3D(temp4D.x, temp4D.y, temp4D.z);
-		float angleRad = temp4D.par;
-		// Operaci 'scaleOrientation' prevedu na rotaci
-		outGeometry << "   Rotate " << RAD_TO_DEG(angleRad) << " " << temp3D << std::endl;
-		outGeometry << "   Scale " << tempT->scale << std::endl;
-		// Inverzni operaci '-scaleOrientation' ziskam jako rotaci o opacny uhel
-		outGeometry << "   Rotate ";
-		float angle = RAD_TO_DEG(angleRad);
-		if (angle >= 0)
-			outGeometry << angle << " " << temp3D << std::endl;
-		else
-			outGeometry << -angle << " " << temp3D << std::endl;
-	}
-	else {
-		// Pokud byl definovan samostatny uzel 'Scale'
-		if (!tempT->hasScale())
-			outGeometry << "   Scale " << tempT->scale << std::endl;
-	}
-
-	// Perform the Inverse Translation for the Center operation
-	if (tempWInfo->retCurrentOpening(animInfo) > 0) {
-
-		// Now test how the window should be opened, if vertically or horizontally
-		if (tempWInfo->retOpenType() == 0) {
-			vec3 vecAxis = tempWInfo->retAxis();
-			if ((tempWInfo->retObjectConstructTypeNumber() < 5) || tempWInfo->retObjectConstructTypeNumber() == 7) {
-				outGeometry << "   Translate " << -vecAxis.x << " " << -vecAxis.y << " " << -vecAxis.z << std::endl;
-			}
-			else if (tempWInfo->retObjectConstructTypeNumber() == 5) {
-				outGeometry << "   Translate " << -vecAxis.x - CENTER_WINDOW_TYPE_56 << " " << -vecAxis.y << " " << -vecAxis.z << std::endl;
-			}
-			else if (tempWInfo->retObjectConstructTypeNumber() == 6) {
-				outGeometry << "   Translate " << -vecAxis.x + CENTER_WINDOW_TYPE_56 << " " << -vecAxis.y << " " << -vecAxis.z << std::endl;
-			}
-		}
-		else {
-			outGeometry << "   Translate 0 " << CENTER_WINDOW_VERTICAL << " 0" << std::endl;
-		}
-	}
-
-	outGeometry << " AttributeEnd" << std::endl << std::endl;
+	addTransformWindowTranslation(tempWInfo, animInfo, transforms, true);
+	addTransformScaleOrientationorScale(tempT, transforms);
+	addTransformWindowRotation(tempWInfo, animInfo, transforms);
+	addTransformRotation(tempT, transforms);
+	addTransformWindowTranslation(tempWInfo, animInfo, transforms, false);
+	addTransformTranslate(tempT, transforms);
 }
 
+
+void addTransformWindowHandleRotation(WindowInfo* tempWInfo, AnimationInfo* animInfo, std::stack<Transform>& transforms)
+{
+	// Rotate the window handle accordingly
+	vec4 vec;
+	if ((tempWInfo->retObjectConstructTypeNumber() == 1) || (tempWInfo->retObjectConstructTypeNumber() == 5)) {
+		vec = vec4(0, 0, 1, 3.14 * (tempWInfo->retCurrentHandleRate(animInfo) / 100.0f));
+	}
+	else if ((tempWInfo->retObjectConstructTypeNumber() == 2) || (tempWInfo->retObjectConstructTypeNumber() == 6)) {
+		vec = vec4(0, 0, 1, -3.14 * (tempWInfo->retCurrentHandleRate(animInfo) / 100.0f));
+	}
+	else if ((tempWInfo->retObjectConstructTypeNumber() == 3) || tempWInfo->retObjectConstructTypeNumber() == 7) {
+		vec = vec4(1, 0, 0, 3.14 * (tempWInfo->retCurrentHandleRate(animInfo) / 100.0f));
+	}
+	else if (tempWInfo->retObjectConstructTypeNumber() == 4) {
+		vec = vec4(1, 0, 0, -3.14 * (tempWInfo->retCurrentHandleRate(animInfo) / 100.0f));
+	}
+	Transform t;
+	t.createRotate(vec);
+	transforms.push(t);
+}
 
 //----------------------------------------------------------------------------------------------
 void MitsubaExporter::mitsubaTransformWindowHandle(TransformNode* tempT, std::stack<Transform>& transforms)
 //----------------------------------------------------------------------------------------------
 {
-	outGeometry << " AttributeBegin" << std::endl;
-	// Pokud byl definovan uzel 'Translation'
-	if (!tempT->hasTranslation()) {
-		outGeometry << "   Translate " << tempT->translation << std::endl;
-	}
 
 	// Perform the translation of the Center operation
 	// get the parent with the handle rotation rate (parent->parent)
 	TransformNode* tempParT = static_cast<TransformNode*> (tempT->parent->parent);
-
-	outGeometry << "   Translate 0 " << CENTER_WINDOW_HANDLES << " 0" << std::endl;
-
-	// Rotate the window handle accordingly
 	WindowInfo* windowInfoT = static_cast<WindowInfo*> (tempParT->retObjectInfo());
 
-	if ((windowInfoT->retObjectConstructTypeNumber() == 1) || (windowInfoT->retObjectConstructTypeNumber() == 5)) {
-		outGeometry << "   Rotate " << RAD_TO_DEG(3.14 * (windowInfoT->retCurrentHandleRate(animInfo) / 100.0f)) << " 0 0 1" << std::endl;
-	}
-	else if ((windowInfoT->retObjectConstructTypeNumber() == 2) || (windowInfoT->retObjectConstructTypeNumber() == 6)) {
-		outGeometry << "   Rotate " << RAD_TO_DEG(-3.14 * (windowInfoT->retCurrentHandleRate(animInfo) / 100.0f)) << " 0 0 1" << std::endl;
-	}
-	else if ((windowInfoT->retObjectConstructTypeNumber() == 3) || windowInfoT->retObjectConstructTypeNumber() == 7) {
-		outGeometry << "   Rotate " << RAD_TO_DEG(3.14 * (windowInfoT->retCurrentHandleRate(animInfo) / 100.0f)) << " 1 0 0" << std::endl;
-	}
-	else if (windowInfoT->retObjectConstructTypeNumber() == 4) {
-		outGeometry << "   Rotate " << RAD_TO_DEG(-3.14 * (windowInfoT->retCurrentHandleRate(animInfo) / 100.0f)) << " 1 0 0" << std::endl;
-	}
+	Transform t2;
+	t2.createTranslate(vec3(0, -CENTER_WINDOW_HANDLES, 0));
+	transforms.push(t2);
 
-	// Pokud byl definovan uzel 'scaleOrientation', pak ho prevedu na rotaci 'Rotate'
-	if (!tempT->hasScaleOrientation()) {
-		vec4 temp4D = tempT->scaleOrientation;
-		vec3 temp3D(temp4D.x, temp4D.y, temp4D.z);
-		float angleRad = temp4D.par;
-		// Operaci 'scaleOrientation' prevedu na rotaci
-		outGeometry << "   Rotate " << RAD_TO_DEG(angleRad) << " " << temp3D << std::endl;
-		outGeometry << "   Scale " << tempT->scale << std::endl;
-		// Inverzni operaci '-scaleOrientation' ziskam jako rotaci o opacny uhel
-		outGeometry << "   Rotate ";
-		float angle = RAD_TO_DEG(angleRad);
-		if (angle >= 0)
-			outGeometry << angle << " " << temp3D << std::endl;
-		else
-			outGeometry << -angle << " " << temp3D << std::endl;
-	}
-	else {
-		// Pokud byl definovan samostatny uzel 'Scale'
-		if (!tempT->hasScale())
-			outGeometry << "   Scale " << tempT->scale << std::endl;
-	}
+	addTransformScaleOrientationorScale(tempT, transforms);
+	addTransformWindowHandleRotation(windowInfoT, animInfo, transforms);
 
-	// Perform the inverse translation of the Center operation	
+	Transform t1;
+	t1.createTranslate(vec3(0, CENTER_WINDOW_HANDLES, 0));
+	transforms.push(t1);
 
-	outGeometry << "   Translate 0 " << -CENTER_WINDOW_HANDLES << " 0" << std::endl;
-
-	outGeometry << " AttributeEnd" << std::endl << std::endl;
+	addTransformTranslate(tempT, transforms);
 }
 
 
@@ -1177,7 +1035,6 @@ void MitsubaExporter::mitsubaTransformWindowShutter(TransformNode* tempT, std::s
 		setShutterRoll(tempT, (int)(tempSInfo->retCurrentRotation(animInfo)));
 	}
 
-	outGeometry << " AttributeBegin" << std::endl;
 
 	// Perform the Translation operation
 	vec3 trans = tempT->translation;
@@ -1205,43 +1062,36 @@ void MitsubaExporter::mitsubaTransformWindowShutter(TransformNode* tempT, std::s
 		yOff = (float)(trans.y + topOff * (1.0 - tempSInfo->retCurrentOpening(animInfo) / 100.0f));
 	}
 
-	outGeometry << "   Translate " << trans.x << " " << yOff << " " << trans.z << std::endl;
-
-	// Pokud byl definovan uzel 'Rotation'
-	if (!tempT->hasRotation()) {
-		vec4 temp = tempT->rotation;
-		vec3 tempV(temp.x, temp.y, temp.z);
-		float angleRad = temp.par;
-		outGeometry << "   Rotate " << RAD_TO_DEG(angleRad) << " " << tempV << std::endl;
-	}
+	
 
 
+	vec3 scaleVec;
 	// Perform the scaling operation
-	if (tempT->hasScaleOrientation()) {
-		ShutterInfo* tempSInfo = static_cast<ShutterInfo*> (tempT->retObjectInfo());
-
-		outGeometry << "   Scale 1 " << tempSInfo->retCurrentOpening(animInfo) / 100.0f << " 1 " << std::endl;
+	if (!tempT->hasScaleOrientation()) {
+		scaleVec = vec3(1, tempSInfo->retCurrentOpening(animInfo) / 100.0f, 1);
 	}
 	else {
 		vec3 scaleVec = tempT->scale;
 
 		// If the y scale was not used, just plug in the shutter opening rate
 		if (scaleVec.y == 1) {
-			ShutterInfo* tempSInfo = static_cast<ShutterInfo*> (tempT->retObjectInfo());
-
-			outGeometry << "   Scale " << scaleVec.x << " " << tempSInfo->retCurrentOpening(animInfo) / 100.0f << " " <<
-				scaleVec.z << std::endl;
+			scaleVec = vec3(scaleVec.x, tempSInfo->retCurrentOpening(animInfo) / 100.0f, scaleVec.z);
 		}
 		// Else we have to use the previous y scale and calculate the correct scaling value
 		else {
-			ShutterInfo* tempSInfo = static_cast<ShutterInfo*> (tempT->retObjectInfo());
-
 			float scaleY = (float)(1.0 + (tempSInfo->retCurrentOpening(animInfo) / 100.0f - 1.0f) + (scaleVec.y - 1.0f));
 
-			outGeometry << "   Scale " << scaleVec.x << " " << scaleY << " " << scaleVec.z << std::endl;
+			scaleVec = vec3(scaleVec.x, scaleY, scaleVec.z);
 		}
 	}
 
+	Transform t2;
+	t2.createScale(vec3(trans.x, yOff, trans.z));
+	transforms.push(t2);
 
-	outGeometry << " AttributeEnd" << std::endl << std::endl;
+	addTransformRotation(tempT, transforms);
+
+	Transform t1;
+	t1.createTranslate(vec3(trans.x, yOff, trans.z));
+	transforms.push(t1);
 }

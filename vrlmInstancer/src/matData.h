@@ -8,6 +8,9 @@ Definice tridy materialu
 #ifndef __MAT_DATA_H__
 #define __MAT_DATA_H__
 
+#include "dataStructs.h"
+
+#include <string>
 
 
 
