@@ -62,13 +62,46 @@ Load Output/6_fl_furniture_N.WRL
 Load Output/6_fl_furniture_S.WRL
 Load Output/6_fl_furniture_W.WRL
 LoadMaterialsFile materials.mat
-ExportToMitsuba 0 cam01 MitsubaExport/staticSceneCam 1
-ExportToMitsuba 1 cam02 MitsubaExport/staticSceneCam 0
-ExportToMitsuba 2 cam03 MitsubaExport/staticSceneCam 0
-ExportToMitsuba 3 cam04 MitsubaExport/staticSceneCam 0
-ExportToMitsuba 4 cam05 MitsubaExport/staticSceneCam 0
-ExportToMitsuba 6 cam07 MitsubaExport/staticSceneCam 0
-ExportToMitsuba 8 cam09 MitsubaExport/staticSceneCam 0
-ExportToMitsuba 9 cam10 MitsubaExport/staticSceneCam 0
-ExportToMitsuba 10 cam11 MitsubaExport/staticSceneCam 0
-
+SubstituteForBTF BF_white01 TODO
+SubstituteForBTF BF_white02 TODO
+SubstituteForBTF CH_white01 TODO
+SubstituteForBTF CH_white02 TODO
+SubstituteForBTF CH_white04 TODO
+SubstituteForBTF CH_white05 TODO
+SubstituteForBTF BF_gray01 TODO
+SubstituteForBTF CH_gray02 TODO
+SubstituteForBTF CH_gray03 TODO
+SubstituteForBTF BF_gray04 TODO
+SubstituteForBTF CH_yellow01 TODO
+SubstituteForBTF CH_yellow02 TODO
+SubstituteForBTF CH_yellow03 TODO
+SubstituteForBTF BF_brown01 TODO
+SubstituteForBTF CH_alum02 TODO
+SubstituteForBTF CH_violet01 TODO
+SubstituteForBTF CH_construction TODO
+SubstituteForBTF CH_pavers01 TODO
+SubstituteForBTF BF_red02 TODO
+SubstituteForBTF BF_green01 TODO
+SubstituteForBTF CH_alum03 TODO
+ExportToPBRT 0 cam01 PBRTExport/staticSceneCam exr 1
+ExportToPBRT 1 cam02 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 2 cam03 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 3 cam04 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 4 cam05 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 5 cam06 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 6 cam07 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 7 cam08 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 8 cam09 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 9 cam10 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 10 cam11 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 11 cam12 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 12 cam13 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 13 cam14 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 14 cam15 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 15 cam16 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 16 cam17 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 17 cam18 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 18 cam19 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 19 cam20 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 20 cam21 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 21 cam22 PBRTExport/staticSceneCam exr 0

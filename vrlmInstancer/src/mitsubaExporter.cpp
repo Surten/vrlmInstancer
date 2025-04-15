@@ -27,7 +27,7 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* cam
 	this->createNewGeometry = createNewGeometry;
 
 	// export all geometries into individual .obj files
-	if (createNewGeometry)
+	if (createNewGeometry && false)
 	{
 		writeAllGeometriesToObjFiles();
 	}
@@ -415,6 +415,7 @@ void MitsubaExporter::writeAllShapeReferences(Scene* scene, int depth)
 void MitsubaExporter::writeShape(ShapeNode* shapeNode, std::string filepath, int depth)
 {
 	writeElementBegScene("shape", { "type", "obj" }, depth);
+		writeElementScene("boolean", { "name", "face_normals", "value", "true"}, depth + 1);
 		writeElementScene("string", { "name", "filename", "value", filepath + "/" + shapeNode->geometry->name + ".obj"}, depth + 1);
 		writeBsdfReference(shapeNode->exportMaterial, depth + 1);
 	writeElementEndScene("shape", depth);
@@ -464,7 +465,7 @@ void MitsubaExporter::writeTransform(ShapeNode* shapeNode, int depth)
 	Matrix m;
 	m.applyTransforms(transforms);
 	writeElementBegScene("transform", { "name", "to_world" }, depth);
-	writeElementScene("matrix", { "value", m.GetAsString() }, depth + 1);
+	writeElementScene("matrix", { "value", shapeNode->transformFromRootMatrix->GetAsString() }, depth + 1);
 	writeElementEndScene("transform", depth);
 }
 
@@ -669,7 +670,7 @@ void addTransformTranslate(TransformNode* transformNode, std::stack<Transform>& 
 
 void addTransformRotation(TransformNode* transformNode, std::stack<Transform>& transforms)
 {
-	if (!transformNode->hasRotation()) {
+	if (transformNode->hasRotation()) {
 		Transform t;
 		t.createRotate(transformNode->rotation);
 		transforms.push(t);
@@ -683,12 +684,11 @@ void addTransformScaleOrientationorScale(TransformNode* transformNode, std::stac
 		vec4 temp4D = transformNode->scaleOrientation;
 		vec3 temp3D(temp4D.x, temp4D.y, temp4D.z);
 		float angleRad = temp4D.par;
-		float angle = RAD_TO_DEG(angleRad);
-		if (angle < 0)
-			angle = -angle;
 
+		if (angleRad < 0)
+			angleRad = -angleRad;
 		Transform t1, t2, t3;
-		t1.createRotate(vec4(temp3D.x, temp3D.y, temp3D.z, angle));
+		t1.createRotate(vec4(temp3D.x, temp3D.y, temp3D.z, angleRad));
 		t2.createScale(transformNode->scale);
 		t3.createRotate(temp4D);
 		transforms.push(t1);

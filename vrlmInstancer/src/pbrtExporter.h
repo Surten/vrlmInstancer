@@ -40,8 +40,8 @@ private:
 	bool createNewGeometry;
 
 
-	int numberOfSamples = 64;
-	int maxDepth = 8;
+	int numberOfSamples = 128;
+	int maxDepth = 10;
 	int xResolution = 1280;
 	int yResolution = 900;
 

@@ -265,15 +265,15 @@ void Matrix::applyTransforms(std::stack<Transform> transforms)
 		Transform transform = transforms.top();
 		if (transform.type == TransformType::TRANSLATE)
 		{
-			mTranslate(transform.vec);
+			*this = *this * Matrix().mTranslate(transform.vec);
 		}
 		else if (transform.type == TransformType::ROTATE)
 		{
-			mRotate(transform.vec, transform.angle);
+			*this = *this * Matrix().mRotate(transform.vec, transform.angle);
 		}
 		else if (transform.type == TransformType::SCALE)
 		{
-			mScale(transform.vec);
+			*this = *this * Matrix().mScale(transform.vec);
 		}
 		transforms.pop();
 	}

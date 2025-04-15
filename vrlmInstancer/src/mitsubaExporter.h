@@ -39,7 +39,7 @@ private:
 	bool createNewGeometry;
 
 	int pathTracingMaxDepth = -1;
-	int nSamples = 2048;
+	int nSamples = 4096;
 	int imageWidth = 1920;
 	int imageHeight = 1080;
 
