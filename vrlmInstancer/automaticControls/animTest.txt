@@ -1,8 +1,7 @@
-Load Door/U-6_doors_F2_new.WRL
-InstanceAll
-ScaleAllScenes
+Load Output/U-6_doors_F2_new.WRL
 Anim 0 GA_AnimFPS 25
 Anim 0 GA_AnimLength 5
 Anim 0 A_Door 2 0 0 0 1 0 2 0 0 0 20 90 45
 Anim 0 A_Camera 0 4 1 1 1 0 2 10.0 22.951201 22.466599 6.652910 0.0120997 -0.999846 -0.012705 -1.61975 0 0 0 75 2.014250 22.466599 6.652910 0.0120997 -0.999846 -0.012705 0.1 0 0 0
+ExportToMitsuba 0 header MitsubaExport/dynamicTest 1
 ExportToPBRT 0 header PBRTExport/dynamicTest exr 1

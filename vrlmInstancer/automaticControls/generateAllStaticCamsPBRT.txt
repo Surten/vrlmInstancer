@@ -62,11 +62,30 @@ Load Output/6_fl_furniture_N.WRL
 Load Output/6_fl_furniture_S.WRL
 Load Output/6_fl_furniture_W.WRL
 LoadMaterialsFile materials.mat
-ExportToPBRT 1 cam02 PBRTExport/staticSceneCam exr 1
-ExportToPBRT 2 cam03 PBRTExport/staticSceneCam exr 0
-ExportToPBRT 3 cam04 PBRTExport/staticSceneCam exr 0
-ExportToPBRT 4 cam05 PBRTExport/staticSceneCam exr 0
-ExportToPBRT 6 cam07 PBRTExport/staticSceneCam exr 0
-ExportToPBRT 8 cam09 PBRTExport/staticSceneCam exr 0
-ExportToPBRT 9 cam10 PBRTExport/staticSceneCam exr 0
-ExportToPBRT 10 cam11 PBRTExport/staticSceneCam exr 0
+ExportToPBRT 0 cam01_volpath PBRTExport/staticSceneCam exr volpath 1
+ExportToPBRT 1 cam02_volpath PBRTExport/staticSceneCam exr volpath 0
+ExportToPBRT 2 cam03_volpath PBRTExport/staticSceneCam exr volpath 0
+ExportToPBRT 3 cam04_volpath PBRTExport/staticSceneCam exr volpath 0
+ExportToPBRT 4 cam05_volpath PBRTExport/staticSceneCam exr volpath 0
+ExportToPBRT 6 cam07_volpath PBRTExport/staticSceneCam exr volpath 0
+ExportToPBRT 8 cam09_volpath PBRTExport/staticSceneCam exr volpath 0
+ExportToPBRT 9 cam10_volpath PBRTExport/staticSceneCam exr volpath 0
+ExportToPBRT 10 cam11_volpath PBRTExport/staticSceneCam exr volpath 0
+ExportToPBRT 0 cam01_simplepath PBRTExport/staticSceneCam exr simplepath 0
+ExportToPBRT 1 cam02_simplepath PBRTExport/staticSceneCam exr simplepath 0
+ExportToPBRT 2 cam03_simplepath PBRTExport/staticSceneCam exr simplepath 0
+ExportToPBRT 3 cam04_simplepath PBRTExport/staticSceneCam exr simplepath 0
+ExportToPBRT 4 cam05_simplepath PBRTExport/staticSceneCam exr simplepath 0
+ExportToPBRT 6 cam07_simplepath PBRTExport/staticSceneCam exr simplepath 0
+ExportToPBRT 8 cam09_simplepath PBRTExport/staticSceneCam exr simplepath 0
+ExportToPBRT 9 cam10_simplepath PBRTExport/staticSceneCam exr simplepath 0
+ExportToPBRT 10 cam11_simplepath PBRTExport/staticSceneCam exr simplepath 0
+ExportToPBRT 0 cam01_mlt PBRTExport/staticSceneCam exr mlt 0
+ExportToPBRT 1 cam02_mlt PBRTExport/staticSceneCam exr mlt 0
+ExportToPBRT 2 cam03_mlt PBRTExport/staticSceneCam exr mlt 0
+ExportToPBRT 3 cam04_mlt PBRTExport/staticSceneCam exr mlt 0
+ExportToPBRT 4 cam05_mlt PBRTExport/staticSceneCam exr mlt 0
+ExportToPBRT 6 cam07_mlt PBRTExport/staticSceneCam exr mlt 0
+ExportToPBRT 8 cam09_mlt PBRTExport/staticSceneCam exr mlt 0
+ExportToPBRT 9 cam10_mlt PBRTExport/staticSceneCam exr mlt 0
+ExportToPBRT 10 cam11_mlt PBRTExport/staticSceneCam exr mlt 0

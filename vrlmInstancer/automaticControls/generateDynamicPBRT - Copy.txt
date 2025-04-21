@@ -40,8 +40,28 @@ Load Output/U-6_windows_Stairway01_new.WRL
 Load Output/U-6_windows_Stairway02_new.WRL
 Load Output/U-6_windows_UF_new.WRL
 LoadMaterialsFile materials.mat
+SubstituteForBTF BF_white01 TODO
+SubstituteForBTF BF_white02 TODO
+SubstituteForBTF CH_white01 TODO
+SubstituteForBTF CH_white02 TODO
+SubstituteForBTF CH_white04 TODO
+SubstituteForBTF CH_white05 TODO
+SubstituteForBTF BF_gray01 TODO
+SubstituteForBTF CH_gray02 TODO
+SubstituteForBTF CH_gray03 TODO
+SubstituteForBTF BF_gray04 TODO
+SubstituteForBTF CH_yellow01 TODO
+SubstituteForBTF CH_yellow02 TODO
+SubstituteForBTF CH_yellow03 TODO
+SubstituteForBTF BF_brown01 TODO
+SubstituteForBTF CH_alum02 TODO
+SubstituteForBTF CH_violet01 TODO
+SubstituteForBTF CH_construction TODO
+SubstituteForBTF CH_pavers01 TODO
+SubstituteForBTF BF_red02 TODO
+SubstituteForBTF BF_green01 TODO
+SubstituteForBTF CH_alum03 TODO
 Anim 0 GA_AnimLength 3.0
 Anim 0 GA_AnimFPS 25.0
-Anim 16 A_Door 2 0 0 0 1 1 2 0.0 0 0 10.0 90 90
 Anim 6 A_Camera 0 4 1 1 1 0 2 10.0 22.951201 22.466599 6.652910 0.0120997 -0.999846 -0.012705 -1.61975 0 0 0 75 2.014250 22.466599 6.652910 0.0120997 -0.999846 -0.012705 0.1 0 0 0
 ExportToPBRT 4 header PBRTExport/dynamicOne exr 1

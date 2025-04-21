@@ -19,7 +19,7 @@ PbrtExporter::PbrtExporter(AnimationInfo* animInfo) : animInfo(animInfo)
 }
 
 
-void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder, std::string headerFileName, std::string outputImageFormat, bool createNewGeometry, MaterialsFile* matFile)
+void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder, std::string headerFileName, std::string outputImageFormat, bool createNewGeometry, MaterialsFile* matFile, std::string integrator)
 {
 	this->scenes = scenes;
 	this->outputFolder = outputFolder;
@@ -27,6 +27,7 @@ void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera
 	this->outputImageFormat = outputImageFormat;
 	this->camera = camera;
 	this->createNewGeometry = createNewGeometry;
+	this->integrator = integrator;
 	bool hasAnimatedCamera = false;
 	bool hasAnimatedGeometry = false;
 	for (Scene* scene : scenes)
@@ -162,7 +163,7 @@ void PbrtExporter::writeSampler(){
 }
 
 void PbrtExporter::writeIntegrator() {
-	out << "Integrator \"volpath\" \"integer maxdepth\" [ " << maxDepth << " ]" << std::endl;
+	out << "Integrator \"" << integrator << "\" \"integer maxdepth\" [ " << maxDepth << " ]" << std::endl;
 	out << std::endl;
 }
 
@@ -194,13 +195,14 @@ void PbrtExporter::writeLightSource(LightNode* lightNode) {
 
 	outGeometry << " AttributeBegin" << std::endl;
 
+	float mult = 106.0f;
 	switch (lightNode->lightType)
 	{
 	case LightNode::LightType::SPOTLIGHT:
 		outGeometry << " LightSource \"spot\"" << std::endl;
 		outGeometry << "    \"point3 from\" [" << lightNode->location << " ]" << std::endl;
 		outGeometry << "    \"point3 to\" [" << lightNode->location + lightNode->direction << " ]" << std::endl;
-		outGeometry << "    \"rgb I\" [" << lightNode->color * lightNode->intensity << " ]" << std::endl;
+		outGeometry << "    \"rgb I\" [" << lightNode->color * (lightNode->intensity * mult) << " ]" << std::endl;
 		outGeometry << "    \"float coneangle\" [" << 60 << " ]" << std::endl;
 		outGeometry << "    \"float conedeltaangle\" [" << 80 << " ]" << std::endl;
 		break;
@@ -288,6 +290,7 @@ void PbrtExporter::writeObjectInstances(Scene* scene) {
 	for (auto geometry : scene->geometries)
 	{
 		outGeometry << " ObjectBegin \"" << geometry->name << "_" << geometryAppendString << "\"" << std::endl;
+		writeMaterialReference(geometry->parent->exportMaterial);
 
 		if (geometry->textureCoords.size() > 0)
 		{
@@ -404,7 +407,6 @@ void PbrtExporter::writeNodeChildren(TransformNode* node)
 void PbrtExporter::writeShapeNode(ShapeNode* node)
 {
 	outGeometry << " AttributeBegin" << std::endl;
-	writeMaterialReference(node->exportMaterial);
 	outGeometry << "    ObjectInstance \"" << node->geometry->name << "_" << geometryAppendString << "\"" << std::endl;
 	outGeometry << " AttributeEnd" << std::endl;
 
@@ -578,6 +580,7 @@ void PbrtExporter::writeAllMaterials(MaterialsFile* matFile)
 	{
 		writeMaterialNamed(material);
 	}
+	outMaterials.close();
 }
 
 #ifdef USE_FOR_CHECKERBOARD_RENDER
@@ -682,7 +685,7 @@ void PbrtExporter::writeMaterialConductorReflectance(Mat* material)
 {
 	outMaterials << "MakeNamedMaterial \"" << material->name << "\"" << std::endl;
 	outMaterials << "    \"string type\" \"conductor\" " << std::endl;
-	outMaterials << "    \"rgb roughness\" [ " << material->reflect << " ]" << std::endl;
+	outMaterials << "    \"rgb reflectance\" [ " << material->reflect << " ]" << std::endl;
 	outMaterials << "    \"float roughness\" " << material->roughness << std::endl;
 }
 
@@ -699,7 +702,7 @@ void PbrtExporter::writeMaterialBTF(Mat* material)
 {
 	outMaterials << "MakeNamedMaterial \"" << material->name << "\"" << std::endl;
 	outMaterials << "    \"string type\" \"custom\" " << std::endl;
-	outMaterials << "    \"string filename\" [ " << material->btfFileName << " ]" << std::endl;
+	outMaterials << "    \"string filename\" \"" << material->btfFileName << "\"" << std::endl;
 }
 
 

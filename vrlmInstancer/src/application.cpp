@@ -170,8 +170,9 @@ void Application::AutomaticMode(std::string fileName){
             std::string outputHeaderName;
             std::string outputFolder;
             std::string outputImageFormat;
-            autoIn >> cameraID >> outputHeaderName >> outputFolder >> outputImageFormat >> createNewGeometry;
-            sm.exportAllToPBRT(cameraID, outputHeaderName, outputFolder, outputImageFormat, (bool)createNewGeometry);
+            std::string integrator;
+            autoIn >> cameraID >> outputHeaderName >> outputFolder >> outputImageFormat >> integrator >> createNewGeometry;
+            sm.exportAllToPBRT(cameraID, outputHeaderName, outputFolder, outputImageFormat, integrator, (bool)createNewGeometry);
         }
         else if (command == "ExportToMitsuba")
         {
