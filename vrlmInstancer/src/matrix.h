@@ -49,6 +49,8 @@ public:
 	/// Operator prirazeni
 	Matrix& operator=(const Matrix&);
 
+	bool operator==(const Matrix&);
+
 	/// Operator pristupu k prvkum matice
 	/**
 	 @param idx1 Index do sloupce

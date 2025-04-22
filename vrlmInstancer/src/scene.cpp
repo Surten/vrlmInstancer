@@ -294,13 +294,27 @@ void Scene::calculateAABBRecursive(TransformNode* transformNode, Matrix transfor
 	Matrix translateMat;
 	Matrix rotateMat;
 	Matrix scaleMat;
+	Matrix scaleOrientationMat;
 	vec3 rotationAxis(transformNode->rotation.x, transformNode->rotation.y, transformNode->rotation.z);
 	if (transformNode->hasTranslation()) translateMat.mTranslate(transformNode->translation);
 	if (transformNode->hasRotation())
 		rotateMat.mRotate(rotationAxis, transformNode->rotation.par);
-	if (transformNode->hasScale()) scaleMat.mScale(transformNode->scale);
+	if (transformNode->hasScaleOrientation())
+	{
+		Matrix r1;
+		Matrix s;
+		Matrix r2;
+		vec3 axis(transformNode->scaleOrientation.x, transformNode->scaleOrientation.y, transformNode->scaleOrientation.z);
+		r1.mRotate(axis, transformNode->scaleOrientation.par);
+		s.mScale(transformNode->scale);
+		r2.mRotate(axis, -transformNode->scaleOrientation.par);
+		scaleMat = r1 * s * r2;
+	}
+	else if (transformNode->hasScale()) 
+		scaleMat.mScale(transformNode->scale);
 
-	transformMatrix = transformMatrix * translateMat * rotateMat * scaleMat;
+
+	transformMatrix = ((transformMatrix * translateMat) * rotateMat) * scaleMat;
 
 	for (auto node : transformNode->children)
 	{

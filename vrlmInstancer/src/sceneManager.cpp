@@ -254,7 +254,7 @@ void SceneManager::exportAllToPBRT(int cameraIndex, std::string outputHeaderName
 	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageFormat, createNewGeometry, materialsFile, integrator);
 }
 
-void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName, std::string outputFolder, bool createNewGeometry) {
+void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName, std::string outputFolder, std::string integrator, bool createNewGeometry) {
 	ViewPointNode* camera;
 	if (cameraIndex == -1 || allCameras.size() == 0)
 	{
@@ -279,7 +279,7 @@ void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName
 		p->executeActions();
 
 	initExportMaterials();
-	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, createNewGeometry, materialsFile);
+	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, integrator, createNewGeometry, materialsFile);
 }
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {

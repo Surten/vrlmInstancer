@@ -1215,19 +1215,19 @@ void PbrtExporter::pbrtTransformWindowShutter(TransformNode* tempT)
 
 	if (tempSInfo->retObjectConstructType() == _TYPE_CONSTRUCT_1) {
 		yOff = tempSInfo->retTopOffset() - abs(tempSInfo->retTopOffset() - trans.y) *
-			(tempSInfo->retCurrentOpening(animInfo) / 100.0f);
+			(tempSInfo->retCurrentOpening(animInfo));
 	}
 	else if (tempSInfo->retObjectConstructType() == _TYPE_CONSTRUCT_2) {
 		float topOff = (float)(tempSInfo->retTopOffset() + SHIFT_SHUTTER_TYPE_2);
-		yOff = topOff - abs(topOff - trans.y) * (tempSInfo->retCurrentOpening(animInfo) / 100.0f);
+		yOff = topOff - abs(topOff - trans.y) * (tempSInfo->retCurrentOpening(animInfo));
 	}
 	else if (tempSInfo->retObjectConstructType() == _TYPE_CONSTRUCT_3) {
 		float topOff = SHIFT_SHUTTER_TYPE_3;
-		yOff = (float)(trans.y + topOff * (1.0 - tempSInfo->retCurrentOpening(animInfo) / 100.0f));
+		yOff = (float)(trans.y + topOff * (1.0 - tempSInfo->retCurrentOpening(animInfo)));
 	}
 	else if (tempSInfo->retObjectConstructType() == _TYPE_CONSTRUCT_4) {
 		float topOff = SHIFT_SHUTTER_TYPE_4;
-		yOff = (float)(trans.y + topOff * (1.0 - tempSInfo->retCurrentOpening(animInfo) / 100.0f));
+		yOff = (float)(trans.y + topOff * (1.0 - tempSInfo->retCurrentOpening(animInfo)));
 	}
 
 	outGeometry << "   Translate " << trans.x << " " << yOff << " " << trans.z << std::endl;

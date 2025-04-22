@@ -180,8 +180,9 @@ void Application::AutomaticMode(std::string fileName){
             int createNewGeometry = 1;
             std::string outputHeaderName;
             std::string outputFolder;
-            autoIn >> cameraID >> outputHeaderName >> outputFolder >> createNewGeometry;
-            sm.exportAllToMitsuba(cameraID, outputHeaderName, outputFolder, (bool)createNewGeometry);
+            std::string integrator;
+            autoIn >> cameraID >> outputHeaderName >> outputFolder >> integrator >> createNewGeometry;
+            sm.exportAllToMitsuba(cameraID, outputHeaderName, outputFolder, integrator, (bool)createNewGeometry);
         }
         else if (command == "DeleteSceneByID")
         {

@@ -126,6 +126,18 @@ Matrix& Matrix::operator=(const Matrix& m)
 	return *this;
 }
 
+//----------------------------------------------------------------------------------------------
+bool Matrix::operator==(const Matrix& m)
+//----------------------------------------------------------------------------------------------
+{
+	bool ret = true;
+	for (int i = 0; i < 4; i++)
+		for (int j = 0; j < 4; j++)
+			if (std::abs(matrix[i][j] - m(i, j)) > 0.0001)
+				return false;
+	return true;
+}
+
 
 //----------------------------------------------------------------------------------------------
 const float& Matrix::operator()(int idx1,int idx2) const
@@ -218,8 +230,8 @@ Matrix& Matrix::mRotate(const vec3& vec3D, const float angle)
 	vec3 v(vec3D.x/length, vec3D.y/length, vec3D.z/length);
 
 	// Spoctu koeficienty
-	float _sin = sinf(angle);
-	float _cos = cosf(angle);
+	float _sin = std::sinf(angle);
+	float _cos = std::cosf(angle);
 	
 	matrix[0][0] = v.x * v.x * (1.f - _cos) + _cos;
 	matrix[0][1] = v.x * v.y * (1.f - _cos) + v.z * _sin;
@@ -260,23 +272,25 @@ Matrix& Matrix::mScale(const vec3& vec3D)
 
 void Matrix::applyTransforms(std::stack<Transform> transforms)
 {
+	Matrix result;
 	while (!transforms.empty())
 	{
 		Transform transform = transforms.top();
 		if (transform.type == TransformType::TRANSLATE)
 		{
-			*this = *this * Matrix().mTranslate(transform.vec);
+			result = result * Matrix().mTranslate(transform.vec);
 		}
 		else if (transform.type == TransformType::ROTATE)
 		{
-			*this = *this * Matrix().mRotate(transform.vec, transform.angle);
+			result = result * Matrix().mRotate(transform.vec, transform.angle);
 		}
 		else if (transform.type == TransformType::SCALE)
 		{
-			*this = *this * Matrix().mScale(transform.vec);
+			result = result * Matrix().mScale(transform.vec);
 		}
 		transforms.pop();
 	}
+	*this = result;
 }
 
 

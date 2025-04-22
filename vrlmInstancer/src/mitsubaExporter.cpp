@@ -10,12 +10,12 @@
 
 #define RAD_TO_DEG(angle)   ((angle)*57.29577951308f)
 
-MitsubaExporter::MitsubaExporter(AnimationInfo* animInfo) : animInfo(animInfo)
+MitsubaExporter::MitsubaExporter(AnimationInfo* animInfo) : animInfo(animInfo), camera(nullptr)
 {
 	matFile = nullptr;
 }
 
-void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName, std::string outputFolder, bool createNewGeometry, MaterialsFile* matFile)
+void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName, std::string outputFolder, std::string integrator, bool createNewGeometry, MaterialsFile* matFile)
 {
 	// figure out door animations...
 	this->scenes = scenes;
@@ -23,6 +23,7 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* cam
 	this->camera = camera;
 	this->sceneFileName = sceneFileName;
 	this->outputFolder = outputFolder;
+	this->integrator = integrator;
 	this->matFile = matFile;
 	this->createNewGeometry = createNewGeometry;
 
@@ -305,8 +306,8 @@ void MitsubaExporter::writeAllGeometriesToObjFiles()
 
 void MitsubaExporter::writeIntegrator(int depth)
 {
-	writeElementBeg("integrator", { "type", "path" }, depth);
-		writeElement("integer", { "name", "max_depth", "value", std::to_string(pathTracingMaxDepth) }, depth + 1);
+	writeElementBeg("integrator", { "type", integrator }, depth);
+		//writeElement("integer", { "name", "max_depth", "value", std::to_string(pathTracingMaxDepth) }, depth + 1);
 	writeElementEnd("integrator", depth);
 	
 }
@@ -464,8 +465,14 @@ void MitsubaExporter::writeTransform(ShapeNode* shapeNode, int depth)
 	}
 	Matrix m;
 	m.applyTransforms(transforms);
+	//if (!(*shapeNode->transformFromRootMatrix == m))
+	//{
+	//	std::cout << "unequal matricies" << std::endl;
+	//}
+	//Matrix m1;
+	//m1.applyTransforms(transforms);
 	writeElementBegScene("transform", { "name", "to_world" }, depth);
-	writeElementScene("matrix", { "value", shapeNode->transformFromRootMatrix->GetAsString() }, depth + 1);
+	writeElementScene("matrix", { "value", m.GetAsString() }, depth + 1);
 	writeElementEndScene("transform", depth);
 }
 
@@ -685,7 +692,7 @@ void addTransformScaleOrientationorScale(TransformNode* transformNode, std::stac
 		vec3 temp3D(temp4D.x, temp4D.y, temp4D.z);
 		float angleRad = temp4D.par;
 
-		if (angleRad < 0)
+		//if (angleRad < 0)
 			angleRad = -angleRad;
 		Transform t1, t2, t3;
 		t1.createRotate(vec4(temp3D.x, temp3D.y, temp3D.z, angleRad));
@@ -852,22 +859,22 @@ void addTransformDoorHandleRotation(TransformNode* transformNode, AnimationInfo*
 	if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 1) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 3) ||
 		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 7) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 8))
 	{
-		vec = vec4(1, 0, 0, RAD_TO_DEG(1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
+		vec = vec4(1, 0, 0, (1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
 	}
 	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 2) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 4) ||
 		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 9) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 11) ||
 		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 13))
 	{
-		vec = vec4(1, 0, 0, RAD_TO_DEG(-1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
+		vec = vec4(1, 0, 0, (-1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
 	}
 	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 10) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 14) ||
 		(tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 15))
 	{
-		vec = vec4(0, 0, 1, RAD_TO_DEG(-1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
+		vec = vec4(0, 0, 1, (-1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
 	}
 	else if ((tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 12) || (tempParT->retObjectInfo()->retObjectConstructTypeNumber() == 16)) 
 	{
-		vec = vec4(0, 0, 1, RAD_TO_DEG(1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
+		vec = vec4(0, 0, 1, (1.57 * (doorInfoT->retCurrentHandleRate(animInfo) / 100.0f)));
 	}
 	Transform t;
 	t.createRotate(vec);
@@ -1047,19 +1054,19 @@ void MitsubaExporter::mitsubaTransformWindowShutter(TransformNode* tempT, std::s
 
 	if (tempSInfo->retObjectConstructType() == _TYPE_CONSTRUCT_1) {
 		yOff = tempSInfo->retTopOffset() - abs(tempSInfo->retTopOffset() - trans.y) *
-			(tempSInfo->retCurrentOpening(animInfo) / 100.0f);
+			(tempSInfo->retCurrentOpening(animInfo));
 	}
 	else if (tempSInfo->retObjectConstructType() == _TYPE_CONSTRUCT_2) {
 		float topOff = (float)(tempSInfo->retTopOffset() + SHIFT_SHUTTER_TYPE_2);
-		yOff = topOff - abs(topOff - trans.y) * (tempSInfo->retCurrentOpening(animInfo) / 100.0f);
+		yOff = topOff - abs(topOff - trans.y) * (tempSInfo->retCurrentOpening(animInfo));
 	}
 	else if (tempSInfo->retObjectConstructType() == _TYPE_CONSTRUCT_3) {
 		float topOff = SHIFT_SHUTTER_TYPE_3;
-		yOff = (float)(trans.y + topOff * (1.0 - tempSInfo->retCurrentOpening(animInfo) / 100.0f));
+		yOff = (float)(trans.y + topOff * (1.0 - tempSInfo->retCurrentOpening(animInfo)));
 	}
 	else if (tempSInfo->retObjectConstructType() == _TYPE_CONSTRUCT_4) {
 		float topOff = SHIFT_SHUTTER_TYPE_4;
-		yOff = (float)(trans.y + topOff * (1.0 - tempSInfo->retCurrentOpening(animInfo) / 100.0f));
+		yOff = (float)(trans.y + topOff * (1.0 - tempSInfo->retCurrentOpening(animInfo)));
 	}
 
 	
