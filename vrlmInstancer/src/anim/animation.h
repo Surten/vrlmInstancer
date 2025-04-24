@@ -70,7 +70,13 @@ public:
 	/// Constructors
 	AnimationInfo() : mAnimLength(0.0), mAnimFps(0.0), mHasBeenSet(false), mDoAnimate(false), mCurrentTime(0.0), mCurrentFrame(0), mTimeStep(0.0),
 		mHandlesAuto(false), mHandlesDuration(0), tension(0.0), continuity(0.0), bias(0.0), mAbsPathLight(false), mVRMLOne(false), pathSet(false),
-		datasetFile(" "), mVRMLExtend(false), mLoadMaterial(false), matFile(" "){}
+		datasetFile(" "), mVRMLExtend(false), mLoadMaterial(false), matFile(" ")
+	{}
+
+	AnimationInfo(AnimationInfo& animInfo) : mAnimLength(animInfo.mAnimLength), mAnimFps(animInfo.mAnimFps), mHasBeenSet(animInfo.mHasBeenSet), mDoAnimate(animInfo.mDoAnimate), mCurrentTime(animInfo.mCurrentTime), mCurrentFrame(animInfo.mCurrentFrame), mTimeStep(animInfo.mTimeStep),
+		mHandlesAuto(animInfo.mHandlesAuto), mHandlesDuration(animInfo.mHandlesDuration), tension(animInfo.tension), continuity(animInfo.continuity), bias(animInfo.bias), mAbsPathLight(animInfo.mAbsPathLight), mVRMLOne(animInfo.mVRMLOne), pathSet(animInfo.pathSet),
+		datasetFile(animInfo.datasetFile), mVRMLExtend(animInfo.mVRMLExtend), mLoadMaterial(animInfo.mLoadMaterial), matFile(animInfo.matFile)
+	{}
 	/// Sets the length of the animation
 	void setAnimLength(float len) { mAnimLength = len; }
 	/// Returns the length of the animation

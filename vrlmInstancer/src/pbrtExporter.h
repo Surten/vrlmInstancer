@@ -17,7 +17,9 @@ public:
 
 	PbrtExporter(AnimationInfo* animInfo);
 
-	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder, std::string headerFileName, std::string outputImageFormat, bool createNewGeometry, MaterialsFile* matFile, std::string integrator);
+	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder,
+		std::string headerFileName, std::string outputImageFormat, bool createNewGeometry,
+		MaterialsFile* matFile, std::string integrator, AnimationInfo* animInfo);
 
 private:
 	std::ofstream out;
@@ -41,10 +43,10 @@ private:
 	bool createNewGeometry;
 
 
-	int numberOfSamples = 1024;
+	int numberOfSamples = 64;
 	int maxDepth = 12;
-	int xResolution = 1920;
-	int yResolution = 1080;
+	int xResolution = 800;
+	int yResolution = 600;
 
 private:
 

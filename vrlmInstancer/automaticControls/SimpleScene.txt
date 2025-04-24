@@ -1,0 +1,4 @@
+Load room215.WRL
+InstanceAll
+ScaleAllScenes
+SaveId 0 Output/room215.WRL

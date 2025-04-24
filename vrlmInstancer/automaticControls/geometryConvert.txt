@@ -1,5 +1,0 @@
-Load Orig/0-7_geometry.WRL
-InstanceAll
-ScaleAllScenes
-UnifyTextureScale
-SaveId 0 Output/0-7_geometry.WRL

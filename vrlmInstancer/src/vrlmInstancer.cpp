@@ -10,7 +10,6 @@
 
 int main()
 {
-    Application app;
     //std::string fileName = "automaticFileTest.txt";
     //std::string fileName = "switchLightsToGonio.txt";
     //std::string fileName = "automaticControls/ExportIndividualObjectsWithTextureToPBRT.txt";
@@ -20,14 +19,28 @@ int main()
     //std::string fileName = "automaticControls/TestPBRTExport.txt";
     //std::string fileName = "automaticControls/TestMitsubaExport.txt";
     //std::string fileName = "automaticControls/FullExportToMitsuba.txt";
-    std::string fileName = "automaticControls/generateAllStaticCamsMitsuba.txt";
+    //std::string fileName = "automaticControls/generateAllStaticCamsMitsuba.txt";
     //std::string fileName = "automaticControls/generateAllStaticCamsPBRT.txt";
     //std::string fileName = "automaticControls/animTest.txt";
     //std::string fileName = "automaticControls/tamp.txt";
     //std::string fileName = "automaticControls/generateDynamicPBRT.txt";
     //std::string fileName = "automaticControls/DebugTexturedExport.txt";
-    app.AutomaticMode(fileName);
 
+    {
+        std::string hallway = "automaticControls/Hallway.txt";
+        Application app;
+        app.AutomaticMode(hallway);
+    }
+    {
+        std::string intoAtrium = "automaticControls/IntoAtrium.txt";
+        Application app2;
+        app2.AutomaticMode(intoAtrium);
+    }
+    {
+        std::string roundel = "automaticControls/Roundel.txt";
+        Application app3;
+        app3.AutomaticMode(roundel);
+    }
 
 }
 

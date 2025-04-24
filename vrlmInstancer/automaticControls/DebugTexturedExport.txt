@@ -1,5 +1,0 @@
-Load textured/table_08_test.wrl
-InstanceAll
-UnifyTextureScale
-ExportToPBRT -1 Table08 png 1
-SaveId 0 table_08Out.wrl

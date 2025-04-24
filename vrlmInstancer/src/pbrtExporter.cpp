@@ -19,8 +19,11 @@ PbrtExporter::PbrtExporter(AnimationInfo* animInfo) : animInfo(animInfo)
 }
 
 
-void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder, std::string headerFileName, std::string outputImageFormat, bool createNewGeometry, MaterialsFile* matFile, std::string integrator)
+void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder,
+	std::string headerFileName, std::string outputImageFormat, bool createNewGeometry,
+	MaterialsFile* matFile, std::string integrator, AnimationInfo* animInfo)
 {
+	this->animInfo = animInfo;
 	this->scenes = scenes;
 	this->outputFolder = outputFolder;
 	this->headerFileName = headerFileName;

@@ -11,6 +11,8 @@ SceneManager::~SceneManager() {
 	delete animInfo;
 	for(Project* p : projects)
 		delete p;
+	for (Scene* s : scenes)
+		delete s;
 }
 
 
@@ -250,8 +252,10 @@ void SceneManager::exportAllToPBRT(int cameraIndex, std::string outputHeaderName
 	for (Project* p : projects)
 		p->executeActions();
 
+	AnimationInfo* animInfoCopy = new AnimationInfo(*animInfo);
+
 	initExportMaterials();
-	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageFormat, createNewGeometry, materialsFile, integrator);
+	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageFormat, createNewGeometry, materialsFile, integrator, animInfoCopy);
 }
 
 void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName, std::string outputFolder, std::string integrator, bool createNewGeometry) {
@@ -278,8 +282,10 @@ void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName
 	for (Project* p : projects)
 		p->executeActions();
 
+	AnimationInfo* animInfoCopy = new AnimationInfo(*animInfo);
+
 	initExportMaterials();
-	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, integrator, createNewGeometry, materialsFile);
+	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, integrator, createNewGeometry, materialsFile, animInfoCopy);
 }
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {

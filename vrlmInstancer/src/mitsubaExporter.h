@@ -18,7 +18,9 @@ public:
 
 	MitsubaExporter(AnimationInfo* animInfo);
 
-	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName, std::string outputFolder, std::string integrator, bool createNewGeometry, MaterialsFile* matFile);
+	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName,
+		std::string outputFolder, std::string integrator,
+		bool createNewGeometry, MaterialsFile* matFile, AnimationInfo* animInfo);
 
 private:
 	std::ofstream out;
@@ -37,7 +39,7 @@ private:
 	std::string currentGeometryFileName;
 	std::string currentGeometryFolderPath;
 
-	bool createNewGeometry;
+	bool createNewGeometry = true;
 
 	int pathTracingMaxDepth = -1;
 	int nSamples = 128;

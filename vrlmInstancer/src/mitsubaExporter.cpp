@@ -15,9 +15,11 @@ MitsubaExporter::MitsubaExporter(AnimationInfo* animInfo) : animInfo(animInfo), 
 	matFile = nullptr;
 }
 
-void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName, std::string outputFolder, std::string integrator, bool createNewGeometry, MaterialsFile* matFile)
+void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName,
+	std::string outputFolder, std::string integrator,
+	bool createNewGeometry, MaterialsFile* matFile, AnimationInfo* animInfo)
 {
-	// figure out door animations...
+	this->animInfo = animInfo;
 	this->scenes = scenes;
 	this->outputFolder = outputFolder;
 	this->camera = camera;
@@ -28,7 +30,7 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* cam
 	this->createNewGeometry = createNewGeometry;
 
 	// export all geometries into individual .obj files
-	if (createNewGeometry && false)
+	if (createNewGeometry)
 	{
 		writeAllGeometriesToObjFiles();
 	}
@@ -112,13 +114,14 @@ void MitsubaExporter::exportDynamic()
 
 
 			writeElement("include", { "filename", currentGeometryFileName + ".xml" }, depth + 1);
-			animInfo->incCurrentFrame();
-			animInfo->incCurrentTime();
 		}
 
 		writeElementEnd("scene", depth);
 		out.close();
 		std::cout << "Exported frame " << i << std::endl;
+
+		animInfo->incCurrentFrame();
+		animInfo->incCurrentTime();
 	}
 }
 
@@ -306,6 +309,7 @@ void MitsubaExporter::writeAllGeometriesToObjFiles()
 
 void MitsubaExporter::writeIntegrator(int depth)
 {
+
 	writeElementBeg("integrator", { "type", integrator }, depth);
 		//writeElement("integer", { "name", "max_depth", "value", std::to_string(pathTracingMaxDepth) }, depth + 1);
 	writeElementEnd("integrator", depth);

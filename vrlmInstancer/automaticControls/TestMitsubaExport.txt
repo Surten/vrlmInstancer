@@ -1,3 +1,0 @@
-Load textured/blackboard_01.wrl
-InstanceAll
-ExportToMitsuba -1 blackboard_header MitsubaExport 1
