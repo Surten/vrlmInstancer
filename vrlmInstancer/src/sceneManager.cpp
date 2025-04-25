@@ -226,7 +226,7 @@ void SceneManager::createDefaultEnviromentalLight(std::string envirometMapFileNa
 	std::cout << "Created default enviromental light for scene with index 0, because no lights were detected" << std::endl;
 }
 
-void SceneManager::exportAllToPBRT(int cameraIndex, std::string outputHeaderName, std::string outputFolder, std::string outputImageFormat, std::string integrator, bool createNewGeometry) {
+void SceneManager::exportAllToPBRT(int cameraIndex, std::string outputHeaderName, std::string outputFolder, std::string outputImageFormat, std::string integrator, int width, int height, int samples, bool createNewGeometry) {
 	bool createdCustomFloor = false;
 	ViewPointNode* camera;
 	if (cameraIndex == -1 || allCameras.size() == 0)
@@ -255,10 +255,10 @@ void SceneManager::exportAllToPBRT(int cameraIndex, std::string outputHeaderName
 	AnimationInfo* animInfoCopy = new AnimationInfo(*animInfo);
 
 	initExportMaterials();
-	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageFormat, createNewGeometry, materialsFile, integrator, animInfoCopy);
+	pbrtExporter.exportScene(scenes, camera, outputFolder, outputHeaderName, outputImageFormat, createNewGeometry, materialsFile, integrator, width, height, samples, animInfoCopy);
 }
 
-void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName, std::string outputFolder, std::string integrator, bool createNewGeometry) {
+void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName, std::string outputFolder, std::string integrator, int width, int height, int samples, bool createNewGeometry) {
 	ViewPointNode* camera;
 	if (cameraIndex == -1 || allCameras.size() == 0)
 	{
@@ -285,7 +285,7 @@ void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName
 	AnimationInfo* animInfoCopy = new AnimationInfo(*animInfo);
 
 	initExportMaterials();
-	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, integrator, createNewGeometry, materialsFile, animInfoCopy);
+	mitsubaExporter.exportScene(scenes, camera, mainSceneName, outputFolder, integrator, width, height, samples, createNewGeometry, materialsFile, animInfoCopy);
 }
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {

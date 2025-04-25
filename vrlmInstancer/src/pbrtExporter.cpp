@@ -21,8 +21,11 @@ PbrtExporter::PbrtExporter(AnimationInfo* animInfo) : animInfo(animInfo)
 
 void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder,
 	std::string headerFileName, std::string outputImageFormat, bool createNewGeometry,
-	MaterialsFile* matFile, std::string integrator, AnimationInfo* animInfo)
+	MaterialsFile* matFile, std::string integrator, int width, int height, int samples, AnimationInfo* animInfo)
 {
+	this->xResolution = width;
+	this->yResolution = height;
+	this->numberOfSamples = samples;
 	this->animInfo = animInfo;
 	this->scenes = scenes;
 	this->outputFolder = outputFolder;

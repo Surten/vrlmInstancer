@@ -41,14 +41,7 @@ Load Output/U-6_windows_UF_new.WRL
 LoadMaterialsFile materials.mat
 Anim 0 GA_AnimLength 10
 Anim 0 GA_AnimFPS 25.0
-Anim 16 A_Door 0 28 0 0 1 1 5 0 0 0 25 0 45 75 80 45 125 0 45 150 0 0
-Anim 16 A_Door 0 23 0 0 1 1 5 0 0 0 25 0 45 75 80 45 125 0 45 150 0 0
-Anim 16 A_Door 0 27 0 0 1 1 5 0 0 0 50 0 45 100 80 45 150 0 45 175 0 0
-Anim 16 A_Door 0 22 0 0 1 1 5 0 0 0 50 0 45 100 80 45 150 0 45 175 0 0
-Anim 16 A_Door 0 26 0 0 1 1 5 0 0 0 75 0 45 125 80 45 175 0 45 200 0 0
-Anim 16 A_Door 0 5 0 0 1 1 5 0 0 0 125 0 45 150 80 45 200 0 45 225 0 0
-Anim 16 A_Door 0 4 0 0 1 1 5 0 0 0 125 0 45 150 80 45 200 0 45 225 0 0
-Anim 16 A_Door 0 25 0 0 1 1 5 0 0 0 125 0 45 150 80 45 200 0 45 225 0 0
-Anim 6 A_Camera 0 5 1 1 1 0 2 30.0 22.9512 22.4666 -12.7347 0.0 1.0 0.0 -3.14935 0 0 0 240.0 22.9512 22.4666 -0.0047 0.0 1.0 0.0 -3.14935 0 0 0
-ExportToPBRT 5 Hallway_header PBRTExport/Hallway exr volpath 800 600 1024 1
-ExportToMitsuba 5 Hallway_header MitsubaExport/Hallway path 800 600 2048 1
+Anim 10 A_Door 32 0 0 0 1 1 3 0 0 0 75 180 0 150 360 0
+Anim 6 A_Camera 0 22 1 1 1 1 3 0.0 1.03015 2.61915 -2.0841 0.0 1.0 0.0 -3.18068 0 0 0 120.0 1.03015 2.61915 -1.56841 0.0 1.0 0.0 -2.28935 0 0 0 240.0 1.03015 2.61915 -2.0841 0.0 1.0 0.0 0 0 0 0
+ExportToPBRT 22 Entrance_header PBRTExport/Entrance exr volpath 800 600 1024 1
+ExportToMitsuba 22 Entrance_header MitsubaExport/Entrance path 800 600 2048 1

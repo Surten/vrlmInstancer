@@ -26,21 +26,20 @@ int main()
     //std::string fileName = "automaticControls/generateDynamicPBRT.txt";
     //std::string fileName = "automaticControls/DebugTexturedExport.txt";
 
+    std::vector<std::string> controlFiles;
+    //controlFiles.push_back("automaticControls/generateAllStaticCams.txt");
+    //controlFiles.push_back("automaticControls/HallwayStatic.txt");
+    //controlFiles.push_back("automaticControls/Entrance.txt");
+    controlFiles.push_back("automaticControls/Hallway.txt");
+    controlFiles.push_back("automaticControls/IntoAtrium.txt");
+    controlFiles.push_back("automaticControls/Roundel.txt");
+
+    for(std::string& controlFile : controlFiles)
     {
-        std::string hallway = "automaticControls/Hallway.txt";
         Application app;
-        app.AutomaticMode(hallway);
+        app.AutomaticMode(controlFile);
     }
-    {
-        std::string intoAtrium = "automaticControls/IntoAtrium.txt";
-        Application app2;
-        app2.AutomaticMode(intoAtrium);
-    }
-    {
-        std::string roundel = "automaticControls/Roundel.txt";
-        Application app3;
-        app3.AutomaticMode(roundel);
-    }
+
 
 }
 

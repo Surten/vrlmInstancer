@@ -19,7 +19,7 @@ public:
 
 	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder,
 		std::string headerFileName, std::string outputImageFormat, bool createNewGeometry,
-		MaterialsFile* matFile, std::string integrator, AnimationInfo* animInfo);
+		MaterialsFile* matFile, std::string integrator, int width, int height, int samples, AnimationInfo* animInfo);
 
 private:
 	std::ofstream out;
@@ -45,8 +45,8 @@ private:
 
 	int numberOfSamples = 64;
 	int maxDepth = 12;
-	int xResolution = 800;
-	int yResolution = 600;
+	int xResolution = 300;
+	int yResolution = 200;
 
 private:
 

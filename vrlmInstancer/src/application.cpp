@@ -171,8 +171,11 @@ void Application::AutomaticMode(std::string fileName){
             std::string outputFolder;
             std::string outputImageFormat;
             std::string integrator;
-            autoIn >> cameraID >> outputHeaderName >> outputFolder >> outputImageFormat >> integrator >> createNewGeometry;
-            sm.exportAllToPBRT(cameraID, outputHeaderName, outputFolder, outputImageFormat, integrator, (bool)createNewGeometry);
+            int width;
+            int height;
+            int samples;
+            autoIn >> cameraID >> outputHeaderName >> outputFolder >> outputImageFormat >> integrator >> width >> height >> samples >> createNewGeometry;
+            sm.exportAllToPBRT(cameraID, outputHeaderName, outputFolder, outputImageFormat, integrator, width, height, samples, (bool)createNewGeometry);
         }
         else if (command == "ExportToMitsuba")
         {
@@ -181,8 +184,11 @@ void Application::AutomaticMode(std::string fileName){
             std::string outputHeaderName;
             std::string outputFolder;
             std::string integrator;
-            autoIn >> cameraID >> outputHeaderName >> outputFolder >> integrator >> createNewGeometry;
-            sm.exportAllToMitsuba(cameraID, outputHeaderName, outputFolder, integrator, (bool)createNewGeometry);
+            int width;
+            int height;
+            int samples;
+            autoIn >> cameraID >> outputHeaderName >> outputFolder >> integrator >> width >> height >> samples >> createNewGeometry;
+            sm.exportAllToMitsuba(cameraID, outputHeaderName, outputFolder, integrator, width, height, samples, (bool)createNewGeometry);
         }
         else if (command == "DeleteSceneByID")
         {

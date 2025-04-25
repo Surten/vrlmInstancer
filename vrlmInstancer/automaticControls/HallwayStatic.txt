@@ -49,6 +49,5 @@ Anim 16 A_Door 0 26 0 0 1 1 5 0 0 0 75 0 45 125 80 45 175 0 45 200 0 0
 Anim 16 A_Door 0 5 0 0 1 1 5 0 0 0 125 0 45 150 80 45 200 0 45 225 0 0
 Anim 16 A_Door 0 4 0 0 1 1 5 0 0 0 125 0 45 150 80 45 200 0 45 225 0 0
 Anim 16 A_Door 0 25 0 0 1 1 5 0 0 0 125 0 45 150 80 45 200 0 45 225 0 0
-Anim 6 A_Camera 0 5 1 1 1 0 2 30.0 22.9512 22.4666 -12.7347 0.0 1.0 0.0 -3.14935 0 0 0 240.0 22.9512 22.4666 -0.0047 0.0 1.0 0.0 -3.14935 0 0 0
-ExportToPBRT 5 Hallway_header PBRTExport/Hallway exr volpath 800 600 1024 1
-ExportToMitsuba 5 Hallway_header MitsubaExport/Hallway path 800 600 2048 1
+ExportToPBRT 5 HallwayStatic_header PBRTExport/HallwayStatic exr volpath 300 200 128 1
+ExportToMitsuba 5 HallwayStatic_header MitsubaExport/HallwayStatic path 300 200 256 1

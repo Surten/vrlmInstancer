@@ -16,9 +16,12 @@ MitsubaExporter::MitsubaExporter(AnimationInfo* animInfo) : animInfo(animInfo), 
 }
 
 void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName,
-	std::string outputFolder, std::string integrator,
+	std::string outputFolder, std::string integrator, int width, int height, int samples,
 	bool createNewGeometry, MaterialsFile* matFile, AnimationInfo* animInfo)
 {
+	this->imageWidth = width;
+	this->imageHeight = height;
+	this->nSamples = samples;
 	this->animInfo = animInfo;
 	this->scenes = scenes;
 	this->outputFolder = outputFolder;

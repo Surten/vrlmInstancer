@@ -61,4 +61,4 @@ Load Output/6_fl_furniture_N.WRL
 Load Output/6_fl_furniture_S.WRL
 Load Output/6_fl_furniture_W.WRL
 LoadMaterialsFile materials.mat
-ExportToMitsuba 2 sceneFile MitsubaExport 1
+ExportToMitsuba 2 sceneFile MitsubaExport 1280 920 512 1

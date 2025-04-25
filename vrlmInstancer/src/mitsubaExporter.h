@@ -19,7 +19,7 @@ public:
 	MitsubaExporter(AnimationInfo* animInfo);
 
 	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName,
-		std::string outputFolder, std::string integrator,
+		std::string outputFolder, std::string integrator, int width, int height, int samples,
 		bool createNewGeometry, MaterialsFile* matFile, AnimationInfo* animInfo);
 
 private:
@@ -43,8 +43,8 @@ private:
 
 	int pathTracingMaxDepth = -1;
 	int nSamples = 128;
-	int imageWidth = 800;
-	int imageHeight = 600;
+	int imageWidth = 300;
+	int imageHeight = 200;
 
 
 private:
