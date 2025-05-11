@@ -22,11 +22,24 @@ public:
 	MaterialsFile();
 	~MaterialsFile();
 
+	/// <summary>
+	/// Loads materials with a predefined format to be used during export to PBRT / Mitsuba
+	/// </summary>
 	bool LoadMaterials(std::string filename);
+
+	/// <summary>
+	/// Returns the material with the found by the vrmlDiffuse color
+	/// </summary>
 	Mat* retMaterial(vec3 vrmlDiffuse);
 
+	/// <summary>
+	/// Traverses the scene objects and appends any materials, that are not already in the materials list, as UndefinedMaterialXX
+	/// </summary>
 	void AddSceneMaterials(Scene* scene);
 
+	/// <summary>
+	/// Adds a BTF counterpart of a material to the list, and sets the original material bool hasBTF to true
+	/// </summary>
 	void replaceByBTF(std::string matName, std::string btfFileName);
 
 

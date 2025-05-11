@@ -46,6 +46,7 @@ public:
 	bool instanceGeometry(int id);
 
 	void instanceAllGeometry();
+	long getNumLoadedTriangles();
 
 	bool copyTextureCoordinatesBetweenScenes(const std::string& fromSceneName, const std::string& toSceneName);
 	bool copyTextureCoordinatesBetweenScenes(int fromSceneId, int toSceneId);

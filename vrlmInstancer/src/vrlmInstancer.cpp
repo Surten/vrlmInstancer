@@ -13,7 +13,6 @@ int main()
     //std::string fileName = "automaticFileTest.txt";
     //std::string fileName = "switchLightsToGonio.txt";
     //std::string fileName = "automaticControls/ExportIndividualObjectsWithTextureToPBRT.txt";
-    //std::string fileName = "automaticControls/FullPass.txt";
     //std::string fileName = "automaticControls/FullPassNoTexture.txt";
     //std::string fileName = "automaticControls/geometryConvert.txt";
     //std::string fileName = "automaticControls/TestPBRTExport.txt";
@@ -27,12 +26,25 @@ int main()
     //std::string fileName = "automaticControls/DebugTexturedExport.txt";
 
     std::vector<std::string> controlFiles;
+
+    //controlFiles.push_back("automaticControls/FullPass.txt");
+    //controlFiles.push_back("automaticControls/InstanceAll.txt");
+    
     //controlFiles.push_back("automaticControls/generateAllStaticCams.txt");
     //controlFiles.push_back("automaticControls/HallwayStatic.txt");
     //controlFiles.push_back("automaticControls/Entrance.txt");
-    controlFiles.push_back("automaticControls/Hallway.txt");
-    controlFiles.push_back("automaticControls/IntoAtrium.txt");
-    controlFiles.push_back("automaticControls/Roundel.txt");
+    //controlFiles.push_back("automaticControls/Hallway.txt");
+    //controlFiles.push_back("automaticControls/IntoAtrium.txt");
+    //controlFiles.push_back("automaticControls/Roundel.txt");
+
+    //controlFiles.push_back("automaticControls/BTFgenerateAllStaticCams.txt");
+    //controlFiles.push_back("automaticControls/BTFHallwayStatic.txt");
+    //controlFiles.push_back("automaticControls/BTFEntrance.txt");
+    //controlFiles.push_back("automaticControls/BTFHallway.txt");
+    //controlFiles.push_back("automaticControls/BTFIntoAtrium.txt");
+    //controlFiles.push_back("automaticControls/BTFRoundel.txt");
+
+    controlFiles.push_back("automaticControls/ExportIndividualObjectsWithTextureToPBRT.txt");
 
     for(std::string& controlFile : controlFiles)
     {

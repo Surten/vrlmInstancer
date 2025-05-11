@@ -8,10 +8,12 @@
 #include <string>
 #include <iomanip>
 
+#include <filesystem>
+
 
 #define RAD_TO_DEG(angle)   ((angle)*57.29577951308f)
 
-//#define USE_FOR_CHECKERBOARD_RENDER
+#define USE_FOR_CHECKERBOARD_RENDER
 
 PbrtExporter::PbrtExporter(AnimationInfo* animInfo) : animInfo(animInfo)
 {
@@ -36,6 +38,8 @@ void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera
 	this->integrator = integrator;
 	bool hasAnimatedCamera = false;
 	bool hasAnimatedGeometry = false;
+
+	std::filesystem::create_directory(this->outputFolder);
 	for (Scene* scene : scenes)
 	{
 		if (scene->hasAnimatedCamera)
@@ -44,7 +48,11 @@ void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera
 			hasAnimatedGeometry = true;
 
 	}
+
+#ifndef USE_FOR_CHECKERBOARD_RENDER
 	writeAllMaterials(matFile);
+#endif // #ifdef USE_FOR_CHECKERBOARD_RENDER
+
 
 	if (!hasAnimatedCamera && !hasAnimatedGeometry)
 	{
@@ -59,11 +67,20 @@ void PbrtExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* camera
 void PbrtExporter::exportStatic()
 {
 	out.open(this->outputFolder + "/" + this->headerFileName + ".pbrt");
+#ifdef USE_FOR_CHECKERBOARD_RENDER
+	size_t ind = headerFileName.rfind('h');
+	std::string renderImageFileName = "output/" + headerFileName.substr(0, ind - 1) + ".png";
+#else
 	std::string renderImageFileName = headerFileName + "." + outputImageFormat;
+#endif
 	writeSceneWideOptions(renderImageFileName);
 	out << " WorldBegin" << std::endl;
-	out << "Include \"" << this->headerFileName << "_Mats.pbrt" << "\"" << std::endl;
 
+#ifdef USE_FOR_CHECKERBOARD_RENDER
+		writeTexture();
+#else
+	out << "Include \"" << this->headerFileName << "_Mats.pbrt" << "\"" << std::endl;
+#endif
 	for (auto scene : scenes)
 	{
 		initCurrentGeometryFilename(scene->name, false);
@@ -133,7 +150,7 @@ void PbrtExporter::writeCamera() {
 		cameraPosition.normalize();
 		float length = retAABB.getDiagonal().len();
 
-		int customCameraZoom = 1.4;		// adjust the camera distance manually, to include the entire object in the render
+		float customCameraZoom = 1.3;		// adjust the camera distance manually, to include the entire object in the render
 		length = length * customCameraZoom;
 		cameraPosition = cameraPosition * length;
 
@@ -148,7 +165,7 @@ void PbrtExporter::writeCamera() {
 		out << "LookAt " << cameraPosition << std::endl;
 		out << "       " << retAABB.getArithmeticCenter() << std::endl;
 		out << "       " << lookUp << std::endl;
-		out << " Camera \"perspective\" \"float fov\" [ " << 40 << " ]" << std::endl;
+		out << " Camera \"perspective\" \"float fov\" [ " << 50 << " ]" << std::endl;
 		out << std::endl;
 		return;
 	}
@@ -296,7 +313,16 @@ void PbrtExporter::writeObjectInstances(Scene* scene) {
 	for (auto geometry : scene->geometries)
 	{
 		outGeometry << " ObjectBegin \"" << geometry->name << "_" << geometryAppendString << "\"" << std::endl;
-		writeMaterialReference(geometry->parent->exportMaterial);
+#ifdef USE_FOR_CHECKERBOARD_RENDER
+		if (geometry->textureCoords.size() > 0) {
+			writeMaterialWithTexture(geometry->parent->material);
+		}
+		else {
+			writeMaterial(geometry->parent->material);
+		}
+#else
+		writeMaterialReference(geometry->parent->exportMaterial, geometry->textureCoords.size() > 0);
+#endif
 
 		if (geometry->textureCoords.size() > 0)
 		{
@@ -306,15 +332,6 @@ void PbrtExporter::writeObjectInstances(Scene* scene) {
 		{
 			writeTriangleMesh(geometry);
 		}
-#ifdef USE_FOR_CHECKERBOARD_RENDER
-		if (geometry->textureCoords.size() > 0) {
-			writeMaterialWithTexture(geometry->parent->material);
-		}
-		else {
-			writeMaterial(geometry->parent->material);
-		}
-
-#endif
 
 		outGeometry << " ObjectEnd " << std::endl;
 		outGeometry << std::endl;
@@ -603,9 +620,12 @@ void PbrtExporter::writeMaterialWithTexture(Material* material) {
 
 #endif
 
-void PbrtExporter::writeMaterialReference(Mat* material)
+void PbrtExporter::writeMaterialReference(Mat* material, bool hasTextureCoordinates)
 {
-	outGeometry << "    NamedMaterial \"" + material->name +"\"" << std::endl;
+	if(material->hasBTF && hasTextureCoordinates)
+		outGeometry << "    NamedMaterial \"" + material->name + "BTF\"" << std::endl;
+	else
+		outGeometry << "    NamedMaterial \"" + material->name +"\"" << std::endl;
 }
 
 

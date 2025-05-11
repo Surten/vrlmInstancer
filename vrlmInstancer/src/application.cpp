@@ -102,7 +102,10 @@ void Application::AutomaticMode(std::string fileName){
         }
         else if (command == "InstanceAll")
         {
+            long countBefore = sm.getNumLoadedTriangles();
             sm.instanceAllGeometry();
+            long countAfter = sm.getNumLoadedTriangles();
+            std::cout << "Total triangles Before: " << countBefore << " ; After: " << countAfter << std::endl;
         }
         else if (command == "CopyTextureCoordsToFromId")
         {

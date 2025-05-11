@@ -18,6 +18,21 @@ public:
 
 	MitsubaExporter(AnimationInfo* animInfo);
 
+
+	/// <summary>
+	/// Exports all loaded scenes to the Mitsuba file Format
+	/// </summary>
+	/// <param name="scenes">List of loaded scenes</param>
+	/// <param name="camera">The camera to be used for Mitsuba render</param>
+	/// <param name="sceneFileName">The header file name</param>
+	/// <param name="outputFolder">The path to the folder where the entire export should be</param>
+	/// <param name="integrator">Name of the integrator used for rendering</param>
+	/// <param name="width">Resulting image Width</param>
+	/// <param name="height">Resulting image Height</param>
+	/// <param name="samples">Number of samples per pixel</param>
+	/// <param name="createNewGeometry">if False, will skip the geometry and scene XML files export, only modifying the header file, saves a lot of time</param>
+	/// <param name="matFile">pointer the all the Materials loaded from MaterialsFile</param>
+	/// <param name="animInfo">Pointer to the AnimInfo, which contains info about all desired animations</param>
 	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string sceneFileName,
 		std::string outputFolder, std::string integrator, int width, int height, int samples,
 		bool createNewGeometry, MaterialsFile* matFile, AnimationInfo* animInfo);
@@ -36,12 +51,14 @@ private:
 	std::string integrator;
 	std::string outputFolder;
 	std::string sceneFileName;
+
+	//These two are very fragile if not handles correctly
 	std::string currentGeometryFileName;
 	std::string currentGeometryFolderPath;
 
 	bool createNewGeometry = true;
 
-	int pathTracingMaxDepth = -1;
+	int pathTracingMaxDepth = -1;	//Infinite
 	int nSamples = 128;
 	int imageWidth = 300;
 	int imageHeight = 200;
@@ -76,7 +93,7 @@ private:
 	void writeTransform(ShapeNode* shapeNode, int depth);
 	void writeAllNamedMaterials(int depth);
 	void writeBsdfNamed(Mat* material, int depth);
-	void writeBsdfReference(Mat* material, int depth);
+	void writeBsdfReference(Mat* material, bool hasTextureCoordinates, int depth);
 	void writeAllLights(Scene* scene, int depth);
 	void writeLight(LightNode* lightNode, int depth);
 

@@ -1,0 +1,137 @@
+Load Output/0-6_equipment.WRL
+Load Output/0-6_furniture_halls.WRL
+Load Output/0-6_heating.WRL
+Load Output/0-6_Lights.WRL
+Load Output/0-6_stairs_fences.WRL
+Load Output/0-7_construction.WRL
+Load Output/0-7_geometry.WRL
+Load Output/0-7_tin_plates.WRL
+Load Output/0-7_ventilation.WRL
+Load Output/7_roof.WRL
+Load Output/U-6_doors_F0_new.WRL
+Load Output/U-6_doors_F1_new.WRL
+Load Output/U-6_doors_F2_new.WRL
+Load Output/U-6_doors_F3_new.WRL
+Load Output/U-6_doors_F4_new.WRL
+Load Output/U-6_doors_F5_new.WRL
+Load Output/U-6_doors_F6_new.WRL
+Load Output/U-6_doors_FU_new.WRL
+Load Output/U-6_doors_Stair_Mid_new.WRL
+Load Output/U-6_doors_Stair_Side2_new.WRL
+Load Output/U-6_doors_Stair_Side1_new.WRL
+Load Output/U-6_windows_0F_new.WRL
+Load Output/U-6_windows_1F_new.WRL
+Load Output/U-6_windows_2F_new.WRL
+Load Output/U-6_windows_3F_new.WRL
+Load Output/U-6_windows_4F_new.WRL
+Load Output/U-6_windows_5F_new.WRL
+Load Output/U-6_windows_6F_new.WRL
+Load Output/U-6_windows_46_new.WRL
+Load Output/U-6_windows_shutters_0F.WRL
+Load Output/U-6_windows_shutters_1F.WRL
+Load Output/U-6_windows_shutters_2F.WRL
+Load Output/U-6_windows_shutters_3F.WRL
+Load Output/U-6_windows_shutters_4F.WRL
+Load Output/U-6_windows_shutters_5F.WRL
+Load Output/U-6_windows_shutters_6F.WRL
+Load Output/U-6_windows_shutters_UF.WRL
+Load Output/U-6_windows_Stairway01_new.WRL
+Load Output/U-6_windows_Stairway02_new.WRL
+Load Output/U-6_windows_UF_new.WRL
+Load Output/0_fl_furniture.WRL
+Load Output/1_fl_furniture.WRL
+Load Output/2_fl_furniture_E.WRL
+Load Output/2_fl_furniture_N.WRL
+Load Output/2_fl_furniture_S.WRL
+Load Output/2_fl_furniture_W.WRL
+Load Output/3_fl_furniture_E.WRL
+Load Output/3_fl_furniture_N.WRL
+Load Output/3_fl_furniture_S.WRL
+Load Output/3_fl_furniture_W.WRL
+Load Output/4_fl_furniture_E.WRL
+Load Output/4_fl_furniture_N.WRL
+Load Output/4_fl_furniture_S.WRL
+Load Output/4_fl_furniture_W.WRL
+Load Output/5_fl_furniture_E.WRL
+Load Output/5_fl_furniture_N.WRL
+Load Output/5_fl_furniture_S.WRL
+Load Output/5_fl_furniture_W.WRL
+Load Output/6_fl_furniture_E.WRL
+Load Output/6_fl_furniture_N.WRL
+Load Output/6_fl_furniture_S.WRL
+Load Output/6_fl_furniture_W.WRL
+LoadMaterialsFile materials.mat
+SubstituteForBTF BF_brown01 btfs/BF_brown01
+SubstituteForBTF BF_white01 btfs/BF_white01
+SubstituteForBTF BF_white02 btfs/BF_white02
+SubstituteForBTF CH_white01 btfs/CH_white01
+SubstituteForBTF CH_white02 btfs/CH_white02
+SubstituteForBTF CH_white04 btfs/CH_white04
+SubstituteForBTF CH_white05 btfs/CH_white05
+SubstituteForBTF BF_gray01 btfs/BF_gray01
+SubstituteForBTF CH_gray02 btfs/CH_gray02
+SubstituteForBTF CH_gray03 btfs/CH_gray03
+SubstituteForBTF BF_gray04 btfs/BF_gray04
+SubstituteForBTF CH_yellow01 btfs/CH_yellow01
+SubstituteForBTF CH_yellow02 btfs/CH_yellow02
+SubstituteForBTF CH_alum02 btfs/CH_alum02
+SubstituteForBTF CH_violet01 btfs/CH_violet01
+SubstituteForBTF CH_construction btfs/CH_construction
+SubstituteForBTF CH_pavers01 btfs/CH_pavers01
+SubstituteForBTF BF_red02 btfs/BF_red02
+SubstituteForBTF BF_green01 btfs/BF_green01
+SubstituteForBTF CH_alum03 btfs/CH_alum03
+ExportToPBRT 0 cam01_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 1
+ExportToPBRT 1 cam02_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
+ExportToPBRT 2 cam03_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
+ExportToPBRT 3 cam04_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
+ExportToPBRT 5 cam06_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
+ExportToPBRT 6 cam07_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
+ExportToPBRT 8 cam09_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
+ExportToPBRT 9 cam10_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
+ExportToPBRT 10 cam11_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
+ExportToPBRT 0 cam01_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
+ExportToPBRT 1 cam02_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
+ExportToPBRT 2 cam03_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
+ExportToPBRT 3 cam04_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
+ExportToPBRT 5 cam06_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
+ExportToPBRT 6 cam07_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
+ExportToPBRT 8 cam09_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
+ExportToPBRT 9 cam10_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
+ExportToPBRT 10 cam11_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
+ExportToPBRT 0 cam01_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
+ExportToPBRT 1 cam02_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
+ExportToPBRT 2 cam03_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
+ExportToPBRT 3 cam04_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
+ExportToPBRT 5 cam06_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
+ExportToPBRT 6 cam07_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
+ExportToPBRT 8 cam09_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
+ExportToPBRT 9 cam10_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
+ExportToPBRT 10 cam11_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
+ExportToMitsuba 0 cam01_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 1
+ExportToMitsuba 1 cam02_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
+ExportToMitsuba 2 cam03_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
+ExportToMitsuba 3 cam04_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
+ExportToMitsuba 5 cam06_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
+ExportToMitsuba 6 cam07_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
+ExportToMitsuba 8 cam09_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
+ExportToMitsuba 9 cam10_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
+ExportToMitsuba 10 cam11_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
+ExportToMitsuba 0 cam01_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
+ExportToMitsuba 1 cam02_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
+ExportToMitsuba 2 cam03_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
+ExportToMitsuba 3 cam04_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
+ExportToMitsuba 5 cam06_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
+ExportToMitsuba 6 cam07_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
+ExportToMitsuba 8 cam09_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
+ExportToMitsuba 9 cam10_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
+ExportToMitsuba 10 cam11_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
+ExportToMitsuba 0 cam01_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
+ExportToMitsuba 1 cam02_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
+ExportToMitsuba 2 cam03_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
+ExportToMitsuba 3 cam04_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
+ExportToMitsuba 5 cam06_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
+ExportToMitsuba 6 cam07_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
+ExportToMitsuba 8 cam09_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
+ExportToMitsuba 9 cam10_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
+ExportToMitsuba 10 cam11_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0

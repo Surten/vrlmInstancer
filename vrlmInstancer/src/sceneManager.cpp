@@ -132,6 +132,16 @@ void SceneManager::instanceAllGeometry() {
 	}
 }
 
+long SceneManager::getNumLoadedTriangles()
+{
+	long count = 0;
+	for (Scene* scene : scenes)
+	{
+		count += scene->getNumSceneTriangles();
+	}
+	return count;
+}
+
 bool SceneManager::copyTextureCoordinatesBetweenScenes(const std::string& fromSceneName, const std::string& toSceneName)
 {
 	Scene* sceneFrom = getSceneByName(fromSceneName);
@@ -269,7 +279,7 @@ void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName
 		camera = allCameras[cameraIndex];
 	}
 	bool hasLights = false;
-	for (auto scene : scenes)
+	for (Scene* scene : scenes)
 	{
 		if (scene->lights.size() > 0)
 		{
@@ -290,13 +300,16 @@ void SceneManager::exportAllToMitsuba(int cameraIndex, std::string mainSceneName
 
 void SceneManager::unifyTextrureCoordScaleOfAllScenes() {
 	float desiredTextureScale = getTextureCoordsToObjectCoordsScale();
-	for (auto scene : scenes) {
+	for (Scene* scene : scenes) {
+		scene->scaleTextureCoordsForAllObjects(desiredTextureScale);
+	}
+	for (Scene* scene : scenesWithTextures) {
 		scene->scaleTextureCoordsForAllObjects(desiredTextureScale);
 	}
 }
 
 void SceneManager::scaleAllScenesGeometry(float scale) {
-	for (auto scene : scenes) {
+	for (Scene* scene : scenes) {
 		scene->scaleSceneGeometry(scale);
 	}
 }

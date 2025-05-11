@@ -84,7 +84,15 @@ LoadTextured textured/Door_08.wrl
 LoadTextured textured/Door_09.wrl
 LoadTextured textured/Door_09_B.wrl
 LoadTextured textured/Door_10.wrl
+LoadTextured textured/door_type_01_L.wrl
+LoadTextured textured/door_type_01_R.wrl
+LoadTextured textured/door_type_02_L.wrl
+LoadTextured textured/door_type_02_R.wrl
+LoadTextured textured/door_type_03_L.wrl
+LoadTextured textured/door_type_03_R.wrl
+LoadTextured textured/door_type_04.wrl
 LoadTextured textured/door_type_05.wrl
+LoadTextured textured/elevator_01.wrl
 LoadTextured textured/fence2to1floorRight.wrl
 LoadTextured textured/fence3floorR.wrl
 LoadTextured textured/fence4floorEnd.wrl
@@ -110,8 +118,8 @@ LoadTextured textured/Heater_06.wrl
 LoadTextured textured/Heater_06_b.wrl
 LoadTextured textured/library_door_02.wrl
 LoadTextured textured/library_door_02b.wrl
-LoadTextured textured/netPlug.wrl
-LoadTextured textured/powerPlug.wrl
+LoadTextured textured/net_plug.wrl
+LoadTextured textured/power_plug.wrl
 LoadTextured textured/rack.wrl
 LoadTextured textured/radiumLamp02.wrl
 LoadTextured textured/Roto_door_01.wrl

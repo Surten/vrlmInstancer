@@ -356,7 +356,8 @@ void VrmlParser::parseGeometry(ShapeNode* shapeNode) {
         }
         return;
     }
-    if (str != "DEF") std::cout << "error: expected DEF at the start of Geometry node named " << shapeNode->parent->name << std::endl;
+    if (str != "DEF") 
+        std::cout << "error: expected DEF at the start of Geometry node named " << shapeNode->parent->name << std::endl;
     Geometry* geometry = new Geometry();
     shapeNode->geometry = geometry;
     geometry->parent = shapeNode;

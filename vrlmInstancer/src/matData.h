@@ -48,6 +48,8 @@ public:
 	vec3 transmit;
 	int indexBRDF;
 
+	bool hasBTF = false;
+
 	std::string btfFileName;
 
 	std::string eta_str;

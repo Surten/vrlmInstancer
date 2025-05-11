@@ -144,7 +144,8 @@ bool MaterialsFile::SaveMaterial(Mat* material)
 void MaterialsFile::AddSceneMaterials(Scene* scene)
 {
 	int numOfGeometriesWithoutTexCoords = 0;
-	for (auto shapeNode : scene->ShapeNodes)
+
+	for (ShapeNode* shapeNode : scene->ShapeNodes)
 	{
 		Mat* existing_material = retMaterial(shapeNode->material->diffuseColor);
 		if (existing_material == nullptr)
@@ -165,7 +166,7 @@ void MaterialsFile::AddSceneMaterials(Scene* scene)
 			shapeNode->exportMaterial = existing_material;
 		}
 
-		if (shapeNode->exportMaterial->materialType == MaterialType::BTF_MATERIAL)
+		if (shapeNode->exportMaterial->hasBTF)
 		{
 			if (shapeNode->geometry && shapeNode->geometry->textureCoords.size() == 0)
 			{
@@ -174,7 +175,7 @@ void MaterialsFile::AddSceneMaterials(Scene* scene)
 			}
 		}
 	}
-	std::cout << "No Texture coordinates to use BTF for # " << numOfGeometriesWithoutTexCoords << " in scene: " << scene->name << std::endl;
+	std::cout << "Cant use BTF for " << numOfGeometriesWithoutTexCoords << " / " << scene->ShapeNodes.size() << " shape nodes, no texture coordinates... in scene: " << scene->name << std::endl;
 }
 
 void MaterialsFile::replaceByBTF(std::string matName, std::string btfFileName)
@@ -183,8 +184,12 @@ void MaterialsFile::replaceByBTF(std::string matName, std::string btfFileName)
 	{
 		if (material->name == matName)
 		{
-			material->materialType = MaterialType::BTF_MATERIAL;
-			material->btfFileName = btfFileName;
+			material->hasBTF = true;
+			Mat* btfMat = new Mat();
+			btfMat->name = material->name + "BTF";
+			btfMat->materialType = MaterialType::BTF_MATERIAL;
+			btfMat->btfFileName = btfFileName;
+			materials.push_back(btfMat);
 		}
 	}
 }

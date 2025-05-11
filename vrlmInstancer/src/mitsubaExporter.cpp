@@ -27,10 +27,11 @@ void MitsubaExporter::exportScene(std::vector<Scene*> scenes, ViewPointNode* cam
 	this->outputFolder = outputFolder;
 	this->camera = camera;
 	this->sceneFileName = sceneFileName;
-	this->outputFolder = outputFolder;
 	this->integrator = integrator;
 	this->matFile = matFile;
 	this->createNewGeometry = createNewGeometry;
+
+	std::filesystem::create_directory(this->outputFolder);
 
 	// export all geometries into individual .obj files
 	if (createNewGeometry)
@@ -425,7 +426,7 @@ void MitsubaExporter::writeShape(ShapeNode* shapeNode, std::string filepath, int
 	writeElementBegScene("shape", { "type", "obj" }, depth);
 		writeElementScene("boolean", { "name", "face_normals", "value", "true"}, depth + 1);
 		writeElementScene("string", { "name", "filename", "value", filepath + "/" + shapeNode->geometry->name + ".obj"}, depth + 1);
-		writeBsdfReference(shapeNode->exportMaterial, depth + 1);
+		writeBsdfReference(shapeNode->exportMaterial, shapeNode->geometry->textureCoords.size() > 0, depth + 1);
 	writeElementEndScene("shape", depth);
 }
 void MitsubaExporter::writeShapeGroup(ShapeNode* shapeNode, std::string filepath, int depth)
@@ -503,14 +504,14 @@ void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
 	}
 	else if (lightNode->lightType == LightNode::LightType::SPOTLIGHT)
 	{
-		float mult = 106;
+		float mult = 15;
 		writeElementBegScene("emitter", { "type", "spot" }, depth);
 		writeElementBegScene("transform", { "name", "to_world" }, depth + 1);
 		writeElementScene("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString() }, depth + 2);
 		writeElementEndScene("transform", depth + 1);
 		writeElementScene("float", { "name", "intensity", "value", std::to_string((lightNode->color * lightNode->intensity).len() * mult) }, depth + 1);
 		writeElementScene("float", { "name", "beam_width", "value", std::to_string(RAD_TO_DEG(lightNode->beamWidth)) }, depth + 1);
-		writeElementScene("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle) * 2) }, depth + 1);
+		writeElementScene("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle) * 1.3) }, depth + 1);
 		writeElementEndScene("emitter", depth);
 	}
 	else if (lightNode->lightType == LightNode::LightType::GONIOLIGHT)
@@ -532,9 +533,12 @@ void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
 	}
 }
 
-void MitsubaExporter::writeBsdfReference(Mat* material, int depth)
+void MitsubaExporter::writeBsdfReference(Mat* material, bool hasTextureCoordinates, int depth)
 {
-	writeElementScene("ref", { "name", "bsdf", "id", material->name }, depth);
+	if(material->hasBTF && hasTextureCoordinates)
+		writeElementScene("ref", { "name", "bsdf", "id", material->name + "BTF"}, depth);
+	else
+		writeElementScene("ref", { "name", "bsdf", "id", material->name }, depth);
 }
 
 

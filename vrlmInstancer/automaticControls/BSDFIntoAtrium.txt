@@ -1,0 +1,48 @@
+Load Output/0-6_equipment.WRL
+Load Output/0-6_furniture_halls.WRL
+Load Output/0-6_heating.WRL
+Load Output/0-6_Lights.WRL
+Load Output/0-6_stairs_fences.WRL
+Load Output/0-7_construction.WRL
+Load Output/0-7_geometry.WRL
+Load Output/0-7_tin_plates.WRL
+Load Output/0-7_ventilation.WRL
+Load Output/7_roof.WRL
+Load Output/cameras.WRL
+Load Output/U-6_doors_F0_new.WRL
+Load Output/U-6_doors_F1_new.WRL
+Load Output/U-6_doors_F2_new.WRL
+Load Output/U-6_doors_F3_new.WRL
+Load Output/U-6_doors_F4_new.WRL
+Load Output/U-6_doors_F5_new.WRL
+Load Output/U-6_doors_F6_new.WRL
+Load Output/U-6_doors_FU_new.WRL
+Load Output/U-6_doors_Stair_Mid_new.WRL
+Load Output/U-6_doors_Stair_Side2_new.WRL
+Load Output/U-6_doors_Stair_Side1_new.WRL
+Load Output/U-6_windows_0F_new.WRL
+Load Output/U-6_windows_1F_new.WRL
+Load Output/U-6_windows_2F_new.WRL
+Load Output/U-6_windows_3F_new.WRL
+Load Output/U-6_windows_4F_new.WRL
+Load Output/U-6_windows_5F_new.WRL
+Load Output/U-6_windows_6F_new.WRL
+Load Output/U-6_windows_46_new.WRL
+Load Output/U-6_windows_shutters_0F.WRL
+Load Output/U-6_windows_shutters_1F.WRL
+Load Output/U-6_windows_shutters_2F.WRL
+Load Output/U-6_windows_shutters_3F.WRL
+Load Output/U-6_windows_shutters_4F.WRL
+Load Output/U-6_windows_shutters_5F.WRL
+Load Output/U-6_windows_shutters_6F.WRL
+Load Output/U-6_windows_shutters_UF.WRL
+Load Output/U-6_windows_Stairway01_new.WRL
+Load Output/U-6_windows_Stairway02_new.WRL
+Load Output/U-6_windows_UF_new.WRL
+LoadMaterialsFile materials.mat
+Anim 0 GA_AnimLength 10
+Anim 0 GA_AnimFPS 25.0
+Anim 16 A_Door 2 0 0 0 1 1 2 0.0 0 0 20.0 90 90
+Anim 6 A_Camera 0 4 1 1 1 0 2 20.0 22.951201 22.466599 6.652910 0.0 1.0 0.0 1.61975 0 0 0 245 2.014250 22.466599 6.652910 0.0 1.0 0.0 0.1 0 0 0
+ExportToPBRT 4 IntoAtrium_header PBRTExport/IntoAtrium exr volpath 800 600 1024 1
+ExportToMitsuba 4 IntoAtrium_header MitsubaExport/IntoAtrium path 800 600 2048 1

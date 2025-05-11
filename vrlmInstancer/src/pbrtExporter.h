@@ -17,6 +17,21 @@ public:
 
 	PbrtExporter(AnimationInfo* animInfo);
 
+	/// <summary>
+	///  Exports all loaded scenes to the PBRTv4 file Format
+	/// </summary>
+	/// <param name="scenes">List of loaded scenes</param>
+	/// <param name="camera">The camera to be used for PBRT render</param>
+	/// <param name="outputFolder">The path to the folder where the entire export should be</param>
+	/// <param name="headerFileName">The header file name</param>
+	/// <param name="outputImageFormat">The output will be named the same as the header file, but with this extension</param>
+	/// <param name="createNewGeometry">if False, only creates the header file</param>
+	/// <param name="matFile">pointer the all the Materials loaded from MaterialsFile</param>
+	/// <param name="integrator">Name of the integrator used for rendering</param>
+	/// <param name="width">Resulting image Width</param>
+	/// <param name="height"><Resulting image Height/param>
+	/// <param name="samples">Number of samples per pixel</param>
+	/// <param name="animInfo">Pointer to the AnimInfo, which contains info about all desired animations</param>
 	void exportScene(std::vector<Scene*> scenes, ViewPointNode* camera, std::string outputFolder,
 		std::string headerFileName, std::string outputImageFormat, bool createNewGeometry,
 		MaterialsFile* matFile, std::string integrator, int width, int height, int samples, AnimationInfo* animInfo);
@@ -79,7 +94,7 @@ private:
 
 
 	void writeAllMaterials(MaterialsFile* material);
-	void writeMaterialReference(Mat* material);
+	void writeMaterialReference(Mat* material, bool hasTextureCoordinates);
 	void writeMaterialNamed(Mat* material);
 
 

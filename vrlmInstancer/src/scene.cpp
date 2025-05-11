@@ -104,30 +104,32 @@ void Scene::scaleSceneGeometry(float scale)
 
 void Scene::findIdenticalGeometry(std::vector<std::pair<int, int>> & geoPairs) {
 
+	// Traverse all
 	for (size_t i = 0; i < geometries.size(); i++)
 	{
+		// Save all important info of the first Geometry for the comparison
 		int nPoints = static_cast<int>(geometries.at(i)->coords.size());
 		AABB aabb = geometries[i]->getAABB();
 		vec3 centerOfGravity = geometries[i]->getCenterOfGravity();
 
-		aabb.max = *(geometries[i]->parent->transformToRootMatrix) * aabb.max;
-		aabb.min = *(geometries[i]->parent->transformToRootMatrix) * aabb.min;
-		centerOfGravity = *(geometries[i]->parent->transformToRootMatrix) * centerOfGravity;
-
 		vec3 diagonal = aabb.getDiagonal();
 		vec3 vectorToGravCenter = centerOfGravity - aabb.getArithmeticCenter();
 
+		// Traverse all remaining geometries (from current to the end)
 		for (size_t j = i+1; j < geometries.size(); j++)
 		{
+			// Save all important info of the second Geometry for the comparison
 			int otherNpoints = static_cast<int>(geometries.at(j)->coords.size());
 			AABB otherAabb = geometries[j]->getAABB();
 			vec3 otherCenterOfGravity = geometries[j]->getCenterOfGravity();
 
-			otherAabb.max = *(geometries[j]->parent->transformToRootMatrix) * otherAabb.max;
-			otherAabb.min = *(geometries[j]->parent->transformToRootMatrix) * otherAabb.min;
-			otherCenterOfGravity = *(geometries[j]->parent->transformToRootMatrix) * otherCenterOfGravity;
-
-			if (nPoints == otherNpoints && diagonal.areEqual(otherAabb.getDiagonal()) && vectorToGravCenter.areEqual(otherCenterOfGravity - otherAabb.getArithmeticCenter())) {
+			//Compare geometries
+			if (nPoints == otherNpoints && aabb.min.areEqual(otherAabb.min) && aabb.max.areEqual(otherAabb.max) && vectorToGravCenter.areEqual(otherCenterOfGravity - otherAabb.getArithmeticCenter())) {
+				//Before adding, we need to check, that geometries[i] will be the source geometry
+				// if i is already in some pair as second, it means that both i and j were already 
+				// found by some previous geometry, therefore we skip this
+				// yes, this can be done more intuitively... We could just find if j is in a pair as second.
+				// But I am too far and do not want to break this by revriting it :D
 				bool addAsNewConnection = true;
 				for (size_t k = 0; k < geoPairs.size(); k++)
 				{
@@ -135,6 +137,7 @@ void Scene::findIdenticalGeometry(std::vector<std::pair<int, int>> & geoPairs) {
 						addAsNewConnection = false;
 					}
 				}
+				// Add indexes of geometries as a connection
 				if(addAsNewConnection)
 					geoPairs.push_back(std::pair<int,int>(i,j));
 			}
@@ -159,7 +162,8 @@ void Scene::findAndUseIdenticalGeometry() {
 		}
 	}
 	int lastUsedIndex = 0;
-	std::cout << "Reduced the number of geometries from " << geometries.size();
+
+	int geometriesBefore = geometries.size(), trianglesBefore = getNumSceneTriangles();
 	for (size_t i = 0; i < geometries.size(); i++)
 	{
 		if (geometries[i]->parent->usesOtherGeometry) {
@@ -170,7 +174,10 @@ void Scene::findAndUseIdenticalGeometry() {
 		}
 	}
 	geometries.resize(lastUsedIndex);
-	std::cout << " to " << geometries.size() << std::endl;
+
+	int geometriesAfter = geometries.size(), trianglesAfter = getNumSceneTriangles();
+	std::cout << "Reduced the number of geometries from " <<geometriesBefore << " to " << geometriesAfter << std::endl;
+	std::cout << "Reduced the number of triangles from " <<trianglesBefore << " to " << trianglesAfter << std::endl;
 
 }
 
@@ -236,21 +243,14 @@ void Scene::findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*>&
 	}
 }
 
-/// <summary>
-/// WIP, maybe will not be finished
-/// </summary>
-/// <param name="diffuseComponent"></param>
-/// <param name="texturePath"></param>
-void Scene::findShapeNodesByTheirMaterialDiffuseComponentAndReplaceTheirTexturePath(vec3 diffuseComponent, std::string texturePath) {
-
-	for (auto shapeNode : ShapeNodes) {
-		if (shapeNode->material->compareDiffuseColor(diffuseComponent)) {
-			shapeNode->textureFilePath = texturePath;
-			if (shapeNode->geometry->textureCoords.size() == 0) {
-				std::cout << "we are missing textures on geometry " << shapeNode->geometry->name << std::endl;
-			}
-		}
+int Scene::getNumSceneTriangles() 
+{
+	int count = 0;
+	for (Geometry* geometry : geometries)
+	{
+		count += geometry->facesPointsIndex.size();
 	}
+	return count;
 }
 
 LightNode* Scene::findSameLightsByPosition(LightNode* light, Scene* listOfOtherLights)

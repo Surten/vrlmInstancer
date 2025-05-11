@@ -58,18 +58,42 @@ public:
 	/// </summary>
 	void findAndUseSameObjectsFromOtherScenesInThisScene(std::vector<Scene*>& scenes);
 
-	void findShapeNodesByTheirMaterialDiffuseComponentAndReplaceTheirTexturePath(vec3 diffuseComponent, std::string texturePath);
+	/// <summary>
+	/// Counts the number of triangles of all geometries in the scene
+	/// </summary>
+	/// <returns>The number of triangles</returns>
+	int getNumSceneTriangles();
 
+
+	/// <summary>
+	/// Looks into the provided Scene for gonioLights and tries to substitute the Lights in the current
+	/// Scene with lights from the provided scene, paired by location. If not present, creates a default GonioLight(may be wrong default)
+	/// </summary>
+	/// <param name="lightReferences"></param>
 	void convertSpotLightsToGonioLights(Scene* lightReferences);
 
+	/// <summary>
+	/// Returns scene AABB, IF SCENE IS MODIFIED, THE AABB IS NOT RECALCULATED BY DEFAULT,
+	/// NEEDS TO BE UPDATED MANUALLY BY CALLING calculateAABB() or initShapeNodeTransformMatricies() EXPLICITLY
+	/// </summary>
+	/// <returns>The scen AABB</returns>
 	AABB& getSceneAABB();
 
+	/// <summary>
+	/// Calculates the Scene AABB and in the process, saves/updates the Transform Matricies from World space to Model space for each Shape Node
+	/// </summary>
 	void initShapeNodeTransformMatricies();
 
 private:
 	AABB sceneAABB;
 
 private:
+
+	/// <summary>
+	/// Based on AABB, center of gravity and the number of verticies,
+	/// paires up geometries that are supposedly the same, to be later used for instancing
+	/// </summary>
+	/// <param name="geoPairs">The output pairs of geometris, should have no duplicates</param>
 	void findIdenticalGeometry(std::vector<std::pair<int, int>>& geoPairs);
 
 	LightNode* findSameLightsByPosition(LightNode* light1, Scene* listOfOtherLights);

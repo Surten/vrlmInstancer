@@ -1,0 +1,126 @@
+Load Orig/0-6_equipment.WRL
+Load Orig/0-6_furniture_halls.WRL
+Load Orig/0-6_heating.WRL
+Load Orig/0-6_Lights.WRL
+Load Orig/0-6_stairs_fences.WRL
+Load Orig/0-7_construction.WRL
+Load Orig/0-7_geometry.WRL
+Load Orig/0-7_tin_plates.WRL
+Load Orig/0-7_ventilation.WRL
+Load Orig/7_roof.WRL
+Load Door/U-6_doors_F0_new.WRL
+Load Door/U-6_doors_F1_new.WRL
+Load Door/U-6_doors_F2_new.WRL
+Load Door/U-6_doors_F3_new.WRL
+Load Door/U-6_doors_F4_new.WRL
+Load Door/U-6_doors_F5_new.WRL
+Load Door/U-6_doors_F6_new.WRL
+Load Door/U-6_doors_FU_new.WRL
+Load Door/U-6_doors_Stair_Mid_new.WRL
+Load Door/U-6_doors_Stair_Side2_new.WRL
+Load Door/U-6_doors_Stair_Side1_new.WRL
+Load Door/U-6_windows_0F_new.WRL
+Load Door/U-6_windows_1F_new.WRL
+Load Door/U-6_windows_2F_new.WRL
+Load Door/U-6_windows_3F_new.WRL
+Load Door/U-6_windows_4F_new.WRL
+Load Door/U-6_windows_5F_new.WRL
+Load Door/U-6_windows_6F_new.WRL
+Load Door/U-6_windows_46_new.WRL
+Load Door/U-6_windows_shutters_0F.WRL
+Load Door/U-6_windows_shutters_1F.WRL
+Load Door/U-6_windows_shutters_2F.WRL
+Load Door/U-6_windows_shutters_3F.WRL
+Load Door/U-6_windows_shutters_4F.WRL
+Load Door/U-6_windows_shutters_5F.WRL
+Load Door/U-6_windows_shutters_6F.WRL
+Load Door/U-6_windows_shutters_UF.WRL
+Load Door/U-6_windows_Stairway01_new.WRL
+Load Door/U-6_windows_Stairway02_new.WRL
+Load Door/U-6_windows_UF_new.WRL
+Load Orig/0_fl_furniture.WRL
+Load Orig/1_fl_furniture.WRL
+Load Orig/2_fl_furniture_E.WRL
+Load Orig/2_fl_furniture_N.WRL
+Load Orig/2_fl_furniture_S.WRL
+Load Orig/2_fl_furniture_W.WRL
+Load Orig/3_fl_furniture_E.WRL
+Load Orig/3_fl_furniture_N.WRL
+Load Orig/3_fl_furniture_S.WRL
+Load Orig/3_fl_furniture_W.WRL
+Load Orig/4_fl_furniture_E.WRL
+Load Orig/4_fl_furniture_N.WRL
+Load Orig/4_fl_furniture_S.WRL
+Load Orig/4_fl_furniture_W.WRL
+Load Orig/5_fl_furniture_E.WRL
+Load Orig/5_fl_furniture_N.WRL
+Load Orig/5_fl_furniture_S.WRL
+Load Orig/5_fl_furniture_W.WRL
+Load Orig/6_fl_furniture_E.WRL
+Load Orig/6_fl_furniture_N.WRL
+Load Orig/6_fl_furniture_S.WRL
+Load Orig/6_fl_furniture_W.WRL
+InstanceAll
+ScaleAllScenes
+SaveId 0 VRML_Instanced/0-6_equipment.WRL
+SaveId 1 VRML_Instanced/0-6_furniture_halls.WRL
+SaveId 2 VRML_Instanced/0-6_heating.WRL
+SaveId 3 VRML_Instanced/0-6_Lights.WRL
+SaveId 4 VRML_Instanced/0-6_stairs_fences.WRL
+SaveId 5 VRML_Instanced/0-7_construction.WRL
+SaveId 6 VRML_Instanced/0-7_geometry.WRL
+SaveId 7 VRML_Instanced/0-7_tin_plates.WRL
+SaveId 8 VRML_Instanced/0-7_ventilation.WRL
+SaveId 9 VRML_Instanced/7_roof.WRL
+SaveId 10 VRML_Instanced/U-6_doors_F0_new.WRL
+SaveId 11 VRML_Instanced/U-6_doors_F1_new.WRL
+SaveId 12 VRML_Instanced/U-6_doors_F2_new.WRL
+SaveId 13 VRML_Instanced/U-6_doors_F3_new.WRL
+SaveId 14 VRML_Instanced/U-6_doors_F4_new.WRL
+SaveId 15 VRML_Instanced/U-6_doors_F5_new.WRL
+SaveId 16 VRML_Instanced/U-6_doors_F6_new.WRL
+SaveId 17 VRML_Instanced/U-6_doors_FU_new.WRL
+SaveId 18 VRML_Instanced/U-6_doors_Stair_Mid_new.WRL
+SaveId 19 VRML_Instanced/U-6_doors_Stair_Side2_new.WRL
+SaveId 20 VRML_Instanced/U-6_doors_Stair_Side1_new.WRL
+SaveId 21 VRML_Instanced/U-6_windows_0F_new.WRL
+SaveId 22 VRML_Instanced/U-6_windows_1F_new.WRL
+SaveId 23 VRML_Instanced/U-6_windows_2F_new.WRL
+SaveId 24 VRML_Instanced/U-6_windows_3F_new.WRL
+SaveId 25 VRML_Instanced/U-6_windows_4F_new.WRL
+SaveId 26 VRML_Instanced/U-6_windows_5F_new.WRL
+SaveId 27 VRML_Instanced/U-6_windows_6F_new.WRL
+SaveId 28 VRML_Instanced/U-6_windows_46_new.WRL
+SaveId 29 VRML_Instanced/U-6_windows_shutters_0F.WRL
+SaveId 30 VRML_Instanced/U-6_windows_shutters_1F.WRL
+SaveId 31 VRML_Instanced/U-6_windows_shutters_2F.WRL
+SaveId 32 VRML_Instanced/U-6_windows_shutters_3F.WRL
+SaveId 33 VRML_Instanced/U-6_windows_shutters_4F.WRL
+SaveId 34 VRML_Instanced/U-6_windows_shutters_5F.WRL
+SaveId 35 VRML_Instanced/U-6_windows_shutters_6F.WRL
+SaveId 36 VRML_Instanced/U-6_windows_shutters_UF.WRL
+SaveId 37 VRML_Instanced/U-6_windows_Stairway01_new.WRL
+SaveId 38 VRML_Instanced/U-6_windows_Stairway02_new.WRL
+SaveId 39 VRML_Instanced/U-6_windows_UF_new.WRL
+SaveId 40 VRML_Instanced/0_fl_furniture.WRL
+SaveId 41 VRML_Instanced/1_fl_furniture.WRL
+SaveId 42 VRML_Instanced/2_fl_furniture_E.WRL
+SaveId 43 VRML_Instanced/2_fl_furniture_N.WRL
+SaveId 44 VRML_Instanced/2_fl_furniture_S.WRL
+SaveId 45 VRML_Instanced/2_fl_furniture_W.WRL
+SaveId 46 VRML_Instanced/3_fl_furniture_E.WRL
+SaveId 47 VRML_Instanced/3_fl_furniture_N.WRL
+SaveId 48 VRML_Instanced/3_fl_furniture_S.WRL
+SaveId 49 VRML_Instanced/3_fl_furniture_W.WRL
+SaveId 50 VRML_Instanced/4_fl_furniture_E.WRL
+SaveId 51 VRML_Instanced/4_fl_furniture_N.WRL
+SaveId 52 VRML_Instanced/4_fl_furniture_S.WRL
+SaveId 53 VRML_Instanced/4_fl_furniture_W.WRL
+SaveId 54 VRML_Instanced/5_fl_furniture_E.WRL
+SaveId 55 VRML_Instanced/5_fl_furniture_N.WRL
+SaveId 56 VRML_Instanced/5_fl_furniture_S.WRL
+SaveId 57 VRML_Instanced/5_fl_furniture_W.WRL
+SaveId 58 VRML_Instanced/6_fl_furniture_E.WRL
+SaveId 59 VRML_Instanced/6_fl_furniture_N.WRL
+SaveId 60 VRML_Instanced/6_fl_furniture_S.WRL
+SaveId 61 VRML_Instanced/6_fl_furniture_W.WRL

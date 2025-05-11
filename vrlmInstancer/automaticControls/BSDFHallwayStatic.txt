@@ -1,0 +1,53 @@
+Load Output/0-6_equipment.WRL
+Load Output/0-6_furniture_halls.WRL
+Load Output/0-6_heating.WRL
+Load Output/0-6_Lights.WRL
+Load Output/0-6_stairs_fences.WRL
+Load Output/0-7_construction.WRL
+Load Output/0-7_geometry.WRL
+Load Output/0-7_tin_plates.WRL
+Load Output/0-7_ventilation.WRL
+Load Output/7_roof.WRL
+Load Output/U-6_doors_F0_new.WRL
+Load Output/U-6_doors_F1_new.WRL
+Load Output/U-6_doors_F2_new.WRL
+Load Output/U-6_doors_F3_new.WRL
+Load Output/U-6_doors_F4_new.WRL
+Load Output/U-6_doors_F5_new.WRL
+Load Output/U-6_doors_F6_new.WRL
+Load Output/U-6_doors_FU_new.WRL
+Load Output/U-6_doors_Stair_Mid_new.WRL
+Load Output/U-6_doors_Stair_Side2_new.WRL
+Load Output/U-6_doors_Stair_Side1_new.WRL
+Load Output/U-6_windows_0F_new.WRL
+Load Output/U-6_windows_1F_new.WRL
+Load Output/U-6_windows_2F_new.WRL
+Load Output/U-6_windows_3F_new.WRL
+Load Output/U-6_windows_4F_new.WRL
+Load Output/U-6_windows_5F_new.WRL
+Load Output/U-6_windows_6F_new.WRL
+Load Output/U-6_windows_46_new.WRL
+Load Output/U-6_windows_shutters_0F.WRL
+Load Output/U-6_windows_shutters_1F.WRL
+Load Output/U-6_windows_shutters_2F.WRL
+Load Output/U-6_windows_shutters_3F.WRL
+Load Output/U-6_windows_shutters_4F.WRL
+Load Output/U-6_windows_shutters_5F.WRL
+Load Output/U-6_windows_shutters_6F.WRL
+Load Output/U-6_windows_shutters_UF.WRL
+Load Output/U-6_windows_Stairway01_new.WRL
+Load Output/U-6_windows_Stairway02_new.WRL
+Load Output/U-6_windows_UF_new.WRL
+LoadMaterialsFile materials.mat
+Anim 0 GA_AnimLength 10
+Anim 0 GA_AnimFPS 25.0
+Anim 16 A_Door 0 27 0 0 1 1 5 0 0 0 25 0 45 75 80 45 125 0 45 150 0 0
+Anim 16 A_Door 0 22 0 0 1 1 5 0 0 0 25 0 45 75 80 45 125 0 45 150 0 0
+Anim 16 A_Door 0 26 0 0 1 1 5 0 0 0 50 0 45 100 80 45 150 0 45 175 0 0
+Anim 16 A_Door 0 21 0 0 1 1 5 0 0 0 50 0 45 100 80 45 150 0 45 175 0 0
+Anim 16 A_Door 0 25 0 0 1 1 5 0 0 0 75 0 45 125 80 45 175 0 45 200 0 0
+Anim 16 A_Door 0 4 0 0 1 1 5 0 0 0 125 0 45 150 80 45 200 0 45 225 0 0
+Anim 16 A_Door 0 3 0 0 1 1 5 0 0 0 125 0 45 150 80 45 200 0 45 225 0 0
+Anim 16 A_Door 0 24 0 0 1 1 5 0 0 0 125 0 45 150 80 45 200 0 45 225 0 0
+ExportToPBRT 5 HallwayStatic_header PBRTExport/HallwayStatic exr volpath 800 600 1024 1
+ExportToMitsuba 5 HallwayStatic_header MitsubaExport/HallwayStatic path 800 600 2048 1

@@ -1,0 +1,67 @@
+Load Output/0-6_equipment.WRL
+Load Output/0-6_furniture_halls.WRL
+Load Output/0-6_heating.WRL
+Load Output/0-6_Lights.WRL
+Load Output/0-6_stairs_fences.WRL
+Load Output/0-7_construction.WRL
+Load Output/0-7_geometry.WRL
+Load Output/0-7_tin_plates.WRL
+Load Output/0-7_ventilation.WRL
+Load Output/7_roof.WRL
+Load Output/U-6_doors_F0_new.WRL
+Load Output/U-6_doors_F1_new.WRL
+Load Output/U-6_doors_F2_new.WRL
+Load Output/U-6_doors_F3_new.WRL
+Load Output/U-6_doors_F4_new.WRL
+Load Output/U-6_doors_F5_new.WRL
+Load Output/U-6_doors_F6_new.WRL
+Load Output/U-6_doors_FU_new.WRL
+Load Output/U-6_doors_Stair_Mid_new.WRL
+Load Output/U-6_doors_Stair_Side2_new.WRL
+Load Output/U-6_doors_Stair_Side1_new.WRL
+Load Output/U-6_windows_0F_new.WRL
+Load Output/U-6_windows_1F_new.WRL
+Load Output/U-6_windows_2F_new.WRL
+Load Output/U-6_windows_3F_new.WRL
+Load Output/U-6_windows_4F_new.WRL
+Load Output/U-6_windows_5F_new.WRL
+Load Output/U-6_windows_6F_new.WRL
+Load Output/U-6_windows_46_new.WRL
+Load Output/U-6_windows_shutters_0F.WRL
+Load Output/U-6_windows_shutters_1F.WRL
+Load Output/U-6_windows_shutters_2F.WRL
+Load Output/U-6_windows_shutters_3F.WRL
+Load Output/U-6_windows_shutters_4F.WRL
+Load Output/U-6_windows_shutters_5F.WRL
+Load Output/U-6_windows_shutters_6F.WRL
+Load Output/U-6_windows_shutters_UF.WRL
+Load Output/U-6_windows_Stairway01_new.WRL
+Load Output/U-6_windows_Stairway02_new.WRL
+Load Output/U-6_windows_UF_new.WRL
+LoadMaterialsFile materials.mat
+SubstituteForBTF BF_brown01 btfs/BF_brown01
+SubstituteForBTF BF_white01 btfs/BF_white01
+SubstituteForBTF BF_white02 btfs/BF_white02
+SubstituteForBTF CH_white01 btfs/CH_white01
+SubstituteForBTF CH_white02 btfs/CH_white02
+SubstituteForBTF CH_white04 btfs/CH_white04
+SubstituteForBTF CH_white05 btfs/CH_white05
+SubstituteForBTF BF_gray01 btfs/BF_gray01
+SubstituteForBTF CH_gray02 btfs/CH_gray02
+SubstituteForBTF CH_gray03 btfs/CH_gray03
+SubstituteForBTF BF_gray04 btfs/BF_gray04
+SubstituteForBTF CH_yellow01 btfs/CH_yellow01
+SubstituteForBTF CH_yellow02 btfs/CH_yellow02
+SubstituteForBTF CH_alum02 btfs/CH_alum02
+SubstituteForBTF CH_violet01 btfs/CH_violet01
+SubstituteForBTF CH_construction btfs/CH_construction
+SubstituteForBTF CH_pavers01 btfs/CH_pavers01
+SubstituteForBTF BF_red02 btfs/BF_red02
+SubstituteForBTF BF_green01 btfs/BF_green01
+SubstituteForBTF CH_alum03 btfs/CH_alum03
+Anim 0 GA_AnimLength 10
+Anim 0 GA_AnimFPS 25.0
+Anim 10 A_Door 32 0 0 0 1 1 3 0 0 0 75 180 0 150 360 0
+Anim 6 A_Camera 0 22 1 1 1 1 3 0.0 1.03015 2.61915 -2.0841 0.0 1.0 0.0 -3.18068 0 0 0 120.0 1.03015 2.61915 -1.56841 0.0 1.0 0.0 -2.28935 0 0 0 240.0 1.03015 2.61915 -2.0841 0.0 1.0 0.0 0 0 0 0
+ExportToPBRT 22 EntranceBTF_header PBRTExport/EntranceBTF exr volpath 800 600 1024 1
+ExportToMitsuba 22 EntranceBTF_header MitsubaExport/EntranceBTF path 800 600 2048 1

@@ -61,6 +61,7 @@ else:
             
         print('Loaded ' + scene_file_name_stripped)
         img = mi.render(scene)
+        mi.Bitmap(img).write('out.exr')
         bitmap_image = mi.Bitmap(img)
 
         bitmap_image = bitmap_image.convert(mi.Bitmap.PixelFormat.RGB, mi.Struct.Type.UInt8, True)
