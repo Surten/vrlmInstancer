@@ -13,7 +13,7 @@
 
 #define RAD_TO_DEG(angle)   ((angle)*57.29577951308f)
 
-#define USE_FOR_CHECKERBOARD_RENDER
+//#define USE_FOR_CHECKERBOARD_RENDER
 
 PbrtExporter::PbrtExporter(AnimationInfo* animInfo) : animInfo(animInfo)
 {
@@ -218,14 +218,14 @@ void PbrtExporter::writeLightSource(LightNode* lightNode) {
 
 	outGeometry << " AttributeBegin" << std::endl;
 
-	float mult = 106.0f;
+	float mult = 15.f;
 	switch (lightNode->lightType)
 	{
 	case LightNode::LightType::SPOTLIGHT:
 		outGeometry << " LightSource \"spot\"" << std::endl;
 		outGeometry << "    \"point3 from\" [" << lightNode->location << " ]" << std::endl;
 		outGeometry << "    \"point3 to\" [" << lightNode->location + lightNode->direction << " ]" << std::endl;
-		outGeometry << "    \"rgb I\" [" << lightNode->color * (lightNode->intensity * mult) << " ]" << std::endl;
+		outGeometry << "    \"rgb I\" [" << lightNode->color * (lightNode->intensity * 106.f) << " ]" << std::endl;
 		outGeometry << "    \"float coneangle\" [" << 60 << " ]" << std::endl;
 		outGeometry << "    \"float conedeltaangle\" [" << 80 << " ]" << std::endl;
 		break;
@@ -238,7 +238,7 @@ void PbrtExporter::writeLightSource(LightNode* lightNode) {
 			lightNode->url = lightNode->url + ".exr";
 		}
 		outGeometry << "    \"string filename\" [ \"" << lightNode->url << "\" ]" << std::endl;
-		outGeometry << "    \"rgb I\" [" << lightNode->color * lightNode->intensity << " ]" << std::endl;
+		outGeometry << "    \"rgb I\" [" << lightNode->color * lightNode->intensity * mult << " ]" << std::endl;
 
 		break;
 	case LightNode::LightType::ENVIROMENTAL_LIGHT:
@@ -310,8 +310,9 @@ void PbrtExporter::writeGeometry(Scene* scene){
 }
 
 void PbrtExporter::writeObjectInstances(Scene* scene) {
-	for (auto geometry : scene->geometries)
+	for (Geometry* geometry : scene->geometries)
 	{
+
 		outGeometry << " ObjectBegin \"" << geometry->name << "_" << geometryAppendString << "\"" << std::endl;
 #ifdef USE_FOR_CHECKERBOARD_RENDER
 		if (geometry->textureCoords.size() > 0) {

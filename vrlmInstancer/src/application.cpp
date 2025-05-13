@@ -164,7 +164,7 @@ void Application::AutomaticMode(std::string fileName){
                 std::cout << "Loaded, Id: " << sceneCount << "Name: " << referenceSceneFilePath << std::endl;
                 sceneCount++;
             }
-            sm.convertSceneSpotLightsToGonioLights(sceneName, fileStringPlaceholder);
+            sm.convertSceneSpotLightsToGonioLights(sceneName, referenceSceneFilePath);
         }
         else if (command == "ExportToPBRT")
         {

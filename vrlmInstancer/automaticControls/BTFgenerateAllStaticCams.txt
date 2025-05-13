@@ -81,57 +81,57 @@ SubstituteForBTF CH_pavers01 btfs/CH_pavers01
 SubstituteForBTF BF_red02 btfs/BF_red02
 SubstituteForBTF BF_green01 btfs/BF_green01
 SubstituteForBTF CH_alum03 btfs/CH_alum03
-ExportToPBRT 0 cam01_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 1
-ExportToPBRT 1 cam02_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
+ExportToPBRT 1 cam02_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 1
 ExportToPBRT 2 cam03_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
 ExportToPBRT 3 cam04_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
 ExportToPBRT 5 cam06_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
 ExportToPBRT 6 cam07_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
+ExportToPBRT 0 cam08_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
 ExportToPBRT 8 cam09_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
 ExportToPBRT 9 cam10_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
 ExportToPBRT 10 cam11_volpath PBRTExport/staticSceneCamBTF exr volpath 2000 1320 1024 0
-ExportToPBRT 0 cam01_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
 ExportToPBRT 1 cam02_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
 ExportToPBRT 2 cam03_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
 ExportToPBRT 3 cam04_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
 ExportToPBRT 5 cam06_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
 ExportToPBRT 6 cam07_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
+ExportToPBRT 0 cam08_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
 ExportToPBRT 8 cam09_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
 ExportToPBRT 9 cam10_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
 ExportToPBRT 10 cam11_simplepath PBRTExport/staticSceneCamBTF exr simplepath 2000 1320 1024 0
-ExportToPBRT 0 cam01_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
 ExportToPBRT 1 cam02_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
 ExportToPBRT 2 cam03_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
 ExportToPBRT 3 cam04_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
 ExportToPBRT 5 cam06_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
 ExportToPBRT 6 cam07_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
+ExportToPBRT 0 cam08_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
 ExportToPBRT 8 cam09_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
 ExportToPBRT 9 cam10_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
 ExportToPBRT 10 cam11_mlt PBRTExport/staticSceneCamBTF exr mlt 2000 1320 1024 0
-ExportToMitsuba 0 cam01_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 1
-ExportToMitsuba 1 cam02_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
+ExportToMitsuba 1 cam02_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 1
 ExportToMitsuba 2 cam03_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
 ExportToMitsuba 3 cam04_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
 ExportToMitsuba 5 cam06_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
 ExportToMitsuba 6 cam07_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
+ExportToMitsuba 0 cam08_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
 ExportToMitsuba 8 cam09_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
 ExportToMitsuba 9 cam10_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
 ExportToMitsuba 10 cam11_path MitsubaExport/staticSceneCamBTF path 2000 1320 2048 0
-ExportToMitsuba 0 cam01_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
 ExportToMitsuba 1 cam02_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
 ExportToMitsuba 2 cam03_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
 ExportToMitsuba 3 cam04_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
 ExportToMitsuba 5 cam06_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
 ExportToMitsuba 6 cam07_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
+ExportToMitsuba 0 cam08_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
 ExportToMitsuba 8 cam09_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
 ExportToMitsuba 9 cam10_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
 ExportToMitsuba 10 cam11_direct MitsubaExport/staticSceneCamBTF direct 2000 1320 2048 0
-ExportToMitsuba 0 cam01_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
 ExportToMitsuba 1 cam02_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
 ExportToMitsuba 2 cam03_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
 ExportToMitsuba 3 cam04_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
 ExportToMitsuba 5 cam06_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
 ExportToMitsuba 6 cam07_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
+ExportToMitsuba 0 cam08_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
 ExportToMitsuba 8 cam09_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
 ExportToMitsuba 9 cam10_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0
 ExportToMitsuba 10 cam11_ptracer MitsubaExport/staticSceneCamBTF ptracer 2000 1320 2048 0

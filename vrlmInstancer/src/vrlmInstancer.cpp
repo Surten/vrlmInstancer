@@ -11,7 +11,6 @@
 int main()
 {
     //std::string fileName = "automaticFileTest.txt";
-    //std::string fileName = "switchLightsToGonio.txt";
     //std::string fileName = "automaticControls/ExportIndividualObjectsWithTextureToPBRT.txt";
     //std::string fileName = "automaticControls/FullPassNoTexture.txt";
     //std::string fileName = "automaticControls/geometryConvert.txt";
@@ -29,22 +28,23 @@ int main()
 
     //controlFiles.push_back("automaticControls/FullPass.txt");
     //controlFiles.push_back("automaticControls/InstanceAll.txt");
+    //controlFiles.push_back("automaticControls/switchLightsToGonio.txt");
     
-    //controlFiles.push_back("automaticControls/generateAllStaticCams.txt");
-    //controlFiles.push_back("automaticControls/HallwayStatic.txt");
-    //controlFiles.push_back("automaticControls/Entrance.txt");
-    //controlFiles.push_back("automaticControls/Hallway.txt");
-    //controlFiles.push_back("automaticControls/IntoAtrium.txt");
-    //controlFiles.push_back("automaticControls/Roundel.txt");
+    controlFiles.push_back("automaticControls/BSDFgenerateAllStaticCams.txt");
+    controlFiles.push_back("automaticControls/BSDFHallwayStatic.txt");
+    controlFiles.push_back("automaticControls/BSDFEntrance.txt");
+    controlFiles.push_back("automaticControls/BSDFHallway.txt");
+    controlFiles.push_back("automaticControls/BSDFIntoAtrium.txt");
+    controlFiles.push_back("automaticControls/BSDFRoundel.txt");
 
-    //controlFiles.push_back("automaticControls/BTFgenerateAllStaticCams.txt");
-    //controlFiles.push_back("automaticControls/BTFHallwayStatic.txt");
-    //controlFiles.push_back("automaticControls/BTFEntrance.txt");
-    //controlFiles.push_back("automaticControls/BTFHallway.txt");
-    //controlFiles.push_back("automaticControls/BTFIntoAtrium.txt");
-    //controlFiles.push_back("automaticControls/BTFRoundel.txt");
+    controlFiles.push_back("automaticControls/BTFgenerateAllStaticCams.txt");
+    controlFiles.push_back("automaticControls/BTFHallwayStatic.txt");
+    controlFiles.push_back("automaticControls/BTFEntrance.txt");
+    controlFiles.push_back("automaticControls/BTFHallway.txt");
+    controlFiles.push_back("automaticControls/BTFIntoAtrium.txt");
+    controlFiles.push_back("automaticControls/BTFRoundel.txt");
 
-    controlFiles.push_back("automaticControls/ExportIndividualObjectsWithTextureToPBRT.txt");
+    //controlFiles.push_back("automaticControls/ExportIndividualObjectsWithTextureToPBRT.txt");
 
     for(std::string& controlFile : controlFiles)
     {

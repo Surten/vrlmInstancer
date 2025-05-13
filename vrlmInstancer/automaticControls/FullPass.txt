@@ -84,12 +84,6 @@ LoadTextured textured/Door_08.wrl
 LoadTextured textured/Door_09.wrl
 LoadTextured textured/Door_09_B.wrl
 LoadTextured textured/Door_10.wrl
-LoadTextured textured/door_type_01_L.wrl
-LoadTextured textured/door_type_01_R.wrl
-LoadTextured textured/door_type_02_L.wrl
-LoadTextured textured/door_type_02_R.wrl
-LoadTextured textured/door_type_03_L.wrl
-LoadTextured textured/door_type_03_R.wrl
 LoadTextured textured/door_type_04.wrl
 LoadTextured textured/door_type_05.wrl
 LoadTextured textured/elevator_01.wrl

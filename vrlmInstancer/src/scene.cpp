@@ -111,8 +111,6 @@ void Scene::findIdenticalGeometry(std::vector<std::pair<int, int>> & geoPairs) {
 		int nPoints = static_cast<int>(geometries.at(i)->coords.size());
 		AABB aabb = geometries[i]->getAABB();
 		vec3 centerOfGravity = geometries[i]->getCenterOfGravity();
-
-		vec3 diagonal = aabb.getDiagonal();
 		vec3 vectorToGravCenter = centerOfGravity - aabb.getArithmeticCenter();
 
 		// Traverse all remaining geometries (from current to the end)
@@ -225,11 +223,14 @@ void Scene::findAndUseSameObjects(Scene* otherScene) {
 		geoPairs[i].first->facesPointsIndex = geoPairs[i].second->facesPointsIndex;
 		geoPairs[i].first->textureCoords = geoPairs[i].second->textureCoords;
 		geoPairs[i].first->facesTextureIndex = geoPairs[i].second->facesTextureIndex;
+
 		geoPairs[i].first->parent->textureFilePath = geoPairs[i].second->parent->textureFilePath;
 		geoPairs[i].first->parent->textureType = geoPairs[i].second->parent->textureType;
+		//geoPairs[i].first->parent->material = geoPairs[i].second->parent->material;
 		for (size_t j = 0; j < geoPairs[i].first->otherShapeNodesUsingMe.size(); j++) {
 			geoPairs[i].first->otherShapeNodesUsingMe[j]->textureFilePath = geoPairs[i].second->parent->textureFilePath;
 			geoPairs[i].first->otherShapeNodesUsingMe[j]->textureType = geoPairs[i].second->parent->textureType;
+			//geoPairs[i].first->otherShapeNodesUsingMe[j]->material = geoPairs[i].second->parent->material;
 		}
 	}
 
@@ -277,11 +278,17 @@ void Scene::convertSpotLightsToGonioLights(Scene* lightReferences) {
 		{
 			lights[i]->url = referenceLight->url;
 			lights[i]->intensity = referenceLight->intensity;
+			lights[i]->color = referenceLight->color;
+			lights[i]->direction = referenceLight->direction;
+			lights[i]->on = referenceLight->on;
 		}
 		else
 		{
 			lights[i]->url = "IESrjh_ts.ies";
 			lights[i]->intensity = 106.230003f;
+			lights[i]->color = vec3(1.f,1.f,1.f);
+			lights[i]->direction = vec3(0.f, -1.f, 0.f);
+			lights[i]->on = true;
 		}
 		lights[i]->lightType = LightNode::LightType::GONIOLIGHT;
 	}

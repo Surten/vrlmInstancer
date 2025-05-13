@@ -1,5 +1,4 @@
-Load Orig/0-6_Lights.WRL
+Load Output/0-6_Lights.WRL
 InstanceAll
-SwitchLightsToGonio Orig/0-6_Lights.WRL lights_all_on.wrl
-ScaleAllScenes
-SaveId 0 Output/Lights.WRL
+SwitchLightsToGonio Output/0-6_Lights.WRL lights_all_on.wrl
+SaveId 0 Output/0-6_Lights.WRL
