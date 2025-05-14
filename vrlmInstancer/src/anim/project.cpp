@@ -152,6 +152,19 @@ void Project::readProject(std::string actualLine)
 		scene->hasAnimatedCamera = true;
 		animInfo->setDoAnimFlag(true);
 	}
+
+	// Action - Light Switch
+	if (((int)actualLine.find("A_LightSwitch") > -1) && (actualLine.find("#") >= NOPE)) {
+		index = (int)actualLine.find(' ');
+		std::string line = actualLine.substr(index + 1);
+
+		ActionNodeLightSwitch* lightSwitchNode = new ActionNodeLightSwitch();
+		lightSwitchNode->setActionType(ACTION_LIGHT_SWITCH);
+
+		lightSwitchNode->parseInput(line);
+
+		this->retActionList()->insertNode(lightSwitchNode);
+	}
 }
 
 
@@ -207,6 +220,11 @@ void Project::executeActions()
 			ActionNodeCamera * helpC = static_cast<ActionNodeCamera*> (help);
 
 			helpC->executeNode(scene);
+		}
+		else if (help->retActionType() == ACTION_LIGHT_SWITCH) {
+			ActionNodeLightSwitch* helpLS = static_cast<ActionNodeLightSwitch*> (help);
+
+			helpLS->executeNode(scene);
 		}
 
 		help = help->retNext();
@@ -1799,4 +1817,100 @@ void ActionNodeCamera::executeNode(Scene* scene)
 	scene->Cameras[this->retObjectIndex()]->animList->setInterpMode(this->retInterpolation());
 }
 
+//----------------------------------------------------------------------------------------------
+ActionNodeLightSwitch::ActionNodeLightSwitch()
+//----------------------------------------------------------------------------------------------
+{
+	this->m_bOn = false;
+	this->m_iLightFloor = 0;
+	this->m_iLightSection = 0;
+};
 
+
+//----------------------------------------------------------------------------------------------
+void ActionNodeLightSwitch::parseInput(std::string input)
+//----------------------------------------------------------------------------------------------
+{
+	int index = (int)input.find(' ');
+	std::string applyMode = input.substr(0, index);
+
+	input = input.substr(index + 1);
+	index = (int)input.find(' ');
+	std::string lightsOn = input.substr(0, index);
+
+	input = input.substr(index + 1);
+	index = (int)input.find(' ');
+	std::string floor = input.substr(0, index);
+
+	input = input.substr(index + 1);
+	std::string section = input;
+
+	this->setAppMode(atoi(applyMode.c_str()));
+
+	if (atoi(lightsOn.c_str()) == 0) {
+		this->setOn(false);
+	}
+	else {
+		this->setOn(true);
+	}
+
+	this->setLightSwitchFloor(atoi(floor.c_str()));
+	this->setLightSwitchSection(atoi(section.c_str()));
+}
+
+
+//----------------------------------------------------------------------------------------------
+void ActionNodeLightSwitch::executeNode(Scene* scene)
+//----------------------------------------------------------------------------------------------
+{
+
+	// Branch according to the application mode
+
+	// Switch lights in one section
+	if (this->retAppMode() == APPLY_SECTION) {
+
+		// Iterate throught the list of lights and set the proper values for all lights in the specified section		
+		for (int i = 0; i < scene->lights.size(); i++) {
+			// Point to the current node
+			LightNode* temp = scene->lights[i];
+			// Check if the light is in the same section and floor
+			if ((this->retLightSwitchFloor() == temp->retFloorNumber()) &&
+				(this->retLightSwitchSection() == temp->retSectionNumber())) {
+
+				temp->on = this->retOn();
+			}
+			
+		}
+	}
+	// Switch lights on one floor
+	else if (this->retAppMode() == APPLY_FLOOR) {
+
+		LightNode* tempAllL;
+		// Iterate throught the list of lights and set the proper values for all lights in the specified section		
+		for (int i = 0; i < scene->lights.size(); i++) {
+			// Point to the current node
+			LightNode* temp = scene->lights[i];
+
+			// Check if the light is in the same floor
+			if (this->retLightSwitchFloor() == temp->retFloorNumber()) {
+
+				temp->on = this->retOn();
+			}
+			
+		}
+	}
+
+	// Switch all lights
+	else if (this->retAppMode() == APPLY_ALL) {
+
+		// Iterate throught the list of lights and set the proper values for all lights in the specified section		
+		for (int i = 0; i < scene->lights.size(); i++) {
+			// Point to the current node
+			LightNode* temp = scene->lights[i];
+
+
+			temp->on = this->retOn();
+		}
+		
+	}
+}

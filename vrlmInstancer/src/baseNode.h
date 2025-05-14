@@ -168,6 +168,41 @@ private:
 /// </summary>
 class LightNode : public BaseNode {
 public:
+	LightNode() : BaseNode("", NodeTypes::Light), intensity(0), color(), location(), direction(),
+		cutOffAngle(0), beamWidth(0), on(false), radius(0), lightType(LightType::SPOTLIGHT) {}
+
+
+	/// Zjisti z nazvu uzlu umisteni svetla v patre + cislo svetelneho okruhu, orizne jmeno svetla
+	void correctName(void);
+	/// Vrati ciselnou hodnotu svetleneho okruhu
+	int retSectionNumber();
+	/// Vrati ciselnou hodnotu podlazi svetla
+	int retFloorNumber();
+	/// Nastavi podlazi vyskytu svetla dle celociselne hodnoty
+	void setFloorNumber(int);
+	/// Nastavi sekci svetla dle ciselne hodnoty
+	void setSectionNumber(int);
+
+
+	/// Sets the has been animated flag
+	void setHasAnimated(bool flag) { m_bHasAnimated = flag; }
+	/// Returns the has animated flag
+	bool retHasAnimated(void) { return m_bHasAnimated; }
+	/// Returns the animation list
+	AnimationList* retAnimationList(void) { return animList; }
+	/// Initializes the animationList object
+	void initAnimList(void) { animList = new AnimationList(); }
+	/// Clears the animtion lists objects
+	void clearAnimList(void);
+	/// Copies the provided animation list with doors
+	void copyAnimList(AnimationList* list);
+	/// Returns the current on/off state of the light
+	bool retCurrentIsOn(AnimationInfo* animInfo);
+	/// Returns the current intensity of the light
+	int retCurrentIntensity(AnimationInfo* animInfo);
+
+
+public:
 	float intensity;
 	vec3 color;
 	vec3 location;
@@ -178,17 +213,25 @@ public:
 	float radius;
 	std::string url;
 
+
+	/// Cislo patra, ve kterem se osvetleni nachazi(da se zjistit ze jmena svetla)
+	ObjectFloor floorNumber;
+	/// Cislo svetelneho okruhu v patre
+	ObjectSection lightSection;
+	/// Typ svetla
+	int lType;
+
 	enum class LightType {
 		SPOTLIGHT,
 		GONIOLIGHT,
-		ENVIROMENTAL_LIGHT	// only default for pbrt, parsing not supported
+		ENVIROMENTAL_LIGHT		// only default for pbrt, parsing not supported
 	};
 	LightType lightType;
 	
-
-
-	LightNode() : BaseNode("", NodeTypes::Light), intensity(0), color(), location(), direction(),
-		cutOffAngle(0), beamWidth(0), on(false), radius(0), lightType(LightType::SPOTLIGHT) {}
+	/// Flag if the light has been animated 
+	bool m_bHasAnimated;
+	/// Pointer to a list with animation checkpoints
+	AnimationList* animList;
 
 
 

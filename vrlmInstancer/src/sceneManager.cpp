@@ -50,6 +50,11 @@ bool SceneManager::loadScene(const std::string& filePath)
 	// Check for the windows objects
 	CheckListWindows(scene->RootNodes);
 
+	for (LightNode* lightNode : scene->lights)
+	{
+		lightNode->correctName();
+	}
+
 	scenes.push_back(scene);
 	return true;
 }

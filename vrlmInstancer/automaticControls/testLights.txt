@@ -1,0 +1,7 @@
+Load Output/0-6_equipment.WRL
+Load Output/0-6_Lights.WRL
+Anim 1 A_LightSwitch 2 1 2 1
+LoadMaterialsFile materials.mat
+ExportToPBRT 1 cam02_volpath PBRTExport/staticSceneCam exr volpath 2000 1320 1024 1
+ExportToMitsuba 1 cam02_path MitsubaExport/staticSceneCam path 2000 1320 2048 1
+ 

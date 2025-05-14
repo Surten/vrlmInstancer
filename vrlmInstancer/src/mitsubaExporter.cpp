@@ -495,6 +495,8 @@ void MitsubaExporter::writeAllLights(Scene* scene, int depth)
 
 void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
 {
+	if (lightNode->on == false) return;
+
 	if (false)
 	{
 		writeElementBegScene("emitter", { "type", "point" }, depth);

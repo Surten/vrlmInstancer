@@ -287,6 +287,46 @@ public:
 };
 
 
+/// Action node for the light switch
+/// It inherits from the parent ActionNode class
+class ActionNodeLightSwitch : public ActionNode {
+
+	/// Camera on
+	bool m_bOn;
+	/// Section of the lights
+	int m_iLightSection;
+	/// Floor of the lights
+	int m_iLightFloor;
+
+public:
+	/// Constructor
+	ActionNodeLightSwitch();
+
+	/// Sets the light on flag
+	void setOn(bool flag) { this->m_bOn = flag; }
+	/// Returns the light on flag
+	bool retOn(void) { return this->m_bOn; }
+	/// Sets the light floor
+	void setLightSwitchFloor(int floor) { this->m_iLightFloor = floor; }
+	/// Returns the light floor
+	int retLightSwitchFloor(void) { return this->m_iLightFloor; }
+	/// Sets the light section
+	void setLightSwitchSection(int section) { this->m_iLightSection = section; }
+	/// Returns the light section
+	int retLightSwitchSection(void) { return this->m_iLightSection; }
+
+
+	/// Writes the light switch action node into the given output stream
+	void writeLightSwitchNode(std::ofstream& out);
+
+	/// Parses the given string and extracts individual parameters
+	void parseInput(std::string input);
+
+	/// Executes this action node
+	void executeNode(Scene* scene);
+};
+
+
 
 ///Class storing a linked list of actions performed by the user
 class ActionList{

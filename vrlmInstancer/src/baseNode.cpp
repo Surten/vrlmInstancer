@@ -3,6 +3,8 @@
 #include "geometryModify.h"
 #include "error.h"
 #include "constants.h"
+#include "animation.h"
+#include "scene_anim.h"
 
 
 
@@ -121,6 +123,7 @@ void TransformNode::setWindowAxis(void)
 
 	Error("Could not find the node with window joints");
 }
+
 
 
 

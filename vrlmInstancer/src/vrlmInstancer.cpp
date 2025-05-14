@@ -30,19 +30,21 @@ int main()
     //controlFiles.push_back("automaticControls/InstanceAll.txt");
     //controlFiles.push_back("automaticControls/switchLightsToGonio.txt");
     
-    controlFiles.push_back("automaticControls/BSDFgenerateAllStaticCams.txt");
-    controlFiles.push_back("automaticControls/BSDFHallwayStatic.txt");
-    controlFiles.push_back("automaticControls/BSDFEntrance.txt");
-    controlFiles.push_back("automaticControls/BSDFHallway.txt");
-    controlFiles.push_back("automaticControls/BSDFIntoAtrium.txt");
-    controlFiles.push_back("automaticControls/BSDFRoundel.txt");
+    controlFiles.push_back("automaticControls/testLights.txt");
+    
+    //controlFiles.push_back("automaticControls/BSDFgenerateAllStaticCams.txt");
+    //controlFiles.push_back("automaticControls/BSDFHallwayStatic.txt");
+    //controlFiles.push_back("automaticControls/BSDFEntrance.txt");
+    //controlFiles.push_back("automaticControls/BSDFHallway.txt");
+    //controlFiles.push_back("automaticControls/BSDFIntoAtrium.txt");
+    //controlFiles.push_back("automaticControls/BSDFRoundel.txt");
 
-    controlFiles.push_back("automaticControls/BTFgenerateAllStaticCams.txt");
-    controlFiles.push_back("automaticControls/BTFHallwayStatic.txt");
-    controlFiles.push_back("automaticControls/BTFEntrance.txt");
-    controlFiles.push_back("automaticControls/BTFHallway.txt");
-    controlFiles.push_back("automaticControls/BTFIntoAtrium.txt");
-    controlFiles.push_back("automaticControls/BTFRoundel.txt");
+    //controlFiles.push_back("automaticControls/BTFgenerateAllStaticCams.txt");
+    //controlFiles.push_back("automaticControls/BTFHallwayStatic.txt");
+    //controlFiles.push_back("automaticControls/BTFEntrance.txt");
+    //controlFiles.push_back("automaticControls/BTFHallway.txt");
+    //controlFiles.push_back("automaticControls/BTFIntoAtrium.txt");
+    //controlFiles.push_back("automaticControls/BTFRoundel.txt");
 
     //controlFiles.push_back("automaticControls/ExportIndividualObjectsWithTextureToPBRT.txt");
 

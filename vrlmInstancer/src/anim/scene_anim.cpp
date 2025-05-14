@@ -7,6 +7,7 @@ Soubor s definicemi trid popisujicich scenu.
 
 #define _USE_MATH_DEFINES
 #include "scene.h"
+#include "baseNode.h"
 #include "matrix.h"
 #include "error.h"
 #include "constants.h"
@@ -1571,4 +1572,530 @@ void WindowInfo::copyAnimList(AnimationList * list)
 
 		help = help->retAnimNext();
 	}
+}
+
+
+
+//----------------------------------------------------------------------------------------------
+void LightNode::correctName(void)
+//----------------------------------------------------------------------------------------------
+{
+	const char* nName = name.c_str();
+	// Samozrejme se daji parametry zjistit pouze pokud je ukazatel nenulovy
+	// a skryva tak nejaky nazev uzlu
+	if (nName != NULL) {
+		int stringLength = (int)strlen(nName);
+		// Pokud je jmeno zapsano korektne dle definice, pak obsahuje prave 4x '_' + min(1x 'S' && 1x 'F' && 1x 'N' && 1x 'T')
+		// Projedu string jako kdyby to bylo pole a zjistim, zda odpovida pocet "nutnych" znaku
+		int numOf_ = 0;
+		int numOfS = 0;
+		int numOfF = 0;
+		int numOfN = 0;
+		int numOfT = 0;
+		for (int i = 0; i < stringLength; i++) {
+			char ch = nName[i];
+			switch (ch) {
+			case '_':
+				numOf_++;
+				break;
+			case 'S':
+			case 's':
+				numOfS++;
+				break;
+			case 'F':
+			case 'f':
+				numOfF++;
+				break;
+			case 'N':
+			case 'n':
+				numOfN++;
+				break;
+			case 'T':
+			case 't':
+				numOfT++;
+				break;
+			default:
+				break;
+			}
+		}
+		bool nameMaybeValid = false;
+		if (numOf_ >= 4 && numOfS >= 1 && numOfF >= 1 && numOfN >= 1 && numOfT >= 2)
+			nameMaybeValid = true;
+
+		// Pokud by nazev uzlu mohl byt korektni, pak ho detailne zkontroluj,
+		// pokud ne, pak ho ponech a nastav defaultni hodnoty
+		if (nameMaybeValid) {
+			//printf("1 .. nName = %s\n", nName);
+
+			// Zjistim index prvniho vyskytu dvojznaku "_F"
+			int posF = (int)(strstr(nName, "_F") - nName);
+			// Pred timto prvnim vyskytem vse ponecham jako nove jmeno
+			// a oriznu aktualni jmeno uzlu na kratsi verzi
+			int length1 = posF + 5;
+			char* newName = new char[length1];
+			for (int i = 0; i < posF; i++)
+				newName[i] = nName[i]; // copy the initial string
+
+			// section
+			int posS = (int)(strstr(nName, "_S") - nName);
+			char str1[10];
+			bool flag = 0;
+			int i;
+			for (i = 0; i < 10; i++) {
+				str1[i] = nName[posS + i + 2];
+				if (str1[i] == '_') { flag = 1; str1[i] = 0; break; }
+			} // for i
+			if (!flag) {
+				Error("Problem parsing the info about light - section \n");
+				abort();
+			}
+			int sN = atoi(str1);
+			if ((sN < 0) && (sN > 20)) {
+				Error("sN index out of bounds");
+			}
+			//assert((sN>= 0)&&(sN <= 20));
+			//printf("str1 = %s posS = %d sN=%d\n", str1, posS, sN);
+
+			// floor
+			flag = 0;
+			for (i = 0; i < 10; i++) {
+				str1[i] = nName[posF + i + 2];
+				if (str1[i] == '_') { flag = 1; str1[i] = 0; break; }
+			} // for i
+			if (!flag) {
+				Error("Problem parsing the info about light - floor\n");
+				abort();
+			}
+			int fN = atoi(str1);
+			if ((fN < -1) && (sN > 20)) {
+				Error("fN index out of bounds");
+			}
+			//assert((fN>= -1)&&(sN <= 20));
+
+			//printf("2 .. nName = %s\n", nName);
+
+			// type
+			int posT = (int)(strstr(nName, "_T") - nName);
+			flag = 0;
+			for (i = 0; i < 10; i++) {
+				str1[i] = nName[posT + i + 2];
+				if (str1[i] == '_') { flag = 1; str1[i] = 0; break; }
+			} // for i
+			if (!flag) {
+				Error("Problem parsing the info about light - floor\n");
+				abort();
+			}
+			int lT = atoi(str1);
+			if ((lT < -1) && (lT > 20)) {
+				Error("lT index out of bounds");
+			}
+			//	assert((lT>= -1)&&(lT <= 20));
+
+			//printf("nName = %s posF = %d newName = %s\n", nName, posF, newName);
+			//printf("fN = %d sN = %d lT = %d\n", fN, sN, lT);
+
+			int posLNumber = (int)(strstr(nName, "_N") - nName);
+
+			// Nastavim hned za jmeno svetla jeho cislo vyskytu a aktualizuju nazev svetla
+			newName[posF] = '_';
+			posF++;
+			posLNumber += 2;
+			//printf("posL = %d posF = %d\n", posLNumber, posF);
+			for (i = 0; i < length1; i++) {
+				newName[posF + i] = nName[posLNumber + i];
+				//printf("%c\n", newName[posF+i]);
+				if (newName[posF + i] == 0)
+					break;
+			} // for i;
+
+			//printf("3 .. nName = %s\n", nName);
+
+			//printf("nName = %s posF = %d newName = %s\n", nName, posF, newName);
+			//printf("fN = %d sN = %d lT = %d\n", fN, sN, lT);
+
+			name = newName;
+			delete[] newName;
+
+			//printf("3 .. nName = %s\n", nName);
+
+			floorNumber = retFloor(fN);
+			lightSection = retSection(sN);
+			lType = lT;
+		}
+		else {
+			floorNumber = _FLOOR_NDEF;
+			lightSection = _SECTION_NDEF;
+			lType = -1;
+		}
+	}
+	else {
+		floorNumber = _FLOOR_NDEF;
+		lightSection = _SECTION_NDEF;
+		lType = -1;
+	}
+}
+
+
+//----------------------------------------------------------------------------------------------
+int LightNode::retFloorNumber()
+//----------------------------------------------------------------------------------------------
+{
+	switch (floorNumber) {
+	case _FLOOR_NDEF:
+		return -1;
+		break;
+	case _G_FLOOR:
+		return 0;
+		break;
+	case _1_FLOOR:
+		return 1;
+		break;
+	case _2_FLOOR:
+		return 2;
+		break;
+	case _3_FLOOR:
+		return 3;
+		break;
+	case _4_FLOOR:
+		return 4;
+		break;
+	case _5_FLOOR:
+		return 5;
+		break;
+	case _6_FLOOR:
+		return 6;
+		break;
+	case _7_FLOOR:
+		return 7;
+		break;
+	case _8_FLOOR:
+		return 8;
+		break;
+	case _9_FLOOR:
+		return 9;
+		break;
+	case _10_FLOOR:
+		return 10;
+		break;
+	default:
+		return -1;
+		break;
+	}
+}
+
+
+//----------------------------------------------------------------------------------------------
+int LightNode::retSectionNumber()
+//----------------------------------------------------------------------------------------------
+{
+	switch (lightSection) {
+	case _SECTION_NDEF:
+		return -1;
+		break;
+	case _1_SECTION:
+		return 1;
+		break;
+	case _2_SECTION:
+		return 2;
+		break;
+	case _3_SECTION:
+		return 3;
+		break;
+	case _4_SECTION:
+		return 4;
+		break;
+	case _5_SECTION:
+		return 5;
+		break;
+	case _6_SECTION:
+		return 6;
+		break;
+	case _7_SECTION:
+		return 7;
+		break;
+	case _8_SECTION:
+		return 8;
+		break;
+	case _9_SECTION:
+		return 9;
+		break;
+	case _10_SECTION:
+		return 10;
+		break;
+	default:
+		return -1;
+		break;
+	}
+}
+
+
+//----------------------------------------------------------------------------------------------
+void LightNode::setFloorNumber(int nn)
+//----------------------------------------------------------------------------------------------
+{
+	switch (nn) {
+	case 0:
+		floorNumber = _G_FLOOR;
+		break;
+	case 1:
+		floorNumber = _1_FLOOR;
+		break;
+	case 2:
+		floorNumber = _2_FLOOR;
+		break;
+	case 3:
+		floorNumber = _3_FLOOR;
+		break;
+	case 4:
+		floorNumber = _4_FLOOR;
+		break;
+	case 5:
+		floorNumber = _5_FLOOR;
+		break;
+	case 6:
+		floorNumber = _6_FLOOR;
+		break;
+	case 7:
+		floorNumber = _7_FLOOR;
+		break;
+	case 8:
+		floorNumber = _8_FLOOR;
+		break;
+	case 9:
+		floorNumber = _9_FLOOR;
+		break;
+	case 10:
+		floorNumber = _10_FLOOR;
+		break;
+	default:
+		floorNumber = _FLOOR_NDEF;
+		break;
+	}
+}
+
+
+//----------------------------------------------------------------------------------------------
+void LightNode::setSectionNumber(int ns)
+//----------------------------------------------------------------------------------------------
+{
+	switch (ns) {
+	case 1:
+		lightSection = _1_SECTION;
+		break;
+	case 2:
+		lightSection = _2_SECTION;
+		break;
+	case 3:
+		lightSection = _3_SECTION;
+		break;
+	case 4:
+		lightSection = _4_SECTION;
+		break;
+	case 5:
+		lightSection = _5_SECTION;
+		break;
+	case 6:
+		lightSection = _6_SECTION;
+		break;
+	case 7:
+		lightSection = _7_SECTION;
+		break;
+	case 8:
+		lightSection = _8_SECTION;
+		break;
+	case 9:
+		lightSection = _9_SECTION;
+		break;
+	case 10:
+		lightSection = _10_SECTION;
+		break;
+	default:
+		lightSection = _SECTION_NDEF;
+		break;
+	}
+}
+
+//----------------------------------------------------------------------------------------------
+void LightNode::clearAnimList(void)
+//----------------------------------------------------------------------------------------------
+{
+	delete this->animList;
+	this->animList = new AnimationList();
+}
+
+
+//----------------------------------------------------------------------------------------------
+void LightNode::copyAnimList(AnimationList* list)
+//----------------------------------------------------------------------------------------------
+{
+	this->clearAnimList();
+
+	// copy the interpolation mode
+	this->retAnimationList()->setInterpMode(list->retInterpMode());
+
+	// If the provided list is empty, there is nothing to copy
+	if (list->retNodeCount() == 0) {
+		return;
+	}
+
+	// Iterate through the list and create copies of the nodes
+	AnimationNode* help = list->retListHead();
+
+	while (help != NULL) {
+		AnimationNodeLight* tempL = static_cast<AnimationNodeLight*> (help);
+
+		AnimationNodeLight* newNodeLight = new AnimationNodeLight();
+
+		newNodeLight->setLigthOn(tempL->retLightOn());
+		newNodeLight->setLightIntensity(tempL->retLightIntensity());
+		newNodeLight->setAnimTime(tempL->retAnimTime());
+
+		// Insert the node to the list
+		this->retAnimationList()->insertNode(newNodeLight);
+
+		help = help->retAnimNext();
+	}
+}
+
+//----------------------------------------------------------------------------------------------
+bool LightNode::retCurrentIsOn(AnimationInfo* animInfo)
+//----------------------------------------------------------------------------------------------
+{
+	// if the object is not animated, then just return the normal on/off state
+	if (!this->retHasAnimated()) {
+		return this->on;
+	}
+
+
+	// In case there is only 1 animation checkpoint, return it as a static on/off state
+	if (this->retAnimationList()->retNodeCount() == 1) {
+		AnimationNodeLight* tempAnimLight = static_cast<AnimationNodeLight*> (this->retAnimationList()->retListHead());
+		return tempAnimLight->retLightOn();
+	}
+
+
+	// If the animation has not started yet, return the intial on/off state
+	if (animInfo->retCurrentFrame() < this->retAnimationList()->retListHead()->retAnimTime()) {
+		AnimationNodeLight* tempAnimLight = static_cast<AnimationNodeLight*> (this->retAnimationList()->retListHead());
+		return tempAnimLight->retLightOn();
+	}
+
+
+	// If the animation is over, return the final on/off state
+	if (animInfo->retCurrentFrame() >= this->retAnimationList()->retListLast()->retAnimTime()) {
+		AnimationNodeLight* tempAnimLight = static_cast<AnimationNodeLight*> (this->retAnimationList()->retListLast());
+		return tempAnimLight->retLightOn();
+	}
+
+	// Else calculate the exact on/off state, based on the current time
+
+	// 1) First find the two surrounding animation checkpoints
+	AnimationNode* help = this->retAnimationList()->retListHead();
+
+	while (animInfo->retCurrentFrame() > help->retAnimTime()) {
+		help = help->retAnimNext();
+	}
+
+	// Check if we are at the very begining of the animation
+	if (help == this->retAnimationList()->retListHead()) {
+		AnimationNodeLight* tempLCurr = static_cast<AnimationNodeLight*> (help);
+		return tempLCurr->retLightOn();
+	}
+
+	AnimationNodeLight* tempLCurr = static_cast<AnimationNodeLight*> (help->retAnimPrev());
+
+	return tempLCurr->retLightOn();
+}
+
+
+//----------------------------------------------------------------------------------------------
+int LightNode::retCurrentIntensity(AnimationInfo* animInfo)
+//----------------------------------------------------------------------------------------------
+{
+	// if the object is not animated, then just return the normal intensity rate
+	if (!this->retHasAnimated()) {
+		return (int)(this->intensity);
+	}
+
+
+	// In case there is only 1 animation checkpoint, return it as a static intensity rate of the light
+	if (this->retAnimationList()->retNodeCount() == 1) {
+		AnimationNodeLight* tempAnimLight = static_cast<AnimationNodeLight*> (this->retAnimationList()->retListHead());
+		return tempAnimLight->retLightIntensity();
+	}
+
+
+	// If the animation has not started yet, return the intial light intensity
+	if (animInfo->retCurrentFrame() < this->retAnimationList()->retListHead()->retAnimTime()) {
+		AnimationNodeLight* tempAnimLight = static_cast<AnimationNodeLight*> (this->retAnimationList()->retListHead());
+		return tempAnimLight->retLightIntensity();
+	}
+
+
+	// If the animation is over, return the final light intensity
+	if (animInfo->retCurrentFrame() >= this->retAnimationList()->retListLast()->retAnimTime()) {
+		AnimationNodeLight* tempAnimLight = static_cast<AnimationNodeLight*> (this->retAnimationList()->retListLast());
+		return tempAnimLight->retLightIntensity();
+	}
+
+	// Else calculate the exact light intensity, based on the current time and the animation properties
+
+	// 1) First find the two surrounding animation checkpoints
+	AnimationNode* help = this->retAnimationList()->retListHead();
+
+	while (animInfo->retCurrentFrame() > help->retAnimTime()) {
+		help = help->retAnimNext();
+	}
+
+	// Check if we are at the very begining of the animation
+	if (help == this->retAnimationList()->retListHead()) {
+		AnimationNodeLight* tempLCurr = static_cast<AnimationNodeLight*> (help);
+		return tempLCurr->retLightIntensity();
+	}
+
+	AnimationNodeLight* tempLPrev = static_cast<AnimationNodeLight*> (help->retAnimPrev());
+	AnimationNodeLight* tempLCurr = static_cast<AnimationNodeLight*> (help);
+
+	// 2) Calculate the time fration between the identified neighboring checkpoints
+	float frameRel = (animInfo->retCurrentFrame() - tempLPrev->retAnimTime()) /
+		(float)(tempLCurr->retAnimTime() - tempLPrev->retAnimTime());
+
+	// 3) Based on the current interpolation mode, calculate the light intensity based on the time fraction 
+
+	float intensityRate = 0;
+	// Linear interpolation
+	if (this->retAnimationList()->retInterpMode() == 0) {
+
+		intensityRate = linearInterp((float)(tempLPrev->retLightIntensity()), (float)(tempLCurr->retLightIntensity()), frameRel);
+
+	}
+	// Cosine interpolation
+	else if (this->retAnimationList()->retInterpMode() == 1) {
+
+		intensityRate = cosineInterp((float)(tempLPrev->retLightIntensity()), (float)(tempLCurr->retLightIntensity()), frameRel);
+
+	}
+	// Cubic interpolation
+	else {
+		float v1 = (float)(tempLPrev->retLightIntensity());
+		float v2 = (float)(tempLCurr->retLightIntensity());
+		float v0 = v1;
+
+		if (tempLPrev->retAnimPrev() != NULL) {
+			AnimationNodeLight* tempLPrevPrev = static_cast<AnimationNodeLight*> (tempLPrev->retAnimPrev());
+			v0 = (float)(tempLPrevPrev->retLightIntensity());
+		}
+
+		float v3 = v2;
+
+		if (tempLCurr->retAnimNext() != NULL) {
+			AnimationNodeLight* tempLCurrCurr = static_cast<AnimationNodeLight*> (tempLCurr->retAnimNext());
+			v0 = (float)(tempLCurrCurr->retLightIntensity());
+		}
+
+		intensityRate = cubicInterp(v0, v1, v2, v3, frameRel);
+
+	}
+
+	return (int)(intensityRate);
 }

@@ -216,6 +216,8 @@ void PbrtExporter::writeFloor() {
 
 void PbrtExporter::writeLightSource(LightNode* lightNode) {
 
+	if (lightNode->on == false) return;
+
 	outGeometry << " AttributeBegin" << std::endl;
 
 	float mult = 15.f;
