@@ -75,6 +75,7 @@ void MitsubaExporter::exportStatic()
 	{
 		scene->initShapeNodeTransformMatricies();
 		initCurrentGeometryFilename(scene->name, false);
+		writeAllLights(scene, depth);
 		writeElement("include", { "filename", currentGeometryFileName + ".xml" }, depth + 1);
 		writeGeometryXML(scene, depth);
 		std::cout << "Exported scene: " << scene->name << std::endl;
@@ -392,7 +393,6 @@ void MitsubaExporter::writeGeometryXML(Scene* scene, int depth)
 
 		outCurrentScene << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << std::endl;
 		writeElementBegScene("scene", { "version", "3.5.2" }, depth);
-		writeAllLights(scene, depth);
 		writeAllShapeGroups(scene, depth);
 		writeAllShapeReferences(scene, depth);
 		writeElementEndScene("scene", depth);
@@ -499,40 +499,40 @@ void MitsubaExporter::writeLight(LightNode* lightNode, int depth)
 
 	if (false)
 	{
-		writeElementBegScene("emitter", { "type", "point" }, depth);
-		writeElementScene("rgb", { "name", "intensity", "value", lightNode->color.toString() }, depth + 1);
-		writeElementScene("point", { "name", "position", "x", std::to_string(lightNode->location.x), "y", std::to_string(lightNode->location.y), "z", std::to_string(lightNode->location.z), }, depth + 1);
-		writeElementEndScene("emitter", depth);
+		writeElementBeg("emitter", { "type", "point" }, depth);
+		writeElement("rgb", { "name", "intensity", "value", lightNode->color.toString() }, depth + 1);
+		writeElement("point", { "name", "position", "x", std::to_string(lightNode->location.x), "y", std::to_string(lightNode->location.y), "z", std::to_string(lightNode->location.z), }, depth + 1);
+		writeElementEnd("emitter", depth);
 	}
 	else if (lightNode->lightType == LightNode::LightType::SPOTLIGHT)
 	{
 		float mult = 15;
-		writeElementBegScene("emitter", { "type", "spot" }, depth);
-		writeElementBegScene("transform", { "name", "to_world" }, depth + 1);
-		writeElementScene("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString() }, depth + 2);
-		writeElementEndScene("transform", depth + 1);
-		writeElementScene("float", { "name", "intensity", "value", std::to_string((lightNode->color * lightNode->intensity).len() * mult) }, depth + 1);
-		writeElementScene("float", { "name", "beam_width", "value", std::to_string(RAD_TO_DEG(lightNode->beamWidth)) }, depth + 1);
-		writeElementScene("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle) * 1.3) }, depth + 1);
-		writeElementEndScene("emitter", depth);
+		writeElementBeg("emitter", { "type", "spot" }, depth);
+		writeElementBeg("transform", { "name", "to_world" }, depth + 1);
+		writeElement("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString() }, depth + 2);
+		writeElementEnd("transform", depth + 1);
+		writeElement("float", { "name", "intensity", "value", std::to_string((lightNode->color * lightNode->intensity).len() * mult) }, depth + 1);
+		writeElement("float", { "name", "beam_width", "value", std::to_string(RAD_TO_DEG(lightNode->beamWidth)) }, depth + 1);
+		writeElement("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle) * 1.3) }, depth + 1);
+		writeElementEnd("emitter", depth);
 	}
 	else if (lightNode->lightType == LightNode::LightType::GONIOLIGHT)
 	{
 		float mult = 15;
-		writeElementBegScene("emitter", { "type", "spot" }, depth);
-		writeElementBegScene("transform", { "name", "to_world" }, depth + 1);
-		writeElementScene("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString() }, depth + 2);
-		writeElementEndScene("transform", depth + 1);
-		writeElementScene("float", { "name", "intensity", "value", std::to_string((lightNode->color * lightNode->intensity).len() * mult) }, depth + 1);
-		writeElementScene("float", { "name", "beam_width", "value", std::to_string(RAD_TO_DEG(lightNode->beamWidth)) }, depth + 1);
-		writeElementScene("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle) * 1.3) }, depth + 1);
-		writeElementEndScene("emitter", depth);
+		writeElementBeg("emitter", { "type", "spot" }, depth);
+		writeElementBeg("transform", { "name", "to_world" }, depth + 1);
+		writeElement("lookat", { "origin", lightNode->location.toString(), "target", (lightNode->location + lightNode->direction).toString() }, depth + 2);
+		writeElementEnd("transform", depth + 1);
+		writeElement("float", { "name", "intensity", "value", std::to_string((lightNode->color * lightNode->intensity).len() * mult) }, depth + 1);
+		writeElement("float", { "name", "beam_width", "value", std::to_string(RAD_TO_DEG(lightNode->beamWidth)) }, depth + 1);
+		writeElement("float", { "name", "cutoff_angle", "value", std::to_string(RAD_TO_DEG(lightNode->cutOffAngle) * 1.3) }, depth + 1);
+		writeElementEnd("emitter", depth);
 	}
 	else if (lightNode->lightType == LightNode::LightType::ENVIROMENTAL_LIGHT)
 	{
-		writeElementBegScene("emitter", { "type", "envmap" }, depth);
-		writeElementScene("string", { "name", "filename", "value", lightNode->url }, depth + 1);
-		writeElementEndScene("emitter", depth);
+		writeElementBeg("emitter", { "type", "envmap" }, depth);
+		writeElement("string", { "name", "filename", "value", lightNode->url }, depth + 1);
+		writeElementEnd("emitter", depth);
 	}
 }
 

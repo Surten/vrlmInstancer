@@ -83,6 +83,7 @@ void PbrtExporter::exportStatic()
 #endif
 	for (auto scene : scenes)
 	{
+		writeAllLightSourcesOfAScene(scene);
 		initCurrentGeometryFilename(scene->name, false);
 		out << "Include \"" << currentGeometryFileName << "\"" << std::endl;
 		writeGeometry(scene);
@@ -118,7 +119,7 @@ void PbrtExporter::exportDynamic()
 			}
 			else
 				initCurrentGeometryFilename(scene->name, false);
-
+			writeAllLightSourcesOfAScene(scene);
 			out << "Include \"" << currentGeometryFileName << "\"" << std::endl;
 		}
 		out.close();
@@ -218,39 +219,39 @@ void PbrtExporter::writeLightSource(LightNode* lightNode) {
 
 	if (lightNode->on == false) return;
 
-	outGeometry << " AttributeBegin" << std::endl;
+	out << " AttributeBegin" << std::endl;
 
 	float mult = 15.f;
 	switch (lightNode->lightType)
 	{
 	case LightNode::LightType::SPOTLIGHT:
-		outGeometry << " LightSource \"spot\"" << std::endl;
-		outGeometry << "    \"point3 from\" [" << lightNode->location << " ]" << std::endl;
-		outGeometry << "    \"point3 to\" [" << lightNode->location + lightNode->direction << " ]" << std::endl;
-		outGeometry << "    \"rgb I\" [" << lightNode->color * (lightNode->intensity * 106.f) << " ]" << std::endl;
-		outGeometry << "    \"float coneangle\" [" << 60 << " ]" << std::endl;
-		outGeometry << "    \"float conedeltaangle\" [" << 80 << " ]" << std::endl;
+		out << " LightSource \"spot\"" << std::endl;
+		out << "    \"point3 from\" [" << lightNode->location << " ]" << std::endl;
+		out << "    \"point3 to\" [" << lightNode->location + lightNode->direction << " ]" << std::endl;
+		out << "    \"rgb I\" [" << lightNode->color * (lightNode->intensity * 106.f) << " ]" << std::endl;
+		out << "    \"float coneangle\" [" << 60 << " ]" << std::endl;
+		out << "    \"float conedeltaangle\" [" << 80 << " ]" << std::endl;
 		break;
 	case LightNode::LightType::GONIOLIGHT:
-		outGeometry << "    Translate " << lightNode->location << std::endl;
-		outGeometry << " LightSource \"goniometric\"" << std::endl;
+		out << "    Translate " << lightNode->location << std::endl;
+		out << " LightSource \"goniometric\"" << std::endl;
 		if (lightNode->url.find(".ies") != std::string::npos)
 		{
 			lightNode->url = lightNode->url.substr(0, lightNode->url.length() - 4);
 			lightNode->url = lightNode->url + ".exr";
 		}
-		outGeometry << "    \"string filename\" [ \"" << lightNode->url << "\" ]" << std::endl;
-		outGeometry << "    \"rgb I\" [" << lightNode->color * lightNode->intensity * mult << " ]" << std::endl;
+		out << "    \"string filename\" [ \"" << lightNode->url << "\" ]" << std::endl;
+		out << "    \"rgb I\" [" << lightNode->color * lightNode->intensity * mult << " ]" << std::endl;
 
 		break;
 	case LightNode::LightType::ENVIROMENTAL_LIGHT:
 		//out << " Rotate -90 1 0 0" << std::endl;
-		outGeometry << " LightSource \"infinite\"" << std::endl;
+		out << " LightSource \"infinite\"" << std::endl;
 		//out << "    \"string filename\" [ \"" << lightNode->url << "\" ]" << std::endl;
 		break;
 	}
-	outGeometry << " AttributeEnd" << std::endl;
-	outGeometry << std::endl;
+	out << " AttributeEnd" << std::endl;
+	out << std::endl;
 }
 
 void PbrtExporter::writeAllLightSourcesOfAScene(Scene* scene) {
@@ -304,7 +305,6 @@ void PbrtExporter::writeGeometry(Scene* scene){
 	{
 		geometryAppendString = scene->name.substr(4);
 		outGeometry.open(this->outputFolder + "/" + currentGeometryFileName);
-		writeAllLightSourcesOfAScene(scene);
 		writeObjectInstances(scene);
 		writeSceneHierarchy(scene);
 		outGeometry.close();

@@ -30,8 +30,9 @@ int main()
     //controlFiles.push_back("automaticControls/InstanceAll.txt");
     //controlFiles.push_back("automaticControls/switchLightsToGonio.txt");
     
-    controlFiles.push_back("automaticControls/testLights.txt");
+    //controlFiles.push_back("automaticControls/testLights.txt");
     
+    controlFiles.push_back("automaticControls/BSDFgenerateAllStaticCams_Lights.txt");
     //controlFiles.push_back("automaticControls/BSDFgenerateAllStaticCams.txt");
     //controlFiles.push_back("automaticControls/BSDFHallwayStatic.txt");
     //controlFiles.push_back("automaticControls/BSDFEntrance.txt");
